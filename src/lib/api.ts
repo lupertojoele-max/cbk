@@ -9,11 +9,14 @@ import {
   EventResultsResponse,
   News,
   Sponsor,
+  Season,
+  SeasonResults,
   GetKartsParams,
   GetDriversParams,
   GetEventsParams,
   GetNewsParams,
   GetSponsorsParams,
+  GetResultsParams,
 } from './types'
 import {
   KartSchema,
@@ -25,6 +28,26 @@ import {
   ApiResponseSchema,
   ApiErrorSchema,
 } from './schemas'
+import {
+  USE_MOCK_DATA,
+  simulateApiDelay,
+  mockKartsResponse,
+  mockDriversResponse,
+  mockEventsResponse,
+  mockNewsResponse,
+  mockSponsorsResponse,
+  mockSeasonsResponse,
+  mockSeasonResultsResponse,
+  mockKarts,
+  mockDrivers,
+  mockEvents,
+  mockNews,
+  mockSponsors,
+  mockSeasons,
+  mockAllSeasonResults,
+  mockSeasonResults2024,
+  mockSeasonResults2023,
+} from './mock'
 
 // API Configuration
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
@@ -163,104 +186,358 @@ export function revalidateApiCache(tags: string | string[]) {
 
 // KARTS API
 export async function getKarts(params: GetKartsParams = {}): Promise<ApiResponse<Kart[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { per_page = 50, page = 1 } = params
+    const startIndex = (page - 1) * per_page
+    const endIndex = startIndex + per_page
+    const paginatedKarts = mockKarts.slice(startIndex, endIndex)
+
+    return {
+      ...mockKartsResponse,
+      data: paginatedKarts,
+      meta: {
+        ...mockKartsResponse.meta!,
+        per_page,
+        current_page: page,
+        from: startIndex + 1,
+        to: Math.min(endIndex, mockKarts.length)
+      }
+    }
+  }
+
   const queryString = buildQueryString(params)
   const schema = ApiResponseSchema(z.array(KartSchema))
 
-  return apiRequest(
-    `/karts${queryString}`,
-    {
-      next: {
-        tags: ['karts'],
-        revalidate: 300 // 5 minutes
+  try {
+    return await apiRequest(
+      `/karts${queryString}`,
+      {
+        next: {
+          tags: ['karts'],
+          revalidate: 300 // 5 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    // Fallback to mock data on network error
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for karts')
+      await simulateApiDelay()
+      const { per_page = 50, page = 1 } = params
+      const startIndex = (page - 1) * per_page
+      const endIndex = startIndex + per_page
+      const paginatedKarts = mockKarts.slice(startIndex, endIndex)
+
+      return {
+        ...mockKartsResponse,
+        data: paginatedKarts,
+        meta: {
+          ...mockKartsResponse.meta!,
+          per_page,
+          current_page: page,
+          from: startIndex + 1,
+          to: Math.min(endIndex, mockKarts.length)
+        }
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+    }
+    throw error
+  }
 }
 
 export async function getKart(slug: string): Promise<ApiResponse<Kart>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const kart = mockKarts.find(k => k.slug === slug)
+    if (!kart) {
+      throw new ApiError('Kart not found', 404)
+    }
+    return { data: kart }
+  }
+
   const schema = ApiResponseSchema(KartSchema)
 
-  return apiRequest(
-    `/karts/${encodeURIComponent(slug)}`,
-    {
-      next: {
-        tags: ['karts', `kart:${slug}`],
-        revalidate: 600 // 10 minutes
+  try {
+    return await apiRequest(
+      `/karts/${encodeURIComponent(slug)}`,
+      {
+        next: {
+          tags: ['karts', `kart:${slug}`],
+          revalidate: 600 // 10 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    // Fallback to mock data on network error
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for kart')
+      await simulateApiDelay()
+      const kart = mockKarts.find(k => k.slug === slug)
+      if (!kart) {
+        throw new ApiError('Kart not found', 404)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      return { data: kart }
+    }
+    throw error
+  }
 }
 
 // DRIVERS API
 export async function getDrivers(params: GetDriversParams = {}): Promise<ApiResponse<Driver[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { per_page = 50, page = 1, team_only } = params
+    let filteredDrivers = mockDrivers
+
+    if (team_only) {
+      filteredDrivers = mockDrivers.filter(d => d.is_team_member)
+    }
+
+    const startIndex = (page - 1) * per_page
+    const endIndex = startIndex + per_page
+    const paginatedDrivers = filteredDrivers.slice(startIndex, endIndex)
+
+    return {
+      ...mockDriversResponse,
+      data: paginatedDrivers,
+      meta: {
+        ...mockDriversResponse.meta!,
+        total: filteredDrivers.length,
+        per_page,
+        current_page: page,
+        from: startIndex + 1,
+        to: Math.min(endIndex, filteredDrivers.length)
+      }
+    }
+  }
+
   const queryString = buildQueryString(params)
   const schema = ApiResponseSchema(z.array(DriverSchema))
 
-  return apiRequest(
-    `/drivers${queryString}`,
-    {
-      next: {
-        tags: ['drivers'],
-        revalidate: 300 // 5 minutes
+  try {
+    return await apiRequest(
+      `/drivers${queryString}`,
+      {
+        next: {
+          tags: ['drivers'],
+          revalidate: 300 // 5 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for drivers')
+      await simulateApiDelay()
+      const { per_page = 50, page = 1, team_only } = params
+      let filteredDrivers = mockDrivers
+
+      if (team_only) {
+        filteredDrivers = mockDrivers.filter(d => d.is_team_member)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+
+      const startIndex = (page - 1) * per_page
+      const endIndex = startIndex + per_page
+      const paginatedDrivers = filteredDrivers.slice(startIndex, endIndex)
+
+      return {
+        ...mockDriversResponse,
+        data: paginatedDrivers,
+        meta: {
+          ...mockDriversResponse.meta!,
+          total: filteredDrivers.length,
+          per_page,
+          current_page: page,
+          from: startIndex + 1,
+          to: Math.min(endIndex, filteredDrivers.length)
+        }
+      }
+    }
+    throw error
+  }
 }
 
 export async function getDriver(slug: string): Promise<ApiResponse<Driver>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const driver = mockDrivers.find(d => d.slug === slug)
+    if (!driver) {
+      throw new ApiError('Driver not found', 404)
+    }
+    return { data: driver }
+  }
+
   const schema = ApiResponseSchema(DriverSchema)
 
-  return apiRequest(
-    `/drivers/${encodeURIComponent(slug)}`,
-    {
-      next: {
-        tags: ['drivers', `driver:${slug}`],
-        revalidate: 600 // 10 minutes
+  try {
+    return await apiRequest(
+      `/drivers/${encodeURIComponent(slug)}`,
+      {
+        next: {
+          tags: ['drivers', `driver:${slug}`],
+          revalidate: 600 // 10 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for driver')
+      await simulateApiDelay()
+      const driver = mockDrivers.find(d => d.slug === slug)
+      if (!driver) {
+        throw new ApiError('Driver not found', 404)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      return { data: driver }
+    }
+    throw error
+  }
 }
 
 // EVENTS API
 export async function getEvents(params: GetEventsParams = {}): Promise<ApiResponse<Event[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { per_page = 50, page = 1, upcoming, year, type } = params
+    let filteredEvents = mockEvents
+
+    if (upcoming) {
+      filteredEvents = mockEvents.filter(e => e.schedule.is_upcoming)
+    }
+    if (year) {
+      filteredEvents = filteredEvents.filter(e =>
+        new Date(e.schedule.event_date).getFullYear() === year
+      )
+    }
+    if (type) {
+      filteredEvents = filteredEvents.filter(e =>
+        e.type.toLowerCase().includes(type.toLowerCase())
+      )
+    }
+
+    const startIndex = (page - 1) * per_page
+    const endIndex = startIndex + per_page
+    const paginatedEvents = filteredEvents.slice(startIndex, endIndex)
+
+    return {
+      ...mockEventsResponse,
+      data: paginatedEvents,
+      meta: {
+        ...mockEventsResponse.meta!,
+        total: filteredEvents.length,
+        per_page,
+        current_page: page,
+        from: startIndex + 1,
+        to: Math.min(endIndex, filteredEvents.length)
+      }
+    }
+  }
+
   const queryString = buildQueryString(params)
   const schema = ApiResponseSchema(z.array(EventSchema))
 
-  return apiRequest(
-    `/events${queryString}`,
-    {
-      next: {
-        tags: ['events'],
-        revalidate: 180 // 3 minutes (events change frequently)
+  try {
+    return await apiRequest(
+      `/events${queryString}`,
+      {
+        next: {
+          tags: ['events'],
+          revalidate: 180 // 3 minutes (events change frequently)
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for events')
+      await simulateApiDelay()
+      const { per_page = 50, page = 1, upcoming, year, type } = params
+      let filteredEvents = mockEvents
+
+      if (upcoming) {
+        filteredEvents = mockEvents.filter(e => e.schedule.is_upcoming)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      if (year) {
+        filteredEvents = filteredEvents.filter(e =>
+          new Date(e.schedule.event_date).getFullYear() === year
+        )
+      }
+      if (type) {
+        filteredEvents = filteredEvents.filter(e =>
+          e.type.toLowerCase().includes(type.toLowerCase())
+        )
+      }
+
+      const startIndex = (page - 1) * per_page
+      const endIndex = startIndex + per_page
+      const paginatedEvents = filteredEvents.slice(startIndex, endIndex)
+
+      return {
+        ...mockEventsResponse,
+        data: paginatedEvents,
+        meta: {
+          ...mockEventsResponse.meta!,
+          total: filteredEvents.length,
+          per_page,
+          current_page: page,
+          from: startIndex + 1,
+          to: Math.min(endIndex, filteredEvents.length)
+        }
+      }
+    }
+    throw error
+  }
 }
 
 export async function getEvent(slug: string): Promise<ApiResponse<Event>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const event = mockEvents.find(e => e.slug === slug)
+    if (!event) {
+      throw new ApiError('Event not found', 404)
+    }
+    return { data: event }
+  }
+
   const schema = ApiResponseSchema(EventSchema)
 
-  return apiRequest(
-    `/events/${encodeURIComponent(slug)}`,
-    {
-      next: {
-        tags: ['events', `event:${slug}`],
-        revalidate: 300 // 5 minutes
+  try {
+    return await apiRequest(
+      `/events/${encodeURIComponent(slug)}`,
+      {
+        next: {
+          tags: ['events', `event:${slug}`],
+          revalidate: 300 // 5 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for event')
+      await simulateApiDelay()
+      const event = mockEvents.find(e => e.slug === slug)
+      if (!event) {
+        throw new ApiError('Event not found', 404)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      return { data: event }
+    }
+    throw error
+  }
 }
 
 export async function getEventResults(slug: string): Promise<EventResultsResponse> {
@@ -279,54 +556,203 @@ export async function getEventResults(slug: string): Promise<EventResultsRespons
 
 // NEWS API
 export async function getNews(params: GetNewsParams = {}): Promise<ApiResponse<News[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { per_page = 50, page = 1, category, featured } = params
+    let filteredNews = mockNews
+
+    if (category) {
+      filteredNews = mockNews.filter(n =>
+        n.category.toLowerCase().includes(category.toLowerCase())
+      )
+    }
+    if (featured) {
+      filteredNews = filteredNews.filter(n => n.is_featured)
+    }
+
+    const startIndex = (page - 1) * per_page
+    const endIndex = startIndex + per_page
+    const paginatedNews = filteredNews.slice(startIndex, endIndex)
+
+    return {
+      ...mockNewsResponse,
+      data: paginatedNews,
+      meta: {
+        ...mockNewsResponse.meta!,
+        total: filteredNews.length,
+        per_page,
+        current_page: page,
+        from: startIndex + 1,
+        to: Math.min(endIndex, filteredNews.length)
+      }
+    }
+  }
+
   const queryString = buildQueryString(params)
   const schema = ApiResponseSchema(z.array(NewsSchema))
 
-  return apiRequest(
-    `/news${queryString}`,
-    {
-      next: {
-        tags: ['news'],
-        revalidate: 300 // 5 minutes
+  try {
+    return await apiRequest(
+      `/news${queryString}`,
+      {
+        next: {
+          tags: ['news'],
+          revalidate: 300 // 5 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for news')
+      await simulateApiDelay()
+      const { per_page = 50, page = 1, category, featured } = params
+      let filteredNews = mockNews
+
+      if (category) {
+        filteredNews = mockNews.filter(n =>
+          n.category.toLowerCase().includes(category.toLowerCase())
+        )
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      if (featured) {
+        filteredNews = filteredNews.filter(n => n.is_featured)
+      }
+
+      const startIndex = (page - 1) * per_page
+      const endIndex = startIndex + per_page
+      const paginatedNews = filteredNews.slice(startIndex, endIndex)
+
+      return {
+        ...mockNewsResponse,
+        data: paginatedNews,
+        meta: {
+          ...mockNewsResponse.meta!,
+          total: filteredNews.length,
+          per_page,
+          current_page: page,
+          from: startIndex + 1,
+          to: Math.min(endIndex, filteredNews.length)
+        }
+      }
+    }
+    throw error
+  }
 }
 
 export async function getNewsItem(slug: string): Promise<ApiResponse<News>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const newsItem = mockNews.find(n => n.slug === slug)
+    if (!newsItem) {
+      throw new ApiError('News item not found', 404)
+    }
+    return { data: newsItem }
+  }
+
   const schema = ApiResponseSchema(NewsSchema)
 
-  return apiRequest(
-    `/news/${encodeURIComponent(slug)}`,
-    {
-      next: {
-        tags: ['news', `news:${slug}`],
-        revalidate: 600 // 10 minutes
+  try {
+    return await apiRequest(
+      `/news/${encodeURIComponent(slug)}`,
+      {
+        next: {
+          tags: ['news', `news:${slug}`],
+          revalidate: 600 // 10 minutes
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for news item')
+      await simulateApiDelay()
+      const newsItem = mockNews.find(n => n.slug === slug)
+      if (!newsItem) {
+        throw new ApiError('News item not found', 404)
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      return { data: newsItem }
+    }
+    throw error
+  }
 }
 
 // SPONSORS API
 export async function getSponsors(params: GetSponsorsParams = {}): Promise<ApiResponse<Sponsor[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { level, active_only } = params
+    let filteredSponsors = mockSponsors
+
+    if (level) {
+      filteredSponsors = mockSponsors.filter(s =>
+        s.sponsorship_level.toLowerCase() === level.toLowerCase()
+      )
+    }
+    if (active_only) {
+      filteredSponsors = filteredSponsors.filter(s =>
+        s.contract_status.toLowerCase() === 'active'
+      )
+    }
+
+    return {
+      ...mockSponsorsResponse,
+      data: filteredSponsors,
+      meta: {
+        ...mockSponsorsResponse.meta!,
+        total: filteredSponsors.length
+      }
+    }
+  }
+
   const queryString = buildQueryString(params)
   const schema = ApiResponseSchema(z.array(SponsorSchema))
 
-  return apiRequest(
-    `/sponsors${queryString}`,
-    {
-      next: {
-        tags: ['sponsors'],
-        revalidate: 3600 // 1 hour (sponsors change infrequently)
+  try {
+    return await apiRequest(
+      `/sponsors${queryString}`,
+      {
+        next: {
+          tags: ['sponsors'],
+          revalidate: 3600 // 1 hour (sponsors change infrequently)
+        }
+      },
+      DEFAULT_TIMEOUT,
+      schema
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for sponsors')
+      await simulateApiDelay()
+      const { level, active_only } = params
+      let filteredSponsors = mockSponsors
+
+      if (level) {
+        filteredSponsors = mockSponsors.filter(s =>
+          s.sponsorship_level.toLowerCase() === level.toLowerCase()
+        )
       }
-    },
-    DEFAULT_TIMEOUT,
-    schema
-  )
+      if (active_only) {
+        filteredSponsors = filteredSponsors.filter(s =>
+          s.contract_status.toLowerCase() === 'active'
+        )
+      }
+
+      return {
+        ...mockSponsorsResponse,
+        data: filteredSponsors,
+        meta: {
+          ...mockSponsorsResponse.meta!,
+          total: filteredSponsors.length
+        }
+      }
+    }
+    throw error
+  }
 }
 
 // SPECIAL ENDPOINTS
@@ -392,6 +818,118 @@ export async function getHealthCheck(): Promise<HealthCheckResponse> {
   )
 }
 
+// RESULTS AND SEASONS API
+export async function getSeasons(): Promise<ApiResponse<Season[]>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    return mockSeasonsResponse
+  }
+
+  try {
+    return await apiRequest(
+      `/seasons`,
+      {
+        next: {
+          tags: ['seasons'],
+          revalidate: 3600 // 1 hour
+        }
+      },
+      DEFAULT_TIMEOUT
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for seasons')
+      await simulateApiDelay()
+      return mockSeasonsResponse
+    }
+    throw error
+  }
+}
+
+export async function getSeasonResults(params: GetResultsParams = {}): Promise<ApiResponse<SeasonResults>> {
+  // Use mock data if configured
+  if (USE_MOCK_DATA) {
+    await simulateApiDelay()
+    const { season_year = 2024 } = params
+
+    if (season_year === 2024) {
+      return mockSeasonResultsResponse
+    } else if (season_year === 2023) {
+      return { data: mockSeasonResults2023 }
+    } else {
+      // Return empty results for other years
+      return {
+        data: {
+          season: mockSeasons.find(s => s.year === season_year) || mockSeasons[0],
+          standings: [],
+          recent_races: [],
+          statistics: {
+            total_drivers: 0,
+            different_winners: 0,
+            closest_championship_gap: 0,
+            most_wins_driver: 'N/A',
+            most_poles_driver: 'N/A',
+            fastest_lap_record: {
+              driver: 'N/A',
+              time: 'N/A',
+              event: 'N/A'
+            }
+          }
+        }
+      }
+    }
+  }
+
+  const queryString = buildQueryString(params)
+
+  try {
+    return await apiRequest(
+      `/results${queryString}`,
+      {
+        next: {
+          tags: ['results'],
+          revalidate: 300 // 5 minutes
+        }
+      },
+      DEFAULT_TIMEOUT
+    )
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      console.warn('API unavailable, using mock data for season results')
+      await simulateApiDelay()
+      const { season_year = 2024 } = params
+
+      if (season_year === 2024) {
+        return mockSeasonResultsResponse
+      } else if (season_year === 2023) {
+        return { data: mockSeasonResults2023 }
+      } else {
+        return {
+          data: {
+            season: mockSeasons.find(s => s.year === season_year) || mockSeasons[0],
+            standings: [],
+            recent_races: [],
+            statistics: {
+              total_drivers: 0,
+              different_winners: 0,
+              closest_championship_gap: 0,
+              most_wins_driver: 'N/A',
+              most_poles_driver: 'N/A',
+              fastest_lap_record: {
+                driver: 'N/A',
+                time: 'N/A',
+                event: 'N/A'
+              }
+            }
+          }
+        }
+      }
+    }
+    throw error
+  }
+}
+
 // Utility functions for client-side usage
 export const api = {
   // Karts
@@ -422,6 +960,12 @@ export const api = {
   // Sponsors
   sponsors: {
     list: getSponsors,
+  },
+
+  // Results
+  results: {
+    seasons: getSeasons,
+    seasonResults: getSeasonResults,
   },
 
   // Special

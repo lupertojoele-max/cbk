@@ -290,3 +290,84 @@ export interface GetSponsorsParams {
   level?: string
   active_only?: boolean
 }
+
+// Season and Championship Types
+export interface Season {
+  id: number
+  year: number
+  name: string
+  status: 'active' | 'completed' | 'upcoming'
+  start_date: string
+  end_date: string
+  total_rounds: number
+  completed_rounds: number
+}
+
+export interface ChampionshipStanding {
+  id: number
+  position: number
+  driver: {
+    id: number
+    full_name: string
+    racing_number: number
+    nationality: string
+  }
+  season_id: number
+  total_points: number
+  wins: number
+  podiums: number
+  best_finish: number
+  races_completed: number
+  total_races: number
+  points_behind_leader?: number
+  points_ahead_next?: number
+}
+
+export interface RaceResult {
+  id: number
+  event_id: number
+  event_name: string
+  event_date: string
+  driver: {
+    id: number
+    full_name: string
+    racing_number: number
+    nationality: string
+  }
+  position: number
+  points_earned: number
+  fastest_lap: boolean
+  pole_position: boolean
+  lap_time_best: string
+  lap_time_average: string
+  status: 'finished' | 'dnf' | 'dns' | 'disqualified'
+  gap_to_winner: string
+  laps_completed: number
+  total_laps: number
+}
+
+export interface SeasonResults {
+  season: Season
+  standings: ChampionshipStanding[]
+  recent_races: RaceResult[]
+  statistics: {
+    total_drivers: number
+    different_winners: number
+    closest_championship_gap: number
+    most_wins_driver: string
+    most_poles_driver: string
+    fastest_lap_record: {
+      driver: string
+      time: string
+      event: string
+    }
+  }
+}
+
+export interface GetResultsParams {
+  season_year?: number
+  driver_id?: number
+  event_id?: number
+  page?: number
+  per_page?: number
+}
