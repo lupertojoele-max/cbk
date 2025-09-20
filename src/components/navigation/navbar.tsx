@@ -286,6 +286,7 @@ export function Navbar() {
 
                 {/* Simple Navigation Items */}
                 {[
+                  { title: 'Calendar', href: '/calendar' },
                   { title: 'News', href: '/news' },
                   { title: 'Sponsors', href: '/sponsors' },
                   { title: 'About', href: '/about' },
