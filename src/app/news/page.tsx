@@ -11,15 +11,16 @@ export const metadata: Metadata = {
 }
 
 interface NewsPageProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string
     category?: string
-  }
+  }>
 }
 
-export default function NewsPage({ searchParams }: NewsPageProps) {
-  const page = Number(searchParams.page) || 1
-  const category = searchParams.category
+export default async function NewsPage({ searchParams }: NewsPageProps) {
+  const params = await searchParams
+  const page = Number(params.page) || 1
+  const category = params.category
 
   return (
     <div className="min-h-screen bg-racing-gray-50">

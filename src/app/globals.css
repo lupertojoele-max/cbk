@@ -279,6 +279,8 @@
   .border-racing-gold { border-color: var(--color-racing-gold); }
   .border-racing-blue { border-color: var(--color-racing-blue); }
 
+  .outline-racing-red { outline-color: var(--color-racing-red); }
+
   /* Racing Motion */
   .racing-transition {
     transition: all var(--duration-normal) var(--ease-out-racing);
