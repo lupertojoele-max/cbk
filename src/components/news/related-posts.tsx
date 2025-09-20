@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { RacingStagger, RacingStaggerItem, RacingFadeIn, RacingLift } from '@/components/animations'
 import { News } from '@/lib/types'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -40,12 +41,7 @@ export function RelatedPosts({ posts, currentCategory }: RelatedPostsProps) {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <RacingFadeIn delay={0.2} className="text-center mb-12">
             <div className="flex items-center justify-center gap-2 mb-4">
               <TrendingUp className="w-6 h-6 text-racing-red" />
               <Badge variant="outline" className="text-racing-red border-racing-red">
@@ -58,18 +54,14 @@ export function RelatedPosts({ posts, currentCategory }: RelatedPostsProps) {
             <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
               Continue reading more stories from the {currentCategory.toLowerCase()} category
             </p>
-          </motion.div>
+          </RacingFadeIn>
 
           {/* Related Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <RacingStagger staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="group hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
+              <RacingStaggerItem key={post.id}>
+                <RacingLift>
+                  <Card className="group hover:shadow-xl racing-transition h-full overflow-hidden">
                   <div className="relative aspect-video overflow-hidden">
                     <Image
                       src={getImageUrl(post.cover_image)}
@@ -142,17 +134,13 @@ export function RelatedPosts({ posts, currentCategory }: RelatedPostsProps) {
                     </Button>
                   </CardContent>
                 </Card>
-              </motion.div>
+                </RacingLift>
+              </RacingStaggerItem>
             ))}
-          </div>
+          </RacingStagger>
 
           {/* View More Articles */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-12"
-          >
+          <RacingFadeIn delay={0.4} className="text-center mt-12">
             <Button
               size="lg"
               className="bg-racing-red hover:bg-racing-red/90 text-white px-8"
@@ -163,7 +151,7 @@ export function RelatedPosts({ posts, currentCategory }: RelatedPostsProps) {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-          </motion.div>
+          </RacingFadeIn>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { KartsGrid } from "@/components/home/karts-grid"
 import { NextRace } from "@/components/home/next-race"
 import { NewsList } from "@/components/home/news-list"
 import { SponsorStripAPI } from "@/components/sponsors/sponsor-strip-api"
+import { RacingStagger, RacingStaggerItem, RacingFadeIn } from "@/components/animations"
 import Link from "next/link"
 
 // Loading components for Suspense boundaries
@@ -111,24 +112,24 @@ export default function Home() {
       {/* Quick Stats */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2">15+</div>
+          <RacingStagger staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <RacingStaggerItem className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">15+</div>
               <div className="text-racing-gray-600">Wins This Season</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2">6</div>
+            </RacingStaggerItem>
+            <RacingStaggerItem className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">6</div>
               <div className="text-racing-gray-600">Professional Drivers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2">10</div>
+            </RacingStaggerItem>
+            <RacingStaggerItem className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">10</div>
               <div className="text-racing-gray-600">Racing Karts</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2">3</div>
+            </RacingStaggerItem>
+            <RacingStaggerItem className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">3</div>
               <div className="text-racing-gray-600">Championships</div>
-            </div>
-          </div>
+            </RacingStaggerItem>
+          </RacingStagger>
         </div>
       </section>
 
@@ -158,15 +159,21 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 bg-racing-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Experience Racing Excellence?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us to learn more about our team, sponsorship opportunities, or upcoming events
-          </p>
-          <Button size="lg" className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3">
-            <Link href="/contact">Get in Touch</Link>
-          </Button>
+          <RacingFadeIn delay={0.2}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Experience Racing Excellence?
+            </h2>
+          </RacingFadeIn>
+          <RacingFadeIn delay={0.4}>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us to learn more about our team, sponsorship opportunities, or upcoming events
+            </p>
+          </RacingFadeIn>
+          <RacingFadeIn delay={0.6}>
+            <Button size="lg" className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3 racing-lift">
+              <Link href="/contact">Get in Touch</Link>
+            </Button>
+          </RacingFadeIn>
         </div>
       </section>
     </div>
