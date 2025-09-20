@@ -371,3 +371,15 @@ export interface GetResultsParams {
   page?: number
   per_page?: number
 }
+
+// Contact Form Types
+export interface ContactFormData {
+  name: string
+  email: string
+  message: string
+}
+
+export interface ContactFormResponse {
+  message: string
+  status: string
+}

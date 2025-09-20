@@ -11,6 +11,8 @@ import {
   Sponsor,
   Season,
   SeasonResults,
+  ContactFormData,
+  ContactFormResponse,
   GetKartsParams,
   GetDriversParams,
   GetEventsParams,
@@ -930,6 +932,51 @@ export async function getSeasonResults(params: GetResultsParams = {}): Promise<A
   }
 }
 
+// CONTACT FORM API
+export async function submitContactForm(data: ContactFormData): Promise<ContactFormResponse> {
+  const url = `${API_BASE_URL}/api/${API_VERSION}/contact`
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}))
+
+      if (response.status === 429) {
+        throw new ApiError('Too many requests. Please wait a moment before trying again.', 429, response)
+      } else if (response.status === 422 && errorData.errors) {
+        // Laravel validation errors
+        throw new ApiError('Validation failed', 422, response, errorData.errors)
+      }
+
+      throw new ApiError(
+        errorData.message || `HTTP ${response.status}: ${response.statusText}`,
+        response.status,
+        response
+      )
+    }
+
+    return response.json()
+  } catch (error) {
+    if (error instanceof ApiError) {
+      throw error
+    }
+
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      throw new NetworkError('Network connection failed. Please check your internet connection and try again.', error)
+    }
+
+    throw new NetworkError('Unexpected error occurred while sending your message.', error as Error)
+  }
+}
+
 // Utility functions for client-side usage
 export const api = {
   // Karts
@@ -972,6 +1019,11 @@ export const api = {
   calendar: getCalendarIcs,
   sitemap: getSitemap,
   health: getHealthCheck,
+
+  // Contact
+  contact: {
+    submit: submitContactForm,
+  },
 
   // Cache management
   revalidate: revalidateApiCache,
