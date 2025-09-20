@@ -32,8 +32,6 @@ const nextConfig: NextConfig = {
   // Compression
   compress: true,
 
-  // Static optimization
-  generateStaticParams: true,
 
   // Logging
   logging: {
