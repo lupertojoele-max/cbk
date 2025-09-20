@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 import { api } from '@/lib/api'
 import { extractData, getMediaUrl, formatEventDate } from '@/lib/api-utils'
 import { KartDetailClient } from '@/components/karts/kart-detail-client'
@@ -6,6 +7,66 @@ import { KartDetailClient } from '@/components/karts/kart-detail-client'
 interface KartDetailPageProps {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: KartDetailPageProps): Promise<Metadata> {
+  try {
+    const response = await api.karts.get(params.slug)
+    const kart = extractData(response)
+
+    if (!kart) {
+      return {
+        title: 'Kart Not Found',
+        description: 'The kart you are looking for could not be found.',
+      }
+    }
+
+    const imageUrl = kart.featured_image?.url || kart.gallery[0]?.url || '/images/karts/default-kart.jpg'
+    const description = `${kart.name} - ${kart.specifications.brand} ${kart.specifications.model} from CBK Racing fleet. Max speed: ${kart.specifications.max_speed_kmh} km/h, Weight: ${kart.specifications.weight_kg} kg.`
+
+    return {
+      title: `${kart.name} - ${kart.specifications.brand} ${kart.specifications.model}`,
+      description,
+      keywords: [
+        kart.name,
+        kart.specifications.brand,
+        kart.specifications.model,
+        'go-kart',
+        'racing kart',
+        'CBK Racing',
+        'motorsport',
+        `${kart.specifications.max_speed_kmh}kmh`,
+        kart.specifications.engine_brand
+      ],
+      openGraph: {
+        title: `${kart.name} - CBK Racing`,
+        description,
+        type: 'article',
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: `${kart.name} - ${kart.specifications.brand} racing kart`,
+          }
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${kart.name} - CBK Racing`,
+        description,
+        images: [imageUrl],
+      },
+      alternates: {
+        canonical: `/karts/${params.slug}`,
+      },
+    }
+  } catch (error) {
+    return {
+      title: 'Kart Not Found',
+      description: 'The kart you are looking for could not be found.',
+    }
   }
 }
 

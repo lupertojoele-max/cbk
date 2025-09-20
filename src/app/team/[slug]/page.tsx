@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 import { api } from '@/lib/api'
 import { extractData, getMediaUrl, formatEventDate } from '@/lib/api-utils'
 import { DriverDetailClient } from '@/components/team/driver-detail-client'
@@ -6,6 +7,65 @@ import { DriverDetailClient } from '@/components/team/driver-detail-client'
 interface DriverDetailPageProps {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: DriverDetailPageProps): Promise<Metadata> {
+  try {
+    const response = await api.drivers.get(params.slug)
+    const driver = extractData(response)
+
+    if (!driver) {
+      return {
+        title: 'Driver Not Found',
+        description: 'The driver you are looking for could not be found.',
+      }
+    }
+
+    const imageUrl = driver.profile_image?.url || '/images/team/default-driver.jpg'
+    const description = `${driver.name} - Professional ${driver.role} at CBK Racing. Age: ${driver.age}, Experience: ${driver.experience_years} years. ${driver.bio}`
+
+    return {
+      title: `${driver.name} - ${driver.role}`,
+      description,
+      keywords: [
+        driver.name,
+        driver.role,
+        'CBK Racing',
+        'professional driver',
+        'go-kart racing',
+        'motorsport',
+        'racing team',
+        driver.nationality
+      ],
+      openGraph: {
+        title: `${driver.name} - CBK Racing ${driver.role}`,
+        description,
+        type: 'profile',
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: `${driver.name} - Professional ${driver.role} at CBK Racing`,
+          }
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${driver.name} - CBK Racing`,
+        description,
+        images: [imageUrl],
+      },
+      alternates: {
+        canonical: `/team/${params.slug}`,
+      },
+    }
+  } catch (error) {
+    return {
+      title: 'Driver Not Found',
+      description: 'The driver you are looking for could not be found.',
+    }
   }
 }
 
