@@ -21,7 +21,7 @@ export interface ApiResponse<T> {
   data: T
   meta?: PaginationMeta
   links?: PaginationLinks
-  filters?: Record<string, any>
+  filters?: Record<string, unknown>
 }
 
 export interface ApiError {

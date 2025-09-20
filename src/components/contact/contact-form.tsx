@@ -106,7 +106,7 @@ export function ContactForm() {
         // Handle Laravel validation errors
         if (error.status === 422 && error.errors) {
           const fieldErrors: ContactFormErrors = {}
-          Object.entries(error.errors).forEach(([field, messages]: [string, any]) => {
+          Object.entries(error.errors).forEach(([field, messages]: [string, string[]]) => {
             if (Array.isArray(messages) && messages.length > 0) {
               fieldErrors[field as keyof ContactFormErrors] = messages[0]
             }
@@ -179,7 +179,7 @@ export function ContactForm() {
                 Send us a Message
               </CardTitle>
               <CardDescription>
-                Have questions about CBK Racing? Fill out the form below and we'll get back to you as soon as possible.
+                Have questions about CBK Racing? Fill out the form below and we&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
 
@@ -206,7 +206,7 @@ export function ContactForm() {
                   >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span id="success-message" className="text-green-700">
-                      Thank you for your message! We'll get back to you within 24 hours.
+                      Thank you for your message! We&apos;ll get back to you within 24 hours.
                     </span>
                   </div>
                 )}
@@ -336,8 +336,8 @@ export function ContactForm() {
               Get in Touch
             </h2>
             <p className="text-racing-gray-600 leading-relaxed">
-              Whether you're interested in joining our team, have sponsorship opportunities,
-              or just want to learn more about CBK Racing, we'd love to hear from you.
+              Whether you&apos;re interested in joining our team, have sponsorship opportunities,
+              or just want to learn more about CBK Racing, we&apos;d love to hear from you.
             </p>
           </div>
 

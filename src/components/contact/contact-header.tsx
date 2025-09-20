@@ -42,7 +42,7 @@ export function ContactHeader() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Have questions about our racing team? Want to get involved or learn more about CBK Racing?
-            We'd love to hear from you.
+            We&apos;d love to hear from you.
           </motion.p>
 
           {/* CTA Buttons */}

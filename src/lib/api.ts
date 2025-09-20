@@ -1,4 +1,15 @@
-import { revalidateTag } from 'next/cache'
+// Conditional import for server-side only
+let revalidateTag: ((tag: string) => void) | undefined
+try {
+  if (typeof window === 'undefined') {
+    // Only import on server side
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    revalidateTag = require('next/cache').revalidateTag
+  }
+} catch {
+  // Fallback for build environments
+  revalidateTag = undefined
+}
 import { z } from 'zod'
 import {
   ApiResponse,
@@ -167,7 +178,7 @@ async function apiRequest<T>(
 }
 
 // Helper function to build query string
-function buildQueryString(params: Record<string, any>): string {
+function buildQueryString(params: Record<string, unknown>): string {
   const searchParams = new URLSearchParams()
 
   Object.entries(params).forEach(([key, value]) => {
@@ -182,8 +193,10 @@ function buildQueryString(params: Record<string, any>): string {
 
 // Revalidation helper
 export function revalidateApiCache(tags: string | string[]) {
-  const tagArray = Array.isArray(tags) ? tags : [tags]
-  tagArray.forEach(tag => revalidateTag(tag))
+  if (revalidateTag) {
+    const tagArray = Array.isArray(tags) ? tags : [tags]
+    tagArray.forEach(tag => revalidateTag!(tag))
+  }
 }
 
 // KARTS API

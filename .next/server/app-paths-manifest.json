@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/karts/[slug]/page": "app/karts/[slug]/page.js",
+  "/news/[slug]/page": "app/news/[slug]/page.js",
+  "/page": "app/page.js",
+  "/karts/page": "app/karts/page.js",
+  "/team/page": "app/team/page.js",
+  "/calendar/page": "app/calendar/page.js",
+  "/team/[slug]/page": "app/team/[slug]/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/news/page": "app/news/page.js",
+  "/results/page": "app/results/page.js"
+}
