@@ -171,10 +171,10 @@ export function Navbar() {
                 <Image
                   src="/images/logo cbk racing png.png"
                   alt="CBK Racing Logo"
-                  width={160}
-                  height={64}
+                  width={200}
+                  height={80}
                   priority
-                  className="h-16 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
               </div>
             </Link>
