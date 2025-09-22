@@ -3,12 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { extractData, getMediaUrl } from '@/lib/api-utils'
+import { Kart } from '@/lib/types'
 import Link from "next/link"
 import Image from "next/image"
 import { Zap, Trophy, Settings } from "lucide-react"
 
 export async function KartsGrid() {
-  let karts = []
+  let karts: Kart[] = []
   let error = null
 
   try {

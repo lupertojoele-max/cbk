@@ -13,7 +13,6 @@ try {
 import { z } from 'zod'
 import {
   ApiResponse,
-  ApiError,
   Kart,
   Driver,
   Event,
@@ -122,13 +121,14 @@ async function apiRequest<T>(
 
     // Handle HTTP errors
     if (!response.ok) {
-      let errorData: ApiError
+      let errorData: any
       try {
         const errorJson = await response.json()
         const parsedError = ApiErrorSchema.parse(errorJson)
         errorData = parsedError
       } catch {
         errorData = {
+          name: 'ApiError',
           message: `HTTP ${response.status}: ${response.statusText}`,
           status: response.status,
         }

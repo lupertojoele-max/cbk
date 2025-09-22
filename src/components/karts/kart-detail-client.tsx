@@ -14,7 +14,7 @@ import { getMediaUrl } from '@/lib/api-utils'
 import { cn } from '@/lib/utils'
 import {
   ArrowLeft,
-  Gallery,
+  Images,
   FileText,
   Download,
   Share2,
@@ -257,8 +257,8 @@ export function KartDetailClient({
               <span className="hidden sm:inline">Overview</span>
             </TabsTrigger>
             <TabsTrigger value="gallery" className="flex items-center space-x-2">
-              <Gallery className="w-4 h-4" />
-              <span className="hidden sm:inline">Gallery</span>
+              <Images className="w-4 h-4" />
+              <span className="hidden sm:inline">Images</span>
             </TabsTrigger>
             <TabsTrigger value="specs" className="flex items-center space-x-2">
               <FileText className="w-4 h-4" />
@@ -272,13 +272,13 @@ export function KartDetailClient({
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-8">
-            {/* Gallery Preview */}
+            {/* Images Preview */}
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center space-x-2">
-                    <Gallery className="w-5 h-5 text-racing-red" />
-                    <span>Gallery Preview</span>
+                    <Images className="w-5 h-5 text-racing-red" />
+                    <span>Images Preview</span>
                   </CardTitle>
                   <Button
                     variant="outline"
@@ -451,13 +451,13 @@ export function KartDetailClient({
             )}
           </TabsContent>
 
-          {/* Gallery Tab */}
+          {/* Images Tab */}
           <TabsContent value="gallery">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <Gallery className="w-5 h-5 text-racing-red" />
-                  <span>Image Gallery</span>
+                  <Images className="w-5 h-5 text-racing-red" />
+                  <span>Image Images</span>
                   <Badge variant="outline">
                     {lightboxImages.length} image{lightboxImages.length !== 1 ? 's' : ''}
                   </Badge>
@@ -622,7 +622,7 @@ export function KartDetailClient({
         initialIndex={lightboxIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        title={`${kart.name} Gallery`}
+        title={`${kart.name} Images`}
         showThumbnails={true}
         showControls={true}
         allowDownload={false}

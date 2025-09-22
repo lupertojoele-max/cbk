@@ -141,7 +141,7 @@ export function ApiErrorBoundary({
           </h3>
 
           <p className="text-racing-gray-600 mb-4 max-w-sm">
-            We couldn't retrieve the latest information. Please check your connection and try again.
+            We couldn&apos;t retrieve the latest information. Please check your connection and try again.
           </p>
 
           {onRetry && (

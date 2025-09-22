@@ -26,7 +26,7 @@ export const placeholderImages = {
 
   // Default fallbacks
   default: 'https://via.placeholder.com/800x600/f1f5f9/64748b?text=CBK+Racing',
-  logo: 'https://via.placeholder.com/200x60/e10600/ffffff?text=CBK'
+  logo: '/images/logo cbk racing png.png'
 }
 
 export function getPlaceholderImage(type: keyof typeof placeholderImages): string {

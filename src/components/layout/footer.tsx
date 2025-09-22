@@ -1,22 +1,26 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-racing-gray-900 text-white">
+    <footer className="bg-racing-gray-900 dark:bg-racing-gray-100 text-white dark:text-racing-gray-900">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-racing-red rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">CBK</span>
-              </div>
-              <span className="font-bold text-xl">CBK Racing</span>
+            <div className="flex items-center">
+              <Image
+                src="/images/logo cbk racing png.png"
+                alt="CBK Racing Logo"
+                width={100}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </div>
-            <p className="text-racing-gray-300 text-sm leading-relaxed">
+            <p className="text-racing-gray-300 dark:text-racing-gray-600 text-sm leading-relaxed">
               Professional go-kart racing team competing in national and international championships.
               Experience the thrill of motorsport with cutting-edge technology and passionate drivers.
             </p>
@@ -32,35 +36,35 @@ export function Footer() {
 
           {/* Racing Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red">Racing</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Racing</h3>
             <div className="space-y-2">
               <Link
                 href="/events"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Upcoming Events
               </Link>
               <Link
                 href="/results"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Race Results
               </Link>
               <Link
                 href="/championship"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Championship Standings
               </Link>
               <Link
                 href="/calendar"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Racing Calendar
               </Link>
               <Link
                 href="/live-timing"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Live Timing
               </Link>
@@ -69,35 +73,35 @@ export function Footer() {
 
           {/* Team Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red">Our Team</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Our Team</h3>
             <div className="space-y-2">
               <Link
                 href="/drivers"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Professional Drivers
               </Link>
               <Link
                 href="/karts"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Racing Fleet
               </Link>
               <Link
                 href="/technical"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Technical Team
               </Link>
               <Link
                 href="/history"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Team History
               </Link>
               <Link
                 href="/achievements"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Achievements
               </Link>
@@ -106,35 +110,35 @@ export function Footer() {
 
           {/* Connect Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red">Connect</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Connect</h3>
             <div className="space-y-2">
               <Link
                 href="/news"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Latest News
               </Link>
               <Link
                 href="/media"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Media Gallery
               </Link>
               <Link
                 href="/sponsors"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Our Sponsors
               </Link>
               <Link
                 href="/contact"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Contact Us
               </Link>
               <Link
                 href="/join"
-                className="block text-racing-gray-300 hover:text-racing-red transition-colors text-sm"
+                className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
                 Join Our Team
               </Link>
@@ -142,11 +146,11 @@ export function Footer() {
 
             {/* Social Media */}
             <div className="pt-2">
-              <p className="text-sm font-medium text-racing-gray-400 mb-2">Follow Us</p>
+              <p className="text-sm font-medium text-racing-gray-400 dark:text-racing-gray-500 mb-2">Follow Us</p>
               <div className="flex space-x-3">
                 <Link
                   href="https://instagram.com/cbkracing"
-                  className="text-racing-gray-400 hover:text-racing-red transition-colors"
+                  className="text-racing-gray-400 dark:text-racing-gray-500 hover:text-racing-red dark:hover:text-racing-red-light transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -155,7 +159,7 @@ export function Footer() {
                 </Link>
                 <Link
                   href="https://facebook.com/cbkracing"
-                  className="text-racing-gray-400 hover:text-racing-red transition-colors"
+                  className="text-racing-gray-400 dark:text-racing-gray-500 hover:text-racing-red dark:hover:text-racing-red-light transition-colors"
                   aria-label="Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -164,7 +168,7 @@ export function Footer() {
                 </Link>
                 <Link
                   href="https://twitter.com/cbkracing"
-                  className="text-racing-gray-400 hover:text-racing-red transition-colors"
+                  className="text-racing-gray-400 dark:text-racing-gray-500 hover:text-racing-red dark:hover:text-racing-red-light transition-colors"
                   aria-label="Twitter"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -173,7 +177,7 @@ export function Footer() {
                 </Link>
                 <Link
                   href="https://youtube.com/cbkracing"
-                  className="text-racing-gray-400 hover:text-racing-red transition-colors"
+                  className="text-racing-gray-400 dark:text-racing-gray-500 hover:text-racing-red dark:hover:text-racing-red-light transition-colors"
                   aria-label="YouTube"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -187,26 +191,26 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-racing-gray-800">
+      <div className="border-t border-racing-gray-800 dark:border-racing-gray-300">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-racing-gray-400">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-racing-gray-400 dark:text-racing-gray-500">
               <p>&copy; {currentYear} CBK Racing. All rights reserved.</p>
               <div className="flex space-x-4">
-                <Link href="/privacy" className="hover:text-racing-red transition-colors">
+                <Link href="/privacy" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="hover:text-racing-red transition-colors">
+                <Link href="/terms" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
                   Terms of Service
                 </Link>
-                <Link href="/cookies" className="hover:text-racing-red transition-colors">
+                <Link href="/cookies" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
                   Cookie Policy
                 </Link>
               </div>
             </div>
-            <div className="flex items-center space-x-2 text-sm text-racing-gray-400">
+            <div className="flex items-center space-x-2 text-sm text-racing-gray-400 dark:text-racing-gray-500">
               <span>Made with</span>
-              <span className="text-racing-red">❤️</span>
+              <span className="text-racing-red dark:text-racing-red-light">❤️</span>
               <span>for motorsport</span>
             </div>
           </div>

@@ -5,14 +5,15 @@ import { extractData, getMediaUrl, formatEventDate } from '@/lib/api-utils'
 import { DriverDetailClient } from '@/components/team/driver-detail-client'
 
 interface DriverDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: DriverDetailPageProps): Promise<Metadata> {
   try {
-    const response = await api.drivers.get(params.slug)
+    const { slug } = await params
+    const response = await api.drivers.get(slug)
     const driver = extractData(response)
 
     if (!driver) {
@@ -22,24 +23,24 @@ export async function generateMetadata({ params }: DriverDetailPageProps): Promi
       }
     }
 
-    const imageUrl = driver.profile_image?.url || '/images/team/default-driver.jpg'
-    const description = `${driver.name} - Professional ${driver.role} at CBK Racing. Age: ${driver.age}, Experience: ${driver.experience_years} years. ${driver.bio}`
+    const imageUrl = driver.photos[0]?.url || '/images/team/default-driver.jpg'
+    const description = `${driver.full_name} - Professional ${driver.category} driver at CBK Racing. From ${driver.profile.nationality}, Age: ${driver.profile.age}, Experience: ${driver.profile.years_experience} years.`
 
     return {
-      title: `${driver.name} - ${driver.role}`,
+      title: `${driver.full_name} - ${driver.category} Driver`,
       description,
       keywords: [
-        driver.name,
-        driver.role,
+        driver.full_name,
+        driver.category,
         'CBK Racing',
         'professional driver',
         'go-kart racing',
         'motorsport',
         'racing team',
-        driver.nationality
+        driver.profile.nationality
       ],
       openGraph: {
-        title: `${driver.name} - CBK Racing ${driver.role}`,
+        title: `${driver.full_name} - CBK Racing ${driver.category}`,
         description,
         type: 'profile',
         images: [
@@ -47,18 +48,18 @@ export async function generateMetadata({ params }: DriverDetailPageProps): Promi
             url: imageUrl,
             width: 1200,
             height: 630,
-            alt: `${driver.name} - Professional ${driver.role} at CBK Racing`,
+            alt: `${driver.full_name} - Professional ${driver.category} at CBK Racing`,
           }
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${driver.name} - CBK Racing`,
+        title: `${driver.full_name} - CBK Racing`,
         description,
         images: [imageUrl],
       },
       alternates: {
-        canonical: `/team/${params.slug}`,
+        canonical: `/team/${slug}`,
       },
     }
   } catch (error) {
@@ -70,11 +71,12 @@ export async function generateMetadata({ params }: DriverDetailPageProps): Promi
 }
 
 export default async function DriverDetailPage({ params }: DriverDetailPageProps) {
+  const { slug } = await params
   let driver
   let error = null
 
   try {
-    const response = await api.drivers.get(params.slug)
+    const response = await api.drivers.get(slug)
     driver = extractData(response)
   } catch (err) {
     console.error('Failed to fetch driver:', err)
@@ -123,9 +125,7 @@ export default async function DriverDetailPage({ params }: DriverDetailPageProps
     podiumRate: driver.statistics.total_races > 0
       ? ((driver.statistics.podiums / driver.statistics.total_races) * 100).toFixed(1)
       : '0.0',
-    averagePosition: driver.statistics.total_races > 0
-      ? (driver.statistics.average_position || 0).toFixed(1)
-      : 'N/A',
+    averagePosition: 'N/A',
   }
 
   // Career highlights and achievements
@@ -156,7 +156,7 @@ export default async function DriverDetailPage({ params }: DriverDetailPageProps
   const bioSections = [
     {
       title: 'Background',
-      content: driver.profile.bio || `${driver.full_name} is a dedicated karting professional from ${driver.profile.hometown}, ${driver.profile.nationality}. With ${driver.profile.years_experience} years of experience in competitive karting, they have established themselves as a formidable competitor in the ${driver.category} category.`,
+      content: `${driver.full_name} is a dedicated karting professional from ${driver.profile.hometown}, ${driver.profile.nationality}. With ${driver.profile.years_experience} years of experience in competitive karting, they have established themselves as a formidable competitor in the ${driver.category} category.`,
     },
     {
       title: 'Racing Career',
@@ -180,48 +180,3 @@ export default async function DriverDetailPage({ params }: DriverDetailPageProps
   )
 }
 
-// Generate metadata for SEO
-export async function generateMetadata({ params }: DriverDetailPageProps) {
-  try {
-    const response = await api.drivers.get(params.slug)
-    const driver = extractData(response)
-
-    return {
-      title: `${driver.full_name} - Professional Karting Driver | CBK Racing`,
-      description: `Meet ${driver.full_name}, a ${driver.category} category karting driver from ${driver.profile.nationality}. With ${driver.statistics.wins} wins and ${driver.statistics.podiums} podiums, they're a key member of the CBK Racing team.`,
-      keywords: [
-        driver.full_name,
-        driver.category,
-        'karting driver',
-        'professional racing',
-        'CBK Racing',
-        driver.profile.nationality,
-        'motorsport',
-        'go-kart racing'
-      ],
-      openGraph: {
-        title: `${driver.full_name} - CBK Racing Driver`,
-        description: `Professional karting driver in ${driver.category} category with ${driver.statistics.wins} wins`,
-        images: driver.photos.length > 0 ? [
-          {
-            url: getMediaUrl(driver.photos[0]),
-            width: 1200,
-            height: 630,
-            alt: `${driver.full_name} - CBK Racing driver`,
-          }
-        ] : [],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: `${driver.full_name} - CBK Racing`,
-        description: `Professional karting driver - ${driver.category} category`,
-        images: driver.photos.length > 0 ? [getMediaUrl(driver.photos[0])] : [],
-      },
-    }
-  } catch (error) {
-    return {
-      title: 'Driver Profile | CBK Racing',
-      description: 'Meet our professional karting drivers at CBK Racing.',
-    }
-  }
-}

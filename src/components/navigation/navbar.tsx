@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -15,6 +16,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
+import { ThemeToggleCompact } from '@/components/ui/theme-toggle'
 
 interface NavItem {
   title: string
@@ -140,7 +142,7 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-racing-gray-200'
+          ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-racing-gray-200 dark:border-slate-700'
           : 'bg-transparent border-transparent'
       )}
       animate={{
@@ -161,26 +163,19 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className="flex items-center space-x-3 group focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-2 rounded-lg p-1"
+              className="flex items-center group focus:outline-none rounded-lg p-1"
               onFocus={() => setFocusedItem('logo')}
               onBlur={() => setFocusedItem(null)}
             >
-              <div className="w-12 h-12 bg-racing-red rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="text-white font-bold text-xl">CBK</span>
-              </div>
-              <div className="flex flex-col">
-                <span className={cn(
-                  'font-bold text-xl transition-colors leading-tight',
-                  isScrolled ? 'text-racing-gray-900' : 'text-white racing-text-shadow'
-                )}>
-                  CBK Racing
-                </span>
-                <span className={cn(
-                  'text-xs font-medium transition-colors',
-                  isScrolled ? 'text-racing-gray-500' : 'text-racing-gray-200'
-                )}>
-                  Professional Team
-                </span>
+              <div className="relative group-hover:scale-105 transition-transform">
+                <Image
+                  src="/images/logo cbk racing png.png"
+                  alt="CBK Racing Logo"
+                  width={160}
+                  height={64}
+                  priority
+                  className="h-16 w-auto object-contain"
+                />
               </div>
             </Link>
           </motion.div>
@@ -193,21 +188,21 @@ export function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={cn(
-                      'group h-12 px-4 py-2 text-base font-medium transition-all duration-200 rounded-lg',
-                      'focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-2',
-                      'data-[state=open]:bg-racing-red/10',
+                      'group h-12 px-4 py-2 text-base font-medium transition-all duration-200 rounded-lg bg-transparent',
+                      'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
+                      'aria-expanded:bg-[#1877F2] aria-expanded:text-white data-[state=open]:!bg-[#1877F2] data-[state=open]:!text-white',
                       isScrolled
-                        ? 'text-racing-gray-900 hover:text-racing-red hover:bg-racing-red/5'
-                        : 'text-white hover:text-racing-red hover:bg-white/10',
+                        ? 'text-racing-gray-900 dark:text-white hover:text-white hover:bg-[#1877F2]'
+                        : 'text-white hover:text-white hover:bg-white/10',
                       isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts')
-                        ? 'bg-racing-red/10 text-racing-red'
+                        ? 'bg-[#1877F2]/10 text-[#1877F2]'
                         : ''
                     )}
                     onFocus={() => setFocusedItem('racing')}
                   >
                     Racing
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-racing-red"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
                       initial={{ scaleX: 0 }}
                       animate={{
                         scaleX: isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts') ? 1 : 0
@@ -216,11 +211,11 @@ export function Navbar() {
                     />
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[800px] grid-cols-3 gap-6 p-6">
+                    <div className="grid w-[800px] grid-cols-3 gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700">
                       {/* Menu Sections */}
                       {megaMenuData.racing.sections.map((section) => (
                         <div key={section.title} className="space-y-3">
-                          <h4 className="text-sm font-semibold text-racing-red uppercase tracking-wide">
+                          <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
                             {section.title}
                           </h4>
                           <div className="space-y-2">
@@ -230,8 +225,9 @@ export function Navbar() {
                                   href={item.href}
                                   className={cn(
                                     'block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none',
-                                    'transition-colors hover:bg-racing-red/5 hover:text-racing-red',
-                                    'focus:bg-racing-red/10 focus:text-racing-red',
+                                    'transition-colors hover:bg-[#1877F2] hover:text-white',
+                                    'focus:bg-[#1877F2] focus:text-white',
+                                    'dark:text-racing-gray-100 dark:hover:text-white',
                                     'group relative'
                                   )}
                                   onFocus={() => setFocusedItem(item.href)}
@@ -242,7 +238,7 @@ export function Navbar() {
                                     </div>
                                     {item.badge && (
                                       <Badge
-                                        className="ml-2 bg-racing-red text-white text-xs"
+                                        className="ml-2 bg-[#1877F2] text-white text-xs"
                                         variant="default"
                                       >
                                         {item.badge}
@@ -250,7 +246,7 @@ export function Navbar() {
                                     )}
                                   </div>
                                   {item.description && (
-                                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                                    <p className="line-clamp-2 text-xs leading-snug text-racing-gray-600 dark:text-racing-gray-400">
                                       {item.description}
                                     </p>
                                   )}
@@ -263,23 +259,178 @@ export function Navbar() {
 
                       {/* Featured Section */}
                       {megaMenuData.racing.featured && (
-                        <div className="bg-racing-gray-50 rounded-lg p-4 space-y-3">
-                          <Badge className="bg-racing-red text-white">Featured</Badge>
+                        <div className="bg-racing-gray-50 dark:bg-racing-gray-700 rounded-lg p-4 space-y-3">
+                          <Badge className="bg-[#1877F2] text-white">Featured</Badge>
                           <NavigationMenuLink asChild>
                             <Link
                               href={megaMenuData.racing.featured.href}
                               className="block space-y-2 no-underline outline-none hover:opacity-80 focus:opacity-80 transition-opacity"
                             >
-                              <div className="text-sm font-semibold text-racing-gray-900">
+                              <div className="text-sm font-semibold text-racing-gray-900 dark:text-white">
                                 {megaMenuData.racing.featured.title}
                               </div>
-                              <p className="text-xs text-racing-gray-600 leading-relaxed">
+                              <p className="text-xs text-racing-gray-600 dark:text-racing-gray-400 leading-relaxed">
                                 {megaMenuData.racing.featured.description}
                               </p>
                             </Link>
                           </NavigationMenuLink>
                         </div>
                       )}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Products Mega Menu */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger
+                    className={cn(
+                      'group h-12 px-4 py-2 text-base font-medium transition-all duration-200 rounded-lg bg-transparent',
+                      'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
+                      'aria-expanded:bg-[#1877F2] aria-expanded:text-white data-[state=open]:!bg-[#1877F2] data-[state=open]:!text-white',
+                      isScrolled
+                        ? 'text-racing-gray-900 dark:text-white hover:text-white hover:bg-[#1877F2]'
+                        : 'text-white hover:text-white hover:bg-white/10',
+                      isActivePath('/products') ? 'bg-[#1877F2]/10 text-[#1877F2]' : ''
+                    )}
+                    onFocus={() => setFocusedItem('products')}
+                  >
+                    Products
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: isActivePath('/products') ? 1 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[600px] grid-cols-2 gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700">
+                      {/* Left Column */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
+                          Componenti Kart
+                        </h4>
+                        <div className="space-y-2">
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/telaio-accessori"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Telaio e Accessori</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Telai, ammortizzatori e componenti strutturali
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/motore-accessori"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Motore e Accessori</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Componenti motore e ricambi per prestazioni
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/carburatori"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Carburatori</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Carburatori e sistemi di alimentazione
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/radiatori-accessori"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Radiatori e Accessori</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Sistemi di raffreddamento e componenti
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/cuscinetti-paraoli-molle"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Cuscinetti Paraoli Molle</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Componenti meccanici e sospensioni
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+
+                      {/* Right Column */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
+                          Equipaggiamento
+                        </h4>
+                        <div className="space-y-2">
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/pneumatici-gomme"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Pneumatici / Gomme</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Pneumatici per tutte le condizioni di gara
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/telemetrie-crono"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Telemetrie & Crono</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Sistemi di telemetria e cronometraggio
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/motori-nuovi"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Motori Nuovi</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Motori nuovi per ogni categoria
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/telai-nuovi"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Telai Nuovi</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Telai completi per competizione
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/products/kart-completi"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                            >
+                              <div className="text-sm font-medium">Kart Completi</div>
+                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                Kart pronti per la pista
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -297,19 +448,19 @@ export function Navbar() {
                       href={item.href}
                       className={cn(
                         'group relative inline-flex h-12 w-max items-center justify-center rounded-lg px-4 py-2 text-base font-medium',
-                        'transition-all duration-200 hover:bg-racing-red/5',
-                        'focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-2',
+                        'transition-all duration-200 hover:bg-[#1877F2]',
+                        'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
                         isScrolled
-                          ? 'text-racing-gray-900 hover:text-racing-red'
-                          : 'text-white hover:text-racing-red',
-                        isActivePath(item.href) ? 'text-racing-red' : ''
+                          ? 'text-racing-gray-900 dark:text-white hover:text-white'
+                          : 'text-white hover:text-white',
+                        isActivePath(item.href) ? 'text-[#1877F2]' : ''
                       )}
                       onFocus={() => setFocusedItem(item.href)}
                       onBlur={() => setFocusedItem(null)}
                     >
                       {item.title}
                       <motion.div
-                        className="absolute bottom-2 left-4 right-4 h-0.5 bg-racing-red"
+                        className="absolute bottom-2 left-4 right-4 h-0.5 bg-[#1877F2]"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: isActivePath(item.href) ? 1 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -326,11 +477,14 @@ export function Navbar() {
             <Button
               variant="default"
               size="lg"
-              className="hidden md:flex bg-racing-red hover:bg-racing-red/90 text-white font-semibold px-6 py-3 h-12"
+              className="hidden md:flex bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-semibold px-6 py-3 h-12"
               asChild
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
+
+            {/* Theme Toggle */}
+            <ThemeToggleCompact isScrolled={isScrolled} />
 
             {/* Mobile Menu Button */}
             <Button
@@ -338,7 +492,7 @@ export function Navbar() {
               size="icon"
               className={cn(
                 'lg:hidden h-12 w-12',
-                isScrolled ? 'text-racing-gray-900' : 'text-white'
+                isScrolled ? 'text-racing-gray-900 dark:text-white' : 'text-white'
               )}
               aria-label="Open mobile menu"
             >

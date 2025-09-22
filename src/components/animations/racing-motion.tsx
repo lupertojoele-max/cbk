@@ -46,7 +46,7 @@ export function RacingFadeIn({
       transition={{
         duration,
         delay,
-        ease: racingEasing.outRacing
+        ease: 'easeOut'
       }}
       className={className}
     >
@@ -80,7 +80,7 @@ export function RacingStagger({
           opacity: 1,
           transition: {
             staggerChildren: staggerDelay,
-            ease: racingEasing.outRacing
+            ease: 'easeOut'
           }
         }
       }}
@@ -106,7 +106,7 @@ export function RacingStaggerItem({ children, className = "" }: RacingStaggerIte
           x: 0,
           transition: {
             duration: racingDuration.smooth,
-            ease: racingEasing.outRacing
+            ease: 'easeOut'
           }
         }
       }}
@@ -134,7 +134,7 @@ export function RacingLift({
         y: liftHeight,
         transition: {
           duration: racingDuration.fast,
-          ease: racingEasing.outRacing
+          ease: 'easeOut'
         }
       }}
       className={className}
@@ -161,7 +161,7 @@ export function RacingScale({
         scale,
         transition: {
           duration: racingDuration.fast,
-          ease: racingEasing.inOutRacing
+          ease: 'easeInOut'
         }
       }}
       className={className}
@@ -207,7 +207,7 @@ export function RacingSlideIn({
       transition={{
         duration: racingDuration.smooth,
         delay,
-        ease: racingEasing.outRacing
+        ease: 'easeOut'
       }}
       className={className}
     >
@@ -230,7 +230,7 @@ export function RacingPageTransition({ children, className = "" }: RacingPageTra
         exit={{ opacity: 0, y: -20 }}
         transition={{
           duration: racingDuration.smooth,
-          ease: racingEasing.outRacing
+          ease: 'easeOut'
         }}
         className={className}
       >
@@ -259,7 +259,7 @@ export function RacingPulse({
       transition={{
         duration,
         repeat: Infinity,
-        ease: racingEasing.inOutRacing
+        ease: 'easeInOut'
       }}
       className={className}
     >

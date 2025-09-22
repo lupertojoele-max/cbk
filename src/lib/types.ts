@@ -258,20 +258,20 @@ export interface Sponsor {
 }
 
 // API Endpoint Parameter Types
-export interface GetKartsParams {
+export interface GetKartsParams extends Record<string, unknown> {
   page?: number
   category?: string
   per_page?: number
 }
 
-export interface GetDriversParams {
+export interface GetDriversParams extends Record<string, unknown> {
   page?: number
   team_only?: boolean
   category?: string
   per_page?: number
 }
 
-export interface GetEventsParams {
+export interface GetEventsParams extends Record<string, unknown> {
   page?: number
   upcoming?: boolean
   year?: number
@@ -279,14 +279,14 @@ export interface GetEventsParams {
   per_page?: number
 }
 
-export interface GetNewsParams {
+export interface GetNewsParams extends Record<string, unknown> {
   page?: number
   category?: string
   featured?: boolean
   per_page?: number
 }
 
-export interface GetSponsorsParams {
+export interface GetSponsorsParams extends Record<string, unknown> {
   level?: string
   active_only?: boolean
 }
@@ -364,7 +364,7 @@ export interface SeasonResults {
   }
 }
 
-export interface GetResultsParams {
+export interface GetResultsParams extends Record<string, unknown> {
   season_year?: number
   driver_id?: number
   event_id?: number

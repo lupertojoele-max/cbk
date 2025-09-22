@@ -5,14 +5,15 @@ import { RelatedPosts } from '@/components/news/related-posts'
 import { getNewsItem, getNews } from '@/lib/api'
 
 interface NewsPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: NewsPostPageProps): Promise<Metadata> {
   try {
-    const response = await getNewsItem(params.slug)
+    const { slug } = await params
+    const response = await getNewsItem(slug)
     const article = response.data
 
     return {
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: NewsPostPageProps): Promise<M
         images: article.cover_image ? [article.cover_image.url] : undefined,
       },
       alternates: {
-        canonical: `/news/${params.slug}`,
+        canonical: `/news/${slug}`,
       },
     }
   } catch (error) {
@@ -55,8 +56,9 @@ export async function generateMetadata({ params }: NewsPostPageProps): Promise<M
 }
 
 export default async function NewsPostPage({ params }: NewsPostPageProps) {
+  const { slug } = await params
   try {
-    const response = await getNewsItem(params.slug)
+    const response = await getNewsItem(slug)
     const article = response.data
 
     // Fetch related posts (same category, exclude current)

@@ -78,7 +78,7 @@ export function MegaHero({
   const [isPaused, setIsPaused] = useState(false)
   const [hasVideoError, setHasVideoError] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const intervalRef = useRef<NodeJS.Timeout>()
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   // Check for reduced motion preference
   useEffect(() => {

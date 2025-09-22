@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SkipToContent } from "@/components/a11y/skip-to-content";
+import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,12 +88,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <SkipToContent />
-        <Header />
-        <main id="main-content" className="flex-1" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
+        <ThemeProviderWrapper>
+          <SkipToContent />
+          <Header />
+          <main id="main-content" className="flex-1" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+        </ThemeProviderWrapper>
       </body>
     </html>
   );

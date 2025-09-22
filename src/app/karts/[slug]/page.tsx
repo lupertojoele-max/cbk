@@ -5,14 +5,15 @@ import { extractData, getMediaUrl, formatEventDate } from '@/lib/api-utils'
 import { KartDetailClient } from '@/components/karts/kart-detail-client'
 
 interface KartDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: KartDetailPageProps): Promise<Metadata> {
   try {
-    const response = await api.karts.get(params.slug)
+    const { slug } = await params
+    const response = await api.karts.get(slug)
     const kart = extractData(response)
 
     if (!kart) {
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: KartDetailPageProps): Promise
       }
     }
 
-    const imageUrl = kart.featured_image?.url || kart.gallery[0]?.url || '/images/karts/default-kart.jpg'
+    const imageUrl = kart.gallery[0]?.url || '/images/karts/default-kart.jpg'
     const description = `${kart.name} - ${kart.specifications.brand} ${kart.specifications.model} from CBK Racing fleet. Max speed: ${kart.specifications.max_speed_kmh} km/h, Weight: ${kart.specifications.weight_kg} kg.`
 
     return {
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: KartDetailPageProps): Promise
         images: [imageUrl],
       },
       alternates: {
-        canonical: `/karts/${params.slug}`,
+        canonical: `/karts/${slug}`,
       },
     }
   } catch (error) {
@@ -71,11 +72,12 @@ export async function generateMetadata({ params }: KartDetailPageProps): Promise
 }
 
 export default async function KartDetailPage({ params }: KartDetailPageProps) {
+  const { slug } = await params
   let kart
   let error = null
 
   try {
-    const response = await api.karts.get(params.slug)
+    const response = await api.karts.get(slug)
     kart = extractData(response)
   } catch (err) {
     console.error('Failed to fetch kart:', err)
@@ -208,49 +210,3 @@ export default async function KartDetailPage({ params }: KartDetailPageProps) {
   )
 }
 
-// Generate metadata for SEO
-export async function generateMetadata({ params }: KartDetailPageProps) {
-  try {
-    const response = await api.karts.get(params.slug)
-    const kart = extractData(response)
-
-    return {
-      title: `${kart.name} - ${kart.specifications.brand} ${kart.specifications.model} | CBK Racing`,
-      description: `Discover the ${kart.name}, a ${kart.category} category go-kart from our professional racing fleet. ${kart.specifications.brand} ${kart.specifications.model} with ${kart.specifications.max_speed_kmh} km/h top speed.`,
-      keywords: [
-        kart.name,
-        kart.specifications.brand,
-        kart.specifications.model,
-        kart.category,
-        'go-kart',
-        'racing',
-        'CBK Racing',
-        'karting',
-        'motorsport'
-      ],
-      openGraph: {
-        title: `${kart.name} - Professional Go-Kart`,
-        description: `${kart.specifications.brand} ${kart.specifications.model} - ${kart.category} category racing kart`,
-        images: kart.gallery.length > 0 ? [
-          {
-            url: kart.gallery[0].url,
-            width: 1200,
-            height: 630,
-            alt: `${kart.name} go-kart`,
-          }
-        ] : [],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: `${kart.name} - CBK Racing`,
-        description: `${kart.specifications.brand} ${kart.specifications.model} racing kart`,
-        images: kart.gallery.length > 0 ? [kart.gallery[0].url] : [],
-      },
-    }
-  } catch (error) {
-    return {
-      title: 'Kart Details | CBK Racing',
-      description: 'Explore our professional go-kart racing fleet at CBK Racing.',
-    }
-  }
-}

@@ -12,7 +12,7 @@ export async function GET() {
 
     const fields = newsItems.map((news) => ({
       loc: `${siteUrl}/news/${news.slug}`,
-      lastmod: new Date(news.updated_at || news.published_at).toISOString(),
+      lastmod: new Date().toISOString(),
       changefreq: 'weekly' as const,
       priority: 0.7,
     }))

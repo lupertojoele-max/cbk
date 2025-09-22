@@ -51,7 +51,6 @@ export default function TeamPage() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   }
@@ -237,7 +236,7 @@ export default function TeamPage() {
         >
           <h2 className="text-3xl font-bold mb-4">Join Our Racing Team</h2>
           <p className="text-xl text-racing-gray-300 mb-8 max-w-2xl mx-auto">
-            Are you passionate about karting? We're always looking for talented drivers
+            Are you passionate about karting? We&apos;re always looking for talented drivers
             to join our competitive racing team across all categories.
           </p>
           <Button

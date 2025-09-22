@@ -88,7 +88,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
           {/* Footer */}
           <div className="mt-12 pt-8 border-t border-racing-gray-700">
             <p className="text-sm text-racing-gray-500">
-              CBK Racing - We'll be back on track soon! 🏎️
+              CBK Racing - We&apos;ll be back on track soon! 🏎️
             </p>
           </div>
         </div>

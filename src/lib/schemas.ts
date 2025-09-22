@@ -248,12 +248,12 @@ export const ApiResponseSchema = <T extends z.ZodTypeAny>(dataSchema: T) => z.ob
   data: dataSchema,
   meta: PaginationMetaSchema.optional(),
   links: PaginationLinksSchema.optional(),
-  filters: z.record(z.any()).optional(),
+  filters: z.record(z.string(), z.any()).optional(),
 })
 
 export const ApiErrorSchema = z.object({
   message: z.string(),
   error: z.string().optional(),
   status: z.number(),
-  errors: z.record(z.array(z.string())).optional(),
+  errors: z.record(z.string(), z.array(z.string())).optional(),
 })

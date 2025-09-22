@@ -8,7 +8,7 @@ import Image from "next/image"
 import { Clock, Eye, User, ArrowRight } from "lucide-react"
 
 export async function NewsList() {
-  let articles = []
+  let articles: any[] = []
   let error = null
 
   try {

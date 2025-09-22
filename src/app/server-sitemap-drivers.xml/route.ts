@@ -12,7 +12,7 @@ export async function GET() {
 
     const fields = drivers.map((driver) => ({
       loc: `${siteUrl}/team/${driver.slug}`,
-      lastmod: new Date(driver.updated_at || driver.created_at).toISOString(),
+      lastmod: new Date().toISOString(),
       changefreq: 'monthly' as const,
       priority: 0.6,
     }))

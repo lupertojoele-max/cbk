@@ -58,7 +58,6 @@ export function DriverCard({ driver, index }: DriverCardProps) {
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        ease: 'easeOut',
       },
     },
   }
@@ -73,7 +72,6 @@ export function DriverCard({ driver, index }: DriverCardProps) {
       filter: 'grayscale(0%)',
       transition: {
         duration: 0.4,
-        ease: 'easeOut',
       },
     },
   }
@@ -88,7 +86,6 @@ export function DriverCard({ driver, index }: DriverCardProps) {
       y: 0,
       transition: {
         duration: 0.3,
-        ease: 'easeOut',
       },
     },
   }

@@ -212,6 +212,37 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Dark Mode Racing Colors */
+  --color-racing-red: #ff2719;
+  --color-racing-red-light: #ff4136;
+  --color-racing-red-dark: #dc2626;
+  --color-racing-black: #ffffff;
+  --color-racing-carbon: #f5f5f5;
+  --color-racing-charcoal: #e5e5e5;
+  --color-racing-white: #0f172a;
+  --color-racing-pearl: #1e293b;
+  --color-racing-gold: #fbbf24;
+  --color-racing-gold-light: #fcd34d;
+  --color-racing-gold-dark: #f59e0b;
+  --color-racing-blue: #3b82f6;
+  --color-racing-blue-light: #60a5fa;
+  --color-racing-blue-dark: #1d4ed8;
+  --color-racing-orange: #f97316;
+  --color-racing-orange-light: #fb923c;
+  --color-racing-orange-dark: #ea580c;
+
+  /* Dark Mode Gray Scale */
+  --color-racing-gray-50: #0f172a;
+  --color-racing-gray-100: #1e293b;
+  --color-racing-gray-200: #334155;
+  --color-racing-gray-300: #475569;
+  --color-racing-gray-400: #64748b;
+  --color-racing-gray-500: #94a3b8;
+  --color-racing-gray-600: #cbd5e1;
+  --color-racing-gray-700: #e2e8f0;
+  --color-racing-gray-800: #f1f5f9;
+  --color-racing-gray-900: #f8fafc;
 }
 
 @layer base {
@@ -279,7 +310,6 @@
   .border-racing-gold { border-color: var(--color-racing-gold); }
   .border-racing-blue { border-color: var(--color-racing-blue); }
 
-  .outline-racing-red { outline-color: var(--color-racing-red); }
 
   /* Racing Motion */
   .racing-transition {

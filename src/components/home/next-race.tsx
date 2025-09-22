@@ -64,7 +64,7 @@ export async function NextRace() {
             Next Race
           </h2>
           <p className="text-xl text-racing-gray-300 max-w-2xl mx-auto">
-            Don't miss our next thrilling race event
+            Don&apos;t miss our next thrilling race event
           </p>
         </div>
 

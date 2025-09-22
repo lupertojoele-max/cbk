@@ -12,7 +12,7 @@ export async function GET() {
 
     const fields = karts.map((kart) => ({
       loc: `${siteUrl}/karts/${kart.slug}`,
-      lastmod: new Date(kart.updated_at || kart.created_at).toISOString(),
+      lastmod: new Date().toISOString(),
       changefreq: 'monthly' as const,
       priority: 0.6,
     }))
