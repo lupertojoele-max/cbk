@@ -13,11 +13,12 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Image
-                src="/images/logo cbk racing png.png"
+                src="/images/cbk-logo.png"
                 alt="CBK Racing Logo"
-                width={100}
-                height={40}
-                className="h-10 w-auto object-contain"
+                width={60}
+                height={24}
+                className="h-6 w-auto object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <p className="text-racing-gray-300 dark:text-racing-gray-600 text-sm leading-relaxed">

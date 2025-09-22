@@ -34,40 +34,18 @@ const defaultSlides: HeroSlide[] = [
     title: 'Racing Excellence',
     subtitle: 'CBK Racing Championship 2024',
     description: 'Experience the thrill of professional go-kart racing with cutting-edge technology and passionate drivers competing at the highest level.',
-    image: '/images/hero-racing.jpg',
+    image: '/images/kart-racing-hero.png',
     cta: {
       primary: { text: 'View Results', href: '/results' },
       secondary: { text: 'Meet Drivers', href: '/drivers' },
     },
     badge: 'Live Now',
   },
-  {
-    id: 'events',
-    title: 'Upcoming Events',
-    subtitle: 'Italian Karting Championship',
-    description: 'Join us for the next round of championship racing at iconic circuits across Italy. Witness speed, precision, and determination.',
-    image: '/images/hero-events.jpg',
-    cta: {
-      primary: { text: 'Event Calendar', href: '/events' },
-      secondary: { text: 'Buy Tickets', href: '/tickets' },
-    },
-  },
-  {
-    id: 'team',
-    title: 'Professional Team',
-    subtitle: 'World-Class Drivers & Technology',
-    description: 'Our team combines years of racing experience with state-of-the-art go-karts and engineering excellence.',
-    image: '/images/hero-team.jpg',
-    cta: {
-      primary: { text: 'Our Fleet', href: '/karts' },
-      secondary: { text: 'Team History', href: '/about' },
-    },
-  },
 ]
 
 export function MegaHero({
   videoSrc = '/hero.mp4',
-  videoPoster = '/images/hero-poster.jpg',
+  videoPoster = '/images/telaio-nuovo.png',
   slides = defaultSlides,
   autoplayInterval = 8000,
   className,
@@ -202,8 +180,13 @@ export function MegaHero({
             className="absolute inset-0"
           >
             <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${currentSlideData.image})` }}
+              className="w-full h-full bg-no-repeat bg-center"
+              style={{
+                backgroundImage: `url(${currentSlideData.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                minHeight: '100vh'
+              }}
               role="img"
               aria-label={currentSlideData.title}
             />
@@ -292,7 +275,7 @@ export function MegaHero({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-racing-gray-900 font-semibold px-8 py-4 h-14 text-lg"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-black font-semibold px-8 py-4 h-14 text-lg"
                   asChild
                 >
                   <Link href={currentSlideData.cta.secondary.href}>

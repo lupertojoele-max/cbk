@@ -169,12 +169,13 @@ export function Navbar() {
             >
               <div className="relative group-hover:scale-105 transition-transform">
                 <Image
-                  src="/images/logo cbk racing png.png"
+                  src="/images/cbk-logo.png"
                   alt="CBK Racing Logo"
-                  width={200}
-                  height={80}
+                  width={160}
+                  height={64}
                   priority
-                  className="h-20 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             </Link>
