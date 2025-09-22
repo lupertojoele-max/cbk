@@ -225,15 +225,15 @@ export function Navbar() {
                                   href={item.href}
                                   className={cn(
                                     'block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none',
-                                    'transition-colors hover:bg-[#1877F2] hover:text-white',
-                                    'focus:bg-[#1877F2] focus:text-white',
-                                    'dark:text-racing-gray-100 dark:hover:text-white',
+                                    'transition-colors hover:bg-[#1877F2]',
+                                    'focus:bg-[#1877F2]',
+                                    'dark:text-racing-gray-100',
                                     'group relative'
                                   )}
                                   onFocus={() => setFocusedItem(item.href)}
                                 >
                                   <div className="flex items-center justify-between">
-                                    <div className="text-sm font-medium leading-none">
+                                    <div className="text-sm font-medium leading-none text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
                                       {item.title}
                                     </div>
                                     {item.badge && (
@@ -313,9 +313,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/telaio-accessori"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Telaio e Accessori</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Telaio e Accessori</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Telai, ammortizzatori e componenti strutturali
                               </p>
@@ -324,9 +324,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/motore-accessori"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Motore e Accessori</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Motore e Accessori</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Componenti motore e ricambi per prestazioni
                               </p>
@@ -335,9 +335,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/carburatori"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Carburatori</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Carburatori</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Carburatori e sistemi di alimentazione
                               </p>
@@ -346,9 +346,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/radiatori-accessori"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Radiatori e Accessori</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Radiatori e Accessori</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Sistemi di raffreddamento e componenti
                               </p>
@@ -357,9 +357,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/cuscinetti-paraoli-molle"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Cuscinetti Paraoli Molle</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Cuscinetti Paraoli Molle</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Componenti meccanici e sospensioni
                               </p>
@@ -377,9 +377,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/pneumatici-gomme"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Pneumatici / Gomme</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Pneumatici / Gomme</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Pneumatici per tutte le condizioni di gara
                               </p>
@@ -388,9 +388,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/telemetrie-crono"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Telemetrie & Crono</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Telemetrie & Crono</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Sistemi di telemetria e cronometraggio
                               </p>
@@ -399,9 +399,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/motori-nuovi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Motori Nuovi</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Motori Nuovi</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Motori nuovi per ogni categoria
                               </p>
@@ -410,9 +410,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/telai-nuovi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Telai Nuovi</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Telai Nuovi</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Telai completi per competizione
                               </p>
@@ -421,9 +421,9 @@ export function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/kart-completi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] hover:text-white focus:bg-[#1877F2] focus:text-white dark:text-racing-gray-100 dark:hover:text-white"
+                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
                             >
-                              <div className="text-sm font-medium">Kart Completi</div>
+                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Kart Completi</div>
                               <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
                                 Kart pronti per la pista
                               </p>
