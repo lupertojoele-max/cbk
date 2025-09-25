@@ -169,12 +169,12 @@ export function Navbar() {
             >
               <div className="relative group-hover:scale-105 transition-transform">
                 <Image
-                  src="/images/cbk-logo.png"
+                  src={isScrolled ? "/images/cbk-logo-black.png" : "/images/cbk-logo.png"}
                   alt="CBK Racing Logo"
                   width={160}
                   height={64}
                   priority
-                  className="h-16 w-auto object-contain"
+                  className="h-16 w-auto object-contain transition-opacity duration-300"
                   style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
