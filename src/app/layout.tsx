@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SkipToContent } from "@/components/a11y/skip-to-content";
 import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper";
+import { InstallPrompt } from "@/components/pwa/install-prompt";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,6 +96,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <InstallPrompt />
         </ThemeProviderWrapper>
       </body>
     </html>

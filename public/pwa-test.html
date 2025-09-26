@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBK Racing PWA Test</title>
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1877F2">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        button { padding: 10px 20px; margin: 5px; border: none; border-radius: 4px; background: #1877F2; color: white; cursor: pointer; }
+        button:hover { background: #1565c0; }
+        #log { background: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; border-radius: 4px; max-height: 300px; overflow-y: auto; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🏁 CBK Racing PWA Test</h1>
+
+    <div id="pwa-status"></div>
+
+    <div style="margin: 20px 0;">
+        <button onclick="testServiceWorker()">Test Service Worker</button>
+        <button onclick="testManifest()">Test Manifest</button>
+        <button onclick="testInstallability()">Test Install Prompt</button>
+        <button onclick="clearCache()">Clear Cache</button>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+        const log = (message, type = 'info') => {
+            const timestamp = new Date().toLocaleTimeString();
+            const logDiv = document.getElementById('log');
+            logDiv.innerHTML += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            console.log(message);
+        };
+
+        const updateStatus = (html) => {
+            document.getElementById('pwa-status').innerHTML = html;
+        };
+
+        // Initial PWA status check
+        window.addEventListener('load', () => {
+            log('CBK Racing PWA Test started');
+            checkPWASupport();
+        });
+
+        function checkPWASupport() {
+            let status = '';
+
+            // Service Worker support
+            if ('serviceWorker' in navigator) {
+                status += '<div class="status success">✓ Service Worker supported</div>';
+                log('Service Worker API supported');
+            } else {
+                status += '<div class="status error">✗ Service Worker not supported</div>';
+                log('Service Worker API not supported');
+            }
+
+            // Push notification support
+            if ('PushManager' in window) {
+                status += '<div class="status success">✓ Push notifications supported</div>';
+                log('Push Manager supported');
+            } else {
+                status += '<div class="status info">⚠ Push notifications not supported</div>';
+                log('Push Manager not supported');
+            }
+
+            // Install prompt support
+            if ('BeforeInstallPromptEvent' in window) {
+                status += '<div class="status success">✓ Install prompt supported</div>';
+                log('BeforeInstallPromptEvent supported');
+            } else {
+                status += '<div class="status info">⚠ Install prompt may not be available</div>';
+                log('BeforeInstallPromptEvent not available');
+            }
+
+            // Check if app is in standalone mode
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                                window.navigator.standalone === true;
+
+            if (isStandalone) {
+                status += '<div class="status success">✓ Running in standalone mode (PWA installed)</div>';
+                log('App running in standalone mode');
+            } else {
+                status += '<div class="status info">ℹ Running in browser mode</div>';
+                log('App running in browser mode');
+            }
+
+            updateStatus(status);
+        }
+
+        async function testServiceWorker() {
+            log('Testing Service Worker registration...');
+
+            if (!('serviceWorker' in navigator)) {
+                log('Service Worker not supported', 'error');
+                return;
+            }
+
+            try {
+                const registration = await navigator.serviceWorker.register('/sw.js');
+                log(`Service Worker registered successfully: ${registration.scope}`);
+
+                if (registration.installing) {
+                    log('Service Worker installing...');
+                } else if (registration.waiting) {
+                    log('Service Worker waiting to activate');
+                } else if (registration.active) {
+                    log('Service Worker active and running');
+                }
+
+                // Test messaging
+                if (registration.active) {
+                    const messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = (event) => {
+                        if (event.data.type === 'VERSION') {
+                            log(`Service Worker version: ${event.data.version}`);
+                        }
+                    };
+                    registration.active.postMessage({ type: 'GET_VERSION' }, [messageChannel.port2]);
+                }
+
+            } catch (error) {
+                log(`Service Worker registration failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function testManifest() {
+            log('Testing Web App Manifest...');
+
+            try {
+                const response = await fetch('/site.webmanifest');
+                if (response.ok) {
+                    const manifest = await response.json();
+                    log('Manifest loaded successfully');
+                    log(`App name: ${manifest.name}`);
+                    log(`Short name: ${manifest.short_name}`);
+                    log(`Display mode: ${manifest.display}`);
+                    log(`Theme color: ${manifest.theme_color}`);
+                    log(`Icons: ${manifest.icons.length} icon(s) defined`);
+                    log(`Shortcuts: ${manifest.shortcuts ? manifest.shortcuts.length : 0} shortcut(s) defined`);
+                } else {
+                    log(`Manifest request failed: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                log(`Manifest test failed: ${error.message}`, 'error');
+            }
+        }
+
+        let installPromptEvent = null;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            log('Install prompt event received');
+            e.preventDefault();
+            installPromptEvent = e;
+        });
+
+        window.addEventListener('appinstalled', () => {
+            log('App installed successfully!');
+            installPromptEvent = null;
+            checkPWASupport();
+        });
+
+        async function testInstallability() {
+            log('Testing install prompt...');
+
+            if (!installPromptEvent) {
+                log('No install prompt available. Checking PWA install criteria...');
+
+                // Check install criteria
+                let criteriaMet = 0;
+                let totalCriteria = 0;
+
+                // HTTPS check
+                totalCriteria++;
+                if (location.protocol === 'https:' || location.hostname === 'localhost') {
+                    log('✓ Served over HTTPS (or localhost)');
+                    criteriaMet++;
+                } else {
+                    log('✗ Must be served over HTTPS');
+                }
+
+                // Service Worker check
+                totalCriteria++;
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    if (registrations.length > 0) {
+                        log('✓ Service Worker registered');
+                        criteriaMet++;
+                    } else {
+                        log('✗ Service Worker not registered');
+                    }
+                } else {
+                    log('✗ Service Worker not supported');
+                }
+
+                // Manifest check
+                totalCriteria++;
+                const manifestLink = document.querySelector('link[rel="manifest"]');
+                if (manifestLink) {
+                    log(`✓ Web App Manifest linked: ${manifestLink.href}`);
+                    criteriaMet++;
+
+                    // Test if manifest is valid
+                    try {
+                        const response = await fetch(manifestLink.href);
+                        if (response.ok) {
+                            const manifest = await response.json();
+                            log('✓ Manifest is accessible and valid JSON');
+
+                            // Check required fields
+                            if (manifest.name && manifest.start_url && manifest.display) {
+                                log('✓ Manifest has required fields (name, start_url, display)');
+                            } else {
+                                log('⚠ Manifest missing some required fields');
+                            }
+
+                            if (manifest.icons && manifest.icons.length > 0) {
+                                log(`✓ Manifest has ${manifest.icons.length} icon(s)`);
+                            } else {
+                                log('⚠ Manifest has no icons defined');
+                            }
+                        }
+                    } catch (e) {
+                        log(`⚠ Manifest fetch error: ${e.message}`);
+                    }
+                } else {
+                    log('✗ Web App Manifest not found in HTML');
+                    // Check if we can access it directly
+                    try {
+                        const response = await fetch('/site.webmanifest');
+                        if (response.ok) {
+                            log('ℹ Manifest exists at /site.webmanifest but not linked in HTML');
+                        }
+                    } catch (e) {
+                        log('✗ Manifest not accessible');
+                    }
+                }
+
+                log(`PWA Criteria: ${criteriaMet}/${totalCriteria} met`);
+
+                if (criteriaMet === totalCriteria) {
+                    log('ℹ All basic PWA criteria met. Install prompt may appear after user engagement.');
+                    log('ℹ Try navigating the site, then return to test install prompt again.');
+                    log('ℹ Or look for install icon in browser address bar (Chrome/Edge).');
+                } else {
+                    log('⚠ Not all PWA criteria are met.');
+                }
+
+                return;
+            }
+
+            try {
+                await installPromptEvent.prompt();
+                const choiceResult = await installPromptEvent.userChoice;
+
+                if (choiceResult.outcome === 'accepted') {
+                    log('User accepted the install prompt');
+                } else {
+                    log('User dismissed the install prompt');
+                }
+
+                installPromptEvent = null;
+            } catch (error) {
+                log(`Install prompt failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function clearCache() {
+            log('Clearing caches...');
+
+            if ('caches' in window) {
+                try {
+                    const cacheNames = await caches.keys();
+                    log(`Found ${cacheNames.length} cache(s)`);
+
+                    for (const cacheName of cacheNames) {
+                        await caches.delete(cacheName);
+                        log(`Deleted cache: ${cacheName}`);
+                    }
+
+                    log('All caches cleared successfully');
+                } catch (error) {
+                    log(`Failed to clear caches: ${error.message}`, 'error');
+                }
+            } else {
+                log('Cache API not supported');
+            }
+        }
+
+        // Listen for Service Worker updates
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                log('Service Worker controller changed - new version active');
+            });
+        }
+    </script>
+</body>
+</html>

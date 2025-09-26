@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBK Racing - Installable PWA Demo</title>
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1877F2">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1877F2, #42a5f5);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .install-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .install-btn {
+            background: #ffffff;
+            color: #1877F2;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .install-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .status.success {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.4);
+        }
+
+        .status.error {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid rgba(244, 67, 54, 0.4);
+        }
+
+        .status.info {
+            background: rgba(33, 150, 243, 0.2);
+            border: 1px solid rgba(33, 150, 243, 0.4);
+        }
+
+        .manual-instructions {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .manual-instructions h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .manual-instructions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .manual-instructions li {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .manual-instructions li:last-child {
+            border-bottom: none;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .pulsing {
+            animation: pulse 2s infinite;
+        }
+
+        .back-to-site {
+            margin-top: 30px;
+        }
+
+        .back-to-site a {
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-site a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏁</div>
+        <h1>CBK Racing</h1>
+        <p class="subtitle">Professional Go-Kart Racing Team</p>
+
+        <div class="install-section">
+            <h3>Install as PWA</h3>
+            <button id="install-btn" class="install-btn" onclick="installPWA()">
+                <span>📱</span>
+                Install App
+            </button>
+            <button class="install-btn" onclick="showInstructions()">
+                <span>❓</span>
+                How to Install
+            </button>
+
+            <div id="status"></div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div>Fast Loading</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div>Home Screen</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📴</div>
+                <div>Works Offline</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔔</div>
+                <div>Notifications</div>
+            </div>
+        </div>
+
+        <div id="manual-instructions" class="manual-instructions" style="display: none;">
+            <h3>Manual Installation Instructions</h3>
+            <ul id="browser-instructions">
+                <!-- Instructions will be populated by JavaScript -->
+            </ul>
+        </div>
+
+        <div class="back-to-site">
+            <a href="/">← Back to CBK Racing Website</a>
+        </div>
+    </div>
+
+    <script>
+        let installPromptEvent = null;
+        let isInstalled = false;
+
+        // Check if already installed
+        window.addEventListener('load', () => {
+            checkInstallationStatus();
+            updateInstallButton();
+        });
+
+        // Capture install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            console.log('Install prompt event received');
+            e.preventDefault();
+            installPromptEvent = e;
+            updateInstallButton();
+            showStatus('Install prompt available! Click "Install App" button.', 'success');
+        });
+
+        // Handle successful installation
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully');
+            isInstalled = true;
+            installPromptEvent = null;
+            updateInstallButton();
+            showStatus('🎉 PWA installed successfully!', 'success');
+        });
+
+        function checkInstallationStatus() {
+            // Check if running in standalone mode
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                                window.navigator.standalone === true;
+
+            if (isStandalone) {
+                isInstalled = true;
+                showStatus('✅ Already running as installed PWA!', 'success');
+            }
+        }
+
+        function updateInstallButton() {
+            const installBtn = document.getElementById('install-btn');
+
+            if (isInstalled) {
+                installBtn.textContent = '✅ Already Installed';
+                installBtn.disabled = true;
+            } else if (installPromptEvent) {
+                installBtn.textContent = '📱 Install App';
+                installBtn.disabled = false;
+                installBtn.classList.add('pulsing');
+            } else {
+                installBtn.textContent = '⏳ Waiting for Install Prompt';
+                installBtn.disabled = true;
+                installBtn.classList.remove('pulsing');
+            }
+        }
+
+        async function installPWA() {
+            if (!installPromptEvent) {
+                showStatus('Install prompt not available. Try manual installation.', 'error');
+                showInstructions();
+                return;
+            }
+
+            try {
+                await installPromptEvent.prompt();
+                const choiceResult = await installPromptEvent.userChoice;
+
+                if (choiceResult.outcome === 'accepted') {
+                    showStatus('Installing PWA...', 'info');
+                } else {
+                    showStatus('Installation cancelled by user.', 'error');
+                }
+            } catch (error) {
+                console.error('Installation failed:', error);
+                showStatus(`Installation failed: ${error.message}`, 'error');
+                showInstructions();
+            }
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        function showInstructions() {
+            const instructionsDiv = document.getElementById('manual-instructions');
+            const instructionsList = document.getElementById('browser-instructions');
+
+            // Detect browser and show appropriate instructions
+            const userAgent = navigator.userAgent.toLowerCase();
+            let instructions = [];
+
+            if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
+                instructions = [
+                    '🔍 Look for install icon in address bar (right side)',
+                    '📋 Or go to Chrome Menu → "Install CBK Racing..."',
+                    '⚙️ Or Chrome Menu → "More tools" → "Create shortcut..."',
+                    '🔧 Enable chrome://flags/#desktop-pwa-install-use-icon for better UX'
+                ];
+            } else if (userAgent.includes('firefox')) {
+                instructions = [
+                    '📋 Firefox Menu → "Install this site as an app"',
+                    '🔍 Look for install icon in address bar',
+                    '⚙️ Or Firefox Menu → "More tools" → "Install page as app"'
+                ];
+            } else if (userAgent.includes('safari')) {
+                instructions = [
+                    '📤 Safari Menu → "Share" → "Add to Home Screen"',
+                    '⚙️ Or click Share button in toolbar'
+                ];
+            } else if (userAgent.includes('edg')) {
+                instructions = [
+                    '📋 Edge Menu → "Apps" → "Install this site as an app"',
+                    '🔍 Look for install icon in address bar',
+                    '⚙️ Or Edge Menu → "Install CBK Racing"'
+                ];
+            } else {
+                instructions = [
+                    '🔍 Look for install or "Add to Home Screen" option in your browser menu',
+                    '📋 Check browser settings for PWA/App installation options',
+                    '⚙️ Some browsers show install icons in the address bar'
+                ];
+            }
+
+            instructionsList.innerHTML = instructions.map(instruction =>
+                `<li>${instruction}</li>`
+            ).join('');
+
+            instructionsDiv.style.display = 'block';
+            showStatus('Manual installation instructions shown below.', 'info');
+        }
+
+        // Force trigger install prompt after some user interaction
+        let userInteractions = 0;
+        document.addEventListener('click', () => {
+            userInteractions++;
+            if (userInteractions === 3 && !installPromptEvent && !isInstalled) {
+                showStatus('Keep interacting! Install prompt may appear with more engagement.', 'info');
+            }
+        });
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered:', registration);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>
