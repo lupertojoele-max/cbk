@@ -393,5 +393,145 @@
   .border-racing-gray-200 { border-color: var(--color-racing-gray-200); }
   .border-racing-gray-300 { border-color: var(--color-racing-gray-300); }
   .border-racing-gray-700 { border-color: var(--color-racing-gray-700); }
+
+  /* =====================================
+     SCROLLBAR UTILITIES FOR TAILWIND v4
+     ===================================== */
+
+  /* Base scrollbar styling for all browsers */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(203 213 225) rgb(241 245 249);
+  }
+
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: rgb(241 245 249);
+    border-radius: 4px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: rgb(203 213 225);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: rgb(148 163 184);
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-corner {
+    background: rgb(241 245 249);
+  }
+
+  /* Dark mode scrollbar */
+  .dark .scrollbar-custom {
+    scrollbar-color: rgb(71 85 105) rgb(30 41 59);
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-track {
+    background: rgb(30 41 59);
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: rgb(71 85 105);
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: rgb(100 116 139);
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-corner {
+    background: rgb(30 41 59);
+  }
+
+  /* Alternative minimal scrollbar for tight spaces */
+  .scrollbar-minimal {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) rgb(249 250 251);
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-thumb {
+    background: rgb(156 163 175);
+    border-radius: 3px;
+  }
+
+  .scrollbar-minimal::-webkit-scrollbar-thumb:hover {
+    background: rgb(107 114 128);
+  }
+
+  /* Hide scrollbar completely */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ========================================
+     LEGACY SUPPORT FOR EXISTING CLASSES
+     ======================================== */
+
+  /* Maintain compatibility with existing scrollbar-thin classes */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(203 213 225) rgb(241 245 249);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgb(203 213 225);
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgb(148 163 184);
+  }
+
+  /* Racing gray thumb colors */
+  .scrollbar-thumb-racing-gray-300 {
+    scrollbar-color: var(--color-racing-gray-300) transparent;
+  }
+
+  .scrollbar-thumb-racing-gray-300::-webkit-scrollbar-thumb {
+    background: var(--color-racing-gray-300);
+  }
+
+  .dark .scrollbar-thumb-racing-gray-600 {
+    scrollbar-color: var(--color-racing-gray-600) transparent;
+  }
+
+  .dark .scrollbar-thumb-racing-gray-600::-webkit-scrollbar-thumb {
+    background: var(--color-racing-gray-600);
+  }
+
+  /* Track colors */
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
