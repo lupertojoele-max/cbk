@@ -383,17 +383,35 @@ export function Navbar() {
                               </div>
                             </div>
                           </div>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/carburatori"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Carburatori</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Carburatori e sistemi di alimentazione
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
+                          <div className="group/carburatori relative">
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Carburatori
+                                  </div>
+                                  <svg className="w-4 h-4 transition-transform group-hover/carburatori:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Carburatori e sistemi di alimentazione
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                            <div className="absolute left-full top-0 ml-2 w-64 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover/carburatori:opacity-100 group-hover/carburatori:visible transition-all duration-200 z-50">
+                              <div className="p-3 max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-racing-gray-300 dark:scrollbar-thumb-racing-gray-600 scrollbar-track-transparent">
+                                <div className="space-y-2">
+                                  <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Attrezzatura Carburatori</Link>
+                                  <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Dellorto e ricambi</Link>
+                                  <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori IBEA e ricambi</Link>
+                                  <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Tillotson e ricambi</Link>
+                                  <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Tryton e ricambi</Link>
+                                  <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori WALBRO e ricambi</Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/radiatori-accessori"
