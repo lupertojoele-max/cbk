@@ -175,7 +175,6 @@ export function Navbar() {
                   height={64}
                   priority
                   className="h-16 w-auto object-contain transition-opacity duration-300"
-                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             </Link>
