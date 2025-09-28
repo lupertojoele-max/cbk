@@ -421,28 +421,28 @@ export function Navbar() {
 
                       {/* Middle Column - Submenu */}
                       {activeSubmenu && (
-                        <div className="space-y-3">
+                        <div className="space-y-3 bg-[#1877F2] p-4 rounded-lg">
                           {/* Telaio Submenu */}
                           {activeSubmenu === 'telaio' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide mb-3">
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
                                 Telaio e Accessori
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Freni e Accessori</Link>
-                                <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
-                                <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Assali chiavette e cuscinetti</Link>
-                                <Link href="/products/telaio-accessori/corone-catene-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Corone, Catene e accessori</Link>
-                                <Link href="/products/telaio-accessori/carenature-staffe-e-paraurti" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carenature, staffe e paraurti</Link>
-                                <Link href="/products/telaio-accessori/leve-cambio-e-frizione" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Leve cambio e frizione</Link>
-                                <Link href="/products/telaio-accessori/pedali-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Pedali e accessori</Link>
-                                <Link href="/products/telaio-accessori/piantone-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Piantone e Accessori</Link>
-                                <Link href="/products/telaio-accessori/portacorona-e-porta-disco" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Portacorona e Porta disco</Link>
-                                <Link href="/products/telaio-accessori/serbatoio-e-tubi-benzina" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Serbatoio e Tubi Benzina</Link>
-                                <Link href="/products/telaio-accessori/sedili-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Sedili e accessori</Link>
-                                <Link href="/products/telaio-accessori/uniball" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Uniball</Link>
-                                <Link href="/products/telaio-accessori/volanti-e-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Volanti e accessori</Link>
-                                <Link href="/products/telaio-accessori/barra-stabilizzatrici" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Barra stabilizzatrici</Link>
+                                <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Freni e Accessori</Link>
+                                <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
+                                <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Assali chiavette e cuscinetti</Link>
+                                <Link href="/products/telaio-accessori/corone-catene-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Corone, Catene e accessori</Link>
+                                <Link href="/products/telaio-accessori/carenature-staffe-e-paraurti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carenature, staffe e paraurti</Link>
+                                <Link href="/products/telaio-accessori/leve-cambio-e-frizione" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Leve cambio e frizione</Link>
+                                <Link href="/products/telaio-accessori/pedali-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pedali e accessori</Link>
+                                <Link href="/products/telaio-accessori/piantone-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Piantone e Accessori</Link>
+                                <Link href="/products/telaio-accessori/portacorona-e-porta-disco" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Portacorona e Porta disco</Link>
+                                <Link href="/products/telaio-accessori/serbatoio-e-tubi-benzina" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Serbatoio e Tubi Benzina</Link>
+                                <Link href="/products/telaio-accessori/sedili-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Sedili e accessori</Link>
+                                <Link href="/products/telaio-accessori/uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Uniball</Link>
+                                <Link href="/products/telaio-accessori/volanti-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Volanti e accessori</Link>
+                                <Link href="/products/telaio-accessori/barra-stabilizzatrici" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Barra stabilizzatrici</Link>
                               </div>
                             </div>
                           )}
@@ -450,16 +450,16 @@ export function Navbar() {
                           {/* Cuscinetti Submenu */}
                           {activeSubmenu === 'cuscinetti' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide mb-3">
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
                                 Cuscinetti Paraoli Molle
                               </h4>
-                              <div className="space-y-2 max-h-52 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/cuscinetti-paraoli-molle/molle" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Molle</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-telaio" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Cuscinetti Telaio</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-motore" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Cuscinetti Motore</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/snodi-sferici-uniball" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Snodi Sferici, Uniball</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/paraoli-anelli-tenuta" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Paraoli, Anelli Tenuta</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/gabbie-a-rulli" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Gabbie a Rulli</Link>
+                              <div className="space-y-2">
+                                <Link href="/products/cuscinetti-paraoli-molle/molle" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Molle</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-telaio" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cuscinetti Telaio</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cuscinetti Motore</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/snodi-sferici-uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Snodi Sferici, Uniball</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/paraoli-anelli-tenuta" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Paraoli, Anelli Tenuta</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/gabbie-a-rulli" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Gabbie a Rulli</Link>
                               </div>
                             </div>
                           )}
@@ -467,22 +467,22 @@ export function Navbar() {
                           {/* Motore Submenu */}
                           {activeSubmenu === 'motore' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide mb-3">
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
                                 Motore e Accessori
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/motore-accessori/ricambi-generici-motore" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Ricambi Generici Motore</Link>
-                                <Link href="/products/motore-accessori/iame" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">IAME</Link>
-                                <Link href="/products/motore-accessori/tm-racing" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">TM RACING</Link>
-                                <Link href="/products/motore-accessori/bmb-bluebird" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">BMB / BLUEBIRD</Link>
-                                <Link href="/products/motore-accessori/rotax" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">ROTAX</Link>
-                                <Link href="/products/motore-accessori/vortex" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">VORTEX</Link>
-                                <Link href="/products/motore-accessori/comer" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">COMER</Link>
-                                <Link href="/products/motore-accessori/lke-lenzo" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">LKE (LENZO)</Link>
-                                <Link href="/products/motore-accessori/maxter" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">MAXTER</Link>
-                                <Link href="/products/motore-accessori/modena-engines" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">MODENA ENGINES</Link>
-                                <Link href="/products/motore-accessori/wtp-60" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">WTP 60</Link>
-                                <Link href="/products/motore-accessori/pavesi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">PAVESI</Link>
+                                <Link href="/products/motore-accessori/ricambi-generici-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Ricambi Generici Motore</Link>
+                                <Link href="/products/motore-accessori/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">IAME</Link>
+                                <Link href="/products/motore-accessori/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">TM RACING</Link>
+                                <Link href="/products/motore-accessori/bmb-bluebird" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">BMB / BLUEBIRD</Link>
+                                <Link href="/products/motore-accessori/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">ROTAX</Link>
+                                <Link href="/products/motore-accessori/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">VORTEX</Link>
+                                <Link href="/products/motore-accessori/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">COMER</Link>
+                                <Link href="/products/motore-accessori/lke-lenzo" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">LKE (LENZO)</Link>
+                                <Link href="/products/motore-accessori/maxter" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">MAXTER</Link>
+                                <Link href="/products/motore-accessori/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">MODENA ENGINES</Link>
+                                <Link href="/products/motore-accessori/wtp-60" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">WTP 60</Link>
+                                <Link href="/products/motore-accessori/pavesi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">PAVESI</Link>
                               </div>
                             </div>
                           )}
@@ -490,16 +490,16 @@ export function Navbar() {
                           {/* Carburatori Submenu */}
                           {activeSubmenu === 'carburatori' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide mb-3">
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
                                 Carburatori
                               </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Attrezzatura Carburatori</Link>
-                                <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Dellorto e ricambi</Link>
-                                <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori IBEA e ricambi</Link>
-                                <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Tillotson e ricambi</Link>
-                                <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori Tryton e ricambi</Link>
-                                <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Carburatori WALBRO e ricambi</Link>
+                              <div className="space-y-2">
+                                <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Attrezzatura Carburatori</Link>
+                                <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Dellorto e ricambi</Link>
+                                <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori IBEA e ricambi</Link>
+                                <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Tillotson e ricambi</Link>
+                                <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Tryton e ricambi</Link>
+                                <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori WALBRO e ricambi</Link>
                               </div>
                             </div>
                           )}
@@ -507,16 +507,16 @@ export function Navbar() {
                           {/* Radiatori Submenu */}
                           {activeSubmenu === 'radiatori' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide mb-3">
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
                                 Radiatori e Accessori
                               </h4>
-                              <div className="space-y-2 max-h-52 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/radiatori-accessori/radiatori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Radiatori</Link>
-                                <Link href="/products/radiatori-accessori/staffe-attacchi-radiatore" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Staffe & Attacchi Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tubi-radiatore-acqua" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Tubi Radiatore Acqua</Link>
-                                <Link href="/products/radiatori-accessori/pompa-acqua-accessori" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Pompa acqua & Accessori</Link>
-                                <Link href="/products/radiatori-accessori/accessori-per-radiatore" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Accessori per Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tendine-radiatore" className="block px-3 py-2 text-xs font-medium text-racing-gray-700 dark:text-racing-gray-300 hover:bg-[#1877F2] hover:text-white rounded transition-colors">Tendine Radiatore</Link>
+                              <div className="space-y-2">
+                                <Link href="/products/radiatori-accessori/radiatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Radiatori</Link>
+                                <Link href="/products/radiatori-accessori/staffe-attacchi-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Staffe & Attacchi Radiatore</Link>
+                                <Link href="/products/radiatori-accessori/tubi-radiatore-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Tubi Radiatore Acqua</Link>
+                                <Link href="/products/radiatori-accessori/pompa-acqua-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pompa acqua & Accessori</Link>
+                                <Link href="/products/radiatori-accessori/accessori-per-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Accessori per Radiatore</Link>
+                                <Link href="/products/radiatori-accessori/tendine-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Tendine Radiatore</Link>
                               </div>
                             </div>
                           )}
