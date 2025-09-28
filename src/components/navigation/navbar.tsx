@@ -305,12 +305,12 @@ export function Navbar() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div
-                      className={`grid gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700 transition-all duration-300 ${
+                      className={`grid gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700 transition-all duration-300 mx-auto ${
                         activeSubmenu ? 'w-[900px] grid-cols-3' : 'w-[600px] grid-cols-2'
                       }`}
                       onMouseLeave={() => setActiveSubmenu(null)}
                     >
-                      {/* Left Column */}
+                      {/* Column 1 - Left Items */}
                       <div className="space-y-3">
                         <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
                           Componenti Kart
@@ -419,7 +419,7 @@ export function Navbar() {
                         </div>
                       </div>
 
-                      {/* Middle Column - Submenu */}
+                      {/* Column 2 - Central Submenu */}
                       {activeSubmenu && (
                         <div className="space-y-3 bg-[#1877F2] p-4 rounded-lg">
                           {/* Telaio Submenu */}
@@ -520,26 +520,57 @@ export function Navbar() {
                               </div>
                             </div>
                           )}
+
+                          {/* Pneumatici Submenu */}
+                          {activeSubmenu === 'pneumatici' && (
+                            <div>
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+                                Pneumatici / Gomme
+                              </h4>
+                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
+                                <Link href="/products/pneumatici-gomme/lecont" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici LeCont</Link>
+                                <Link href="/products/pneumatici-gomme/vega" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Vega</Link>
+                                <Link href="/products/pneumatici-gomme/maxxis" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Maxxis</Link>
+                                <Link href="/products/pneumatici-gomme/mg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici MG</Link>
+                                <Link href="/products/pneumatici-gomme/komet" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Komet</Link>
+                                <Link href="/products/pneumatici-gomme/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Easykart</Link>
+                                <Link href="/products/pneumatici-gomme/bridgestone" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Bridgestone</Link>
+                                <Link href="/products/pneumatici-gomme/dunlop" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Dunlop</Link>
+                                <Link href="/products/pneumatici-gomme/accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Accessori pneumatici</Link>
+                                <Link href="/products/pneumatici-gomme/attrezzatura" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Attrezzatura pneumatici</Link>
+                              </div>
+                            </div>
+                          )}
+
                         </div>
                       )}
 
-                      {/* Right Column */}
+                      {/* Column 3 - Right Items */}
                       <div className="space-y-3">
                         <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
                           Equipaggiamento
                         </h4>
                         <div className="space-y-2">
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/pneumatici-gomme"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Pneumatici / Gomme</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Pneumatici per tutte le condizioni di gara
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
+                          <div
+                            className="group/pneumatici relative"
+                            onMouseEnter={() => setActiveSubmenu('pneumatici')}
+                          >
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Pneumatici / Gomme
+                                  </div>
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'pneumatici' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Pneumatici per tutte le condizioni di gara
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                          </div>
                           <NavigationMenuLink asChild>
                             <Link
                               href="/products/telemetrie-crono"
@@ -586,6 +617,7 @@ export function Navbar() {
                           </NavigationMenuLink>
                         </div>
                       </div>
+
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
