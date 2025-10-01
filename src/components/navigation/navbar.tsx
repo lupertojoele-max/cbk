@@ -542,6 +542,84 @@ export function Navbar() {
                             </div>
                           )}
 
+                          {/* Telemetrie Submenu */}
+                          {activeSubmenu === 'telemetrie' && (
+                            <div>
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+                                Telemetrie & Crono
+                              </h4>
+                              <div className="space-y-2">
+                                <Link href="/products/telemetrie-crono/aim-mychron" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">AIM MyChron</Link>
+                                <Link href="/products/telemetrie-crono/alfano" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Alfano</Link>
+                                <Link href="/products/telemetrie-crono/unipro" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Unipro</Link>
+                                <Link href="/products/telemetrie-crono/starlane" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Starlane</Link>
+                                <Link href="/products/telemetrie-crono/contagiri-rpm-contaore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Contagiri RPM - Contaore</Link>
+                                <Link href="/products/telemetrie-crono/cronometri" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cronometri</Link>
+                                <Link href="/products/telemetrie-crono/termometri-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Termometri acqua</Link>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Motori Nuovi Submenu */}
+                          {activeSubmenu === 'motori-nuovi' && (
+                            <div>
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+                                Motori Nuovi
+                              </h4>
+                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
+                                <Link href="/products/motori-nuovi/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori TM Racing</Link>
+                                <Link href="/products/motori-nuovi/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Iame</Link>
+                                <Link href="/products/motori-nuovi/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Vortex</Link>
+                                <Link href="/products/motori-nuovi/bmb" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori BMB</Link>
+                                <Link href="/products/motori-nuovi/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Modena Engines</Link>
+                                <Link href="/products/motori-nuovi/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Rotax</Link>
+                                <Link href="/products/motori-nuovi/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Comer</Link>
+                                <Link href="/products/motori-nuovi/lke" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori LKE</Link>
+                                <Link href="/products/motori-nuovi/briggs-stratton" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Briggs & Stratton</Link>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Telai Nuovi Submenu */}
+                          {activeSubmenu === 'telai-nuovi' && (
+                            <div>
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+                                Telai Nuovi
+                              </h4>
+                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
+                                <Link href="/products/telai-nuovi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai CRG</Link>
+                                <Link href="/products/telai-nuovi/birelart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai BirelArt</Link>
+                                <Link href="/products/telai-nuovi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Top-Kart</Link>
+                                <Link href="/products/telai-nuovi/formula-k" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Formula K</Link>
+                                <Link href="/products/telai-nuovi/praga" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Praga</Link>
+                                <Link href="/products/telai-nuovi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Kart Republic KR</Link>
+                                <Link href="/products/telai-nuovi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Tony Kart</Link>
+                                <Link href="/products/telai-nuovi/parolin" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Parolin</Link>
+                                <Link href="/products/telai-nuovi/kosmic" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Kosmic</Link>
+                                <Link href="/products/telai-nuovi/maranello" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Maranello</Link>
+                                <Link href="/products/telai-nuovi/ckr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai CKR</Link>
+                                <Link href="/products/telai-nuovi/intrepid" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Intrepid</Link>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Kart Completi Submenu */}
+                          {activeSubmenu === 'kart-completi' && (
+                            <div>
+                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+                                Kart Completi
+                              </h4>
+                              <div className="space-y-2">
+                                <Link href="/products/kart-completi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi CRG</Link>
+                                <Link href="/products/kart-completi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Tony Kart</Link>
+                                <Link href="/products/kart-completi/birelart-kgp" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi BirelArt & KGP</Link>
+                                <Link href="/products/kart-completi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Top-Kart</Link>
+                                <Link href="/products/kart-completi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Kart Republic KR</Link>
+                                <Link href="/products/kart-completi/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Easykart</Link>
+                              </div>
+                            </div>
+                          )}
+
                         </div>
                       )}
 
@@ -571,50 +649,86 @@ export function Navbar() {
                               </div>
                             </NavigationMenuLink>
                           </div>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/telemetrie-crono"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Telemetrie & Crono</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Sistemi di telemetria e cronometraggio
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/motori-nuovi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Motori Nuovi</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Motori nuovi per ogni categoria
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/telai-nuovi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Telai Nuovi</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Telai completi per competizione
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/products/kart-completi"
-                              className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group"
-                            >
-                              <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">Kart Completi</div>
-                              <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
-                                Kart pronti per la pista
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
+                          <div
+                            className="group/telemetrie relative"
+                            onMouseEnter={() => setActiveSubmenu('telemetrie')}
+                          >
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Telemetrie & Crono
+                                  </div>
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telemetrie' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Sistemi di telemetria e cronometraggio
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                          </div>
+                          <div
+                            className="group/motori-nuovi relative"
+                            onMouseEnter={() => setActiveSubmenu('motori-nuovi')}
+                          >
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Motori Nuovi
+                                  </div>
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motori-nuovi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Motori nuovi per ogni categoria
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                          </div>
+                          <div
+                            className="group/telai-nuovi relative"
+                            onMouseEnter={() => setActiveSubmenu('telai-nuovi')}
+                          >
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Telai Nuovi
+                                  </div>
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telai-nuovi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Telai completi per competizione
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                          </div>
+                          <div
+                            className="group/kart-completi relative"
+                            onMouseEnter={() => setActiveSubmenu('kart-completi')}
+                          >
+                            <NavigationMenuLink asChild>
+                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                                <div className="flex items-center justify-between">
+                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                    Kart Completi
+                                  </div>
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'kart-completi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                  Kart pronti per la pista
+                                </p>
+                              </div>
+                            </NavigationMenuLink>
+                          </div>
                         </div>
                       </div>
 
