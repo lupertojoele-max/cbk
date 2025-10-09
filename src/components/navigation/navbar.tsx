@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
 import { ThemeToggleCompact } from '@/components/ui/theme-toggle'
+import styles from './navbar.module.css'
 
 interface NavItem {
   title: string
@@ -109,6 +110,7 @@ export function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [focusedItem, setFocusedItem] = useState<string | null>(null)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null)
   const pathname = usePathname()
   const navRef = useRef<HTMLDivElement>(null)
 
@@ -318,103 +320,228 @@ export function Navbar() {
                         <div className="space-y-2">
                           <div
                             className="group/telaio relative"
-                            onMouseEnter={() => setActiveSubmenu('telaio')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('telaio')
+                              setSelectedMenuItem('telaio')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'telaio'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'telaio' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'telaio'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Telaio e Accessori
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telaio' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telaio' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'telaio' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'telaio' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Telai, ammortizzatori e componenti strutturali
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/motore relative"
-                            onMouseEnter={() => setActiveSubmenu('motore')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('motore')
+                              setSelectedMenuItem('motore')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'motore'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'motore' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'motore'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Motore e Accessori
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motore' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motore' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'motore' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'motore' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Componenti motore e ricambi per prestazioni
-                                </p>
+                                </div>
                               </div>
-                            </NavigationMenuLink>
                           </div>
                           <div
                             className="group/carburatori relative"
-                            onMouseEnter={() => setActiveSubmenu('carburatori')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('carburatori')
+                              setSelectedMenuItem('carburatori')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'carburatori'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'carburatori' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'carburatori'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Carburatori
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'carburatori' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'carburatori' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'carburatori' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'carburatori' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Carburatori e sistemi di alimentazione
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/radiatori relative"
-                            onMouseEnter={() => setActiveSubmenu('radiatori')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('radiatori')
+                              setSelectedMenuItem('radiatori')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'radiatori'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'radiatori' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'radiatori'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Radiatori e Accessori
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'radiatori' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'radiatori' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'radiatori' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'radiatori' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Sistemi di raffreddamento e componenti
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/cuscinetti relative"
-                            onMouseEnter={() => setActiveSubmenu('cuscinetti')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('cuscinetti')
+                              setSelectedMenuItem('cuscinetti')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'cuscinetti'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'cuscinetti' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'cuscinetti'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Cuscinetti Paraoli Molle
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'cuscinetti' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'cuscinetti' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'cuscinetti' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'cuscinetti' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Componenti meccanici e sospensioni
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -429,20 +556,20 @@ export function Navbar() {
                                 Telaio e Accessori
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Freni e Accessori</Link>
-                                <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
-                                <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Assali chiavette e cuscinetti</Link>
-                                <Link href="/products/telaio-accessori/corone-catene-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Corone, Catene e accessori</Link>
-                                <Link href="/products/telaio-accessori/carenature-staffe-e-paraurti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carenature, staffe e paraurti</Link>
-                                <Link href="/products/telaio-accessori/leve-cambio-e-frizione" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Leve cambio e frizione</Link>
-                                <Link href="/products/telaio-accessori/pedali-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pedali e accessori</Link>
-                                <Link href="/products/telaio-accessori/piantone-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Piantone e Accessori</Link>
-                                <Link href="/products/telaio-accessori/portacorona-e-porta-disco" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Portacorona e Porta disco</Link>
-                                <Link href="/products/telaio-accessori/serbatoio-e-tubi-benzina" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Serbatoio e Tubi Benzina</Link>
-                                <Link href="/products/telaio-accessori/sedili-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Sedili e accessori</Link>
-                                <Link href="/products/telaio-accessori/uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Uniball</Link>
-                                <Link href="/products/telaio-accessori/volanti-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Volanti e accessori</Link>
-                                <Link href="/products/telaio-accessori/barra-stabilizzatrici" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Barra stabilizzatrici</Link>
+                                <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Freni e Accessori</Link>
+                                <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
+                                <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Assali chiavette e cuscinetti</Link>
+                                <Link href="/products/telaio-accessori/corone-catene-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Corone, Catene e accessori</Link>
+                                <Link href="/products/telaio-accessori/carenature-staffe-e-paraurti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carenature, staffe e paraurti</Link>
+                                <Link href="/products/telaio-accessori/leve-cambio-e-frizione" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Leve cambio e frizione</Link>
+                                <Link href="/products/telaio-accessori/pedali-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pedali e accessori</Link>
+                                <Link href="/products/telaio-accessori/piantone-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Piantone e Accessori</Link>
+                                <Link href="/products/telaio-accessori/portacorona-e-porta-disco" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Portacorona e Porta disco</Link>
+                                <Link href="/products/telaio-accessori/serbatoio-e-tubi-benzina" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Serbatoio e Tubi Benzina</Link>
+                                <Link href="/products/telaio-accessori/sedili-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Sedili e accessori</Link>
+                                <Link href="/products/telaio-accessori/uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Uniball</Link>
+                                <Link href="/products/telaio-accessori/volanti-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Volanti e accessori</Link>
+                                <Link href="/products/telaio-accessori/barra-stabilizzatrici" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Barra stabilizzatrici</Link>
                               </div>
                             </div>
                           )}
@@ -454,12 +581,12 @@ export function Navbar() {
                                 Cuscinetti Paraoli Molle
                               </h4>
                               <div className="space-y-2">
-                                <Link href="/products/cuscinetti-paraoli-molle/molle" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Molle</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-telaio" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cuscinetti Telaio</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cuscinetti Motore</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/snodi-sferici-uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Snodi Sferici, Uniball</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/paraoli-anelli-tenuta" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Paraoli, Anelli Tenuta</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/gabbie-a-rulli" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Gabbie a Rulli</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/molle" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Molle</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-telaio" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Cuscinetti Telaio</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Cuscinetti Motore</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/snodi-sferici-uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Snodi Sferici, Uniball</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/paraoli-anelli-tenuta" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Paraoli, Anelli Tenuta</Link>
+                                <Link href="/products/cuscinetti-paraoli-molle/gabbie-a-rulli" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Gabbie a Rulli</Link>
                               </div>
                             </div>
                           )}
@@ -471,18 +598,18 @@ export function Navbar() {
                                 Motore e Accessori
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/motore-accessori/ricambi-generici-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Ricambi Generici Motore</Link>
-                                <Link href="/products/motore-accessori/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">IAME</Link>
-                                <Link href="/products/motore-accessori/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">TM RACING</Link>
-                                <Link href="/products/motore-accessori/bmb-bluebird" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">BMB / BLUEBIRD</Link>
-                                <Link href="/products/motore-accessori/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">ROTAX</Link>
-                                <Link href="/products/motore-accessori/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">VORTEX</Link>
-                                <Link href="/products/motore-accessori/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">COMER</Link>
-                                <Link href="/products/motore-accessori/lke-lenzo" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">LKE (LENZO)</Link>
-                                <Link href="/products/motore-accessori/maxter" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">MAXTER</Link>
-                                <Link href="/products/motore-accessori/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">MODENA ENGINES</Link>
-                                <Link href="/products/motore-accessori/wtp-60" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">WTP 60</Link>
-                                <Link href="/products/motore-accessori/pavesi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">PAVESI</Link>
+                                <Link href="/products/motore-accessori/ricambi-generici-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Ricambi Generici Motore</Link>
+                                <Link href="/products/motore-accessori/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">IAME</Link>
+                                <Link href="/products/motore-accessori/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">TM RACING</Link>
+                                <Link href="/products/motore-accessori/bmb-bluebird" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">BMB / BLUEBIRD</Link>
+                                <Link href="/products/motore-accessori/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">ROTAX</Link>
+                                <Link href="/products/motore-accessori/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">VORTEX</Link>
+                                <Link href="/products/motore-accessori/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">COMER</Link>
+                                <Link href="/products/motore-accessori/lke-lenzo" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">LKE (LENZO)</Link>
+                                <Link href="/products/motore-accessori/maxter" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">MAXTER</Link>
+                                <Link href="/products/motore-accessori/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">MODENA ENGINES</Link>
+                                <Link href="/products/motore-accessori/wtp-60" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">WTP 60</Link>
+                                <Link href="/products/motore-accessori/pavesi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">PAVESI</Link>
                               </div>
                             </div>
                           )}
@@ -494,12 +621,12 @@ export function Navbar() {
                                 Carburatori
                               </h4>
                               <div className="space-y-2">
-                                <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Attrezzatura Carburatori</Link>
-                                <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Dellorto e ricambi</Link>
-                                <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori IBEA e ricambi</Link>
-                                <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Tillotson e ricambi</Link>
-                                <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori Tryton e ricambi</Link>
-                                <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Carburatori WALBRO e ricambi</Link>
+                                <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Attrezzatura Carburatori</Link>
+                                <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carburatori Dellorto e ricambi</Link>
+                                <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carburatori IBEA e ricambi</Link>
+                                <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carburatori Tillotson e ricambi</Link>
+                                <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carburatori Tryton e ricambi</Link>
+                                <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Carburatori WALBRO e ricambi</Link>
                               </div>
                             </div>
                           )}
@@ -511,12 +638,12 @@ export function Navbar() {
                                 Radiatori e Accessori
                               </h4>
                               <div className="space-y-2">
-                                <Link href="/products/radiatori-accessori/radiatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Radiatori</Link>
-                                <Link href="/products/radiatori-accessori/staffe-attacchi-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Staffe & Attacchi Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tubi-radiatore-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Tubi Radiatore Acqua</Link>
-                                <Link href="/products/radiatori-accessori/pompa-acqua-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pompa acqua & Accessori</Link>
-                                <Link href="/products/radiatori-accessori/accessori-per-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Accessori per Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tendine-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Tendine Radiatore</Link>
+                                <Link href="/products/radiatori-accessori/radiatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Radiatori</Link>
+                                <Link href="/products/radiatori-accessori/staffe-attacchi-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Staffe & Attacchi Radiatore</Link>
+                                <Link href="/products/radiatori-accessori/tubi-radiatore-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Tubi Radiatore Acqua</Link>
+                                <Link href="/products/radiatori-accessori/pompa-acqua-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pompa acqua & Accessori</Link>
+                                <Link href="/products/radiatori-accessori/accessori-per-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Accessori per Radiatore</Link>
+                                <Link href="/products/radiatori-accessori/tendine-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Tendine Radiatore</Link>
                               </div>
                             </div>
                           )}
@@ -528,16 +655,16 @@ export function Navbar() {
                                 Pneumatici / Gomme
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/pneumatici-gomme/lecont" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici LeCont</Link>
-                                <Link href="/products/pneumatici-gomme/vega" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Vega</Link>
-                                <Link href="/products/pneumatici-gomme/maxxis" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Maxxis</Link>
-                                <Link href="/products/pneumatici-gomme/mg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici MG</Link>
-                                <Link href="/products/pneumatici-gomme/komet" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Komet</Link>
-                                <Link href="/products/pneumatici-gomme/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Easykart</Link>
-                                <Link href="/products/pneumatici-gomme/bridgestone" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Bridgestone</Link>
-                                <Link href="/products/pneumatici-gomme/dunlop" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Pneumatici Dunlop</Link>
-                                <Link href="/products/pneumatici-gomme/accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Accessori pneumatici</Link>
-                                <Link href="/products/pneumatici-gomme/attrezzatura" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Attrezzatura pneumatici</Link>
+                                <Link href="/products/pneumatici-gomme/lecont" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici LeCont</Link>
+                                <Link href="/products/pneumatici-gomme/vega" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Vega</Link>
+                                <Link href="/products/pneumatici-gomme/maxxis" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Maxxis</Link>
+                                <Link href="/products/pneumatici-gomme/mg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici MG</Link>
+                                <Link href="/products/pneumatici-gomme/komet" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Komet</Link>
+                                <Link href="/products/pneumatici-gomme/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Easykart</Link>
+                                <Link href="/products/pneumatici-gomme/bridgestone" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Bridgestone</Link>
+                                <Link href="/products/pneumatici-gomme/dunlop" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Pneumatici Dunlop</Link>
+                                <Link href="/products/pneumatici-gomme/accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Accessori pneumatici</Link>
+                                <Link href="/products/pneumatici-gomme/attrezzatura" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Attrezzatura pneumatici</Link>
                               </div>
                             </div>
                           )}
@@ -549,13 +676,13 @@ export function Navbar() {
                                 Telemetrie & Crono
                               </h4>
                               <div className="space-y-2">
-                                <Link href="/products/telemetrie-crono/aim-mychron" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">AIM MyChron</Link>
-                                <Link href="/products/telemetrie-crono/alfano" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Alfano</Link>
-                                <Link href="/products/telemetrie-crono/unipro" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Unipro</Link>
-                                <Link href="/products/telemetrie-crono/starlane" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Starlane</Link>
-                                <Link href="/products/telemetrie-crono/contagiri-rpm-contaore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Contagiri RPM - Contaore</Link>
-                                <Link href="/products/telemetrie-crono/cronometri" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Cronometri</Link>
-                                <Link href="/products/telemetrie-crono/termometri-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Termometri acqua</Link>
+                                <Link href="/products/telemetrie-crono/aim-mychron" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">AIM MyChron</Link>
+                                <Link href="/products/telemetrie-crono/alfano" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Alfano</Link>
+                                <Link href="/products/telemetrie-crono/unipro" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Unipro</Link>
+                                <Link href="/products/telemetrie-crono/starlane" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Starlane</Link>
+                                <Link href="/products/telemetrie-crono/contagiri-rpm-contaore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Contagiri RPM - Contaore</Link>
+                                <Link href="/products/telemetrie-crono/cronometri" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Cronometri</Link>
+                                <Link href="/products/telemetrie-crono/termometri-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Termometri acqua</Link>
                               </div>
                             </div>
                           )}
@@ -567,15 +694,15 @@ export function Navbar() {
                                 Motori Nuovi
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/motori-nuovi/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori TM Racing</Link>
-                                <Link href="/products/motori-nuovi/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Iame</Link>
-                                <Link href="/products/motori-nuovi/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Vortex</Link>
-                                <Link href="/products/motori-nuovi/bmb" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori BMB</Link>
-                                <Link href="/products/motori-nuovi/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Modena Engines</Link>
-                                <Link href="/products/motori-nuovi/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Rotax</Link>
-                                <Link href="/products/motori-nuovi/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Comer</Link>
-                                <Link href="/products/motori-nuovi/lke" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori LKE</Link>
-                                <Link href="/products/motori-nuovi/briggs-stratton" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Motori Briggs & Stratton</Link>
+                                <Link href="/products/motori-nuovi/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori TM Racing</Link>
+                                <Link href="/products/motori-nuovi/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Iame</Link>
+                                <Link href="/products/motori-nuovi/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Vortex</Link>
+                                <Link href="/products/motori-nuovi/bmb" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori BMB</Link>
+                                <Link href="/products/motori-nuovi/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Modena Engines</Link>
+                                <Link href="/products/motori-nuovi/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Rotax</Link>
+                                <Link href="/products/motori-nuovi/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Comer</Link>
+                                <Link href="/products/motori-nuovi/lke" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori LKE</Link>
+                                <Link href="/products/motori-nuovi/briggs-stratton" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Motori Briggs & Stratton</Link>
                               </div>
                             </div>
                           )}
@@ -587,18 +714,18 @@ export function Navbar() {
                                 Telai Nuovi
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telai-nuovi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai CRG</Link>
-                                <Link href="/products/telai-nuovi/birelart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai BirelArt</Link>
-                                <Link href="/products/telai-nuovi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Top-Kart</Link>
-                                <Link href="/products/telai-nuovi/formula-k" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Formula K</Link>
-                                <Link href="/products/telai-nuovi/praga" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Praga</Link>
-                                <Link href="/products/telai-nuovi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Kart Republic KR</Link>
-                                <Link href="/products/telai-nuovi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Tony Kart</Link>
-                                <Link href="/products/telai-nuovi/parolin" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Parolin</Link>
-                                <Link href="/products/telai-nuovi/kosmic" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Kosmic</Link>
-                                <Link href="/products/telai-nuovi/maranello" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Maranello</Link>
-                                <Link href="/products/telai-nuovi/ckr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai CKR</Link>
-                                <Link href="/products/telai-nuovi/intrepid" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Telai Intrepid</Link>
+                                <Link href="/products/telai-nuovi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai CRG</Link>
+                                <Link href="/products/telai-nuovi/birelart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai BirelArt</Link>
+                                <Link href="/products/telai-nuovi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Top-Kart</Link>
+                                <Link href="/products/telai-nuovi/formula-k" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Formula K</Link>
+                                <Link href="/products/telai-nuovi/praga" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Praga</Link>
+                                <Link href="/products/telai-nuovi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Kart Republic KR</Link>
+                                <Link href="/products/telai-nuovi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Tony Kart</Link>
+                                <Link href="/products/telai-nuovi/parolin" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Parolin</Link>
+                                <Link href="/products/telai-nuovi/kosmic" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Kosmic</Link>
+                                <Link href="/products/telai-nuovi/maranello" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Maranello</Link>
+                                <Link href="/products/telai-nuovi/ckr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai CKR</Link>
+                                <Link href="/products/telai-nuovi/intrepid" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Telai Intrepid</Link>
                               </div>
                             </div>
                           )}
@@ -610,12 +737,12 @@ export function Navbar() {
                                 Kart Completi
                               </h4>
                               <div className="space-y-2">
-                                <Link href="/products/kart-completi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi CRG</Link>
-                                <Link href="/products/kart-completi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Tony Kart</Link>
-                                <Link href="/products/kart-completi/birelart-kgp" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi BirelArt & KGP</Link>
-                                <Link href="/products/kart-completi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Top-Kart</Link>
-                                <Link href="/products/kart-completi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Kart Republic KR</Link>
-                                <Link href="/products/kart-completi/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-blue-700 rounded transition-colors">Kart completi Easykart</Link>
+                                <Link href="/products/kart-completi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi CRG</Link>
+                                <Link href="/products/kart-completi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi Tony Kart</Link>
+                                <Link href="/products/kart-completi/birelart-kgp" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi BirelArt & KGP</Link>
+                                <Link href="/products/kart-completi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi Top-Kart</Link>
+                                <Link href="/products/kart-completi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi Kart Republic KR</Link>
+                                <Link href="/products/kart-completi/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#1877F2] rounded transition-colors">Kart completi Easykart</Link>
                               </div>
                             </div>
                           )}
@@ -631,103 +758,228 @@ export function Navbar() {
                         <div className="space-y-2">
                           <div
                             className="group/pneumatici relative"
-                            onMouseEnter={() => setActiveSubmenu('pneumatici')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('pneumatici')
+                              setSelectedMenuItem('pneumatici')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'pneumatici'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'pneumatici' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'pneumatici'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Pneumatici / Gomme
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'pneumatici' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'pneumatici' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'pneumatici' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'pneumatici' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Pneumatici per tutte le condizioni di gara
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/telemetrie relative"
-                            onMouseEnter={() => setActiveSubmenu('telemetrie')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('telemetrie')
+                              setSelectedMenuItem('telemetrie')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'telemetrie'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'telemetrie' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'telemetrie'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Telemetrie & Crono
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telemetrie' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telemetrie' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'telemetrie' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'telemetrie' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Sistemi di telemetria e cronometraggio
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/motori-nuovi relative"
-                            onMouseEnter={() => setActiveSubmenu('motori-nuovi')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('motori-nuovi')
+                              setSelectedMenuItem('motori-nuovi')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'motori-nuovi'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'motori-nuovi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'motori-nuovi'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Motori Nuovi
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motori-nuovi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motori-nuovi' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'motori-nuovi' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'motori-nuovi' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Motori nuovi per ogni categoria
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/telai-nuovi relative"
-                            onMouseEnter={() => setActiveSubmenu('telai-nuovi')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('telai-nuovi')
+                              setSelectedMenuItem('telai-nuovi')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'telai-nuovi'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'telai-nuovi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'telai-nuovi'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Telai Nuovi
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telai-nuovi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telai-nuovi' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'telai-nuovi' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'telai-nuovi' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Telai completi per competizione
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                           <div
                             className="group/kart-completi relative"
-                            onMouseEnter={() => setActiveSubmenu('kart-completi')}
+                            onMouseEnter={() => {
+                              setActiveSubmenu('kart-completi')
+                              setSelectedMenuItem('kart-completi')
+                            }}
+                            onMouseLeave={() => {
+                              setSelectedMenuItem(null)
+                            }}
                           >
-                            <NavigationMenuLink asChild>
-                              <div className="block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100 group cursor-pointer">
+                            <div
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                                selectedMenuItem === 'kart-completi'
+                                  ? 'text-white'
+                                  : 'hover:bg-[#1877F2] focus:bg-[#1877F2] dark:text-racing-gray-100'
+                              }`}
+                              style={selectedMenuItem === 'kart-completi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                            >
                                 <div className="flex items-center justify-between">
-                                  <div className="text-sm font-medium text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className={`text-sm font-medium transition-colors ${
+                                    selectedMenuItem === 'kart-completi'
+                                      ? 'text-white'
+                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
+                                  }`}>
                                     Kart Completi
                                   </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'kart-completi' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'kart-completi' ? 'rotate-180' : ''} ${
+                                    selectedMenuItem === 'kart-completi' ? 'text-white' : ''
+                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </div>
-                                <p className="line-clamp-2 text-xs text-racing-gray-600 dark:text-racing-gray-400">
+                                <div style={{
+                                  fontSize: '12px',
+                                  lineHeight: '16px',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  color: selectedMenuItem === 'kart-completi' ? '#ffffff' : '#6b7280'
+                                }}>
                                   Kart pronti per la pista
-                                </p>
-                              </div>
-                            </NavigationMenuLink>
+                                </div>
+                            </div>
                           </div>
                         </div>
                       </div>
