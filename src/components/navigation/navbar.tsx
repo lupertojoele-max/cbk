@@ -111,8 +111,12 @@ export function Navbar() {
   const [focusedItem, setFocusedItem] = useState<string | null>(null)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
   const pathname = usePathname()
   const navRef = useRef<HTMLDivElement>(null)
+  const searchInputRef = useRef<HTMLInputElement>(null)
+  const searchContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
@@ -127,10 +131,37 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Focus search input when search opens
+  useEffect(() => {
+    if (isSearchOpen && searchInputRef.current) {
+      searchInputRef.current.focus()
+    }
+  }, [isSearchOpen])
+
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isSearchOpen &&
+          searchContainerRef.current &&
+          !searchContainerRef.current.contains(event.target as Node)) {
+        setIsSearchOpen(false)
+        setSearchQuery('')
+      }
+    }
+
+    if (isSearchOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }
+  }, [isSearchOpen])
+
   const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
       setActiveDropdown(null)
       setFocusedItem(null)
+      setIsSearchOpen(false)
     }
   }, [])
 
@@ -1038,6 +1069,35 @@ export function Navbar() {
               <Link href="/contact">Contact Us</Link>
             </Button>
 
+            {/* Search Button */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className={cn(
+                'flex items-center justify-center h-12 w-12 rounded-lg',
+                'transition-transform duration-200',
+                'hover:scale-110',
+                isScrolled
+                  ? 'text-racing-gray-900 dark:text-white'
+                  : 'text-white',
+                isSearchOpen && 'scale-110'
+              )}
+              aria-label="Apri ricerca"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+
             {/* Theme Toggle */}
             <ThemeToggleCompact isScrolled={isScrolled} />
 
@@ -1069,6 +1129,80 @@ export function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Search Dropdown */}
+      <motion.div
+        ref={searchContainerRef}
+        initial={false}
+        animate={{
+          height: isSearchOpen ? 'auto' : 0,
+          opacity: isSearchOpen ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className="overflow-hidden"
+      >
+        {isSearchOpen && (
+          <div className="bg-transparent">
+            <div className="container mx-auto px-4 py-1">
+              <div className="relative max-w-2xl mx-auto">
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Cerca prodotti, categorie, marchi..."
+                  className={cn(
+                    'w-full h-12 pl-12 pr-12 rounded-lg border-2 border-[#1877F2]',
+                    'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:border-transparent',
+                    'transition-colors text-base',
+                    'bg-white dark:bg-slate-800 text-racing-gray-900 dark:text-white',
+                    'placeholder:text-racing-gray-500 dark:placeholder:text-slate-400'
+                  )}
+                />
+                <svg
+                  className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-racing-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <button
+                  onClick={() => {
+                    setIsSearchOpen(false)
+                    setSearchQuery('')
+                  }}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
+                  aria-label="Chiudi ricerca"
+                >
+                  <svg
+                    className="h-5 w-5 text-racing-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Search suggestions/results can go here */}
+              {searchQuery && (
+                <div className="max-w-2xl mx-auto mt-4">
+                  <p className="text-sm text-racing-gray-600 dark:text-slate-400">
+                    Premi Enter per cercare "{searchQuery}"
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </motion.div>
     </motion.nav>
   )
 }
