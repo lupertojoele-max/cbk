@@ -1,10 +1,10 @@
 // CBK Racing PWA Service Worker
 // Advanced caching strategy for optimal performance
 
-const CACHE_NAME = 'cbk-racing-v1.0.0';
-const STATIC_CACHE_NAME = 'cbk-static-v1.0.0';
-const DYNAMIC_CACHE_NAME = 'cbk-dynamic-v1.0.0';
-const IMAGE_CACHE_NAME = 'cbk-images-v1.0.0';
+const CACHE_NAME = 'cbk-racing-v1.0.2';
+const STATIC_CACHE_NAME = 'cbk-static-v1.0.2';
+const DYNAMIC_CACHE_NAME = 'cbk-dynamic-v1.0.2';
+const IMAGE_CACHE_NAME = 'cbk-images-v1.0.2';
 
 // Cache different types of resources with different strategies
 const STATIC_ASSETS = [
@@ -13,8 +13,7 @@ const STATIC_ASSETS = [
   '/site.webmanifest',
   '/favicon.ico',
   '/images/cbk-logo.png',
-  '/images/cbk-logo-black.png',
-  '/_next/static/css/app/globals.css'
+  '/images/cbk-logo-black.png'
 ];
 
 const CACHE_STRATEGIES = {
@@ -153,9 +152,13 @@ async function staleWhileRevalidate(request, cacheName) {
 
     // Fetch in background to update cache
     const fetchPromise = fetch(request).then((networkResponse) => {
-      if (networkResponse.ok) {
-        const cache = caches.open(cacheName);
-        cache.then((c) => c.put(request, networkResponse.clone()));
+      // Only cache complete responses (status 200), not partial responses (206)
+      if (networkResponse.ok && networkResponse.status === 200) {
+        // Clone the response before using it
+        const responseToCache = networkResponse.clone();
+        caches.open(cacheName).then((cache) => {
+          cache.put(request, responseToCache);
+        });
       }
       return networkResponse;
     });

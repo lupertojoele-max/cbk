@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -107,6 +106,7 @@ const megaMenuData: Record<string, MegaMenuData> = {
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [focusedItem, setFocusedItem] = useState<string | null>(null)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
@@ -115,9 +115,13 @@ export function Navbar() {
   const navRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
+
+    // Set initial scroll state
+    handleScroll()
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -170,14 +174,12 @@ export function Navbar() {
               onFocus={() => setFocusedItem('logo')}
               onBlur={() => setFocusedItem(null)}
             >
-              <div className="relative group-hover:scale-105 transition-transform">
-                <Image
-                  src={isScrolled ? "/images/cbk-logo-black.png" : "/images/cbk-logo.png"}
+              <div className="relative group-hover:scale-105 transition-transform h-16">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={mounted && isScrolled ? "/images/cbk-logo-black.png" : "/images/cbk-logo.png"}
                   alt="CBK Racing Logo"
-                  width={160}
-                  height={64}
-                  priority
-                  className="h-16 w-auto object-contain transition-opacity duration-300"
+                  className="h-full w-auto object-contain transition-opacity duration-300"
                 />
               </div>
             </Link>
