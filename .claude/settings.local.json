@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implementa barra di ricerca animata nella navbar con icona ingrandibile\n\nAggiunta funzionalità di ricerca completa alla navbar con le seguenti caratteristiche:\n\n**Icona Ricerca:**\n- Icona lente di ingrandimento (h-6 w-6) con stroke più spesso (2.5)\n- Effetto scale-110 al passaggio del mouse e quando attiva\n- Nessuno sfondo colorato, solo ingrandimento dell''icona\n- Transizione fluida con duration-200\n\n**Barra di Ricerca a Dropdown:**\n- Si apre sotto la navbar con animazione framer-motion\n- Sfondo completamente trasparente\n- Input box con bordo blu #1877F2 e focus ring\n- Dimensioni compatte (h-12, py-1)\n- Auto-focus sull''input quando si apre\n- Icona lente a sinistra, pulsante chiudi (X) a destra\n\n**Gestione Interazioni:**\n- Click fuori dalla barra per chiuderla\n- ESC key per chiuderla\n- Toggle con click sull''icona\n- Pulizia automatica del testo alla chiusura\n- Supporto dark mode completo\n\n**Implementazione Tecnica:**\n- useState per isSearchOpen e searchQuery\n- useRef per gestire focus e click-outside detection\n- useEffect per event listeners (mousedown, ESC key)\n- Framer Motion per animazioni fluide height/opacity\n\nLa search bar è ora completamente funzionale e pronta per essere integrata\ncon la logica di ricerca backend.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
