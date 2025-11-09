@@ -1,0 +1,545 @@
+{
+  "products": [
+    {
+      "id": "mk-1762649311927-0",
+      "name": "Pastiglia freno posteriore standard",
+      "slug": "pastiglia-freno-posteriore-standard",
+      "category": "freni-accessori",
+      "brand": "WildKart",
+      "price": "8.99",
+      "image": "https://www.mondokart.com/23801-square_home_default/pastiglia-freno-posteriore-standard-karting.jpg",
+      "description": "Pastiglia freno posteriore standard mescola media compatibile con diversi impianti frenanti tra cui:\nRighetti Ridolfi\nWildkart\nBiesse\n\nLunghezza totale 90mm\nInterasse tra i due fori 65mm\nAltezza totale 50mm\nSpessore 16mm\n\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-standard-karting.html",
+      "specifications": {
+        "ean13": "8870",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-standard.jpg"
+    },
+    {
+      "id": "mk-1762649311927-1",
+      "name": "Pastiglia Freno Compatibile CRG V05 anteriore",
+      "slug": "pastiglia-freno-compatibile-crg-v05-anteriore",
+      "category": "freni-accessori",
+      "brand": "Mondokart Racing",
+      "price": "9.75",
+      "image": "https://www.mondokart.com/29513-square_home_default/pastiglia-freno-compatibile-crg-v05-anteriore.jpg",
+      "description": "Pastiglia freno non originale compatibile con impianto CRG V05 anteriore e CRG Mini\nIl prezzo si riferisce ad ogni singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-compatibile-crg-v05-anteriore.html",
+      "specifications": {
+        "ean13": "5141",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-compatibile-crg-v05-anteriore.jpg"
+    },
+    {
+      "id": "mk-1762649311927-2",
+      "name": "Pastiglia Freno Compatibile CRG V05 posteriore",
+      "slug": "pastiglia-freno-compatibile-crg-v05-posteriore",
+      "category": "freni-accessori",
+      "brand": "Mondokart Racing",
+      "price": "9.75",
+      "image": "https://www.mondokart.com/29518-square_home_default/pastiglia-freno-compatibile-crg-v05-posteriore.jpg",
+      "description": "Pastiglia freno compatibile con impianto CRG V05 posteriore\nIl prezzo si riferisce ad una SINGOLA PASTIGLIA.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-compatibile-crg-v05-posteriore.html",
+      "specifications": {
+        "ean13": "5146",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-compatibile-crg-v05-posteriore.jpg"
+    },
+    {
+      "id": "mk-1762649311927-3",
+      "name": "Pastiglia Freno Posteriore AZZURRA - V05 V09 V10 V11 V13 ORIGINALE CRG",
+      "slug": "pastiglia-freno-posteriore-azzurra-v05-v09-v10-v11-v13-originale-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "24.39",
+      "image": "https://www.mondokart.com/23976-square_home_default/pastiglie-freno-posteriore-blu-v05-v09-v10-v11-v13-crg.jpg",
+      "description": "Pastiglia freno posteriore V05 V9 V11 blu per disco freno in ghisa posteriore impianto V05 V09 V11\n(il prezzo si riferisce per singola pastiglia)\nMescola media",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglie-freno-posteriore-blu-v05-v09-v10-v11-v13-crg.html",
+      "originalPrice": "30.49",
+      "specifications": {
+        "ean13": "12040",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-azzurra-v05-v09-v10-v11-v13-originale-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-4",
+      "name": "Pastiglia Freno Posteriore ARANCIONE Ven05 (V05) V13 CRG",
+      "slug": "pastiglia-freno-posteriore-arancione-ven05-v05-v13-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "29.89",
+      "image": "https://www.mondokart.com/13245-square_home_default/pastiglia-freno-posteriore-arancione-ven05-v05.jpg",
+      "description": "Pastiglia freno posteriore V05 nuova mescola per disco freno in ghisa posteriore impianto Ven05.\n(il prezzo si riferisce per singola pastiglia)\nEx codice AFS.01745",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-arancione-ven05-v05.html",
+      "specifications": {
+        "ean13": "2423",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-arancione-ven05-v05-v13-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-5",
+      "name": "Pastiglia SPECIALE 14,5mm Freno Posteriore V05 V09 V10 V11 V13 CRG",
+      "slug": "pastiglia-speciale-14-5mm-freno-posteriore-v05-v09-v10-v11-v13-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "34.76",
+      "image": "https://www.mondokart.com/21223-square_home_default/pastiglia-speciale-145mm-freno-posteriore-v05-v09-v10-v11-v13-crg.jpg",
+      "description": "Pastiglia freno posteriore V05 V9 V11 V13 rossa per disco freno in ghisa posteriore impianto V05 V09 V11 V13\nVersione speciale con spessore 14,5mm\n(il prezzo si riferisce per singola pastiglia)",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-speciale-145mm-freno-posteriore-v05-v09-v10-v11-v13-crg.html",
+      "specifications": {
+        "ean13": "11515",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-speciale-14-5mm-freno-posteriore-v05-v09-v10-v11-v13-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-6",
+      "name": "Pastiglia Freno V04 - V06 - Mini New Age Standard nero CRG",
+      "slug": "pastiglia-freno-v04-v06-mini-new-age-standard-nero-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "25.56",
+      "image": "https://www.mondokart.com/29552-square_home_default/pastiglia-freno-v04-v06-mini-new-age-standard.jpg",
+      "description": "Pastiglia freno standard CRG colore nero per i seguenti impianti frenanti:\n- V04 - V06 montata sulla pinza anteriore (telai KF monomarcia)\n- Ven Mini (per telai minikart e babykart 60cc) - ATTENZIONE: Per alcuni telai Mini e Babykart la pastiglia da utilizzare è quella con codice AFS.00366\n \nPREZZO RIFERITO A SINGOLA PASTIGLIA",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v04-ant-post-mondokart/pinza-anteriore-v04-crg-mondokart/pastiglia-freno-v04-v06-mini-new-age-standard.html",
+      "specifications": {
+        "ean13": "2317",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v04-v06-mini-new-age-standard-nero-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-7",
+      "name": "Pastiglia freno V04 posteriore standard CRG",
+      "slug": "pastiglia-freno-v04-posteriore-standard-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "29.95",
+      "image": "https://www.mondokart.com/29554-square_home_default/pastiglia-freno-v04-posteriore-standard-crg.jpg",
+      "description": "Pastiglia freno V04 posteriore standard nero originale CRG\nPrezzo riferito a singola pastiglia\nLa pastiglia misura 65mm lunghezza e 35mm di altezza (altezza della parte con la mescola frenante).",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v04-ant-post-mondokart/pinza-posteriore-v04-crg-mondokart/pastiglia-freno-v04-posteriore-standard-crg.html",
+      "specifications": {
+        "ean13": "2303",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v04-posteriore-standard-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-8",
+      "name": "Pastiglia freno V04 posteriore sinterizzata CRG",
+      "slug": "pastiglia-freno-v04-posteriore-sinterizzata-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "36.59",
+      "image": "https://www.mondokart.com/29555-square_home_default/pastiglia-freno-v04-posteriore-sinterizzata-crg.jpg",
+      "description": "Pastiglia freno V04 posteriore sinterizzata BREMBO\nPrezzo riferito a singola pastiglia\nLa pastiglia misura 65mm lunghezza e 35mm di altezza (altezza della parte con la mescola frenante).",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v04-ant-post-mondokart/pinza-posteriore-v04-crg-mondokart/pastiglia-freno-v04-posteriore-sinterizzata-crg.html",
+      "specifications": {
+        "ean13": "2295",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v04-posteriore-sinterizzata-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-9",
+      "name": "Pastiglia Freno V08 Anteriore CRG",
+      "slug": "pastiglia-freno-v08-anteriore-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "26.78",
+      "image": "https://www.mondokart.com/9459-square_home_default/pastiglia-freno-v08-anteriore-crg.jpg",
+      "description": "Pastiglia freno anteriori per impianti Ven08 senza recupero (fissaggio tramite viti e molle di ritegno)\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v08-kf-e-kz-mondokart/pastiglia-freno-v08-anteriore-crg.html",
+      "specifications": {
+        "ean13": "7473"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v08-anteriore-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-10",
+      "name": "Pastiglia Freno V08 Posteriore CRG",
+      "slug": "pastiglia-freno-v08-posteriore-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "32.2",
+      "image": "https://www.mondokart.com/9458-square_home_default/pastiglia-freno-v08-posteriore-crg.jpg",
+      "description": "Pastiglia freno posteriore per impianti Ven08\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v08-kf-e-kz-mondokart/pastiglia-freno-v08-posteriore-crg.html",
+      "specifications": {
+        "ean13": "7472"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v08-posteriore-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-11",
+      "name": "Pastiglia Freno V99 Anteriore CRG",
+      "slug": "pastiglia-freno-v99-anteriore-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "23.66",
+      "image": "https://www.mondokart.com/15873-square_home_default/pastiglia-freno-v99-anteriore-crg.jpg",
+      "description": "Pastiglia freno V99 anteriore standard\nPrezzo inteso a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v99-mondokart/pinza-anteriore-v99-crg-mondokart/pastiglia-freno-v99-anteriore-crg.html",
+      "specifications": {
+        "ean13": "2512"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v99-anteriore-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-12",
+      "name": "Pastiglia Freno V99 Posteriore CRG",
+      "slug": "pastiglia-freno-v99-posteriore-crg",
+      "category": "freni-accessori",
+      "brand": "CRG",
+      "price": "31.66",
+      "image": "https://www.mondokart.com/15872-square_home_default/pastiglia-freno-v99-posteriore-crg.jpg",
+      "description": "Pastiglia freno V99 post. standard\nPrezzo inteso a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/crg-mondokart/impianto-frenante-crg-mondokart/impianto-v99-mondokart/pinza-posteriore-v99-mondokart/pastiglia-freno-v99-posteriore-crg.html",
+      "specifications": {
+        "ean13": "2493"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-v99-posteriore-crg.jpg"
+    },
+    {
+      "id": "mk-1762649311928-13",
+      "name": "Pastiglia Freno BS 5 - BS6 - SA2 Rossa OTK TonyKart",
+      "slug": "pastiglia-freno-bs-5-bs6-sa2-rossa-otk-tonykart",
+      "category": "freni-accessori",
+      "brand": "Tony Kart",
+      "price": "26.83",
+      "image": "https://www.mondokart.com/23691-square_home_default/pastiglia-freno-bs5-bs6-sa2-rossa-otk-tonykart.jpg",
+      "description": "Pastiglia freno BS5 - BS6. Nuova versione Rossa (identica come mescola alla vecchia versione Nera che si vede in foto).",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-bs5-bs6-sa2-rossa-otk-tonykart.html",
+      "originalPrice": "29.81",
+      "specifications": {
+        "ean13": "1970",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-bs-5-bs6-sa2-rossa-otk-tonykart.jpg"
+    },
+    {
+      "id": "mk-1762649311928-14",
+      "name": "Pastiglia freno Tony OTK BS5 - BS6 - SA2 compatibile",
+      "slug": "pastiglia-freno-tony-otk-bs5-bs6-sa2-compatibile",
+      "category": "freni-accessori",
+      "brand": "Mondokart Racing",
+      "price": "9.99",
+      "image": "https://www.mondokart.com/17615-square_home_default/pastiglia-freno-tony-otk-bs5-bs6-sa2.jpg",
+      "description": "Singola pastiglia freno per impianti Tonykart BS5 - BS6 - SA2 mescola media.\nNon omologata, non originale\nPrezzo riferito a singola pastiglia.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-tony-otk-bs5-bs6-sa2.html",
+      "specifications": {
+        "ean13": "5627",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-tony-otk-bs5-bs6-sa2-compatibile.jpg"
+    },
+    {
+      "id": "mk-1762649311928-15",
+      "name": "Pastiglia freno anteriore BSS BWZ KZ Tonykart OTK",
+      "slug": "pastiglia-freno-anteriore-bss-bwz-kz-tonykart-otk",
+      "category": "freni-accessori",
+      "brand": "Varie",
+      "price": "25.19",
+      "image": "https://www.mondokart.com/23692-square_home_default/pastiglia-freno-anteriore-bss-kz-tonykart-otk.jpg",
+      "description": "Pastiglia freno per impianti di nuova omologa prodotti a partire dal 2015 TonyKart Kosmic OTK.Mescola media\nPrezzo riferito a SINGOLA PASTIGLIA (per la coppia inserire quantità 2)\nStessa pastiglia utilizzata sui telai Mini con impianto BSM4 (a partire dal 2019)",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/tonykart-otk-kosmic-mondokart/impianto-frenante-otk-mondokart/pinza-freno-anteriore-bss-kz-mondokart/pastiglia-freno-anteriore-bss-kz-tonykart-otk.html",
+      "originalPrice": "27.99",
+      "specifications": {
+        "ean13": "5886",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-anteriore-bss-bwz-kz-tonykart-otk.jpg"
+    },
+    {
+      "id": "mk-1762649311928-16",
+      "name": "Pastiglia Freno TonyKart - BSD BWD - Posteriore KF KZ OTK TonyKart",
+      "slug": "pastiglia-freno-tonykart-bsd-bwd-posteriore-kf-kz-otk-tonykart",
+      "category": "freni-accessori",
+      "brand": "Tony Kart",
+      "price": "26.83",
+      "image": "https://www.mondokart.com/29640-square_home_default/pastiglia-freno-tonykart-bsd-posteriore-kf-kz-otk.jpg",
+      "description": "Pastiglia freno per impianto frenante nuovo tipo OTK Tonykart BSD BWD.\nPer pinza posteriore\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/tonykart-otk-kosmic-mondokart/impianto-frenante-otk-mondokart/pinza-freno-posteriore-bsd/pastiglia-freno-tonykart-bsd-posteriore-kf-kz-otk.html",
+      "originalPrice": "29.81",
+      "specifications": {
+        "ean13": "5719",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-tonykart-bsd-bwd-posteriore-kf-kz-otk-tonykart.jpg"
+    },
+    {
+      "id": "mk-1762649311928-17",
+      "name": "Pastiglia freno anteriore SA3 BS7 Rossa OTK TonyKart",
+      "slug": "pastiglia-freno-anteriore-sa3-bs7-rossa-otk-tonykart",
+      "category": "freni-accessori",
+      "brand": "Tony Kart",
+      "price": "29.2",
+      "image": "https://www.mondokart.com/9463-square_home_default/pastiglia-freno-anteriore-sa3-bs7-rossa-otk.jpg",
+      "description": "Pastiglia freno anteriore BS7 OTK - Rossa\nATTENZIONE IL PREZZO SI RIFERISCE AD UNA SINGOLA PASTIGLIA FRENO",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-anteriore-sa3-bs7-rossa-otk.html",
+      "originalPrice": "32.44",
+      "specifications": {
+        "ean13": "1972",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-anteriore-sa3-bs7-rossa-otk-tonykart.jpg"
+    },
+    {
+      "id": "mk-1762649311928-18",
+      "name": "Pastiglia freno posteriore Mini Rookie Neos BSM BSM2 OTK TonyKart",
+      "slug": "pastiglia-freno-posteriore-mini-rookie-neos-bsm-bsm2-otk-tonykart",
+      "category": "freni-accessori",
+      "brand": "Tony Kart",
+      "price": "28.54",
+      "image": "https://www.mondokart.com/15951-square_home_default/pastiglia-freno-posteriore-mini-rookie-neos-bsm.jpg",
+      "description": "Nuova pastiglia freno posteriore con doppio fissaggio per impianto freno BSM.\nATTENZIONE: IL PREZZO SI INTENDE PER SINGOLA PASTIGLIA\nParticolare E della seconda immagine allegata (pinza freno BSM)",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-mini-rookie-neos-bsm.html",
+      "originalPrice": "31.71",
+      "specifications": {
+        "ean13": "2852",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-mini-rookie-neos-bsm-bsm2-otk-tonykart.jpg"
+    },
+    {
+      "id": "mk-1762649311928-19",
+      "name": "Pastiglia freno anteriore Intrepid R2",
+      "slug": "pastiglia-freno-anteriore-intrepid-r2",
+      "category": "freni-accessori",
+      "brand": "Varie",
+      "price": "10",
+      "image": "https://www.mondokart.com/9466-square_home_default/pastiglia-freno-anteriore-intrepid-r2.jpg",
+      "description": "Pastiglia freno anteriore compatibile con Intrepid per impianti R2 (fino al 2014)\nPrezzo inteso per singola pastiglia.\nMisure L X A X P : 41,20mm x 26,30mm x 9,90mm\nInterasse fori: 31,90mm",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-anteriore-intrepid-r2.html",
+      "specifications": {
+        "ean13": "6079"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-anteriore-intrepid-r2.jpg"
+    },
+    {
+      "id": "mk-1762649311928-20",
+      "name": "Pastiglia freno posteriore Intrepid R2",
+      "slug": "pastiglia-freno-posteriore-intrepid-r2",
+      "category": "freni-accessori",
+      "brand": "Mondokart Racing",
+      "price": "10",
+      "image": "https://www.mondokart.com/9467-square_home_default/pastiglia-freno-posteriore-intrepid-r2.jpg",
+      "description": "Pastiglia freno posteriore compatibile per Intrepid per impianti R2 (prodotti fino al 2014)\nPrezzo inteso per singola pastiglia.\nLunghezza 77mm\nInterasse fori 62mm\nAltezza totale 45mm\nSpessore 12mm",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-intrepid-r2.html",
+      "specifications": {
+        "ean13": "6080-Nero"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-intrepid-r2.jpg"
+    },
+    {
+      "id": "mk-1762649311928-21",
+      "name": "Pastiglia Freno per Intrepid R6K - R6KZ",
+      "slug": "pastiglia-freno-per-intrepid-r6k-r6kz",
+      "category": "freni-accessori",
+      "brand": "Varie",
+      "price": "11.99",
+      "image": "https://www.mondokart.com/25684-square_home_default/pastiglia-freno-intrepid-r6k-r6kz.jpg",
+      "description": "Pastiglia freno compatibile Intrepid R6K - R6KZ\nper nuovo impianto frenante Intrepid, anteriore e posteriore.\nPrezzo riferito alla singola pastiglia.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-intrepid-r6k-r6kz.html",
+      "specifications": {
+        "ean13": "12541"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-per-intrepid-r6k-r6kz.jpg"
+    },
+    {
+      "id": "mk-1762649311928-22",
+      "name": "Pastiglia freno anteriore Intrepid (R1K) KZ",
+      "slug": "pastiglia-freno-anteriore-intrepid-r1k-kz",
+      "category": "freni-accessori",
+      "brand": "Intrepid",
+      "price": "21.95",
+      "image": "https://www.mondokart.com/9468-square_home_default/pastiglia-freno-anteriore-intrepid-r1k-kz-karting.jpg",
+      "description": "Pastiglia freno anteriore ORIGINALE Intrepid per i nuovi impianti KZ R1K (prodotti a partire dal 2015).\nPrezzo inteso per singola pastiglia.\nColore Nero\nCodice omologa 82/FR/20",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-anteriore-intrepid-r1k-kz-karting.html",
+      "specifications": {
+        "ean13": "6696"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-anteriore-intrepid-r1k-kz.jpg"
+    },
+    {
+      "id": "mk-1762649311928-23",
+      "name": "Pastiglia Freno R2K Posteriore Intrepid KF KZ (R2K)",
+      "slug": "pastiglia-freno-r2k-posteriore-intrepid-kf-kz-r2k",
+      "category": "freni-accessori",
+      "brand": "Intrepid",
+      "price": "22.95",
+      "image": "https://www.mondokart.com/15954-square_home_default/pastiglia-freno-posteriore-intrepid-kf-kz-r2k-karting.jpg",
+      "description": "Pastiglia freno posteriore ORIGINALE Intrepid per telai KF (KFJ e KF) e KZ\nPrezzo inteso per singola pastiglia.\nPER IMPIANTO FRENANTE NUOVO TIPO R2K KF e KZ\nCodice omologazione:\n79/FR/17\n81/FR/20\n82/FR/20\n\nMisure pastiglia:\nLunghezza 65mm\nAltezza 43mm (massima, con foro)\nInterasse 56mm",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-intrepid-kf-kz-r2k-karting.html",
+      "specifications": {
+        "ean13": "6695-Nero"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-r2k-posteriore-intrepid-kf-kz-r2k.jpg"
+    },
+    {
+      "id": "mk-1762649311928-24",
+      "name": "Pastiglia Freno Birel Anteriore SYNT (BANANA PICCOLE)",
+      "slug": "pastiglia-freno-birel-anteriore-synt-banana-piccole",
+      "category": "freni-accessori",
+      "brand": "BirelArt",
+      "price": "42.69",
+      "image": "https://www.mondokart.com/29678-square_home_default/pastiglia-freno-birel-anteriore-synt.jpg",
+      "description": "Pastiglia freno Birel anteriore sinterizzata 100x8\nPer pinza freno CX-I24\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-birel-anteriore-synt.html",
+      "specifications": {
+        "ean13": "3897",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-birel-anteriore-synt-banana-piccole.jpg"
+    },
+    {
+      "id": "mk-1762649311929-25",
+      "name": "Pastiglia Freno Birel Posteriore SYNT (BANANA GRANDI)",
+      "slug": "pastiglia-freno-birel-posteriore-synt-banana-grandi",
+      "category": "freni-accessori",
+      "brand": "BirelArt",
+      "price": "46.96",
+      "image": "https://www.mondokart.com/29680-square_home_default/pastiglia-freno-birel-posteriore-synt.jpg",
+      "description": "Pastiglia freno Birel Freeline sinterizzata dimensione 135x10\nPrezzo riferito a singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-birel-posteriore-synt.html",
+      "specifications": {
+        "ean13": "3895",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-birel-posteriore-synt-banana-grandi.jpg"
+    },
+    {
+      "id": "mk-1762649311929-26",
+      "name": "Pastiglia Freno ORIGINALE Birel 40x38 GRIGIA Dura",
+      "slug": "pastiglia-freno-originale-birel-40x38-grigia-dura",
+      "category": "freni-accessori",
+      "brand": "BirelArt",
+      "price": "19.99",
+      "image": "https://www.mondokart.com/29645-square_home_default/pastiglia-freno-birel-40x38-grigio-dura.jpg",
+      "description": "Pastiglia freno Birel 40 x 38 colore grigio (non sinterizzata)\nAdatta per:\n- Pinze freno RR-I25x4-H16 Post.\n- Pinze freno RR-I25x2-H3\n- Pinza feno RR-I25x2-H12 Ant.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-birel-40x38-grigio-dura.html",
+      "originalPrice": "24.99",
+      "specifications": {
+        "ean13": "3896",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-originale-birel-40x38-grigia-dura.jpg"
+    },
+    {
+      "id": "mk-1762649311929-27",
+      "name": "Pastiglia Freno ORIGINALE Birel 40x38 SYNT",
+      "slug": "pastiglia-freno-originale-birel-40x38-synt",
+      "category": "freni-accessori",
+      "brand": "Birel",
+      "price": "25.49",
+      "image": "https://www.mondokart.com/29648-square_home_default/pastiglia-freno-birel-40x38-synt.jpg",
+      "description": "Pastiglia freno Birel 40 x 38 colore oro SINTERIZZATA\nIdeale per l'utilizzo con pneumatici morbidi (frenata molto efficace)\nAdatta per:\n- Pinze freno RR-I25x4-H16 Post.\n- Pinze freno RR-I25x2-H3\n- Pinza feno RR-I25x2-H12 Ant.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-birel-40x38-synt.html",
+      "originalPrice": "31.86",
+      "specifications": {
+        "ean13": "5393",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-originale-birel-40x38-synt.jpg"
+    },
+    {
+      "id": "mk-1762649311929-28",
+      "name": "Pastiglia Freno ORIGINALE Birel 40x38 NERA Morbida",
+      "slug": "pastiglia-freno-originale-birel-40x38-nera-morbida",
+      "category": "freni-accessori",
+      "brand": "BirelArt",
+      "price": "19.99",
+      "image": "https://www.mondokart.com/29643-square_home_default/pastiglia-freno-birel-40x38-nero-morbida.jpg",
+      "description": "Pastiglia freno Birel 40 x 38 colore nero (non sinterizzata) più performante rispetto alla grigia (adatta soprattutto per impianto anteriore KZ)\nAdatta per:\n- Pinze freno RR-I25x4-H16 Post.\n- Pinze freno RR-I25x2-H3\n- Pinza feno RR-I25x2-H12 Ant.",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-birel-40x38-nero-morbida.html",
+      "originalPrice": "24.99",
+      "specifications": {
+        "ean13": "5907",
+        "mpn": "1"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-originale-birel-40x38-nera-morbida.jpg"
+    },
+    {
+      "id": "mk-1762649311929-29",
+      "name": "Pastiglia freno anteriore Wildkart",
+      "slug": "pastiglia-freno-anteriore-wildkart",
+      "category": "freni-accessori",
+      "brand": "Varie",
+      "price": "14.5",
+      "image": "https://www.mondokart.com/28348-square_home_default/pastiglia-freno-anteriore-wildkart.jpg",
+      "description": "Pastiglia freno anteriore (per MPFA2)\nMisure:\nLarghezza totale - 93mm\nAltezza totale (compreso triangolo centrale forato) - 45mm\nAltezza laterale (in prossimità dei fori fissaggio pastiglia) - 30mm\nInterasse tra i fori fissaggio pastiglia (m6) - 74mm",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-anteriore-wildkart.html",
+      "specifications": {
+        "ean13": "2845"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-anteriore-wildkart.jpg"
+    },
+    {
+      "id": "mk-1762649311929-30",
+      "name": "Pastiglia freno posteriore Wildkart",
+      "slug": "pastiglia-freno-posteriore-wildkart",
+      "category": "freni-accessori",
+      "brand": "WildKart",
+      "price": "15.82",
+      "image": "https://www.mondokart.com/29778-square_home_default/pastiglia-freno-posteriore-wildkart.jpg",
+      "description": "Pastiglia freno posteriore\nLunghezza totale 90mm\nInterasse tra i due fori 65mm\nAltezza totale 53mm\nLarghezza mescola 16mm",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-posteriore-wildkart.html",
+      "specifications": {
+        "ean13": "2846"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-posteriore-wildkart.jpg"
+    },
+    {
+      "id": "mk-1762649311929-31",
+      "name": "Pastiglia freno PCR anteriore KF",
+      "slug": "pastiglia-freno-pcr-anteriore-kf",
+      "category": "freni-accessori",
+      "brand": "Mondokart Racing",
+      "price": "24.95",
+      "image": "https://www.mondokart.com/13270-square_home_default/pastiglia-freno-pcr-anteriore-kf.jpg",
+      "description": "Pastiglia freno originale (ultima omologa CH14) come in foto per telai KF (anteriore) freno manuale prezzo per singola pastiglia",
+      "inStock": true,
+      "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/freni-e-accessori-mondokart/pastiglie-freno-mondokart/pastiglia-freno-pcr-anteriore-kf.html",
+      "specifications": {
+        "ean13": "4160"
+      },
+      "imageLocal": "/images/products/pastiglia-freno-pcr-anteriore-kf.jpg"
+    }
+  ]
+}
