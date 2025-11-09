@@ -47,6 +47,8 @@ const nextConfig: NextConfig = {
 
   // Headers for security and performance
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development'
+
     return [
       {
         source: '/(.*)',
@@ -69,6 +71,18 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Disable cache in development for JS/CSS files
+      ...(isDev ? [
+        {
+          source: '/_next/static/(.*)',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'no-cache, no-store, must-revalidate',
+            },
+          ],
+        },
+      ] : []),
       {
         source: '/images/(.*)',
         headers: [
