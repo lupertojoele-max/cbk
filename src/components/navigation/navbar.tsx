@@ -357,11 +357,9 @@ export function Navbar() {
                               setActiveSubmenu('telaio')
                               setSelectedMenuItem('telaio')
                             }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
                           >
-                            <div
+                            <Link
+                              href="/products/telaio-accessori"
                               className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group cursor-pointer ${
                                 selectedMenuItem === 'telaio'
                                   ? 'text-white'
@@ -394,7 +392,7 @@ export function Navbar() {
                                 }}>
                                   Telai, ammortizzatori e componenti strutturali
                                 </div>
-                            </div>
+                            </Link>
                           </div>
                           <div
                             className="group/motore relative"
@@ -586,12 +584,9 @@ export function Navbar() {
                           {activeSubmenu === 'telaio' && (
                             <div>
                               <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Telaio e Accessori
+                                Sottocategorie
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telaio-accessori" className="block px-3 py-2 text-xs font-bold text-white bg-white/20 hover:bg-white/30 rounded transition-colors border-2 border-white/40">
-                                  📋 Tutte le Categorie Telaio
-                                </Link>
                                 <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Freni e Accessori</Link>
                                 <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
                                 <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Assali chiavette e cuscinetti</Link>
