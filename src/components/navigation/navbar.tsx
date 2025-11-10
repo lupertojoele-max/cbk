@@ -362,7 +362,7 @@ export function Navbar() {
                             }}
                           >
                             <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
+                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group cursor-pointer ${
                                 selectedMenuItem === 'telaio'
                                   ? 'text-white'
                                   : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
@@ -589,6 +589,9 @@ export function Navbar() {
                                 Telaio e Accessori
                               </h4>
                               <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
+                                <Link href="/products/telaio-accessori" className="block px-3 py-2 text-xs font-bold text-white bg-white/20 hover:bg-white/30 rounded transition-colors border-2 border-white/40">
+                                  📋 Tutte le Categorie Telaio
+                                </Link>
                                 <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Freni e Accessori</Link>
                                 <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
                                 <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Assali chiavette e cuscinetti</Link>
@@ -1015,6 +1018,17 @@ export function Navbar() {
                             </div>
                           </div>
                         </div>
+                      </div>
+
+                      {/* View All Products Button - Spanning full width */}
+                      <div className={activeSubmenu ? 'col-span-3' : 'col-span-2'}>
+                        <Link
+                          href="/prodotti"
+                          className="mt-4 block w-full py-3 px-6 text-center bg-[#1877F2] text-white font-bold rounded-lg
+                            hover:bg-[#0d5dbf] transition-colors shadow-md hover:shadow-lg"
+                        >
+                          Vedi Tutti i Prodotti →
+                        </Link>
                       </div>
 
                     </div>
