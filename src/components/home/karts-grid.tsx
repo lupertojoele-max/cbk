@@ -26,7 +26,7 @@ export async function KartsGrid() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-              La Nostra Flotta Kart
+              I Nostri Kart
             </h2>
             <div className="bg-racing-gray-50 rounded-lg p-8">
               <p className="text-racing-gray-600">
@@ -47,7 +47,7 @@ export async function KartsGrid() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-            La Nostra Flotta Kart
+            I Nostri Kart
           </h2>
           <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
             Go-kart ad alte prestazioni progettati per velocità, precisione ed eccellenza nelle corse

@@ -25,7 +25,7 @@ export function CalendarHeader() {
             transition={{ duration: 0.6 }}
           >
             <Badge className="bg-racing-red/90 text-white text-sm px-4 py-2 font-semibold mb-6">
-              Racing Schedule 2024
+              Calendario Gare 2026
             </Badge>
           </motion.div>
 
@@ -36,7 +36,7 @@ export function CalendarHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Racing Calendar
+            Calendario Gare WSK 2026
           </motion.h1>
 
           {/* Description */}
@@ -46,8 +46,8 @@ export function CalendarHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Stay up to date with all CBK Racing events, championships, and race schedules.
-            Never miss a thrilling moment on the track.
+            Segui CBK Racing in tutti gli eventi WSK 2026: Super Master Series, Euro Series e Final Cup.
+            Non perdere un solo momento emozionante in pista.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -61,9 +61,10 @@ export function CalendarHeader() {
               size="lg"
               onClick={handleDownloadICS}
               className="bg-racing-red hover:bg-racing-red/90 text-white font-semibold px-8 py-4 h-14 text-lg group"
+              disabled
             >
               <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Add to Calendar
+              Aggiungi al Calendario
             </Button>
 
             <Button
@@ -74,7 +75,7 @@ export function CalendarHeader() {
             >
               <a href="#upcoming-events">
                 <CalendarDays className="w-5 h-5 mr-2" />
-                View Schedule
+                Vedi Programma
               </a>
             </Button>
           </motion.div>
@@ -87,20 +88,20 @@ export function CalendarHeader() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="text-center">
+              <div className="text-3xl font-bold text-racing-red">5</div>
+              <div className="text-sm text-racing-gray-300">Round Super Master</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-racing-red">3</div>
+              <div className="text-sm text-racing-gray-300">Round Euro Series</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-racing-red">3</div>
+              <div className="text-sm text-racing-gray-300">Round Final Cup</div>
+            </div>
+            <div className="text-center">
               <div className="text-3xl font-bold text-racing-red">12</div>
-              <div className="text-sm text-racing-gray-300">Championship Races</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">6</div>
-              <div className="text-sm text-racing-gray-300">Practice Sessions</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">4</div>
-              <div className="text-sm text-racing-gray-300">Special Events</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">22</div>
-              <div className="text-sm text-racing-gray-300">Total Events</div>
+              <div className="text-sm text-racing-gray-300">Eventi Totali</div>
             </div>
           </motion.div>
         </div>
