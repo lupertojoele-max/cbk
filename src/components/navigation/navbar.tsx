@@ -118,14 +118,15 @@ export function Navbar() {
   const searchInputRef = useRef<HTMLInputElement>(null)
   const searchContainerRef = useRef<HTMLDivElement>(null)
 
-  // Check if we're on a product page (always show scrolled navbar)
+  // Check if we're on a product or calendar page (always show scrolled navbar)
   const isProductPage = pathname.startsWith('/prodotti') || pathname.startsWith('/products')
+  const isCalendarPage = pathname.startsWith('/calendar') || pathname.startsWith('/calendario')
 
   useEffect(() => {
     setMounted(true)
     const handleScroll = () => {
-      // Always show scrolled state on product pages
-      if (isProductPage) {
+      // Always show scrolled state on product and calendar pages
+      if (isProductPage || isCalendarPage) {
         setIsScrolled(true)
       } else {
         setIsScrolled(window.scrollY > 50)
@@ -137,7 +138,7 @@ export function Navbar() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isProductPage])
+  }, [isProductPage, isCalendarPage])
 
   // Focus search input when search opens
   useEffect(() => {
