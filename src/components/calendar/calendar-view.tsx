@@ -8,29 +8,62 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Calendar, MapPin, Users, ExternalLink, Clock, Trophy, Flag } from 'lucide-react'
 import { wsk2026Calendar, getSeriesColor, getSeriesBadgeText, type WSKEvent } from '@/data/wsk-2026-calendar'
+import { rok2026Calendar, getROKSeriesColor, getROKSeriesBadgeText, type ROKEvent } from '@/data/rok-2026-calendar'
+import { EventRegistrationModal } from './event-registration-modal'
 import Image from 'next/image'
+
+type CalendarEvent = (WSKEvent | ROKEvent) & {
+  eventType: 'WSK' | 'ROK'
+}
 
 interface MonthGroup {
   monthKey: string
   monthName: string
   year: number
-  events: WSKEvent[]
+  events: CalendarEvent[]
 }
 
 export function CalendarView() {
-  const [selectedFilter, setSelectedFilter] = useState<'all' | 'sms' | 'euro' | 'final'>('all')
+  const [selectedFilter, setSelectedFilter] = useState<'all' | 'wsk' | 'rok' | 'sms' | 'euro' | 'final' | 'rok-italia' | 'rok-special'>('all')
+  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false)
+  const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null)
+
+  // Merge both calendars
+  const allEvents: CalendarEvent[] = useMemo(() => {
+    const wskEvents = wsk2026Calendar.map(event => ({ ...event, eventType: 'WSK' as const }))
+    const rokEvents = rok2026Calendar.map(event => ({ ...event, eventType: 'ROK' as const }))
+    return [...wskEvents, ...rokEvents]
+  }, [])
 
   const monthGroups = useMemo(() => {
-    const filtered = wsk2026Calendar.filter(event => {
+    const filtered = allEvents.filter(event => {
+      // Filter by championship type
+      if (selectedFilter === 'wsk') {
+        return event.eventType === 'WSK'
+      }
+      if (selectedFilter === 'rok') {
+        return event.eventType === 'ROK'
+      }
+
+      // WSK-specific filters
       if (selectedFilter === 'sms') {
-        return event.series === 'WSK Super Master Series'
+        return event.eventType === 'WSK' && event.series === 'WSK Super Master Series'
       }
       if (selectedFilter === 'euro') {
-        return event.series === 'WSK Euro Series'
+        return event.eventType === 'WSK' && event.series === 'WSK Euro Series'
       }
       if (selectedFilter === 'final') {
-        return event.series === 'WSK Final Cup'
+        return event.eventType === 'WSK' && event.series === 'WSK Final Cup'
       }
+
+      // ROK-specific filters
+      if (selectedFilter === 'rok-italia') {
+        return event.eventType === 'ROK' && event.series === 'ROK Cup Italia'
+      }
+      if (selectedFilter === 'rok-special') {
+        return event.eventType === 'ROK' && (event.series === 'ROK Winter Trophy' || event.series === 'ROK Cup Superfinal' || event.series === 'ROK Cup Festival')
+      }
+
       return true
     })
 
@@ -64,49 +97,103 @@ export function CalendarView() {
 
     // Sort months chronologically
     return Object.values(groups).sort((a, b) => a.monthKey.localeCompare(b.monthKey))
-  }, [selectedFilter])
+  }, [selectedFilter, allEvents])
 
   const seriesStats = useMemo(() => {
     return {
+      total: allEvents.length,
+      wsk: wsk2026Calendar.length,
+      rok: rok2026Calendar.length,
       sms: wsk2026Calendar.filter(e => e.series === 'WSK Super Master Series').length,
       euro: wsk2026Calendar.filter(e => e.series === 'WSK Euro Series').length,
       final: wsk2026Calendar.filter(e => e.series === 'WSK Final Cup').length,
-      test: wsk2026Calendar.filter(e => e.series === 'WSK Official Test').length,
+      rokItalia: rok2026Calendar.filter(e => e.series === 'ROK Cup Italia').length,
+      rokSpecial: rok2026Calendar.filter(e => e.series === 'ROK Winter Trophy' || e.series === 'ROK Cup Superfinal' || e.series === 'ROK Cup Festival').length,
     }
-  }, [])
+  }, [allEvents])
 
   return (
     <div className="space-y-8">
       {/* Filter Controls */}
-      <div className="flex flex-wrap gap-3" id="upcoming-events">
-        <Button
-          variant={selectedFilter === 'all' ? 'default' : 'outline'}
-          onClick={() => setSelectedFilter('all')}
-          className={selectedFilter === 'all' ? 'bg-blue-600 hover:bg-blue-700' : ''}
-        >
-          Tutti gli Eventi ({wsk2026Calendar.length})
-        </Button>
-        <Button
-          variant={selectedFilter === 'sms' ? 'default' : 'outline'}
-          onClick={() => setSelectedFilter('sms')}
-          className={selectedFilter === 'sms' ? 'bg-blue-600 hover:bg-blue-700' : ''}
-        >
-          Super Master Series ({seriesStats.sms})
-        </Button>
-        <Button
-          variant={selectedFilter === 'euro' ? 'default' : 'outline'}
-          onClick={() => setSelectedFilter('euro')}
-          className={selectedFilter === 'euro' ? 'bg-blue-600 hover:bg-blue-700' : ''}
-        >
-          Euro Series ({seriesStats.euro})
-        </Button>
-        <Button
-          variant={selectedFilter === 'final' ? 'default' : 'outline'}
-          onClick={() => setSelectedFilter('final')}
-          className={selectedFilter === 'final' ? 'bg-amber-600 hover:bg-amber-700' : ''}
-        >
-          Final Cup ({seriesStats.final})
-        </Button>
+      <div className="space-y-4" id="upcoming-events">
+        {/* Main Championship Filters */}
+        <div className="flex flex-wrap gap-3">
+          <Button
+            variant={selectedFilter === 'all' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('all')}
+            className={selectedFilter === 'all' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+          >
+            Tutti gli Eventi ({seriesStats.total})
+          </Button>
+          <Button
+            variant={selectedFilter === 'wsk' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('wsk')}
+            className={selectedFilter === 'wsk' ? 'bg-racing-red hover:bg-racing-red/90' : ''}
+          >
+            WSK Promotion ({seriesStats.wsk})
+          </Button>
+          <Button
+            variant={selectedFilter === 'rok' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('rok')}
+            className={selectedFilter === 'rok' ? 'bg-orange-600 hover:bg-orange-700' : ''}
+          >
+            ROK Cup ({seriesStats.rok})
+          </Button>
+        </div>
+
+        {/* WSK Series Filters */}
+        <div className="flex flex-wrap gap-3">
+          <span className="text-sm text-racing-gray-600 dark:text-racing-gray-400 flex items-center">
+            WSK:
+          </span>
+          <Button
+            variant={selectedFilter === 'sms' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('sms')}
+            className={selectedFilter === 'sms' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+            size="sm"
+          >
+            Super Master ({seriesStats.sms})
+          </Button>
+          <Button
+            variant={selectedFilter === 'euro' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('euro')}
+            className={selectedFilter === 'euro' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+            size="sm"
+          >
+            Euro Series ({seriesStats.euro})
+          </Button>
+          <Button
+            variant={selectedFilter === 'final' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('final')}
+            className={selectedFilter === 'final' ? 'bg-amber-600 hover:bg-amber-700' : ''}
+            size="sm"
+          >
+            Final Cup ({seriesStats.final})
+          </Button>
+        </div>
+
+        {/* ROK Cup Filters */}
+        <div className="flex flex-wrap gap-3">
+          <span className="text-sm text-racing-gray-600 dark:text-racing-gray-400 flex items-center">
+            ROK:
+          </span>
+          <Button
+            variant={selectedFilter === 'rok-italia' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('rok-italia')}
+            className={selectedFilter === 'rok-italia' ? 'bg-orange-600 hover:bg-orange-700' : ''}
+            size="sm"
+          >
+            ROK Cup Italia ({seriesStats.rokItalia})
+          </Button>
+          <Button
+            variant={selectedFilter === 'rok-special' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('rok-special')}
+            className={selectedFilter === 'rok-special' ? 'bg-purple-600 hover:bg-purple-700' : ''}
+            size="sm"
+          >
+            Eventi Speciali ({seriesStats.rokSpecial})
+          </Button>
+        </div>
       </div>
 
       {/* Series Info Banner */}
@@ -116,7 +203,7 @@ export function CalendarView() {
         className="rounded-lg p-6"
       >
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex gap-4">
             <Image
               src="https://www.wskarting.it/assets/img/loghi/wsk_promotion.png"
               alt="WSK Promotion Logo"
@@ -124,26 +211,39 @@ export function CalendarView() {
               height={80}
               className="w-20 h-auto"
             />
+            <Image
+              src="https://italy.rokcup.com/assets/images/logo_rok.png"
+              alt="ROK Cup Logo"
+              width={80}
+              height={80}
+              className="w-20 h-auto"
+            />
           </div>
           <div>
             <h3 className="text-xl font-bold text-racing-gray-900 dark:text-white mb-2">
-              Calendario WSK 2026
+              Calendario Gare 2026
             </h3>
             <p className="text-racing-gray-700 dark:text-racing-gray-300 mb-4">
-              Segui CBK Racing nei principali campionati WSK 2026. Calendario completo con tutte le gare,
-              test collettivi e categorie (MINI, OKNJ, OKN, OKJ, OK, KZ2).
+              Segui CBK Racing nei principali campionati 2026: WSK Promotion e ROK Cup Italia.
+              Calendario completo con tutte le gare, test collettivi e categorie.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <Flag className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
                 <span className="font-semibold text-racing-gray-900 dark:text-white">
-                  {wsk2026Calendar.length} Eventi Totali
+                  {seriesStats.total} Eventi Totali
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Trophy className="w-4 h-4 text-racing-red" />
+                <span className="text-racing-gray-700 dark:text-racing-gray-300">
+                  {seriesStats.wsk} WSK • {seriesStats.rok} ROK Cup
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
                 <span className="text-racing-gray-700 dark:text-racing-gray-300">
-                  Circuiti: La Conca, Sarno, Viterbo, Lonato, Franciacorta, Cremona
+                  Circuiti: Lonato, Franciacorta, Cremona, Viterbo, Sarno, La Conca, 7 Laghi, Jesolo
                 </span>
               </div>
             </div>
@@ -214,8 +314,11 @@ export function CalendarView() {
                               {event.round && ` - Round ${event.round}`}
                             </h3>
                             <div className="flex gap-2">
-                              <Badge className={getSeriesColor(event.series)}>
-                                {getSeriesBadgeText(event.series, event.round)}
+                              <Badge className={event.eventType === 'WSK' ? getSeriesColor(event.series) : getROKSeriesColor(event.series)}>
+                                {event.eventType === 'WSK' ? getSeriesBadgeText(event.series, event.round) : getROKSeriesBadgeText(event.series, event.round)}
+                              </Badge>
+                              <Badge variant="outline" className={event.eventType === 'WSK' ? 'bg-racing-red/10 text-racing-red border-racing-red/30' : 'bg-orange-600/10 text-orange-600 border-orange-600/30'}>
+                                {event.eventType}
                               </Badge>
                               {event.status === 'pending' && (
                                 <Badge variant="outline" className="bg-yellow-50 dark:bg-yellow-950 text-yellow-700 dark:text-yellow-500 border-yellow-300 dark:border-yellow-700">
@@ -270,10 +373,13 @@ export function CalendarView() {
                           <Button
                             variant="outline"
                             className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full lg:w-auto"
-                            disabled
+                            onClick={() => {
+                              setSelectedEvent(event)
+                              setIsRegistrationModalOpen(true)
+                            }}
                           >
                             <Trophy className="w-4 h-4 mr-2" />
-                            Info Evento
+                            Iscriviti
                           </Button>
                         </div>
                       </div>
@@ -300,6 +406,21 @@ export function CalendarView() {
           </div>
         )}
       </div>
+
+      {/* Event Registration Modal */}
+      {selectedEvent && (
+        <EventRegistrationModal
+          isOpen={isRegistrationModalOpen}
+          onClose={() => setIsRegistrationModalOpen(false)}
+          event={{
+            series: selectedEvent.series,
+            round: selectedEvent.round,
+            dates: selectedEvent.dates,
+            venue: selectedEvent.venue,
+            location: selectedEvent.location,
+          }}
+        />
+      )}
     </div>
   )
 }

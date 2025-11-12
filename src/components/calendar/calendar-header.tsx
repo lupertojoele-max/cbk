@@ -18,17 +18,6 @@ export function CalendarHeader() {
 
       <div className="relative container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Badge className="bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 font-semibold mb-6 border border-white/30">
-              Calendario Gare 2026
-            </Badge>
-          </motion.div>
-
           {/* Title */}
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-6 racing-text-shadow"
@@ -36,7 +25,7 @@ export function CalendarHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Calendario Gare WSK 2026
+            Calendario Gare 2026
           </motion.h1>
 
           {/* Description */}
@@ -46,7 +35,7 @@ export function CalendarHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Segui CBK Racing in tutti gli eventi WSK 2026: Super Master Series, Euro Series e Final Cup.
+            Segui CBK Racing nei principali campionati 2026: WSK Promotion e ROK Cup Italia.
             Non perdere un solo momento emozionante in pista.
           </motion.p>
 
@@ -87,19 +76,19 @@ export function CalendarHeader() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">5</div>
-              <div className="text-sm text-white/80">Round Super Master</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">3</div>
-              <div className="text-sm text-white/80">Round Euro Series</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">3</div>
-              <div className="text-sm text-white/80">Round Final Cup</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-white">12</div>
+              <div className="text-sm text-white/80">Eventi WSK</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">11</div>
+              <div className="text-sm text-white/80">Eventi ROK Cup</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">8</div>
+              <div className="text-sm text-white/80">Circuiti Italiani</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">23</div>
               <div className="text-sm text-white/80">Eventi Totali</div>
             </div>
           </motion.div>
