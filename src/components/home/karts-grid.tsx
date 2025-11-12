@@ -26,14 +26,14 @@ export async function KartsGrid() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-              Our Racing Fleet
+              La Nostra Flotta Kart
             </h2>
             <div className="bg-racing-gray-50 rounded-lg p-8">
               <p className="text-racing-gray-600">
-                Unable to load karts at the moment. Please try again later.
+                Impossibile caricare i kart al momento. Riprova più tardi.
               </p>
               <Button className="mt-4 bg-racing-red hover:bg-racing-red/90" asChild>
-                <Link href="/karts">View All Karts</Link>
+                <Link href="/karts">Vedi Tutti i Kart</Link>
               </Button>
             </div>
           </div>
@@ -47,10 +47,10 @@ export async function KartsGrid() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-            Our Racing Fleet
+            La Nostra Flotta Kart
           </h2>
           <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
-            High-performance go-karts engineered for speed, precision, and racing excellence
+            Go-kart ad alte prestazioni progettati per velocità, precisione ed eccellenza nelle corse
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export async function KartsGrid() {
                         : 'bg-racing-gray-500 text-white'
                     }
                   >
-                    {kart.is_available ? 'Available' : 'In Use'}
+                    {kart.is_available ? 'Disponibile' : 'In Uso'}
                   </Badge>
                 </div>
 
@@ -132,7 +132,7 @@ export async function KartsGrid() {
                       <div className="font-semibold text-racing-gray-900">
                         {kart.performance.wins}
                       </div>
-                      <div className="text-racing-gray-500">wins</div>
+                      <div className="text-racing-gray-500">vittorie</div>
                     </div>
                   </div>
 
@@ -142,7 +142,7 @@ export async function KartsGrid() {
                       <div className="font-semibold text-racing-gray-900">
                         {kart.specifications.year_manufactured}
                       </div>
-                      <div className="text-racing-gray-500">year</div>
+                      <div className="text-racing-gray-500">anno</div>
                     </div>
                   </div>
                 </div>
@@ -153,19 +153,19 @@ export async function KartsGrid() {
                     <div className="font-semibold text-racing-gray-900">
                       {kart.performance.total_races}
                     </div>
-                    <div className="text-racing-gray-500">Races</div>
+                    <div className="text-racing-gray-500">Gare</div>
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-racing-gray-900">
                       {kart.performance.podiums}
                     </div>
-                    <div className="text-racing-gray-500">Podiums</div>
+                    <div className="text-racing-gray-500">Podi</div>
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-racing-gray-900">
                       {kart.performance.best_lap_time}s
                     </div>
-                    <div className="text-racing-gray-500">Best Lap</div>
+                    <div className="text-racing-gray-500">Miglior Giro</div>
                   </div>
                 </div>
 
@@ -176,7 +176,7 @@ export async function KartsGrid() {
                   asChild
                 >
                   <Link href={`/karts/${kart.slug}`}>
-                    View Details
+                    Vedi Dettagli
                     <svg
                       className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                       fill="none"
@@ -205,7 +205,7 @@ export async function KartsGrid() {
             asChild
           >
             <Link href="/karts">
-              View All Karts
+              Vedi Tutti i Kart
               <svg
                 className="w-5 h-5 ml-2"
                 fill="none"

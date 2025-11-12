@@ -26,14 +26,14 @@ export async function NextRace() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Next Race
+              Prossima Gara
             </h2>
             <div className="bg-racing-gray-800 rounded-lg p-8 max-w-2xl mx-auto">
               <p className="text-racing-gray-300 mb-4">
-                {error ? 'Unable to load upcoming events.' : 'No upcoming races scheduled at the moment.'}
+                {error ? 'Impossibile caricare gli eventi.' : 'Nessuna gara in programma al momento.'}
               </p>
               <Button className="bg-racing-red hover:bg-racing-red/90" asChild>
-                <Link href="/events">View All Events</Link>
+                <Link href="/events">Vedi Tutti gli Eventi</Link>
               </Button>
             </div>
           </div>
@@ -58,13 +58,13 @@ export async function NextRace() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-racing-red text-white text-sm px-4 py-2">
-            {isToday ? 'Racing Today!' : isTomorrow ? 'Racing Tomorrow!' : 'Upcoming Race'}
+            {isToday ? 'Gara Oggi!' : isTomorrow ? 'Gara Domani!' : 'Prossima Gara'}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Next Race
+            Prossima Gara
           </h2>
           <p className="text-xl text-racing-gray-300 max-w-2xl mx-auto">
-            Don&apos;t miss our next thrilling race event
+            Non perdere il nostro prossimo evento di gara emozionante
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export async function NextRace() {
                       {isToday ? 'TODAY' : isTomorrow ? 'TOMORROW' : daysUntil}
                     </div>
                     <div className="text-racing-gray-600 font-medium">
-                      {isToday || isTomorrow ? 'Race Day' : daysUntil === 1 ? 'Day Remaining' : 'Days Remaining'}
+                      {isToday || isTomorrow ? 'Giorno di Gara' : daysUntil === 1 ? 'Giorno Rimanente' : 'Giorni Rimanenti'}
                     </div>
                   </div>
 
@@ -139,7 +139,7 @@ export async function NextRace() {
                     <div className="flex items-center space-x-3">
                       <Flag className="w-5 h-5 text-racing-red flex-shrink-0" />
                       <div>
-                        <div className="font-semibold">Track Length</div>
+                        <div className="font-semibold">Lunghezza Pista</div>
                         <div className="text-sm text-racing-gray-600">
                           {upcomingEvent.track.length_meters}m • {upcomingEvent.track.surface}
                         </div>
@@ -149,12 +149,12 @@ export async function NextRace() {
                     <div className="flex items-center space-x-3">
                       <Users className="w-5 h-5 text-racing-red flex-shrink-0" />
                       <div>
-                        <div className="font-semibold">Participants</div>
+                        <div className="font-semibold">Partecipanti</div>
                         <div className="text-sm text-racing-gray-600">
-                          {upcomingEvent.participants.registered}/{upcomingEvent.participants.max_capacity} registered
+                          {upcomingEvent.participants.registered}/{upcomingEvent.participants.max_capacity} iscritti
                           {upcomingEvent.participants.waiting_list > 0 && (
                             <span className="ml-2 text-orange-600">
-                              • {upcomingEvent.participants.waiting_list} waiting
+                              • {upcomingEvent.participants.waiting_list} in lista d'attesa
                             </span>
                           )}
                         </div>
@@ -165,7 +165,7 @@ export async function NextRace() {
                       <div className="flex items-center space-x-3">
                         <Clock className="w-5 h-5 text-racing-red flex-shrink-0" />
                         <div>
-                          <div className="font-semibold">Registration Deadline</div>
+                          <div className="font-semibold">Scadenza Iscrizioni</div>
                           <div className="text-sm text-racing-gray-600">
                             {formatEventDate(upcomingEvent.schedule.registration_deadline)}
                           </div>
@@ -181,7 +181,7 @@ export async function NextRace() {
                       asChild
                     >
                       <Link href={`/events/${upcomingEvent.slug}`}>
-                        View Event Details
+                        Vedi Dettagli Evento
                       </Link>
                     </Button>
                     <Button
@@ -190,7 +190,7 @@ export async function NextRace() {
                       asChild
                     >
                       <Link href="/events">
-                        All Events
+                        Tutti gli Eventi
                       </Link>
                     </Button>
                   </div>

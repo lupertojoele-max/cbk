@@ -27,58 +27,58 @@ interface HighlightCard {
 const highlightCards: HighlightCard[] = [
   {
     id: 'championship',
-    title: 'Championship Victory',
-    description: 'CBK Racing secures another championship victory with outstanding performance at Monza circuit',
+    title: 'Vittoria Campionato',
+    description: 'CBK Racing conquista un\'altra vittoria di campionato con una prestazione eccezionale sul circuito di Monza',
     badge: {
-      text: 'Latest News',
+      text: 'Ultime News',
       variant: 'default',
       color: 'bg-racing-red text-white'
     },
     cta: {
-      text: 'Read More',
+      text: 'Leggi di Più',
       href: '/news'
     },
     icon: <Trophy className="w-6 h-6 text-racing-red" />,
     stats: {
-      label: 'Position',
-      value: '1st'
+      label: 'Posizione',
+      value: '1°'
     }
   },
   {
     id: 'upcoming-event',
-    title: 'Italian Karting Championship',
-    description: 'Join us for the next round of the Italian Championship series at iconic racing circuits',
+    title: 'Campionato Italiano Karting',
+    description: 'Unisciti a noi per il prossimo round del Campionato Italiano sui circuiti più iconici',
     badge: {
-      text: 'Upcoming Event',
+      text: 'Prossimo Evento',
       variant: 'outline',
       color: 'border-blue-600 text-blue-600'
     },
     cta: {
-      text: 'View Event',
+      text: 'Vedi Evento',
       href: '/events'
     },
     icon: <Calendar className="w-6 h-6 text-blue-600" />,
     stats: {
-      label: 'Days Left',
+      label: 'Giorni Mancanti',
       value: '12'
     }
   },
   {
     id: 'technology',
-    title: 'New Kart Technology',
-    description: 'Discover our latest high-performance racing technology and engineering innovations',
+    title: 'Nuova Tecnologia Kart',
+    description: 'Scopri la nostra ultima tecnologia di gara ad alte prestazioni e le innovazioni ingegneristiche',
     badge: {
-      text: 'Team Update',
+      text: 'Aggiornamento Team',
       variant: 'outline',
       color: 'border-green-600 text-green-600'
     },
     cta: {
-      text: 'Explore Fleet',
+      text: 'Esplora Flotta',
       href: '/karts'
     },
     icon: <Wrench className="w-6 h-6 text-green-600" />,
     stats: {
-      label: 'New Karts',
+      label: 'Nuovi Kart',
       value: '3'
     }
   }
@@ -90,10 +90,10 @@ export function Highlights() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-            Latest from CBK Racing
+            Ultime da CBK Racing
           </h2>
           <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
-            Stay updated with our latest races, achievements, and team developments
+            Rimani aggiornato con le nostre ultime gare, successi e sviluppi del team
           </p>
         </div>
 

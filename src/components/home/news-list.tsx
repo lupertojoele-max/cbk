@@ -25,14 +25,14 @@ export async function NewsList() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-              Latest News
+              Ultime News
             </h2>
             <div className="bg-white rounded-lg p-8 max-w-2xl mx-auto">
               <p className="text-racing-gray-600 mb-4">
-                Unable to load news articles at the moment.
+                Impossibile caricare gli articoli al momento.
               </p>
               <Button className="bg-racing-red hover:bg-racing-red/90" asChild>
-                <Link href="/news">View All News</Link>
+                <Link href="/news">Vedi Tutte le News</Link>
               </Button>
             </div>
           </div>
@@ -47,14 +47,14 @@ export async function NewsList() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-              Latest News
+              Ultime News
             </h2>
             <div className="bg-white rounded-lg p-8 max-w-2xl mx-auto">
               <p className="text-racing-gray-600 mb-4">
-                No news articles available at the moment.
+                Nessun articolo disponibile al momento.
               </p>
               <Button className="bg-racing-red hover:bg-racing-red/90" asChild>
-                <Link href="/news">Visit News Section</Link>
+                <Link href="/news">Visita Sezione News</Link>
               </Button>
             </div>
           </div>
@@ -70,10 +70,10 @@ export async function NewsList() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-            Latest News
+            Ultime News
           </h2>
           <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest racing news, results, and team updates
+            Rimani aggiornato con le ultime notizie di gara, risultati e aggiornamenti del team
           </p>
         </div>
 
@@ -94,12 +94,12 @@ export async function NewsList() {
                 <div className="absolute top-4 left-4 flex gap-2">
                   {featuredArticle.is_breaking && (
                     <Badge className="bg-red-500 text-white animate-pulse">
-                      Breaking
+                      Ultima Ora
                     </Badge>
                   )}
                   {featuredArticle.is_featured && (
                     <Badge className="bg-racing-red text-white">
-                      Featured
+                      In Evidenza
                     </Badge>
                   )}
                   <Badge variant="outline" className="bg-white/90 text-racing-gray-900">
@@ -136,7 +136,7 @@ export async function NewsList() {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Eye className="w-4 h-4" />
-                      <span>{featuredArticle.views.toLocaleString()} views</span>
+                      <span>{featuredArticle.views.toLocaleString()} visualizzazioni</span>
                     </div>
                   </div>
                   <div>
@@ -150,7 +150,7 @@ export async function NewsList() {
                   asChild
                 >
                   <Link href={`/news/${featuredArticle.slug}`}>
-                    Read Full Article
+                    Leggi Articolo Completo
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
@@ -218,7 +218,7 @@ export async function NewsList() {
               asChild
             >
               <Link href="/news">
-                View All News
+                Vedi Tutte le News
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
