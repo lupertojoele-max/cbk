@@ -118,10 +118,18 @@ export function Navbar() {
   const searchInputRef = useRef<HTMLInputElement>(null)
   const searchContainerRef = useRef<HTMLDivElement>(null)
 
+  // Check if we're on a product page (always show scrolled navbar)
+  const isProductPage = pathname.startsWith('/prodotti') || pathname.startsWith('/products')
+
   useEffect(() => {
     setMounted(true)
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      // Always show scrolled state on product pages
+      if (isProductPage) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(window.scrollY > 50)
+      }
     }
 
     // Set initial scroll state
@@ -129,7 +137,7 @@ export function Navbar() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isProductPage])
 
   // Focus search input when search opens
   useEffect(() => {
