@@ -45,6 +45,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/c/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.wskarting.it',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 

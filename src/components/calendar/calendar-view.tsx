@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Calendar, MapPin, Users, ExternalLink, Clock, Trophy, Flag } from 'lucide-react'
 import { wsk2026Calendar, getSeriesColor, getSeriesBadgeText, type WSKEvent } from '@/data/wsk-2026-calendar'
+import Image from 'next/image'
 
 interface MonthGroup {
   monthKey: string
@@ -81,14 +82,14 @@ export function CalendarView() {
         <Button
           variant={selectedFilter === 'all' ? 'default' : 'outline'}
           onClick={() => setSelectedFilter('all')}
-          className={selectedFilter === 'all' ? 'bg-racing-red hover:bg-racing-red/90' : ''}
+          className={selectedFilter === 'all' ? 'bg-blue-600 hover:bg-blue-700' : ''}
         >
           Tutti gli Eventi ({wsk2026Calendar.length})
         </Button>
         <Button
           variant={selectedFilter === 'sms' ? 'default' : 'outline'}
           onClick={() => setSelectedFilter('sms')}
-          className={selectedFilter === 'sms' ? 'bg-racing-red hover:bg-racing-red/90' : ''}
+          className={selectedFilter === 'sms' ? 'bg-blue-600 hover:bg-blue-700' : ''}
         >
           Super Master Series ({seriesStats.sms})
         </Button>
@@ -112,28 +113,36 @@ export function CalendarView() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-blue-50 to-red-50 dark:from-blue-950/30 dark:to-red-950/30 rounded-lg p-6 border-l-4 border-racing-red"
+        className="rounded-lg p-6"
       >
         <div className="flex items-start gap-4">
-          <Trophy className="w-8 h-8 text-racing-red flex-shrink-0 mt-1" />
+          <div className="flex-shrink-0">
+            <Image
+              src="https://www.wskarting.it/assets/img/loghi/wsk_promotion.png"
+              alt="WSK Promotion Logo"
+              width={80}
+              height={80}
+              className="w-20 h-auto"
+            />
+          </div>
           <div>
             <h3 className="text-xl font-bold text-racing-gray-900 dark:text-white mb-2">
               Calendario WSK 2026
             </h3>
-            <p className="text-racing-gray-600 dark:text-racing-gray-400 mb-4">
+            <p className="text-racing-gray-700 dark:text-racing-gray-300 mb-4">
               Segui CBK Racing nei principali campionati WSK 2026. Calendario completo con tutte le gare,
               test collettivi e categorie (MINI, OKNJ, OKN, OKJ, OK, KZ2).
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2">
-                <Flag className="w-4 h-4 text-racing-red" />
+                <Flag className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
                 <span className="font-semibold text-racing-gray-900 dark:text-white">
                   {wsk2026Calendar.length} Eventi Totali
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-racing-red" />
-                <span className="text-racing-gray-600 dark:text-racing-gray-400">
+                <MapPin className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
+                <span className="text-racing-gray-700 dark:text-racing-gray-300">
                   Circuiti: La Conca, Sarno, Viterbo, Lonato, Franciacorta, Cremona
                 </span>
               </div>
@@ -161,7 +170,7 @@ export function CalendarView() {
               <div className="sticky top-20 z-10 bg-white/95 dark:bg-racing-gray-900/95 backdrop-blur-sm border-b border-racing-gray-200 dark:border-racing-gray-700 py-4 rounded-lg shadow-sm">
                 <div className="flex items-center justify-between">
                   <h2 className="text-2xl font-bold text-racing-gray-900 dark:text-white flex items-center gap-3 capitalize">
-                    <Calendar className="w-6 h-6 text-racing-red" />
+                    <Calendar className="w-6 h-6 text-blue-600" />
                     {monthGroup.monthName}
                   </h2>
                   <Badge variant="outline" className="text-racing-gray-600 dark:text-racing-gray-400">
@@ -178,14 +187,14 @@ export function CalendarView() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: eventIndex * 0.05 }}
-                    className="bg-white dark:bg-racing-gray-800 rounded-lg shadow-sm border border-racing-gray-200 dark:border-racing-gray-700 hover:shadow-md transition-all duration-200 hover:border-racing-red/50"
+                    className="bg-white dark:bg-racing-gray-800 rounded-lg shadow-sm border border-racing-gray-200 dark:border-racing-gray-700 hover:shadow-md transition-all duration-200 hover:border-blue-600/50"
                   >
                     <div className="p-6">
                       <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                         {/* Date Display */}
                         <div className="flex-shrink-0">
-                          <div className="bg-racing-red/10 dark:bg-racing-red/20 rounded-lg p-4 text-center min-w-[100px]">
-                            <div className="text-2xl font-bold text-racing-red">
+                          <div className="bg-blue-600/10 dark:bg-blue-600/20 rounded-lg p-4 text-center min-w-[100px]">
+                            <div className="text-2xl font-bold text-blue-600">
                               {format(parseISO(event.startDate), 'd')}-{format(parseISO(event.endDate), 'd')}
                             </div>
                             <div className="text-xs font-medium text-racing-gray-600 dark:text-racing-gray-400 uppercase">
@@ -260,7 +269,7 @@ export function CalendarView() {
                         <div className="flex-shrink-0">
                           <Button
                             variant="outline"
-                            className="border-racing-red text-racing-red hover:bg-racing-red hover:text-white w-full lg:w-auto"
+                            className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full lg:w-auto"
                             disabled
                           >
                             <Trophy className="w-4 h-4 mr-2" />

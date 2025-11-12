@@ -12,7 +12,7 @@ export function CalendarHeader() {
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-racing-gray-900 via-racing-gray-800 to-racing-red/20 text-white py-16">
+    <section className="relative bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-600 text-white pt-32 pb-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-10" />
 
@@ -24,7 +24,7 @@ export function CalendarHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="bg-racing-red/90 text-white text-sm px-4 py-2 font-semibold mb-6">
+            <Badge className="bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 font-semibold mb-6 border border-white/30">
               Calendario Gare 2026
             </Badge>
           </motion.div>
@@ -41,7 +41,7 @@ export function CalendarHeader() {
 
           {/* Description */}
           <motion.p
-            className="text-xl md:text-2xl text-racing-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -60,8 +60,7 @@ export function CalendarHeader() {
             <Button
               size="lg"
               onClick={handleDownloadICS}
-              className="bg-racing-red hover:bg-racing-red/90 text-white font-semibold px-8 py-4 h-14 text-lg group"
-              disabled
+              className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 font-semibold px-8 py-4 h-14 text-lg group shadow-lg"
             >
               <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
               Aggiungi al Calendario
@@ -70,7 +69,7 @@ export function CalendarHeader() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-racing-gray-900 font-semibold px-8 py-4 h-14 text-lg"
+              className="border-2 border-white/80 bg-transparent text-white hover:bg-white/10 font-semibold px-8 py-4 h-14 text-lg backdrop-blur-sm"
               asChild
             >
               <a href="#upcoming-events">
@@ -82,26 +81,26 @@ export function CalendarHeader() {
 
           {/* Stats */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-racing-gray-700"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/30"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">5</div>
-              <div className="text-sm text-racing-gray-300">Round Super Master</div>
+              <div className="text-3xl font-bold text-white">5</div>
+              <div className="text-sm text-white/80">Round Super Master</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">3</div>
-              <div className="text-sm text-racing-gray-300">Round Euro Series</div>
+              <div className="text-3xl font-bold text-white">3</div>
+              <div className="text-sm text-white/80">Round Euro Series</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">3</div>
-              <div className="text-sm text-racing-gray-300">Round Final Cup</div>
+              <div className="text-3xl font-bold text-white">3</div>
+              <div className="text-sm text-white/80">Round Final Cup</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-racing-red">12</div>
-              <div className="text-sm text-racing-gray-300">Eventi Totali</div>
+              <div className="text-3xl font-bold text-white">12</div>
+              <div className="text-sm text-white/80">Eventi Totali</div>
             </div>
           </motion.div>
         </div>
