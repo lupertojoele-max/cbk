@@ -22,132 +22,132 @@ export function Footer() {
               />
             </div>
             <p className="text-racing-gray-300 dark:text-racing-gray-600 text-sm leading-relaxed">
-              Professional go-kart racing team competing in national and international championships.
-              Experience the thrill of motorsport with cutting-edge technology and passionate drivers.
+              Team professionale di go-kart che compete in campionati nazionali e internazionali.
+              Vivi il brivido del motorsport con tecnologia all'avanguardia e piloti appassionati.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline" className="border-racing-red text-racing-red">
-                Est. 2020
+                Dal 2020
               </Badge>
               <Badge variant="outline" className="border-racing-gray-400 text-racing-gray-300">
-                Pro Team
+                Team Pro
               </Badge>
             </div>
           </div>
 
           {/* Racing Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Racing</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Gare</h3>
             <div className="space-y-2">
               <Link
                 href="/events"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Upcoming Events
+                Prossimi Eventi
               </Link>
               <Link
                 href="/results"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Race Results
+                Risultati Gare
               </Link>
               <Link
                 href="/championship"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Championship Standings
+                Classifica Campionato
               </Link>
               <Link
                 href="/calendar"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Racing Calendar
+                Calendario Gare
               </Link>
               <Link
                 href="/live-timing"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Live Timing
+                Tempi Live
               </Link>
             </div>
           </div>
 
           {/* Team Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Our Team</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Il Nostro Team</h3>
             <div className="space-y-2">
               <Link
                 href="/drivers"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Professional Drivers
+                Piloti Professionisti
               </Link>
               <Link
                 href="/karts"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Racing Fleet
+                Flotta Kart
               </Link>
               <Link
                 href="/technical"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Technical Team
+                Team Tecnico
               </Link>
               <Link
                 href="/history"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Team History
+                Storia del Team
               </Link>
               <Link
                 href="/achievements"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Achievements
+                Successi
               </Link>
             </div>
           </div>
 
           {/* Connect Column */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Connect</h3>
+            <h3 className="font-semibold text-lg text-racing-red dark:text-racing-red-light">Connettiti</h3>
             <div className="space-y-2">
               <Link
                 href="/news"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Latest News
+                Ultime News
               </Link>
               <Link
                 href="/media"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Media Gallery
+                Galleria Media
               </Link>
               <Link
                 href="/sponsors"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Our Sponsors
+                I Nostri Sponsor
               </Link>
               <Link
                 href="/contact"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Contact Us
+                Contattaci
               </Link>
               <Link
                 href="/join"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Join Our Team
+                Unisciti al Team
               </Link>
             </div>
 
             {/* Social Media */}
             <div className="pt-2">
-              <p className="text-sm font-medium text-racing-gray-400 dark:text-racing-gray-500 mb-2">Follow Us</p>
+              <p className="text-sm font-medium text-racing-gray-400 dark:text-racing-gray-500 mb-2">Seguici</p>
               <div className="flex space-x-3">
                 <Link
                   href="https://instagram.com/cbkracing"
@@ -196,13 +196,13 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-racing-gray-400 dark:text-racing-gray-500">
-              <p>&copy; {currentYear} CBK Racing. All rights reserved.</p>
+              <p>&copy; {currentYear} CBK Racing. Tutti i diritti riservati.</p>
               <div className="flex space-x-4">
                 <Link href="/privacy" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
                   Privacy Policy
                 </Link>
                 <Link href="/terms" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
-                  Terms of Service
+                  Termini di Servizio
                 </Link>
                 <Link href="/cookies" className="hover:text-racing-red dark:hover:text-racing-red-light transition-colors">
                   Cookie Policy
@@ -210,9 +210,9 @@ export function Footer() {
               </div>
             </div>
             <div className="flex items-center space-x-2 text-sm text-racing-gray-400 dark:text-racing-gray-500">
-              <span>Made with</span>
+              <span>Fatto con</span>
               <span className="text-racing-red dark:text-racing-red-light">❤️</span>
-              <span>for motorsport</span>
+              <span>per il motorsport</span>
             </div>
           </div>
         </div>

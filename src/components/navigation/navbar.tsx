@@ -45,28 +45,28 @@ const megaMenuData: Record<string, MegaMenuData> = {
   racing: {
     sections: [
       {
-        title: 'Events',
+        title: 'Eventi',
         items: [
           {
-            title: 'Upcoming Races',
+            title: 'Prossime Gare',
             href: '/events',
-            description: 'View all scheduled racing events and championships',
+            description: 'Visualizza tutti gli eventi di gara e i campionati programmati',
           },
           {
-            title: 'Race Results',
+            title: 'Risultati Gare',
             href: '/results',
-            description: 'Latest race results and championship standings',
+            description: 'Ultimi risultati delle gare e classifiche dei campionati',
           },
           {
-            title: 'Live Timing',
+            title: 'Tempi Live',
             href: '/live',
-            description: 'Real-time race timing and positions',
+            description: 'Cronometraggio e posizioni in tempo reale',
             badge: 'Live',
           },
           {
-            title: 'Championship',
+            title: 'Campionato',
             href: '/championship',
-            description: 'Current season standings and points',
+            description: 'Classifiche e punteggi della stagione corrente',
           },
         ],
       },
@@ -74,31 +74,31 @@ const megaMenuData: Record<string, MegaMenuData> = {
         title: 'Team',
         items: [
           {
-            title: 'Our Drivers',
+            title: 'I Nostri Piloti',
             href: '/drivers',
-            description: 'Meet our professional racing team',
+            description: 'Conosci il nostro team di piloti professionisti',
           },
           {
-            title: 'Racing Fleet',
+            title: 'Flotta Kart',
             href: '/karts',
-            description: 'Explore our high-performance go-kart collection',
+            description: 'Esplora la nostra collezione di kart ad alte prestazioni',
           },
           {
-            title: 'Technical Team',
+            title: 'Team Tecnico',
             href: '/technical',
-            description: 'Behind the scenes with our engineers',
+            description: 'Dietro le quinte con i nostri ingegneri',
           },
           {
-            title: 'Team History',
+            title: 'Storia del Team',
             href: '/history',
-            description: 'Our journey in motorsport',
+            description: 'Il nostro percorso nel motorsport',
           },
         ],
       },
     ],
     featured: {
-      title: 'Next Race: Italian Championship',
-      description: 'Join us at Monza for the next round of championship racing',
+      title: 'Prossima Gara: Campionato Italiano',
+      description: 'Unisciti a noi a Monza per il prossimo round del campionato',
       href: '/events/italian-championship-round-6',
     },
   },
@@ -244,7 +244,7 @@ export function Navbar() {
                     )}
                     onFocus={() => setFocusedItem('racing')}
                   >
-                    Racing
+                    Gare
                     <motion.div
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
                       initial={{ scaleX: 0 }}
@@ -304,7 +304,7 @@ export function Navbar() {
                       {/* Featured Section */}
                       {megaMenuData.racing.featured && (
                         <div className="bg-racing-gray-50 dark:bg-racing-gray-700 rounded-lg p-4 space-y-3">
-                          <Badge className="bg-[#1877F2] text-white">Featured</Badge>
+                          <Badge className="bg-[#1877F2] text-white">In Evidenza</Badge>
                           <NavigationMenuLink asChild>
                             <Link
                               href={megaMenuData.racing.featured.href}
@@ -338,7 +338,7 @@ export function Navbar() {
                     )}
                     onFocus={() => setFocusedItem('products')}
                   >
-                    Products
+                    Prodotti
                     <motion.div
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
                       initial={{ scaleX: 0 }}
@@ -1040,11 +1040,11 @@ export function Navbar() {
 
                 {/* Simple Navigation Items */}
                 {[
-                  { title: 'Calendar', href: '/calendar' },
-                  { title: 'Results', href: '/results' },
+                  { title: 'Calendario', href: '/calendar' },
+                  { title: 'Risultati', href: '/results' },
                   { title: 'News', href: '/news' },
-                  { title: 'Sponsors', href: '/sponsors' },
-                  { title: 'About', href: '/about' },
+                  { title: 'Sponsor', href: '/sponsors' },
+                  { title: 'Chi Siamo', href: '/about' },
                 ].map((item) => (
                   <NavigationMenuItem key={item.href}>
                     <Link
@@ -1083,7 +1083,7 @@ export function Navbar() {
               className="hidden md:flex bg-[#1877F2] hover:bg-[#0d5dbf]/90 text-white font-semibold px-6 py-3 h-12"
               asChild
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Contattaci</Link>
             </Button>
 
             {/* Search Button */}
