@@ -31,15 +31,15 @@ interface MegaHeroProps {
 const defaultSlides: HeroSlide[] = [
   {
     id: 'championship',
-    title: 'Racing Excellence',
-    subtitle: 'CBK Racing Championship 2024',
-    description: 'Experience the thrill of professional go-kart racing with cutting-edge technology and passionate drivers competing at the highest level.',
+    title: 'Eccellenza nelle Corse',
+    subtitle: 'Campionato CBK Racing 2024',
+    description: 'Vivi il brivido delle corse professionali di go-kart con tecnologia all\'avanguardia e piloti appassionati che competono ai massimi livelli.',
     image: '/images/kart-racing-hero.png',
     cta: {
-      primary: { text: 'View Results', href: '/results' },
-      secondary: { text: 'Meet Drivers', href: '/drivers' },
+      primary: { text: 'Vedi Risultati', href: '/results' },
+      secondary: { text: 'Conosci i Piloti', href: '/drivers' },
     },
-    badge: 'Live Now',
+    badge: 'Live Ora',
   },
 ]
 
@@ -249,7 +249,7 @@ export function MegaHero({
               transition={{ delay: 0.5 }}
             >
               {showVideo
-                ? 'Experience the thrill of professional go-kart racing with cutting-edge technology and passionate drivers'
+                ? 'Vivi il brivido delle corse professionali di go-kart con tecnologia all\'avanguardia e piloti appassionati'
                 : currentSlideData.description
               }
             </motion.p>

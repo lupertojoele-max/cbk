@@ -115,19 +115,19 @@ export default function Home() {
           <RacingStagger staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">15+</div>
-              <div className="text-racing-gray-600">Wins This Season</div>
+              <div className="text-racing-gray-600">Vittorie Stagione</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">6</div>
-              <div className="text-racing-gray-600">Professional Drivers</div>
+              <div className="text-racing-gray-600">Piloti Professionisti</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">10</div>
-              <div className="text-racing-gray-600">Racing Karts</div>
+              <div className="text-racing-gray-600">Kart da Gara</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">3</div>
-              <div className="text-racing-gray-600">Championships</div>
+              <div className="text-racing-gray-600">Campionati</div>
             </RacingStaggerItem>
           </RacingStagger>
         </div>
@@ -161,17 +161,17 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <RacingFadeIn delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Experience Racing Excellence?
+              Pronto a Vivere l'Eccellenza delle Corse?
             </h2>
           </RacingFadeIn>
           <RacingFadeIn delay={0.4}>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us to learn more about our team, sponsorship opportunities, or upcoming events
+              Contattaci per saperne di più sul nostro team, opportunità di sponsorizzazione o eventi futuri
             </p>
           </RacingFadeIn>
           <RacingFadeIn delay={0.6}>
             <Button size="lg" className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3 racing-lift">
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="/contact">Contattaci</Link>
             </Button>
           </RacingFadeIn>
         </div>
