@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mk-kit-revisione-tonykart-1",
+    "name": "Kit revisione completo Pompa OTK TonyKart BSS BS5 SA2 SA3",
+    "price": "48.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/16366-square_home_default/kit-revisione-completo-pompa-otk-tonykart-bss-bs5.jpg",
+    "slug": "kit-revisione-completo-pompa-otk-tonykart-bss-bs5-sa2-sa3",
+    "imageLocal": "/images/products/kit-revisione-completo-pompa-otk-tonykart-bss-bs5-sa2-sa3.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-tonykart-2",
+    "name": "Kit Revisione Pinza Freno posteriore per BSD / SA2 / BWD OTK completo",
+    "price": "29.50",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/26343-square_home_default/kit-revisione-pinza-freno-posteriore-bsd-sa2-otk.jpg",
+    "slug": "kit-revisione-pinza-freno-posteriore-per-bsd-sa2-bwd-otk-completo",
+    "imageLocal": "/images/products/kit-revisione-pinza-freno-posteriore-per-bsd-sa2-bwd-otk-completo.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-tonykart-3",
+    "name": "Kit Revisione Pinza Freno anteriore BSS OTK completo",
+    "price": "59.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/11119-square_home_default/kit-revisione-pinza-freno-anteriore-bss-otk.jpg",
+    "slug": "kit-revisione-pinza-freno-anteriore-bss-otk-completo",
+    "imageLocal": "/images/products/kit-revisione-pinza-freno-anteriore-bss-otk-completo.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-tonykart-4",
+    "name": "Kit Revisione Pinza Freno anteriore BS5 OTK completo",
+    "price": "11.39",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/28279-square_home_default/kit-revisione-pinza-freno-anteriore-bs5-otk.jpg",
+    "slug": "kit-revisione-pinza-freno-anteriore-bs5-otk-completo",
+    "imageLocal": "/images/products/kit-revisione-pinza-freno-anteriore-bs5-otk-completo.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-tonykart-5",
+    "name": "Kit Revisione Pinza Freno BSM BSM2 OTK, MONDOKART, kart, go",
+    "price": "16.39",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/15011-square_home_default/kit-revisione-pinza-freno-bsm-bsm2-otk.jpg",
+    "slug": "kit-revisione-pinza-freno-bsm-bsm2-otk-mondokart-kart-go",
+    "imageLocal": "/images/products/kit-revisione-pinza-freno-bsm-bsm2-otk-mondokart-kart-go.jpg"
+  }
+]

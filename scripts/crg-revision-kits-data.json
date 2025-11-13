@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mk-kit-revisione-1",
+    "name": "Kit revisione completo pinza posteriore 31,9mm V05 CRG",
+    "price": "40.98",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14785-square_home_default/kit-revisione-completo-pinza-posteriore-319mm.jpg",
+    "slug": "kit-revisione-completo-pinza-posteriore-319mm-v05-crg",
+    "imageLocal": "/images/products/kit-revisione-completo-pinza-posteriore-319mm-v05-crg.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-2",
+    "name": "Kit Revisione Pompa Freno V05 V04 V09 V10 V11 CRG",
+    "price": "17.17",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29543-square_home_default/kit-revisione-pompa-freno-v05-v04-crg.jpg",
+    "slug": "kit-revisione-pompa-freno-v05-v04-v09-v10-v11-crg",
+    "imageLocal": "/images/products/kit-revisione-pompa-freno-v05-v04-v09-v10-v11-crg.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-3",
+    "name": "Kit revisione completo pinza posteriore 29,8mm V09 - V10 CRG",
+    "price": "31.80",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14783-square_home_default/kit-revisione-completo-pinza-posteriore-298mm.jpg",
+    "slug": "kit-revisione-completo-pinza-posteriore-298mm-v09-v10-crg",
+    "imageLocal": "/images/products/kit-revisione-completo-pinza-posteriore-298mm-v09-v10-crg.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-4",
+    "name": "Kit revisione pinza anteriore V05 Ven05 CRG, MONDOKART, kart",
+    "price": "24.50",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14886-square_home_default/kit-revisione-pinza-anteriore-v05-ven05-crg.jpg",
+    "slug": "kit-revisione-pinza-anteriore-v05-ven05-crg-mondokart-kart",
+    "imageLocal": "/images/products/kit-revisione-pinza-anteriore-v05-ven05-crg-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-5",
+    "name": "Kit revisione pompa freni V99 (senza recupero) CRG, MONDOKART",
+    "price": "19.95",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14818-square_home_default/kit-revisione-pompa-freni-v99-senza-recupero-crg.jpg",
+    "slug": "kit-revisione-pompa-freni-v99-senza-recupero-crg-mondokart",
+    "imageLocal": "/images/products/kit-revisione-pompa-freni-v99-senza-recupero-crg-mondokart.jpg"
+  }
+]

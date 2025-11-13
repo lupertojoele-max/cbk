@@ -1,0 +1,407 @@
+[
+  {
+    "id": "mk-pinze-freno-1",
+    "name": "Pinza freno adattabile 2PN100 SILVER",
+    "slug": "pinza-freno-adattabile-2pn100-silver",
+    "price": "57.37",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/9738-square_home_default/pinza-freno-adattabile-2pn100-silver.jpg",
+    "imageLocal": "/images/products/pinza-freno-adattabile-2pn100-silver.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-2",
+    "name": "Pinza Freno Posteriore Top-Kart D.30",
+    "slug": "pinza-freno-posteriore-top-kart-d-30",
+    "price": "109.99",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/29921-square_home_default/pinza-freno-posteriore-top-kart-d30.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-top-kart-d-30.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-3",
+    "name": "Pinza freno idraulica posteriore 4 pistoncini anodizzata",
+    "slug": "pinza-freno-idraulica-posteriore-4-pistoncini-anodizzata",
+    "price": "106.55",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/2888-square_home_default/pinza-freno-idraulica-posteriore-4-pistonicini.jpg",
+    "imageLocal": "/images/products/pinza-freno-idraulica-posteriore-4-pistoncini-anodizzata.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-4",
+    "name": "Pinza Freno MECCANICA Top-Kart Mini e Baby 60cc - ORO",
+    "slug": "pinza-freno-meccanica-top-kart-mini-e-baby-60cc-oro",
+    "price": "49.17",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/22084-square_home_default/pinza-freno-meccanica-top-kart-mini-e-baby-60cc-oro.jpg",
+    "imageLocal": "/images/products/pinza-freno-meccanica-top-kart-mini-e-baby-60cc-oro.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-5",
+    "name": "Pinza anteriore V04 completa CRG",
+    "slug": "pinza-anteriore-v04-completa-crg",
+    "price": "194.00",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28351-square_home_default/pinza-anteriore-v04-completa-crg.jpg",
+    "imageLocal": "/images/products/pinza-anteriore-v04-completa-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-6",
+    "name": "Pinza V05/UP anteriore completa Nera (ghisa) CRG",
+    "slug": "pinza-v05-up-anteriore-completa-nera-ghisa-crg",
+    "price": "199.60",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14806-square_home_default/pinza-v05-up-anteriore-completa-nera-ghisa-crg.jpg",
+    "imageLocal": "/images/products/pinza-v05-up-anteriore-completa-nera-ghisa-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-7",
+    "name": "Pinza posteriore V04 completa CRG",
+    "slug": "pinza-posteriore-v04-completa-crg",
+    "price": "299.85",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28352-square_home_default/pinza-posteriore-v04-completa-crg.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-v04-completa-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-8",
+    "name": "Pinza Posteriore CRG Ven05 (V05) V09 V10 V11 NERA",
+    "slug": "pinza-posteriore-crg-ven05-v05-v09-v10-v11-nera",
+    "price": "245.86",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/23980-square_home_default/pinza-posteriore-crg-ven05-v05-v09-v10-nera.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-crg-ven05-v05-v09-v10-v11-nera.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-9",
+    "name": "Pinza anteriore V10 completa Oro CRG",
+    "slug": "pinza-anteriore-v10-completa-oro-crg",
+    "price": "215.00",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28353-square_home_default/pinza-anteriore-v10-completa-oro-crg.jpg",
+    "imageLocal": "/images/products/pinza-anteriore-v10-completa-oro-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-10",
+    "name": "Pinza V05 V09 V11 V13 anteriore completa ORO CRG",
+    "slug": "pinza-v05-v09-v11-v13-anteriore-completa-oro-crg",
+    "price": "199.00",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28354-square_home_default/pinza-v05-v09-anteriore-completa-oro-crg.jpg",
+    "imageLocal": "/images/products/pinza-v05-v09-v11-v13-anteriore-completa-oro-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-11",
+    "name": "Pinza Freno Top-Kart Mini e Baby 60cc",
+    "slug": "pinza-freno-top-kart-mini-e-baby-60cc",
+    "price": "149.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18386-square_home_default/pinza-freno-topkart-mini-e-baby-60cc.jpg",
+    "imageLocal": "/images/products/pinza-freno-top-kart-mini-e-baby-60cc.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-12",
+    "name": "Pinza freno posteriore completa V11 V10 V09 V05 V13 Oro CRG",
+    "slug": "pinza-freno-posteriore-completa-v11-v10-v09-v05-v13-oro-crg",
+    "price": "266.50",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/23982-square_home_default/pinza-freno-posteriore-completa-v10-v09-v05-oro.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-completa-v11-v10-v09-v05-v13-oro-crg.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-13",
+    "name": "Pinza Freno Posteriore OTK Tony Kart – BWD",
+    "slug": "pinza-freno-posteriore-otk-tony-kart-bwd",
+    "price": "422.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/26298-square_home_default/pinza-freno-posteriore-otk-tony-kart-bwd.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-otk-tony-kart-bwd.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-14",
+    "name": "Pinza Freno Anteriore OTK Tony Kart – BWZ",
+    "slug": "pinza-freno-anteriore-otk-tony-kart-bwz",
+    "price": "467.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/26301-square_home_default/pinza-freno-anteriore-otk-tony-kart-bwz.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-otk-tony-kart-bwz.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-15",
+    "name": "Pinza Freno TonyKart BSD posteriore KZ - OK OTK TonyKart",
+    "slug": "pinza-freno-tonykart-bsd-posteriore-kz-ok-otk-tonykart",
+    "price": "330.30",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29981-square_home_default/pinza-freno-tonykart-bsd-posteriore-kz-ok-otk.jpg",
+    "imageLocal": "/images/products/pinza-freno-tonykart-bsd-posteriore-kz-ok-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-16",
+    "name": "Pinza Freno posteriore SA2 (KZ e KF) (BS6)",
+    "slug": "pinza-freno-posteriore-sa2-kz-e-kf-bs6",
+    "price": "285.99",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/29984-square_home_default/pinza-freno-posteriore-sa2-kz-e-kf-bs6.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-sa2-kz-e-kf-bs6.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-17",
+    "name": "Pinza completa anteriore KZ BSS TonyKart OTK",
+    "slug": "pinza-completa-anteriore-kz-bss-tonykart-otk",
+    "price": "304.20",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29995-square_home_default/pinza-completa-anteriore-kz-bss-tonykart-otk.jpg",
+    "imageLocal": "/images/products/pinza-completa-anteriore-kz-bss-tonykart-otk.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-18",
+    "name": "Pinza freno anteriore SA3 completa (BS7) OTK TonyKart",
+    "slug": "pinza-freno-anteriore-sa3-completa-bs7-otk-tonykart",
+    "price": "225.00",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29996-square_home_default/pinza-freno-anteriore-sa3-completa-bs7-otk.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-sa3-completa-bs7-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-19",
+    "name": "Pinza Freno Posteriore BSM Neos OTK TonyKart",
+    "slug": "pinza-freno-posteriore-bsm-neos-otk-tonykart",
+    "price": "183.19",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/30008-square_home_default/pinza-freno-posteriore-bsm-neos-otk-tonykart.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-bsm-neos-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-20",
+    "name": "Pinza Freno Posteriore BSM Rookie OTK TonyKart",
+    "slug": "pinza-freno-posteriore-bsm-rookie-otk-tonykart",
+    "price": "171.00",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/30009-square_home_default/pinza-freno-posteriore-bsm-rookie-otk-tonykart.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-bsm-rookie-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-21",
+    "name": "Pinza Completa Posteriore R-I25x2-H5 BirelArt",
+    "slug": "pinza-completa-posteriore-r-i25x2-h5-birelart",
+    "price": "198.29",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16671-square_home_default/pinza-completa-di-pastiglie-posteriore-r-i25x2-h5.jpg",
+    "imageLocal": "/images/products/pinza-completa-posteriore-r-i25x2-h5-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-22",
+    "name": "Pinza Completa Posteriore R I38x2 Easykart BirelArt",
+    "slug": "pinza-completa-posteriore-r-i38x2-easykart-birelart",
+    "price": "239.99",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30662-square_home_default/pinza-completa-posteriore-r-i38x2-easykart.jpg",
+    "imageLocal": "/images/products/pinza-completa-posteriore-r-i38x2-easykart-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-23",
+    "name": "Pinza Posteriore Completa RR-l132x2 BirelArt",
+    "slug": "pinza-posteriore-completa-rr-l132x2-birelart",
+    "price": "350.00",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30630-square_home_default/pinza-completa-di-pastiglie-rr-l132x2-birelart.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-completa-rr-l132x2-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-24",
+    "name": "Pinza Completa Posteriore Banana CX-I28 BirelArt",
+    "slug": "pinza-completa-posteriore-banana-cx-i28-birelart",
+    "price": "345.81",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16725-square_home_default/pinza-completa-banana-cx-i28-birelart.jpg",
+    "imageLocal": "/images/products/pinza-completa-posteriore-banana-cx-i28-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-25",
+    "name": "Pinza Posteriore Completa RR-l125x4-H16/A BirelArt",
+    "slug": "pinza-posteriore-completa-rr-l125x4-h16-a-birelart",
+    "price": "429.99",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30686-square_home_default/pinza-posteriore-completa-di-pastiglie.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-completa-rr-l125x4-h16-a-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-26",
+    "name": "Pinza Freno Anteriore RR-I25x2-H12 KZ BirelArt",
+    "slug": "pinza-freno-anteriore-rr-i25x2-h12-kz-birelart",
+    "price": "264.78",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29676-square_home_default/pinza-freno-anteriore-rr-i25x2-h12-kz-birelart.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-rr-i25x2-h12-kz-birelart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-27",
+    "name": "Pinza Freno Anteriore R1K Intrepid KZ",
+    "slug": "pinza-freno-anteriore-r1k-intrepid-kz",
+    "price": "161.07",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/12653-square_home_default/pinza-freno-anteriore-r1k-intrepid-kz.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-r1k-intrepid-kz.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-28",
+    "name": "Pinza posteriore R1K R2K Intrepid (dal 2015 in poi)",
+    "slug": "pinza-posteriore-r1k-r2k-intrepid-dal-2015-in-poi",
+    "price": "202.05",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/12654-square_home_default/pinza-posteriore-r1k-r2k-intrepid-dal-2015-in.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-r1k-r2k-intrepid-dal-2015-in-poi.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-29",
+    "name": "Pinza posteriore Intrepid R1 R2",
+    "slug": "pinza-posteriore-intrepid-r1-r2",
+    "price": "163.93",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/30235-square_home_default/pinza-posteriore-intrepid-r1-r2.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-intrepid-r1-r2.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-30",
+    "name": "Pinza freno anteriore KZ Intrepid R2",
+    "slug": "pinza-freno-anteriore-kz-intrepid-r2",
+    "price": "139.34",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/30238-square_home_default/pinza-freno-anteriore-kz-intrepid-r2.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-kz-intrepid-r2.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-31",
+    "name": "Pinza freno anteriore KZ (dal 2015) PCR",
+    "slug": "pinza-freno-anteriore-kz-dal-2015-pcr",
+    "price": "179.47",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30260-square_home_default/pinza-freno-anteriore-kz-dal-2015-pcr.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-kz-dal-2015-pcr.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-32",
+    "name": "Pinza freno posteriore KZ (2006 - 2014) PCR",
+    "slug": "pinza-freno-posteriore-kz-2006-2014-pcr",
+    "price": "213.11",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30261-square_home_default/pinza-freno-posteriore-kz-2006-2014-pcr.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-kz-2006-2014-pcr.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-33",
+    "name": "Pinza freno posteriore KZ (dal 2015) PCR",
+    "slug": "pinza-freno-posteriore-kz-dal-2015-pcr",
+    "price": "259.50",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30262-square_home_default/pinza-freno-posteriore-kz-dal-2015-pcr.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-kz-dal-2015-pcr.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-34",
+    "name": "Pinza Freno Anteriore IPK - Praga - Formula K - OK1 - STR V2 V3",
+    "slug": "pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3",
+    "price": "209.00",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/29793-square_home_default/pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-35",
+    "name": "Pinza Freno Posteriore IPK - Praga - Formula K - OK1 - RBS V2",
+    "slug": "pinza-freno-posteriore-ipk-praga-formula-k-ok1-rbs-v2",
+    "price": "230.00",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/15258-square_home_default/pinza-freno-posteriore-ipk-praga-formula-k-.jpg",
+    "imageLocal": "/images/products/pinza-freno-posteriore-ipk-praga-formula-k-ok1-rbs-v2.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-36",
+    "name": "Pinza Posteriore V05 V09 V10 V11 Nera CRG TOP-KART",
+    "slug": "pinza-posteriore-v05-v09-v10-v11-nera-crg-top-kart",
+    "price": "239.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18416-square_home_default/pinza-posteriore-v05-v09-v10-v11-nera-top-kart.jpg",
+    "imageLocal": "/images/products/pinza-posteriore-v05-v09-v10-v11-nera-crg-top-kart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-37",
+    "name": "Pinza Freno Anteriore V05 - V11 Nera CRG Top-Kart",
+    "slug": "pinza-freno-anteriore-v05-v11-nera-crg-top-kart",
+    "price": "189.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28358-square_home_default/pinza-freno-anteriore-v05-v11-nera-top-kart.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-v05-v11-nera-crg-top-kart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-38",
+    "name": "Pinza Freno Anteriore IPK - Praga - Formula K - OK1 - STR V2 V3 - VERIONE \"R\" - NEW",
+    "slug": "pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3-verione-r-new",
+    "price": "224.95",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/23605-square_home_default/pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3-verione-r-new.jpg",
+    "imageLocal": "/images/products/pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3-verione-r-new.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-39",
+    "name": "Staffa in acciaio per pinze RighettiRidolfi",
+    "slug": "staffa-in-acciaio-per-pinze-righettiridolfi",
+    "price": "15.16",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5344-square_home_default/staffa-in-acciaio-per-pinze-righettiridolfi-karting.jpg",
+    "imageLocal": "/images/products/staffa-in-acciaio-per-pinze-righettiridolfi.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-40",
+    "name": "Staffa in acciaio per pinze RighettiRidolfi",
+    "slug": "staffa-in-acciaio-per-pinze-righettiridolfi",
+    "price": "16.35",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5346-square_home_default/staffa-in-acciaio-per-pinze-righettiridolfi.jpg",
+    "imageLocal": "/images/products/staffa-in-acciaio-per-pinze-righettiridolfi.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-41",
+    "name": "Staffa in acciaio per pinze RighettiRidolfi per telai Easykart",
+    "slug": "staffa-in-acciaio-per-pinze-righettiridolfi-per-telai-easykart",
+    "price": "19.95",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/5343-square_home_default/staffa-in-acciaio-per-pinze-righettiridolfi-per.jpg",
+    "imageLocal": "/images/products/staffa-in-acciaio-per-pinze-righettiridolfi-per-telai-easykart.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-42",
+    "name": "Spessore 2mm Pinza Posteriore 2PN100 Righetti Ridolfi",
+    "slug": "spessore-2mm-pinza-posteriore-2pn100-righetti-ridolfi",
+    "price": "1.35",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/11050-square_home_default/spessore-2mm-pinza-posteriore-2pn100-righetti.jpg",
+    "imageLocal": "/images/products/spessore-2mm-pinza-posteriore-2pn100-righetti-ridolfi.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-43",
+    "name": "Spessore 1mm Pinza Posteriore 2PN100 Righetti Ridolfi",
+    "slug": "spessore-1mm-pinza-posteriore-2pn100-righetti-ridolfi",
+    "price": "0.82",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/11049-square_home_default/spessore-1mm-pinza-posteriore-2pn100-righetti.jpg",
+    "imageLocal": "/images/products/spessore-1mm-pinza-posteriore-2pn100-righetti-ridolfi.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-44",
+    "name": "Pinza Freno CX-I24 - H5/A HQ BirelArt Nero",
+    "slug": "pinza-freno-cx-i24-h5-a-hq-birelart-nero",
+    "price": "279.95",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30535-square_home_default/pinza-freno-cx-i24-h5a-hq-birelart-nero.jpg",
+    "imageLocal": "/images/products/pinza-freno-cx-i24-h5-a-hq-birelart-nero.jpg"
+  },
+  {
+    "id": "mk-pinze-freno-45",
+    "name": "Pinza Freno I32x2 H8 Birel",
+    "slug": "pinza-freno-i32x2-h8-birel",
+    "price": "199.44",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16660-square_home_default/pinza-freno-i32x2-h8-birel.jpg",
+    "imageLocal": "/images/products/pinza-freno-i32x2-h8-birel.jpg"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "mk-raccordi-freno-1",
+    "name": "Raccordo DRITTO Tubo Freno",
+    "slug": "raccordo-dritto-tubo-freno",
+    "price": "1.60",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5090-square_home_default/raccordo-dritto-tubo-freno.jpg",
+    "imageLocal": "/images/products/raccordo-dritto-tubo-freno.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-2",
+    "name": "Raccordo tubo freno a L",
+    "slug": "raccordo-tubo-freno-a-l",
+    "price": "2.25",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5119-square_home_default/raccordo-tubo-freno-a-l.jpg",
+    "imageLocal": "/images/products/raccordo-tubo-freno-a-l.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-3",
+    "name": "Raccordo tubo freno a \" T \"(Tre Vie)",
+    "slug": "raccordo-tubo-freno-a-t-tre-vie",
+    "price": "2.78",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/28360-square_home_default/raccordo-tubo-freno-a-t-tre-vie.jpg",
+    "imageLocal": "/images/products/raccordo-tubo-freno-a-t-tre-vie.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-4",
+    "name": "Fascetta Fissaggio tubo 8mm",
+    "slug": "fascetta-fissaggio-tubo-8mm",
+    "price": "1.59",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/23991-square_home_default/fascetta-fissaggio-tubo-8mm.jpg",
+    "imageLocal": "/images/products/fascetta-fissaggio-tubo-8mm.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-5",
+    "name": "Fermo per tubazione freno da 6mm",
+    "slug": "fermo-per-tubazione-freno-da-6mm",
+    "price": "0.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17771-square_home_default/fermo-per-tubazione-freno-da-6mm.jpg",
+    "imageLocal": "/images/products/fermo-per-tubazione-freno-da-6mm.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-6",
+    "name": "Raccordo a 2 vie + 1/8-6mm RAPIDO",
+    "slug": "raccordo-a-2-vie-1-8-6mm-rapido",
+    "price": "2.43",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2971-square_home_default/raccordo-a-2-vie-1-8-6mm-rapido.jpg",
+    "imageLocal": "/images/products/raccordo-a-2-vie-1-8-6mm-rapido.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-7",
+    "name": "Raccordo TRE vie - 6mm RAPIDO",
+    "slug": "raccordo-tre-vie-6mm-rapido",
+    "price": "3.10",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2977-square_home_default/raccordo-tre-vie-6mm-rapido.jpg",
+    "imageLocal": "/images/products/raccordo-tre-vie-6mm-rapido.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-8",
+    "name": "Raccordo occhiello tubo freno M10",
+    "slug": "raccordo-occhiello-tubo-freno-m10",
+    "price": "1.59",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/11905-square_home_default/raccordo-occhiello-tubo-freno-m10-crg.jpg",
+    "imageLocal": "/images/products/raccordo-occhiello-tubo-freno-m10.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-9",
+    "name": "Rondella Rame 10,5-14x2 raccordo freno",
+    "slug": "rondella-rame-10-5-14x2-raccordo-freno",
+    "price": "0.79",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18481-square_home_default/rondella-rame-105-14x2-raccordo-freno.jpg",
+    "imageLocal": "/images/products/rondella-rame-10-5-14x2-raccordo-freno.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-10",
+    "name": "Raccordo combinato completo CRG",
+    "slug": "raccordo-combinato-completo-crg",
+    "price": "3.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/11901-square_home_default/raccordo-combinato-completo-crg.jpg",
+    "imageLocal": "/images/products/raccordo-combinato-completo-crg.jpg"
+  },
+  {
+    "id": "mk-raccordi-freno-11",
+    "name": "Raccordo occhiello tubo freno 1/8\" DOPPIO",
+    "slug": "raccordo-occhiello-tubo-freno-1-8-doppio",
+    "price": "8.07",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18884-square_home_default/raccordo-occhiello-tubo-freno-m10-doppio.jpg",
+    "imageLocal": "/images/products/raccordo-occhiello-tubo-freno-1-8-doppio.jpg"
+  }
+]

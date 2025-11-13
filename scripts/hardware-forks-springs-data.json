@@ -1,0 +1,119 @@
+[
+  {
+    "id": "mk-minuteria-forcelle-1",
+    "name": "Clips CORTA 6x12mm zincata",
+    "slug": "clips-corta-6x12mm-zincata",
+    "price": "0.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2784-square_home_default/clips-6x24mm-zincata-oro.jpg",
+    "imageLocal": "/images/products/clips-corta-6x12mm-zincata.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-2",
+    "name": "Clips LUNGA 6x24mm zincata",
+    "slug": "clips-lunga-6x24mm-zincata",
+    "price": "0.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2785-square_home_default/clips-6x36mm-zincata-oro.jpg",
+    "imageLocal": "/images/products/clips-lunga-6x24mm-zincata.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-3",
+    "name": "Perno 6mm per forcelle",
+    "slug": "perno-6mm-per-forcelle",
+    "price": "1.22",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2811-square_home_default/perno-6mm-per-forcelle.jpg",
+    "imageLocal": "/images/products/perno-6mm-per-forcelle.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-4",
+    "name": "Forcella CORTA M6 acciaio 12mm tirante freno",
+    "slug": "forcella-corta-m6-acciaio-12mm-tirante-freno",
+    "price": "1.39",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2798-square_home_default/forcella-m6-acciaio-24mm-tirante-freno.jpg",
+    "imageLocal": "/images/products/forcella-corta-m6-acciaio-12mm-tirante-freno.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-5",
+    "name": "Forcella LUNGA M6 acciaio 24mm tirante freno",
+    "slug": "forcella-lunga-m6-acciaio-24mm-tirante-freno",
+    "price": "1.47",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2799-square_home_default/forcella-m6-acciaio-36mm-tirante-freno.jpg",
+    "imageLocal": "/images/products/forcella-lunga-m6-acciaio-24mm-tirante-freno.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-6",
+    "name": "Forcella CORTA 12mm M6 - COMPLETA di fermo",
+    "slug": "forcella-corta-12mm-m6-completa-di-fermo",
+    "price": "1.96",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2801-square_home_default/forcella-m6-completa-di-fermo.jpg",
+    "imageLocal": "/images/products/forcella-corta-12mm-m6-completa-di-fermo.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-7",
+    "name": "Forcella LUNGA M6 24mm - COMPLETA di fermo",
+    "slug": "forcella-lunga-m6-24mm-completa-di-fermo",
+    "price": "2.09",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2802-square_home_default/forcella-m6-lunga-completa-di-fermo.jpg",
+    "imageLocal": "/images/products/forcella-lunga-m6-24mm-completa-di-fermo.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-8",
+    "name": "Clip Sicurezza per perno M6",
+    "slug": "clip-sicurezza-per-perno-m6",
+    "price": "0.49",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/4537-square_home_default/clip-sicurezza-per-perno-m6.jpg",
+    "imageLocal": "/images/products/clip-sicurezza-per-perno-m6.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-9",
+    "name": "Molla tirante freno 60mm M6 (interno 7mm) tipo Birel",
+    "slug": "molla-tirante-freno-60mm-m6-interno-7mm-tipo-birel",
+    "price": "0.39",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/13563-square_home_default/molla-tirante-freno-60mm-m6-interno-7mm-tipo.jpg",
+    "imageLocal": "/images/products/molla-tirante-freno-60mm-m6-interno-7mm-tipo-birel.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-10",
+    "name": "Molla ritorno pastiglia freno 8x25mm BSM - BS2 OTK TonyKart",
+    "slug": "molla-ritorno-pastiglia-freno-8x25mm-bsm-bs2-otk-tonykart",
+    "price": "1.06",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29990-square_home_default/molla-ritorno-pastiglia-freno-8x25mm-bsm-bs2.jpg",
+    "imageLocal": "/images/products/molla-ritorno-pastiglia-freno-8x25mm-bsm-bs2-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-11",
+    "name": "Vite speciale ritorno pastiglia M6 (tubetti 8x25)",
+    "slug": "vite-speciale-ritorno-pastiglia-m6-tubetti-8x25",
+    "price": "0.70",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/13567-square_home_default/vite-speciale-ritorno-pastiglia-m6-tubetti-8x25.jpg",
+    "imageLocal": "/images/products/vite-speciale-ritorno-pastiglia-m6-tubetti-8x25.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-12",
+    "name": "Molla ritorno pastiglia freno 7x20",
+    "slug": "molla-ritorno-pastiglia-freno-7x20",
+    "price": "0.43",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/13568-square_home_default/molla-ritorno-pastiglia-freno-7x20.jpg",
+    "imageLocal": "/images/products/molla-ritorno-pastiglia-freno-7x20.jpg"
+  },
+  {
+    "id": "mk-minuteria-forcelle-13",
+    "name": "Vite M6-D8 L.12,2mm per Disco Freno Posteriore FLOTTANTE",
+    "slug": "vite-m6-d8-l-12-2mm-per-disco-freno-posteriore-flottante",
+    "price": "3.65",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/21595-square_home_default/vite-m6-d8-l122mm-per-disco-freno-posteriore-flottante.jpg",
+    "imageLocal": "/images/products/vite-m6-d8-l-12-2mm-per-disco-freno-posteriore-flottante.jpg"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mk-convogliatore-1",
+    "name": "Convogliatore aria KG per pinza freno, MONDOKART, kart, go",
+    "price": "16.35",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17773-square_home_default/convogliatore-aria-kg-per-pinza-freno.jpg",
+    "slug": "convogliatore-aria-kg-per-pinza-freno-mondokart-kart-go",
+    "imageLocal": "/images/products/convogliatore-aria-kg-per-pinza-freno-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-convogliatore-2",
+    "name": "Kit viti fissaggio per convogliatore freni OTK TonyKart",
+    "price": "9.19",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/7687-square_home_default/kit-viti-fissaggio-per-convogliatore-freni-otk.jpg",
+    "slug": "kit-viti-fissaggio-per-convogliatore-freni-otk-tonykart",
+    "imageLocal": "/images/products/kit-viti-fissaggio-per-convogliatore-freni-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-convogliatore-3",
+    "name": "Convogliatore raffreddamento KG carter MINI, MONDOKART, kart",
+    "price": "65.57",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/22525-square_home_default/convogliatore-raffreddamento-kg-carter-mini.jpg",
+    "slug": "convogliatore-raffreddamento-kg-carter-mini-mondokart-kart",
+    "imageLocal": "/images/products/convogliatore-raffreddamento-kg-carter-mini-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-convogliatore-4",
+    "name": "Cover Pioggia per Pinza Freno - GreyHound",
+    "price": "67.94",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/23949-square_home_default/cover-pioggia-per-pinza-freno-greyhound-.jpg",
+    "slug": "cover-pioggia-per-pinza-freno-greyhound",
+    "imageLocal": "/images/products/cover-pioggia-per-pinza-freno-greyhound.jpg"
+  }
+]

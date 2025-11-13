@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mk-protezione-disco-1",
+    "name": "KIT Completo Protezione disco freno posteriore OTK TonyKart",
+    "price": "47.49",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/23999-square_home_default/protezione-disco-freno-posteriore-otk-tonykart.jpg",
+    "slug": "kit-completo-protezione-disco-freno-posteriore-otk-tonykart",
+    "imageLocal": "/images/products/kit-completo-protezione-disco-freno-posteriore-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-protezione-disco-2",
+    "name": "Protezione Disco Freno Topkart, MONDOKART, kart, go kart",
+    "price": "25.78",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17462-square_home_default/protezione-disco-freno-topkart.jpg",
+    "slug": "protezione-disco-freno-topkart-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/protezione-disco-freno-topkart-mondokart-kart-go-kart.jpg"
+  }
+]

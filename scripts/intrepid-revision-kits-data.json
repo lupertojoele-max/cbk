@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mk-kit-revisione-intrepid-1",
+    "name": "Kit Revisione pinza posteriore Intrepid R1/R2, MONDOKART, kart",
+    "price": "28.69",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/15193-square_home_default/kit-revisione-pinza-posteriore-intrepid-r1-r2.jpg",
+    "slug": "kit-revisione-pinza-posteriore-intrepid-r1r2-mondokart-kart",
+    "imageLocal": "/images/products/kit-revisione-pinza-posteriore-intrepid-r1r2-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-intrepid-2",
+    "name": "Kit Revisione IPK - Pompa Freno Intrepid - IPK - Formula K - Praga",
+    "price": "12.99",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/29786-square_home_default/kit-revisione-pompa-freno-intrepid-ipk-.jpg",
+    "slug": "kit-revisione-ipk-pompa-freno-intrepid-ipk-formula-k-praga",
+    "imageLocal": "/images/products/kit-revisione-ipk-pompa-freno-intrepid-ipk-formula-k-praga.jpg"
+  }
+]

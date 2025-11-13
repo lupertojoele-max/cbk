@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mk-kit-revisione-birelart-1",
+    "name": "Kit Revisione Pinza CX-I24 BirelArt (\"Banana Anteriore\")",
+    "price": "24.58",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29685-square_home_default/kit-revisione-pinza-cx-i24-birelart.jpg",
+    "slug": "kit-revisione-pinza-cx-i24-birelart-banana-anteriore",
+    "imageLocal": "/images/products/kit-revisione-pinza-cx-i24-birelart-banana-anteriore.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-2",
+    "name": "Kit Revisione Pinza Posteriore CX-I28 BirelArt (\"Banana\")",
+    "price": "24.58",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29665-square_home_default/kit-revisione-pinza-posteriore-cx-i28-birelart.jpg",
+    "slug": "kit-revisione-pinza-posteriore-cx-i28-birelart-banana",
+    "imageLocal": "/images/products/kit-revisione-pinza-posteriore-cx-i28-birelart-banana.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-3",
+    "name": "Kit Revisione Pinze RR-l25x4 x2 BirelArt",
+    "price": "17.94",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29666-square_home_default/kit-revisione-pinza-rr-l25x4-x2-i38-birelart.jpg",
+    "slug": "kit-revisione-pinze-rr-l25x4-x2-birelart",
+    "imageLocal": "/images/products/kit-revisione-pinze-rr-l25x4-x2-birelart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-4",
+    "name": "Kit revisione pinza RR-I32X2 FL01 BirelArt",
+    "price": "17.59",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29663-square_home_default/kit-revisione-pinza-rr-i32x2-fl01-birelart.jpg",
+    "slug": "kit-revisione-pinza-rr-i32x2-fl01-birelart",
+    "imageLocal": "/images/products/kit-revisione-pinza-rr-i32x2-fl01-birelart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-5",
+    "name": "Kit Revisione Pinza Freno Easykart (primo tipo) Birelart B-I32x2",
+    "price": "16.39",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29634-square_home_default/kit-revisione-pinza-freno-easykart-primo-tipo.jpg",
+    "slug": "kit-revisione-pinza-freno-easykart-primo-tipo-birelart-b-i32x2",
+    "imageLocal": "/images/products/kit-revisione-pinza-freno-easykart-primo-tipo-birelart-b-i32x2.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-6",
+    "name": "Kit Revisione Pompa Freno con Recupero 22SR BirelArt",
+    "price": "19.26",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30737-square_home_default/kit-revisione-pompa-freno-con-recupero-22sr.jpg",
+    "slug": "kit-revisione-pompa-freno-con-recupero-22sr-birelart",
+    "imageLocal": "/images/products/kit-revisione-pompa-freno-con-recupero-22sr-birelart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-7",
+    "name": "Kit Revisione Pompa Freno Birelart 19/B",
+    "price": "10.61",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30707-square_home_default/kit-revisione-pompa-freno-birel-19-b.jpg",
+    "slug": "kit-revisione-pompa-freno-birelart-19b",
+    "imageLocal": "/images/products/kit-revisione-pompa-freno-birelart-19b.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-birelart-8",
+    "name": "Kit Revisione I38x2 Pinza Freno BirelArt Easykart",
+    "price": "3.24",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29777-square_home_default/kit-revisione-i38x2-pinza-freno-birelart-easykart.jpg",
+    "slug": "kit-revisione-i38x2-pinza-freno-birelart-easykart",
+    "imageLocal": "/images/products/kit-revisione-i38x2-pinza-freno-birelart-easykart.jpg"
+  }
+]

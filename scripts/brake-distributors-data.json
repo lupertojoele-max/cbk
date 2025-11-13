@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mk-ripartitori-freno-1",
+    "name": "Ripartitore di frenata anodizzato a scatti universale",
+    "slug": "ripartitore-di-frenata-anodizzato-a-scatti-universale",
+    "price": "39.34",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/21675-square_home_default/ripartitore-di-frenata-anodizzato-a-scatti.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-anodizzato-a-scatti-universale.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-2",
+    "name": "Ripartitore di frenata KZ",
+    "slug": "ripartitore-di-frenata-kz",
+    "price": "19.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17764-square_home_default/ripartitore-di-frenata-kz.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-kz.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-3",
+    "name": "Pomolo regolatore per tirante freno anodizzato",
+    "slug": "pomolo-regolatore-per-tirante-freno-anodizzato",
+    "price": "3.26",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17770-square_home_default/pomolo-regolatore-per-tirante-freno-anodizzato.jpg",
+    "imageLocal": "/images/products/pomolo-regolatore-per-tirante-freno-anodizzato.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-4",
+    "name": "Ripartitore di frenata KZ OTK TonyKart",
+    "slug": "ripartitore-di-frenata-kz-otk-tonykart",
+    "price": "57.86",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/25591-square_home_default/ripartitore-di-frenata-kz-otk-tonykart.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-kz-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-5",
+    "name": "Ripartitore frenata 125cc KZ CRG",
+    "slug": "ripartitore-frenata-125cc-kz-crg",
+    "price": "55.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14795-square_home_default/ripartitore-frenata-125cc-kz-crg.jpg",
+    "imageLocal": "/images/products/ripartitore-frenata-125cc-kz-crg.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-6",
+    "name": "Ripartitore di Frenata BirelArt - RR",
+    "slug": "ripartitore-di-frenata-birelart-rr",
+    "price": "35.55",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/23989-square_home_default/ripartitore-di-frenata-birelart.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-birelart-rr.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-7",
+    "name": "Assieme Ripartitore Frenata KZ BirelArt - NEW",
+    "slug": "assieme-ripartitore-frenata-kz-birelart-new",
+    "price": "79.99",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/25953-square_home_default/assieme-ripartitore-di-frenata-kz-birelart-new.jpg",
+    "imageLocal": "/images/products/assieme-ripartitore-frenata-kz-birelart-new.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-8",
+    "name": "Ripartitore di frenata IPK - Praga - Formula K - OK1",
+    "slug": "ripartitore-di-frenata-ipk-praga-formula-k-ok1",
+    "price": "72.49",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/15356-square_home_default/ripartitore-di-frenata-ipk-praga-formula-k-.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-ipk-praga-formula-k-ok1.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-9",
+    "name": "Ripartitore Frenata KZ CRG con posizionatore GOLD a scatto",
+    "slug": "ripartitore-frenata-kz-crg-con-posizionatore-gold-a-scatto",
+    "price": "60.80",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29580-square_home_default/ripartitore-frenata-kz-crg-con-posizionatore-gold-a-scatto.jpg",
+    "imageLocal": "/images/products/ripartitore-frenata-kz-crg-con-posizionatore-gold-a-scatto.jpg"
+  },
+  {
+    "id": "mk-ripartitori-freno-10",
+    "name": "Ripartitore di frenata KZ AP-RACE 01 Parolin - Top-Kart",
+    "slug": "ripartitore-di-frenata-kz-ap-race-01-parolin-top-kart",
+    "price": "52.91",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/21464-square_home_default/ripartitore-di-frenata-kz-ap-race-01-parolin.jpg",
+    "imageLocal": "/images/products/ripartitore-di-frenata-kz-ap-race-01-parolin-top-kart.jpg"
+  }
+]

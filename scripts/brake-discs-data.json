@@ -1,0 +1,452 @@
+[
+  {
+    "id": "mk-dischi-freno-1",
+    "name": "Disco Freno 210x8mm (Acciaio) - 210mm",
+    "slug": "disco-freno-210x8mm-acciaio-210mm",
+    "price": "32.75",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2701-square_home_default/disco-freno-210x8mm-acciaio.jpg",
+    "imageLocal": "/images/products/disco-freno-210x8mm-acciaio-210mm.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-2",
+    "name": "Disco freno autoventilato posteriore 210x12mm (Ghisa)",
+    "slug": "disco-freno-autoventilato-posteriore-210x12mm-ghisa",
+    "price": "44.99",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/2718-square_home_default/disco-freno-autoventilato-posteriore-210x12mm.jpg",
+    "imageLocal": "/images/products/disco-freno-autoventilato-posteriore-210x12mm-ghisa.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-3",
+    "name": "Disco freno anteriore autoventilato forato Destro 160x12mm (Ghisa)",
+    "slug": "disco-freno-anteriore-autoventilato-forato-destro-160x12mm-ghisa",
+    "price": "36.84",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/5607-square_home_default/disco-freno-anteriore-autoventilato-forato-destro-karting.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-autoventilato-forato-destro-160x12mm-ghisa.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-4",
+    "name": "Disco freno anteriore autoventilato forato Sinistro 160x12mm (Ghisa)",
+    "slug": "disco-freno-anteriore-autoventilato-forato-sinistro-160x12mm-ghisa",
+    "price": "36.84",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/5608-square_home_default/disco-freno-anteriore-autoventilato-forato-karting.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-autoventilato-forato-sinistro-160x12mm-ghisa.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-5",
+    "name": "Disco Freno FISSO AUTOVENTILATO 210 x 12mm con fori (Ghisa) - SOTTILE",
+    "slug": "disco-freno-fisso-autoventilato-210-x-12mm-con-fori-ghisa-sottile",
+    "price": "49.17",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/21444-square_home_default/disco-freno-autoventilato-210x12mm-con-fori.jpg",
+    "imageLocal": "/images/products/disco-freno-fisso-autoventilato-210-x-12mm-con-fori-ghisa-sottile.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-6",
+    "name": "Disco Freno Posteriore 195mm CRG V05 (Ven05) Ghisa - 195 - GRANDE",
+    "slug": "disco-freno-posteriore-195mm-crg-v05-ven05-ghisa-195-grande",
+    "price": "113.92",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29550-square_home_default/disco-freno-posteriore-crg-195mm-v05-ven05-ghisa.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-195mm-crg-v05-ven05-ghisa-195-grande.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-7",
+    "name": "Disco Freno POSTERIORE Autoventilato MARGHERITA 195x18mm FLOTTANTE",
+    "slug": "disco-freno-posteriore-autoventilato-margherita-195x18mm-flottante",
+    "price": "69.99",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/21610-square_home_default/disco-freno-autoventilato-margherita-195x18mm-flottante.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-autoventilato-margherita-195x18mm-flottante.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-8",
+    "name": "Disco Freno Anteriore CRG V05 (Ven05) V10 Ghisa",
+    "slug": "disco-freno-anteriore-crg-v05-ven05-v10-ghisa",
+    "price": "119.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29551-square_home_default/disco-freno-anteriore-crg-v05-ven05-v10-ghisa.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-crg-v05-ven05-v10-ghisa.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-9",
+    "name": "Disco Freno ANTERIORE Autoventilato MARGHERITA 150x14mm FLOTTANTE",
+    "slug": "disco-freno-anteriore-autoventilato-margherita-150x14mm-flottante",
+    "price": "58.98",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/21611-square_home_default/disco-freno-autoventilato-margherita-150x14mm-flottante.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-autoventilato-margherita-150x14mm-flottante.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-10",
+    "name": "Disco freno New Age 190mmCRG",
+    "slug": "disco-freno-new-age-190mmcrg",
+    "price": "80.20",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14793-square_home_default/disco-freno-new-age-190mmcrg.jpg",
+    "imageLocal": "/images/products/disco-freno-new-age-190mmcrg.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-11",
+    "name": "Disco freno V04 anteriore CRG",
+    "slug": "disco-freno-v04-anteriore-crg",
+    "price": "96.70",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14789-square_home_default/disco-freno-v04-anteriore-crg.jpg",
+    "imageLocal": "/images/products/disco-freno-v04-anteriore-crg.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-12",
+    "name": "Disco Freno Posteriore 206 x 16 mm - MAGGIORATO - OTK TonyKart - 206 Ø",
+    "slug": "disco-freno-posteriore-206-x-16-mm-maggiorato-otk-tonykart-206",
+    "price": "161.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/14809-square_home_default/disco-freno-posteriore-206-x-16-mm-otk-tonykart.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-206-x-16-mm-maggiorato-otk-tonykart-206.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-13",
+    "name": "Disco Freno Posteriore 180 x 13 mm - STANDARD - OTK TonyKart - 180 Ø",
+    "slug": "disco-freno-posteriore-180-x-13-mm-standard-otk-tonykart-180",
+    "price": "130.49",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/23985-square_home_default/disco-freno-posteriore-180-x-13-mm-otk-tonykart.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-180-x-13-mm-standard-otk-tonykart-180.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-14",
+    "name": "Disco freno posteriore Mini Margherita OTK TonyKart",
+    "slug": "disco-freno-posteriore-mini-margherita-otk-tonykart",
+    "price": "79.19",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29931-square_home_default/disco-freno-posteriore-mini-margherita-otk.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-mini-margherita-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-15",
+    "name": "Disco freno posteriore IPK - Intrepid R1 R2 R1K R2K",
+    "slug": "disco-freno-posteriore-ipk-intrepid-r1-r2-r1k-r2k",
+    "price": "135.50",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/18378-square_home_default/disco-freno-posteriore-ipk-intrepid-r1-r2-r1k.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-ipk-intrepid-r1-r2-r1k-r2k.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-16",
+    "name": "Disco Freno originale posteriore PCR",
+    "slug": "disco-freno-originale-posteriore-pcr",
+    "price": "125.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/14643-square_home_default/disco-freno-originale-posteriore-pcr.jpg",
+    "imageLocal": "/images/products/disco-freno-originale-posteriore-pcr.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-17",
+    "name": "Disco freno Posteriore 189mm CRG V09 / V10 / V05 - PICCOLO",
+    "slug": "disco-freno-posteriore-189mm-crg-v09-v10-v05-piccolo",
+    "price": "129.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/28359-square_home_default/disco-freno-posteriore-crg-189mm-v09-v10-v05.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-189mm-crg-v09-v10-v05-piccolo.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-18",
+    "name": "Disco Freno Top-Kart Mini 180mm",
+    "slug": "disco-freno-top-kart-mini-180mm",
+    "price": "32.75",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/29917-square_home_default/disco-freno-topkart-mini-180mm-karting.jpg",
+    "imageLocal": "/images/products/disco-freno-top-kart-mini-180mm.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-19",
+    "name": "Disco freno anteriore autoventilante KZ BSS Destro OTK TonyKart",
+    "slug": "disco-freno-anteriore-autoventilante-kz-bss-destro-otk-tonykart",
+    "price": "104.39",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/23986-square_home_default/disco-freno-anteriore-autoventilante-kz-bss-destro-otk-tonykart.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-autoventilante-kz-bss-destro-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-20",
+    "name": "Disco freno anteriore autoventilante KZ BSS Sinistro OTK TonyKart",
+    "slug": "disco-freno-anteriore-autoventilante-kz-bss-sinistro-otk-tonykart",
+    "price": "104.39",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/23987-square_home_default/disco-freno-anteriore-autoventilante-kz-bss-sinistro-otk-tonykart.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-autoventilante-kz-bss-sinistro-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-21",
+    "name": "Disco Freno originale posteriore PCR",
+    "slug": "disco-freno-originale-posteriore-pcr",
+    "price": "115.00",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30254-square_home_default/disco-freno-originale-posteriore-pcr-dal-2015.jpg",
+    "imageLocal": "/images/products/disco-freno-originale-posteriore-pcr.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-22",
+    "name": "Disco Freno anteriore PCR KF",
+    "slug": "disco-freno-anteriore-pcr-kf",
+    "price": "55.00",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30252-square_home_default/disco-freno-anteriore-pcr-kf.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-pcr-kf.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-23",
+    "name": "Disco Freno anteriore PCR KZ",
+    "slug": "disco-freno-anteriore-pcr-kz",
+    "price": "129.45",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/30253-square_home_default/disco-freno-anteriore-pcr-kz.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-pcr-kz.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-24",
+    "name": "Disco freno New Age 180mm CRG",
+    "slug": "disco-freno-new-age-180mm-crg",
+    "price": "94.10",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/16190-square_home_default/disco-freno-new-age-180mm-crg.jpg",
+    "imageLocal": "/images/products/disco-freno-new-age-180mm-crg.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-25",
+    "name": "Disco Freno ANTERIORE CRG V11 V13 KZ",
+    "slug": "disco-freno-anteriore-crg-v11-v13-kz",
+    "price": "99.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14812-square_home_default/disco-freno-anteriore-crg-v11-kz.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-crg-v11-v13-kz.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-26",
+    "name": "Disco Freno Posteriore CRG V11 V13 KZ (STANDARD 192mm)",
+    "slug": "disco-freno-posteriore-crg-v11-v13-kz-standard-192mm",
+    "price": "129.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/18411-square_home_default/disco-freno-posteriore-crg-v11-kz.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-crg-v11-v13-kz-standard-192mm.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-27",
+    "name": "Disco freno anteriore V06 V10 CRG",
+    "slug": "disco-freno-anteriore-v06-v10-crg",
+    "price": "59.30",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/21232-square_home_default/disco-freno-anteriore-v06-crg.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-v06-v10-crg.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-28",
+    "name": "Disco POSTERIORE Birel 80x180x16 KF KZ OK BirelArt",
+    "slug": "disco-posteriore-birel-80x180x16-kf-kz-ok-birelart",
+    "price": "122.94",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29704-square_home_default/disco-posteriore-birel-80x180x16-kf-kz-ok-birelart.jpg",
+    "imageLocal": "/images/products/disco-posteriore-birel-80x180x16-kf-kz-ok-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-29",
+    "name": "Disco anteriore fisso 80x150x12G KZ BirelArt",
+    "slug": "disco-anteriore-fisso-80x150x12g-kz-birelart",
+    "price": "97.99",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30497-square_home_default/disco-anteriore-fisso-80x150x12g-kz-birelart.jpg",
+    "imageLocal": "/images/products/disco-anteriore-fisso-80x150x12g-kz-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-30",
+    "name": "Disco posteriore fisso W 66x180x8 RI38 BirelArt",
+    "slug": "disco-posteriore-fisso-w-66x180x8-ri38-birelart",
+    "price": "79.81",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/30759-square_home_default/disco-posteriore-fisso-w-66x180x8-ri38-birelart.jpg",
+    "imageLocal": "/images/products/disco-posteriore-fisso-w-66x180x8-ri38-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-31",
+    "name": "Disco posteriore fisso 80x166x5 RI25 BirelArt",
+    "slug": "disco-posteriore-fisso-80x166x5-ri25-birelart",
+    "price": "48.24",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29784-square_home_default/disco-posteriore-fisso-80x166x5-ri25-birelart.jpg",
+    "imageLocal": "/images/products/disco-posteriore-fisso-80x166x5-ri25-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-32",
+    "name": "Disco freno anteriore 80x150x5 CXI24 BirelArt",
+    "slug": "disco-freno-anteriore-80x150x5-cxi24-birelart",
+    "price": "73.76",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/14933-square_home_default/disco-freno-anteriore-80x150x5-cxi24-birelart.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-80x150x5-cxi24-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-33",
+    "name": "Disco Posteriore Fisso BIG 80x200x6 INOX CXI28 (BANANA) BirelArt",
+    "slug": "disco-posteriore-fisso-big-80x200x6-inox-cxi28-banana-birelart",
+    "price": "92.37",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29710-square_home_default/disco-posteriore-fisso-80x200x6-inox-cxi28.jpg",
+    "imageLocal": "/images/products/disco-posteriore-fisso-big-80x200x6-inox-cxi28-banana-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-34",
+    "name": "Disco Freno Anteriore IPK - Praga - Formula K - OK1 - STR V2 V3",
+    "slug": "disco-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3",
+    "price": "145.89",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/29795-square_home_default/disco-freno-anteriore-ipk-praga-formula-k-.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-35",
+    "name": "Disco Freno - 187MM - Posteriore 187mm IPK - Praga - Formula K - OK1 - RBS V2",
+    "slug": "disco-freno-187mm-posteriore-187mm-ipk-praga-formula-k-ok1-rbs-v2",
+    "price": "167.00",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/29813-square_home_default/disco-freno-posteriore-187mm-ipk-praga-.jpg",
+    "imageLocal": "/images/products/disco-freno-187mm-posteriore-187mm-ipk-praga-formula-k-ok1-rbs-v2.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-36",
+    "name": "Disco Freno Posteriore FISSO Mini 160x10 OTK TonyKart",
+    "slug": "disco-freno-posteriore-fisso-mini-160x10-otk-tonykart",
+    "price": "102.53",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/30016-square_home_default/disco-freno-posteriore-mini-160x10-otk-tonykart.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-fisso-mini-160x10-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-37",
+    "name": "Disco Freno - 195MM - Posteriore 195mm IPK - Praga - Formula K - OK1 - RBS V2 V3",
+    "slug": "disco-freno-195mm-posteriore-195mm-ipk-praga-formula-k-ok1-rbs-v2-v3",
+    "price": "176.99",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/29820-square_home_default/disco-freno-posteriore-195mm-ipk-praga-formula-k-ok1-rbs-v2.jpg",
+    "imageLocal": "/images/products/disco-freno-195mm-posteriore-195mm-ipk-praga-formula-k-ok1-rbs-v2-v3.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-38",
+    "name": "Disco posteriore fisso W 66x180x4A BirelArt",
+    "slug": "disco-posteriore-fisso-w-66x180x4a-birelart",
+    "price": "59.12",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16658-square_home_default/disco-posteriore-fisso-w-66x180x4a-birelart.jpg",
+    "imageLocal": "/images/products/disco-posteriore-fisso-w-66x180x4a-birelart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-39",
+    "name": "Disco Freno Autoventilato 200mm OK KF KZ Bullet EVO Top-Kart",
+    "slug": "disco-freno-autoventilato-200mm-ok-kf-kz-bullet-evo-top-kart",
+    "price": "107.90",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/29919-square_home_default/disco-freno-autoventilato-200mm-ok-kf-kz-topkart.jpg",
+    "imageLocal": "/images/products/disco-freno-autoventilato-200mm-ok-kf-kz-bullet-evo-top-kart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-40",
+    "name": "Disco Freno Anteriore 140mm KF TopKart",
+    "slug": "disco-freno-anteriore-140mm-kf-topkart",
+    "price": "45.08",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17141-square_home_default/disco-freno-anteriore-140mm-kf-topkart.jpg",
+    "imageLocal": "/images/products/disco-freno-anteriore-140mm-kf-topkart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-41",
+    "name": "Disco Freno TopKart Mini 180mm CADET",
+    "slug": "disco-freno-topkart-mini-180mm-cadet",
+    "price": "37.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17251-square_home_default/disco-freno-topkart-mini-180mm-cadet.jpg",
+    "imageLocal": "/images/products/disco-freno-topkart-mini-180mm-cadet.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-42",
+    "name": "Disco Freno 200x8mm (Acciaio) - 200mm",
+    "slug": "disco-freno-200x8mm-acciaio-200mm",
+    "price": "36.84",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17252-square_home_default/disco-freno-200x8mm-acciaio.jpg",
+    "imageLocal": "/images/products/disco-freno-200x8mm-acciaio-200mm.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-43",
+    "name": "Disco Freno Autoventilato FLOTTANTE 200mm OK KF KZ TopKart",
+    "slug": "disco-freno-autoventilato-flottante-200mm-ok-kf-kz-topkart",
+    "price": "107.90",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/17253-square_home_default/disco-freno-autoventilato-flottante-200mm-ok-kf-kz-topkart.jpg",
+    "imageLocal": "/images/products/disco-freno-autoventilato-flottante-200mm-ok-kf-kz-topkart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-44",
+    "name": "Disco Freno Autoventilato FLOTTANTE 160mm TopKart",
+    "slug": "disco-freno-autoventilato-flottante-160mm-topkart",
+    "price": "69.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17255-square_home_default/disco-freno-autoventilato-flottante-160mm-topkart.jpg",
+    "imageLocal": "/images/products/disco-freno-autoventilato-flottante-160mm-topkart.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-45",
+    "name": "Disco Freno Posteriore 206 x 16 mm Tipo OTK TonyKart - NON OMOLOGATO",
+    "slug": "disco-freno-posteriore-206-x-16-mm-tipo-otk-tonykart-non-omologato",
+    "price": "57.34",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/17678-square_home_default/disco-freno-posteriore-206-x-16-mm-tipo-otk-tonykart-non-omologato.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-206-x-16-mm-tipo-otk-tonykart-non-omologato.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-46",
+    "name": "Disco Freno Top-Kart Kid Kart 50cc 165mm",
+    "slug": "disco-freno-top-kart-kid-kart-50cc-165mm",
+    "price": "32.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18345-square_home_default/disco-freno-top-kart-kid-kart-50cc-165mm.jpg",
+    "imageLocal": "/images/products/disco-freno-top-kart-kid-kart-50cc-165mm.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-47",
+    "name": "Disco Freno Posteriore Meccanico BABY IPK - Praga - Formula K - OK1",
+    "slug": "disco-freno-posteriore-meccanico-baby-ipk-praga-formula-k-ok1",
+    "price": "32.69",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/19923-square_home_default/disco-freno-posteriore-meccanico-baby-ipk-praga-formula-k-ok1.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-meccanico-baby-ipk-praga-formula-k-ok1.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-48",
+    "name": "Disco Freno Posteriore - 180 mm - CRG V13 (RIDOTTO)",
+    "slug": "disco-freno-posteriore-180-mm-crg-v13-ridotto",
+    "price": "129.95",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/21084-square_home_default/disco-freno-posteriore-crg-v13-180mm.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-180-mm-crg-v13-ridotto.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-49",
+    "name": "Disco Freno Posteriore 180mm UP V11 V13 Optional CRG",
+    "slug": "disco-freno-posteriore-180mm-up-v11-v13-optional-crg",
+    "price": "106.52",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/21210-square_home_default/disco-freno-posteriore-180mm-up-v11-v13-optional-crg.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-180mm-up-v11-v13-optional-crg.jpg"
+  },
+  {
+    "id": "mk-dischi-freno-50",
+    "name": "Disco Freno Posteriore BWD - OTK Tony Kart 180x13 mm – BWD",
+    "slug": "disco-freno-posteriore-bwd-otk-tony-kart-180x13-mm-bwd",
+    "price": "130.49",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/26296-square_home_default/disco-freno-posteriore-otk-tony-kart-180x13-mm-bwd.jpg",
+    "imageLocal": "/images/products/disco-freno-posteriore-bwd-otk-tony-kart-180x13-mm-bwd.jpg"
+  }
+]

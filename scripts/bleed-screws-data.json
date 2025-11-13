@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mk-viti-spurgo-1",
+    "name": "Vite Spurgo M6 (passo 1 std)",
+    "price": "2.42",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/23994-square_home_default/vite-spurgo-m6-passo-1-std.jpg",
+    "slug": "vite-spurgo-m6-passo-1-std",
+    "imageLocal": "/images/products/vite-spurgo-m6-passo-1-std.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-2",
+    "name": "Parapolvere per viti spurgo freno, MONDOKART, kart, go kart",
+    "price": "0.78",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10585-square_home_default/parapolvere-per-viti-spurgo-freno.jpg",
+    "slug": "parapolvere-per-viti-spurgo-freno-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/parapolvere-per-viti-spurgo-freno-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-3",
+    "name": "Tappo Ø 7 x 1 mm con passaggio spurgo pinza OTK TonyKart",
+    "price": "2.42",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29970-square_home_default/tappo-o-7-x-1-mm-con-passaggio-spurgo-pinza-otk.jpg",
+    "slug": "tappo-7-x-1-mm-con-passaggio-spurgo-pinza-otk-tonykart",
+    "imageLocal": "/images/products/tappo-7-x-1-mm-con-passaggio-spurgo-pinza-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-4",
+    "name": "Spurgo M10 V05 - V04 CRG (Passo 1), MONDOKART, kart, go kart",
+    "price": "1.84",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/10786-square_home_default/spurgo-m10-v05-v04-crg-passo-1.jpg",
+    "slug": "spurgo-m10-v05-v04-crg-passo-1-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/spurgo-m10-v05-v04-crg-passo-1-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-5",
+    "name": "Tappo M10 freno (tutti gli impianti frenanti)",
+    "price": "0.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/29515-square_home_default/tappo-m10-freno-tutti-gli-impianti-frenanti.jpg",
+    "slug": "tappo-m10-freno-tutti-gli-impianti-frenanti",
+    "imageLocal": "/images/products/tappo-m10-freno-tutti-gli-impianti-frenanti.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-6",
+    "name": "Raccordo combinato completo CRG, MONDOKART, kart, go kart",
+    "price": "3.99",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/11901-square_home_default/raccordo-combinato-completo-crg.jpg",
+    "slug": "raccordo-combinato-completo-crg-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/raccordo-combinato-completo-crg-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-7",
+    "name": "Vite spurgo pinza freno G 1/8 BirelArt, MONDOKART, kart, go",
+    "price": "3.75",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16673-square_home_default/vite-spurgo-pinza-freno-g-1-8-birelart.jpg",
+    "slug": "vite-spurgo-pinza-freno-g-18-birelart-mondokart-kart-go",
+    "imageLocal": "/images/products/vite-spurgo-pinza-freno-g-18-birelart-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-8",
+    "name": "Sfiato M10x1 Posteriore / Anteriore IPK - Praga - Formula K -",
+    "price": "4.07",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/14825-square_home_default/sfiato-m10x1-posteriore-anteriore-ipk-praga-.jpg",
+    "slug": "sfiato-m10x1-posteriore-anteriore-ipk-praga-formula-k-",
+    "imageLocal": "/images/products/sfiato-m10x1-posteriore-anteriore-ipk-praga-formula-k-.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-9",
+    "name": "Vite Spurgo M8 Pinza Freno",
+    "price": "7.34",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/30266-square_home_default/vite-spurgo-m8-pinza-freno-pcr.jpg",
+    "slug": "vite-spurgo-m8-pinza-freno",
+    "imageLocal": "/images/products/vite-spurgo-m8-pinza-freno.jpg"
+  },
+  {
+    "id": "mk-viti-spurgo-10",
+    "name": "Vite Spurgo M6 CORTO (passo 1) Top-Kart, MONDOKART, kart, go",
+    "price": "3.27",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/18384-square_home_default/vite-spurgo-m6-corto-passo-1-top-kart.jpg",
+    "slug": "vite-spurgo-m6-corto-passo-1-top-kart-mondokart-kart-go",
+    "imageLocal": "/images/products/vite-spurgo-m6-corto-passo-1-top-kart-mondokart-kart-go.jpg"
+  }
+]

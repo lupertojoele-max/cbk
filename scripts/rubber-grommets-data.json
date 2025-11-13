@@ -1,0 +1,200 @@
+[
+  {
+    "id": "mk-gommini-1",
+    "name": "Gommino Akron 19,05mm esterno, MONDOKART, kart, go kart",
+    "price": "0.81",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15204-square_home_default/gommino-akron-1905mm-esterno.jpg",
+    "slug": "gommino-akron-1905mm-esterno-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-akron-1905mm-esterno-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-2",
+    "name": "Gommino Akron 22,22mm esterno, MONDOKART, kart, go kart",
+    "price": "0.78",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18389-square_home_default/gommino-akron-2222mm-esterno.jpg",
+    "slug": "gommino-akron-2222mm-esterno-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-akron-2222mm-esterno-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-3",
+    "name": "Gommino Akron 3008 (1''1/4) - a tazza 30,80 mm",
+    "price": "0.74",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/28361-square_home_default/gommino-akron-3008-1-1-4-a-tazza-3080-mm.jpg",
+    "slug": "gommino-akron-3008-114-a-tazza-3080-mm",
+    "imageLocal": "/images/products/gommino-akron-3008-114-a-tazza-3080-mm.jpg"
+  },
+  {
+    "id": "mk-gommini-4",
+    "name": "Gommino Akron 3021 - a tazza 29,50 mm, MONDOKART, kart, go",
+    "price": "1.21",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5371-square_home_default/gommino-akron-3021-a-tazza-2950-mm.jpg",
+    "slug": "gommino-akron-3021-a-tazza-2950-mm-mondokart-kart-go",
+    "imageLocal": "/images/products/gommino-akron-3021-a-tazza-2950-mm-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-gommini-5",
+    "name": "Gommino Akron 30001 (7/8) - a tazza 21,70 mm, MONDOKART, kart",
+    "price": "0.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/9978-square_home_default/gommino-akron-30001-7-8-a-tazza-2170-mm.jpg",
+    "slug": "gommino-akron-30001-78-a-tazza-2170-mm-mondokart-kart",
+    "imageLocal": "/images/products/gommino-akron-30001-78-a-tazza-2170-mm-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-6",
+    "name": "Gommino Akron 3005 - a tazza 26,30mm, MONDOKART, kart, go kart",
+    "price": "1.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15123-square_home_default/gommino-akron-3005-a-tazza-2630mm.jpg",
+    "slug": "gommino-akron-3005-a-tazza-2630mm-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-akron-3005-a-tazza-2630mm-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-7",
+    "name": "Gommino Akron 3002 - a tazza 24,70mm, MONDOKART, kart, go kart",
+    "price": "0.82",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15124-square_home_default/gommino-akron-3002-a-tazza-2470mm.jpg",
+    "slug": "gommino-akron-3002-a-tazza-2470mm-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-akron-3002-a-tazza-2470mm-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-8",
+    "name": "Gommino Akron 3000 - a tazza 19 mm, MONDOKART, kart, go kart",
+    "price": "1.43",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5375-square_home_default/gommino-akron-3000-a-tazza-19-mm.jpg",
+    "slug": "gommino-akron-3000-a-tazza-19-mm-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-akron-3000-a-tazza-19-mm-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-9",
+    "name": "Guarnizione alluminio / gomma M5 5mm (spurgo freno), MONDOKART",
+    "price": "0.78",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10576-square_home_default/guarnizione-alluminio-gomma-m5-5mm-spurgo.jpg",
+    "slug": "guarnizione-alluminio-gomma-m5-5mm-spurgo-freno-mondokart",
+    "imageLocal": "/images/products/guarnizione-alluminio-gomma-m5-5mm-spurgo-freno-mondokart.jpg"
+  },
+  {
+    "id": "mk-gommini-10",
+    "name": "Guarnizione in fibra M10 (tappo pompa freno), MONDOKART, kart",
+    "price": "0.22",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10577-square_home_default/guarnizione-in-fibra-m10-tappo-pompa-freno.jpg",
+    "slug": "guarnizione-in-fibra-m10-tappo-pompa-freno-mondokart-kart",
+    "imageLocal": "/images/products/guarnizione-in-fibra-m10-tappo-pompa-freno-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-11",
+    "name": "Gommino a tazza 15/16 Akron 3019, MONDOKART, kart, go kart",
+    "price": "1.23",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10579-square_home_default/gommino-a-tazza-15-16-akron-3019.jpg",
+    "slug": "gommino-a-tazza-1516-akron-3019-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gommino-a-tazza-1516-akron-3019-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-12",
+    "name": "Oring Sezione Quadra 21x18x1.8, MONDOKART, kart, go kart",
+    "price": "0.24",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/16514-square_home_default/oring-sezione-quadra-21x18x18.jpg",
+    "slug": "oring-sezione-quadra-21x18x18-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/oring-sezione-quadra-21x18x18-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-13",
+    "name": "Guarnizione or pinza freno posteriore per SA2 BS6 BSD BWD OTK TonyKart",
+    "price": "2.42",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29967-square_home_default/guarnizione-or-pinza-freno-posteriore-sa2-bs6-bsd.jpg",
+    "slug": "guarnizione-or-pinza-freno-posteriore-per-sa2-bs6-bsd-bwd-otk-tonykart",
+    "imageLocal": "/images/products/guarnizione-or-pinza-freno-posteriore-per-sa2-bs6-bsd-bwd-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-gommini-14",
+    "name": "Gommino pinza posteriore V09 V10 V11 V13 KF KZ CRG",
+    "price": "4.49",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29519-square_home_default/gommino-pinza-posteriore-v09-v10-kf-kz-crg.jpg",
+    "slug": "gommino-pinza-posteriore-v09-v10-v11-v13-kf-kz-crg",
+    "imageLocal": "/images/products/gommino-pinza-posteriore-v09-v10-v11-v13-kf-kz-crg.jpg"
+  },
+  {
+    "id": "mk-gommini-15",
+    "name": "Gommino pinza freno anteriore V05 / V04 CRG, MONDOKART, kart",
+    "price": "4.06",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/10781-square_home_default/gommino-pinza-freno-anteriore-v05-v04-crg.jpg",
+    "slug": "gommino-pinza-freno-anteriore-v05-v04-crg-mondokart-kart",
+    "imageLocal": "/images/products/gommino-pinza-freno-anteriore-v05-v04-crg-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-gommini-16",
+    "name": "Guarnizione Sezione Quadra 25x3x3 EPDM BirelArt",
+    "price": "2.45",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29677-square_home_default/guarnizione-sezione-quadra-25x3x3-epdm-birelart.jpg",
+    "slug": "guarnizione-sezione-quadra-25x3x3-epdm-birelart",
+    "imageLocal": "/images/products/guarnizione-sezione-quadra-25x3x3-epdm-birelart.jpg"
+  },
+  {
+    "id": "mk-gommini-17",
+    "name": "Guarnizione tenuta pinza anteriore BSS BWZ KZ BSM4 TonyKart OTK",
+    "price": "3.69",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/26359-square_home_default/guarnizione-tenuta-pinza-anteriore-bss-kz-bsm4.jpg",
+    "slug": "guarnizione-tenuta-pinza-anteriore-bss-bwz-kz-bsm4-tonykart-otk",
+    "imageLocal": "/images/products/guarnizione-tenuta-pinza-anteriore-bss-bwz-kz-bsm4-tonykart-otk.jpg"
+  },
+  {
+    "id": "mk-gommini-18",
+    "name": "Gommino Tenuta 27mm Pistoncino Pinza Freno AP-RACE 01 Parolin",
+    "price": "11.35",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/16453-square_home_default/gommino-tenuta-27mm-pistoncino-pinza-freno-ap-race-01-parolin.jpg",
+    "slug": "gommino-tenuta-27mm-pistoncino-pinza-freno-ap-race-01-parolin",
+    "imageLocal": "/images/products/gommino-tenuta-27mm-pistoncino-pinza-freno-ap-race-01-parolin.jpg"
+  },
+  {
+    "id": "mk-gommini-19",
+    "name": "Gommino Tenuta 32mm Pistoncino Pinza Freno Posteriore AP-RACE",
+    "price": "11.46",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/21484-square_home_default/gommino-tenuta-32mm-pistoncino-pinza-freno-posteriore-ap-race-01-06-parolin-kart-republic-kr.jpg",
+    "slug": "gommino-tenuta-32mm-pistoncino-pinza-freno-posteriore-ap-race",
+    "imageLocal": "/images/products/gommino-tenuta-32mm-pistoncino-pinza-freno-posteriore-ap-race.jpg"
+  },
+  {
+    "id": "mk-gommini-20",
+    "name": "Guarnizione Quadra 19mm Pinza Freno Anteriore IPK - Praga - Formula K - OK1 - STR V2 V3",
+    "price": "1.59",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/28362-square_home_default/guarnizione-quadra-19mm-pinza-freno-anteriore-ipk.jpg",
+    "slug": "guarnizione-quadra-19mm-pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3",
+    "imageLocal": "/images/products/guarnizione-quadra-19mm-pinza-freno-anteriore-ipk-praga-formula-k-ok1-str-v2-v3.jpg"
+  },
+  {
+    "id": "mk-gommini-21",
+    "name": "Gommino 28mm sezione quadra Intrepid - IPK - Praga - Formula K",
+    "price": "2.09",
+    "brand": "Intrepid",
+    "imageUrl": "https://www.mondokart.com/14213-square_home_default/gommino-28mm-sezione-quadra-intrepid-ipk-.jpg",
+    "slug": "gommino-28mm-sezione-quadra-intrepid-ipk-praga-formula-k",
+    "imageLocal": "/images/products/gommino-28mm-sezione-quadra-intrepid-ipk-praga-formula-k.jpg"
+  },
+  {
+    "id": "mk-gommini-22",
+    "name": "OR Pinza V05 (Ven05) - chiusura semi-pinze CRG, MONDOKART",
+    "price": "0.80",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/10606-square_home_default/or-pinza-v05-ven05-chiusura-semi-pinze-crg.jpg",
+    "slug": "or-pinza-v05-ven05-chiusura-semi-pinze-crg-mondokart",
+    "imageLocal": "/images/products/or-pinza-v05-ven05-chiusura-semi-pinze-crg-mondokart.jpg"
+  }
+]

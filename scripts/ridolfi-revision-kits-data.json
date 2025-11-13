@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mk-kit-revisione-ridolfi-1",
+    "name": "Kit revisione pinza RR K880, MONDOKART, kart, go kart, karting",
+    "price": "3.69",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/8566-square_home_default/kit-revisione-pinza-rr-k880.jpg",
+    "slug": "kit-revisione-pinza-rr-k880-mondokart-kart-go-kart-karting",
+    "imageLocal": "/images/products/kit-revisione-pinza-rr-k880-mondokart-kart-go-kart-karting.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-ridolfi-2",
+    "name": "Kit revisione pompa freno RR K225, MONDOKART, kart, go kart",
+    "price": "9.82",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/8570-square_home_default/kit-revisione-pompa-freno-rr-k225.jpg",
+    "slug": "kit-revisione-pompa-freno-rr-k225-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/kit-revisione-pompa-freno-rr-k225-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-ridolfi-3",
+    "name": "Kit revisione pompa con vaschetta RR KB030, MONDOKART, kart, go",
+    "price": "6.54",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/8568-square_home_default/kit-revisione-pompa-con-vaschetta-rr-kb030.jpg",
+    "slug": "kit-revisione-pompa-con-vaschetta-rr-kb030-mondokart-kart-go",
+    "imageLocal": "/images/products/kit-revisione-pompa-con-vaschetta-rr-kb030-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-ridolfi-4",
+    "name": "Kit revisione pompa manuale RR KB078",
+    "price": "6.43",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/23992-square_home_default/kit-revisione-pompa-manuale-rr-kb078.jpg",
+    "slug": "kit-revisione-pompa-manuale-rr-kb078",
+    "imageLocal": "/images/products/kit-revisione-pompa-manuale-rr-kb078.jpg"
+  },
+  {
+    "id": "mk-kit-revisione-ridolfi-5",
+    "name": "Kit revisione pinza anteriore MA20 KZ KF MINI RR, MONDOKART",
+    "price": "2.44",
+    "brand": "Righetti Ridolfi",
+    "imageUrl": "https://www.mondokart.com/10582-square_home_default/kit-revisione-pinza-anteriore-ma20-kz-kf-mini-rr.jpg",
+    "slug": "kit-revisione-pinza-anteriore-ma20-kz-kf-mini-rr-mondokart",
+    "imageLocal": "/images/products/kit-revisione-pinza-anteriore-ma20-kz-kf-mini-rr-mondokart.jpg"
+  }
+]

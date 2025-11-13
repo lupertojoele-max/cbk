@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mk-kit-completo-1",
+    "name": "Gruppo freno anteriore MA20 WP KZ RR, MONDOKART, kart, go kart",
+    "price": "737.70",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/11984-square_home_default/gruppo-freno-anteriore-ma20-wp-kz-rr.jpg",
+    "slug": "gruppo-freno-anteriore-ma20-wp-kz-rr-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/gruppo-freno-anteriore-ma20-wp-kz-rr-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-kit-completo-2",
+    "name": "Gruppo freno posteriore MA20 WP KZ - KF, MONDOKART, kart, go",
+    "price": "262.29",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/12111-square_home_default/gruppo-freno-posteriore-ma20-wp-kz-kf.jpg",
+    "slug": "gruppo-freno-posteriore-ma20-wp-kz-kf-mondokart-kart-go",
+    "imageLocal": "/images/products/gruppo-freno-posteriore-ma20-wp-kz-kf-mondokart-kart-go.jpg"
+  }
+]
