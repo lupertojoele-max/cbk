@@ -29,6 +29,26 @@ interface SubcategoryPageClientProps {
   brands: string[]
 }
 
+// Brake subcategories for freni-e-accessori
+const brakeSubcategories = [
+  'Tutti',
+  'Pastiglie Freno',
+  'Tubi Freno',
+  'Tiranti Freno',
+  'Pompe Freno',
+  'Pinze Freno',
+  'Dischi Freno Generici',
+  'Ripartitori di Frenata',
+  'Raccordi Freno e Ferma-tubi',
+  'Minuteria, Forcelle, Molle',
+  'Kit Revisione',
+  'Gommini Singoli',
+  'Viti Spurgo Freno',
+  'Kit completi impianto frenante',
+  'Convogliatori - Raffreddamento',
+  'Protezioni disco freno',
+]
+
 export default function SubcategoryPageClient({
   categoryName,
   slug,
@@ -36,9 +56,13 @@ export default function SubcategoryPageClient({
   brands,
 }: SubcategoryPageClientProps) {
   const [selectedBrand, setSelectedBrand] = useState('Tutti')
+  const [selectedSubcategory, setSelectedSubcategory] = useState('Tutti')
   const [sortBy, setSortBy] = useState('featured')
   const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+
+  // Check if this is brake products category
+  const isBrakeCategory = slug === 'freni-e-accessori'
 
   // Calculate statistics
   const stats = useMemo(() => {
@@ -61,6 +85,49 @@ export default function SubcategoryPageClient({
   // Filter products by category
   const categoryProducts = useMemo(() => {
     let filtered = allCategoryProducts
+
+    // Filter by subcategory (for brake products)
+    if (isBrakeCategory && selectedSubcategory !== 'Tutti') {
+      filtered = filtered.filter((p) => {
+        const name = p.name.toLowerCase()
+        const desc = p.description.toLowerCase()
+
+        switch (selectedSubcategory) {
+          case 'Pastiglie Freno':
+            return name.includes('pastigl') || desc.includes('pastigl')
+          case 'Tubi Freno':
+            return (name.includes('tubo') || name.includes('tubi')) && !name.includes('tirante')
+          case 'Tiranti Freno':
+            return name.includes('tirante') || name.includes('asta') || name.includes('forcella') || name.includes('clips') || name.includes('cavo')
+          case 'Pompe Freno':
+            return name.includes('pompa')
+          case 'Pinze Freno':
+            return name.includes('pinza')
+          case 'Dischi Freno Generici':
+            return name.includes('disco')
+          case 'Ripartitori di Frenata':
+            return name.includes('ripartitor')
+          case 'Raccordi Freno e Ferma-tubi':
+            return name.includes('raccord') || name.includes('ferma')
+          case 'Minuteria, Forcelle, Molle':
+            return name.includes('forcella') || name.includes('molla') || name.includes('clips') || name.includes('dado')
+          case 'Kit Revisione':
+            return name.includes('revisione') || name.includes('kit') && desc.includes('revisione')
+          case 'Gommini Singoli':
+            return name.includes('gommino') || name.includes('gommini')
+          case 'Viti Spurgo Freno':
+            return name.includes('spurgo') || name.includes('vite')
+          case 'Kit completi impianto frenante':
+            return name.includes('kit') && (name.includes('completo') || name.includes('impianto'))
+          case 'Convogliatori - Raffreddamento':
+            return name.includes('convogliator') || name.includes('raffreddamento')
+          case 'Protezioni disco freno':
+            return name.includes('protezion')
+          default:
+            return true
+        }
+      })
+    }
 
     // Filter by brand
     if (selectedBrand !== 'Tutti') {
@@ -96,7 +163,7 @@ export default function SubcategoryPageClient({
     })
 
     return sorted
-  }, [allCategoryProducts, selectedBrand, searchQuery, sortBy])
+  }, [allCategoryProducts, selectedBrand, selectedSubcategory, searchQuery, sortBy, isBrakeCategory])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 dark:from-gray-900 dark:via-blue-950/20 dark:to-gray-900 pt-24 pb-16">
@@ -230,6 +297,28 @@ export default function SubcategoryPageClient({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Subcategory Filter (only for brake products) */}
+            {isBrakeCategory && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  Sottocategoria
+                </label>
+                <select
+                  value={selectedSubcategory}
+                  onChange={(e) => setSelectedSubcategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl
+                    focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all
+                    text-gray-900 dark:text-white cursor-pointer"
+                >
+                  {brakeSubcategories.map((subcat) => (
+                    <option key={subcat} value={subcat}>
+                      {subcat}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
             {/* Brand Filter */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -513,109 +602,111 @@ function ProductCard({
   }
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      transition={{ delay: index * 0.05 }}
-      whileHover={{ y: -8, transition: { duration: 0.2 } }}
-    >
+    <div style={{ height: '380px', width: '100%', overflow: 'hidden' }}>
       <Link
         href={`/prodotti/${product.slug}`}
-        className="block bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-md overflow-hidden
-          hover:shadow-2xl transition-all duration-300 group border border-gray-200/50 dark:border-gray-700/50 h-full"
+        className="block bg-white dark:bg-gray-800 rounded-xl shadow-md
+          hover:shadow-2xl transition-shadow duration-300 group border border-gray-200/50 dark:border-gray-700/50"
+        style={{ height: '380px', width: '100%', display: 'block', overflow: 'hidden' }}
       >
-        {/* Image Container */}
-        <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 overflow-hidden">
+        {/* Image Container - Fixed Exact Size */}
+        <div className="relative bg-white dark:bg-gray-800"
+          style={{ height: '180px', minHeight: '180px', maxHeight: '180px', width: '100%', overflow: 'hidden' }}
+        >
           {product.featured && (
-            <motion.div
-              initial={{ x: -100 }}
-              animate={{ x: 0 }}
-              className="absolute top-3 left-3 z-10 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg"
-            >
-              IN EVIDENZA
-            </motion.div>
+            <div className="absolute top-2 left-2 z-10 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
+              EVIDENZA
+            </div>
           )}
           {hasDiscount && (
-            <motion.div
-              initial={{ x: 100 }}
-              animate={{ x: 0 }}
-              className="absolute top-3 right-3 z-10 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg"
-            >
+            <div className="absolute top-2 right-2 z-10 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
               -{discountPercentage}%
-            </motion.div>
+            </div>
           )}
           {!product.inStock && (
             <div className="absolute inset-0 z-10 bg-black/60 backdrop-blur-sm flex items-center justify-center">
-              <span className="bg-gray-900/90 text-white px-6 py-3 rounded-xl font-bold shadow-2xl">
+              <span className="bg-gray-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-2xl">
                 ESAURITO
               </span>
             </div>
           )}
-          <Image
-            src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
-            alt={product.name}
-            fill
-            className="object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-500"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            padding: '15px',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Image
+              src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
+              alt={product.name}
+              fill
+              className="object-contain"
+              sizes="180px"
+              style={{ padding: '15px' }}
+            />
+          </div>
         </div>
 
-        {/* Product Info */}
-        <div className="p-5">
-          {/* Brand */}
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-xs text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">
+        {/* Product Info - Fixed Height Sections */}
+        <div style={{ height: '200px', minHeight: '200px', maxHeight: '200px', padding: '12px', display: 'flex', flexDirection: 'column' }}>
+          {/* Brand and Stock - Fixed Height */}
+          <div style={{ height: '20px', minHeight: '20px', maxHeight: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <p className="text-xs text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wide truncate" style={{ flex: 1 }}>
               {product.brand}
             </p>
             {product.inStock ? (
-              <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded">
-                Disponibile
+              <span className="px-1.5 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
+                Stock
               </span>
             ) : (
-              <span className="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold rounded">
-                Esaurito
+              <span className="px-1.5 py-0.5 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
+                Out
               </span>
             )}
           </div>
 
-          {/* Name */}
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors min-h-[3.5rem]">
+          {/* Name - Fixed Height 2 Lines */}
+          <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors overflow-hidden"
+            style={{ height: '40px', minHeight: '40px', maxHeight: '40px', fontSize: '13px', lineHeight: '20px', marginBottom: '8px' }}
+          >
             {product.name}
           </h3>
 
-          {/* Description */}
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 min-h-[2.5rem]">
+          {/* Description - Fixed Height 2 Lines */}
+          <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2 overflow-hidden"
+            style={{ height: '32px', minHeight: '32px', maxHeight: '32px', lineHeight: '16px', marginBottom: '8px' }}
+          >
             {product.description}
           </p>
 
-          {/* Price */}
-          <div className="flex items-end justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-            <div>
+          {/* Price Section - Fixed Height */}
+          <div style={{ height: '56px', minHeight: '56px', maxHeight: '56px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid', marginTop: 'auto' }}
+            className="border-gray-200 dark:border-gray-700"
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
               {hasDiscount && (
-                <p className="text-sm text-gray-500 dark:text-gray-400 line-through mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-400 line-through" style={{ marginBottom: '2px' }}>
                   €{parseFloat(product.originalPrice!).toFixed(2)}
                 </p>
               )}
-              <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
                 €{parseFloat(product.price).toFixed(2)}
               </p>
             </div>
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:bg-blue-700 transition-colors"
+            <div className="bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:bg-blue-700 transition-colors"
+              style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
             >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </motion.div>
+            </div>
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   )
 }

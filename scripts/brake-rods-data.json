@@ -1,0 +1,128 @@
+[
+  {
+    "id": "mk-tiranti-freno-1",
+    "name": "Tirante asta freno M6 universale",
+    "slug": "tirante-asta-freno-m6-universale",
+    "price": "4.50",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/25589-square_home_default/tirante-asta-freno-m6-universale.jpg",
+    "imageLocal": "/images/products/tirante-asta-freno-m6-universale.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-2",
+    "name": "Forcella LUNGA M6 24mm - COMPLETA di fermo",
+    "slug": "forcella-lunga-m6-24mm-completa-di-fermo",
+    "price": "2.09",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2802-square_home_default/forcella-m6-lunga-completa-di-fermo.jpg",
+    "imageLocal": "/images/products/forcella-lunga-m6-24mm-completa-di-fermo.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-3",
+    "name": "Forcella CORTA 12mm M6 - COMPLETA di fermo",
+    "slug": "forcella-corta-12mm-m6-completa-di-fermo",
+    "price": "1.96",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2801-square_home_default/forcella-m6-completa-di-fermo.jpg",
+    "imageLocal": "/images/products/forcella-corta-12mm-m6-completa-di-fermo.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-4",
+    "name": "Clips CORTA 6x12mm zincata",
+    "slug": "clips-corta-6x12mm-zincata",
+    "price": "0.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2784-square_home_default/clips-6x24mm-zincata-oro.jpg",
+    "imageLocal": "/images/products/clips-corta-6x12mm-zincata.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-5",
+    "name": "Clips LUNGA 6x24mm zincata",
+    "slug": "clips-lunga-6x24mm-zincata",
+    "price": "0.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2785-square_home_default/clips-6x36mm-zincata-oro.jpg",
+    "imageLocal": "/images/products/clips-lunga-6x24mm-zincata.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-6",
+    "name": "Forcella CORTA M6 acciaio 12mm tirante freno",
+    "slug": "forcella-corta-m6-acciaio-12mm-tirante-freno",
+    "price": "1.39",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2798-square_home_default/forcella-m6-acciaio-24mm-tirante-freno.jpg",
+    "imageLocal": "/images/products/forcella-corta-m6-acciaio-12mm-tirante-freno.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-7",
+    "name": "Forcella LUNGA M6 acciaio 24mm tirante freno",
+    "slug": "forcella-lunga-m6-acciaio-24mm-tirante-freno",
+    "price": "1.47",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2799-square_home_default/forcella-m6-acciaio-36mm-tirante-freno.jpg",
+    "imageLocal": "/images/products/forcella-lunga-m6-acciaio-24mm-tirante-freno.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-8",
+    "name": "Asta freno tirante CRG",
+    "slug": "asta-freno-tirante-crg",
+    "price": "19.90",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/767-square_home_default/asta-freno-tirante-crg.jpg",
+    "imageLocal": "/images/products/asta-freno-tirante-crg.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-9",
+    "name": "Asta tirante Freno comando pompa dritta",
+    "slug": "asta-tirante-freno-comando-pompa-dritta",
+    "price": "8.99",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/8103-square_home_default/asta-tirante-freno-comando-pompa-dritta-otk.jpg",
+    "imageLocal": "/images/products/asta-tirante-freno-comando-pompa-dritta.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-10",
+    "name": "Asta tirante Freno comando pompa curva OTK TonyKart",
+    "slug": "asta-tirante-freno-comando-pompa-curva-otk-tonykart",
+    "price": "12.00",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/8104-square_home_default/asta-tirante-freno-comando-pompa-curva-otk.jpg",
+    "imageLocal": "/images/products/asta-tirante-freno-comando-pompa-curva-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-11",
+    "name": "Prolunga tirante freno M6 o cavo di sicurezza - 30mm",
+    "slug": "prolunga-tirante-freno-m6-o-cavo-di-sicurezza-30mm",
+    "price": "2.40",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/10580-square_home_default/prolunga-tirante-freno-m6-o-cavo-di-sicurezza-.jpg",
+    "imageLocal": "/images/products/prolunga-tirante-freno-m6-o-cavo-di-sicurezza-30mm.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-12",
+    "name": "Cavo in acciaio di sicurezza freno con terminali M6",
+    "slug": "cavo-in-acciaio-di-sicurezza-freno-con-terminali-m6",
+    "price": "5.45",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2661-square_home_default/cavo-in-acciaio-di-sicurezza-freno-con-terminali.jpg",
+    "imageLocal": "/images/products/cavo-in-acciaio-di-sicurezza-freno-con-terminali-m6.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-13",
+    "name": "Cavo Sicurezza Freno 46cm Doppio KZ CRG",
+    "slug": "cavo-sicurezza-freno-46cm-doppio-kz-crg",
+    "price": "11.46",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/18128-square_home_default/cavo-sicurezza-freno-46cm-doppio-kz-crg.jpg",
+    "imageLocal": "/images/products/cavo-sicurezza-freno-46cm-doppio-kz-crg.jpg"
+  },
+  {
+    "id": "mk-tiranti-freno-14",
+    "name": "Dado Conico 6x22 tirante freno M6 o cavo di sicurezza",
+    "slug": "dado-conico-6x22-tirante-freno-m6-o-cavo-di-sicurezza",
+    "price": "3.16",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/18390-square_home_default/dado-conico-6x22-tirante-freno-m6-o-cavo-di.jpg",
+    "imageLocal": "/images/products/dado-conico-6x22-tirante-freno-m6-o-cavo-di-sicurezza.jpg"
+  }
+]

@@ -245,81 +245,111 @@ function ProductCard({ product }: { product: Product }) {
     : 0
 
   return (
-    <Link
-      href={`/prodotti/${product.slug}`}
-      className="block bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden
-        hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-    >
-      {/* Image Container */}
-      <div className="relative h-64 bg-gray-100 dark:bg-gray-700 overflow-hidden">
-        {product.featured && (
-          <div className="absolute top-2 left-2 z-10 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
-            IN EVIDENZA
-          </div>
-        )}
-        {hasDiscount && (
-          <div className="absolute top-2 right-2 z-10 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
-            -{discountPercentage}%
-          </div>
-        )}
-        {!product.inStock && (
-          <div className="absolute inset-0 z-10 bg-black bg-opacity-50 flex items-center justify-center">
-            <span className="bg-gray-800 text-white px-4 py-2 rounded-lg font-bold">
-              ESAURITO
-            </span>
-          </div>
-        )}
-        <Image
-          src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
-          alt={product.name}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        />
-      </div>
-
-      {/* Product Info */}
-      <div className="p-4">
-        {/* Brand */}
-        <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-1">
-          {product.brand}
-        </p>
-
-        {/* Name */}
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-          {product.name}
-        </h3>
-
-        {/* Description */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
-          {product.description}
-        </p>
-
-        {/* Price */}
-        <div className="flex items-center justify-between">
-          <div>
-            {hasDiscount && (
-              <p className="text-sm text-gray-500 dark:text-gray-400 line-through">
-                €{parseFloat(product.originalPrice!).toFixed(2)}
-              </p>
-            )}
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              €{parseFloat(product.price).toFixed(2)}
-            </p>
-          </div>
-
-          {/* Stock Status */}
-          {product.inStock ? (
-            <span className="text-xs text-green-600 dark:text-green-400 font-semibold">
-              Disponibile
-            </span>
-          ) : (
-            <span className="text-xs text-red-600 dark:text-red-400 font-semibold">
-              Esaurito
-            </span>
+    <div style={{ height: '380px', width: '100%', overflow: 'hidden' }}>
+      <Link
+        href={`/prodotti/${product.slug}`}
+        className="block bg-white dark:bg-gray-800 rounded-xl shadow-md
+          hover:shadow-2xl transition-shadow duration-300 group border border-gray-200/50 dark:border-gray-700/50"
+        style={{ height: '380px', width: '100%', display: 'block', overflow: 'hidden' }}
+      >
+        {/* Image Container - Fixed Exact Size */}
+        <div className="relative bg-white dark:bg-gray-800"
+          style={{ height: '180px', minHeight: '180px', maxHeight: '180px', width: '100%', overflow: 'hidden' }}
+        >
+          {product.featured && (
+            <div className="absolute top-2 left-2 z-10 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
+              EVIDENZA
+            </div>
           )}
+          {hasDiscount && (
+            <div className="absolute top-2 right-2 z-10 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
+              -{discountPercentage}%
+            </div>
+          )}
+          {!product.inStock && (
+            <div className="absolute inset-0 z-10 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+              <span className="bg-gray-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-2xl">
+                ESAURITO
+              </span>
+            </div>
+          )}
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            padding: '15px',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Image
+              src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
+              alt={product.name}
+              fill
+              className="object-contain"
+              sizes="180px"
+              style={{ padding: '15px' }}
+            />
+          </div>
         </div>
-      </div>
-    </Link>
+
+        {/* Product Info - Fixed Height Sections */}
+        <div style={{ height: '200px', minHeight: '200px', maxHeight: '200px', padding: '12px', display: 'flex', flexDirection: 'column' }}>
+          {/* Brand and Stock - Fixed Height */}
+          <div style={{ height: '20px', minHeight: '20px', maxHeight: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <p className="text-xs text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wide truncate" style={{ flex: 1 }}>
+              {product.brand}
+            </p>
+            {product.inStock ? (
+              <span className="px-1.5 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
+                Stock
+              </span>
+            ) : (
+              <span className="px-1.5 py-0.5 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
+                Out
+              </span>
+            )}
+          </div>
+
+          {/* Name - Fixed Height 2 Lines */}
+          <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors overflow-hidden"
+            style={{ height: '40px', minHeight: '40px', maxHeight: '40px', fontSize: '13px', lineHeight: '20px', marginBottom: '8px' }}
+          >
+            {product.name}
+          </h3>
+
+          {/* Description - Fixed Height 2 Lines */}
+          <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2 overflow-hidden"
+            style={{ height: '32px', minHeight: '32px', maxHeight: '32px', lineHeight: '16px', marginBottom: '8px' }}
+          >
+            {product.description}
+          </p>
+
+          {/* Price Section - Fixed Height */}
+          <div style={{ height: '56px', minHeight: '56px', maxHeight: '56px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid', marginTop: 'auto' }}
+            className="border-gray-200 dark:border-gray-700"
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+              {hasDiscount && (
+                <p className="text-xs text-gray-500 dark:text-gray-400 line-through" style={{ marginBottom: '2px' }}>
+                  €{parseFloat(product.originalPrice!).toFixed(2)}
+                </p>
+              )}
+              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
+                €{parseFloat(product.price).toFixed(2)}
+              </p>
+            </div>
+            <div className="bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:bg-blue-700 transition-colors"
+              style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
+            >
+              <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </div>
   )
 }

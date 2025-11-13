@@ -1,0 +1,146 @@
+[
+  {
+    "id": "mk-tubi-freno-1",
+    "name": "Tubo freno universale (8mm) Inox + Pvc",
+    "slug": "tubo-freno-universale-8mm-inox-pvc",
+    "price": "10.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/19844-square_home_default/tubo-freno-universale-8mm-inox-pvc.jpg",
+    "imageLocal": "/images/products/tubo-freno-universale-8mm-inox-pvc.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-2",
+    "name": "Tubo freno anteriore (freno al volante) tris occhiello freno anteriore V06 CRG",
+    "slug": "tubo-freno-anteriore-freno-al-volante-tris-occhiello-freno-anteriore-v06-crg",
+    "price": "64.49",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/14802-square_home_default/tubo-freno-anteriore-freno-al-volante-tris.jpg",
+    "imageLocal": "/images/products/tubo-freno-anteriore-freno-al-volante-tris-occhiello-freno-anteriore-v06-crg.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-3",
+    "name": "Tubo freno 720mm occhiello CRG",
+    "slug": "tubo-freno-720mm-occhiello-crg",
+    "price": "24.50",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14801-square_home_default/tubo-freno-720mm-occhiello-crg.jpg",
+    "imageLocal": "/images/products/tubo-freno-720mm-occhiello-crg.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-4",
+    "name": "Tubo freno anteriore tris 570-350-570 occhiello KZ V05 V10 V07 V11 CRG",
+    "slug": "tubo-freno-anteriore-tris-570-350-570-occhiello-kz-v05-v10-v07-v11-crg",
+    "price": "54.20",
+    "brand": "",
+    "imageUrl": "https://www.mondokart.com/14800-square_home_default/tubo-freno-anteriore-tris-570-350-570-occhiello.jpg",
+    "imageLocal": "/images/products/tubo-freno-anteriore-tris-570-350-570-occhiello-kz-v05-v10-v07-v11-crg.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-5",
+    "name": "Tubo Freno OTK Tonykart BWD",
+    "slug": "tubo-freno-otk-tonykart-bwd",
+    "price": "57.50",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29948-square_home_default/tubo-freno-otk-bwd.jpg",
+    "imageLocal": "/images/products/tubo-freno-otk-tonykart-bwd.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-6",
+    "name": "Kit anteriore tubi freno KZ BSS OTK TonyKart",
+    "slug": "kit-anteriore-tubi-freno-kz-bss-otk-tonykart",
+    "price": "94.05",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/5150-square_home_default/kit-anteriore-tubi-freno-kz-bss-otk-tonykart.jpg",
+    "imageLocal": "/images/products/kit-anteriore-tubi-freno-kz-bss-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-7",
+    "name": "Kit posteriore tubi freno KZ BSS BSD OTK TonyKart",
+    "slug": "kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart",
+    "price": "106.35",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/5149-square_home_default/kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart.jpg",
+    "imageLocal": "/images/products/kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-8",
+    "name": "Kit tubi freno posteriore SA2 BWD OTK TonyKart",
+    "slug": "kit-tubi-freno-posteriore-sa2-bwd-otk-tonykart",
+    "price": "116.50",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/8109-square_home_default/kit-tubi-freno-posteriore-sa2-otk-tonykart.jpg",
+    "imageLocal": "/images/products/kit-tubi-freno-posteriore-sa2-bwd-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-9",
+    "name": "Kit tubi freno anteriore SA3 OTK TonyKart",
+    "slug": "kit-tubi-freno-anteriore-sa3-otk-tonykart",
+    "price": "111.30",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/8093-square_home_default/kit-tubi-freno-anteriore-sa3-otk-tonykart.jpg",
+    "imageLocal": "/images/products/kit-tubi-freno-anteriore-sa3-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-10",
+    "name": "Tubo Freno Completo 510-175-245 BirelArt",
+    "slug": "tubo-freno-completo-510-175-245-birelart",
+    "price": "72.67",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16710-square_home_default/tubo-freno-completo-510-175-245-birelart.jpg",
+    "imageLocal": "/images/products/tubo-freno-completo-510-175-245-birelart.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-11",
+    "name": "Tubi freno (kit) PCR KZ Anteriore (dal 2015)",
+    "slug": "tubi-freno-kit-pcr-kz-anteriore-dal-2015",
+    "price": "55.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/14731-square_home_default/tubi-freno-kit-pcr-kz-anteriore-dal-2015.jpg",
+    "imageLocal": "/images/products/tubi-freno-kit-pcr-kz-anteriore-dal-2015.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-12",
+    "name": "Tubo freno 635mm occhiello mini CRG",
+    "slug": "tubo-freno-635mm-occhiello-mini-crg",
+    "price": "24.55",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/14821-square_home_default/tubo-freno-615mm-occhiello-mini-crg.jpg",
+    "imageLocal": "/images/products/tubo-freno-635mm-occhiello-mini-crg.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-13",
+    "name": "Tubo freno anteriore KZ IPK STR V2 V3",
+    "slug": "tubo-freno-anteriore-kz-ipk-str-v2-v3",
+    "price": "56.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/22512-square_home_default/tubo-freno-anteriore-kz-ipk-str-v2.jpg",
+    "imageLocal": "/images/products/tubo-freno-anteriore-kz-ipk-str-v2-v3.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-14",
+    "name": "Tubo freno posteriore KZ IPK RBS V2 V3",
+    "slug": "tubo-freno-posteriore-kz-ipk-rbs-v2-v3",
+    "price": "54.00",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15282-square_home_default/tubo-freno-posteriore-kz-ipk-rbs-v2.jpg",
+    "imageLocal": "/images/products/tubo-freno-posteriore-kz-ipk-rbs-v2-v3.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-15",
+    "name": "Tubo freno MINI IPK MKB V1",
+    "slug": "tubo-freno-mini-ipk-mkb-v1",
+    "price": "44.00",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15310-square_home_default/tubo-freno-mini-ipk-mkb-v1.jpg",
+    "imageLocal": "/images/products/tubo-freno-mini-ipk-mkb-v1.jpg"
+  },
+  {
+    "id": "mk-tubi-freno-16",
+    "name": "Kit tubi freno posteriore BSM4 Mini OTK TonyKart",
+    "slug": "kit-tubi-freno-posteriore-bsm4-mini-otk-tonykart",
+    "price": "91.80",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/16033-square_home_default/kit-tubi-freno-posteriore-bsm4-mini-otk-tonykart.jpg",
+    "imageLocal": "/images/products/kit-tubi-freno-posteriore-bsm4-mini-otk-tonykart.jpg"
+  }
+]
