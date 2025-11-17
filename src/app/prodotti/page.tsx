@@ -54,6 +54,7 @@ const brands = [
   'Sparco',
   'OMP',
   'Tillotson',
+  'Racing',
   'Varie',
 ]
 
