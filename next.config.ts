@@ -57,6 +57,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.iameeuroseries.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 
