@@ -232,7 +232,7 @@ export function CalendarView() {
               className="w-20 h-auto"
             />
             <Image
-              src="https://www.iameeuroseries.com/static/images/logo.svg"
+              src="https://www.iameeuroseries.com/wp-content/uploads/2019/07/logowhiteEURO.png"
               alt="IAME Euro Series Logo"
               width={80}
               height={80}
