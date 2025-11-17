@@ -1,0 +1,182 @@
+[
+  {
+    "id": "mk-mozzo-post-30mm-1",
+    "name": "Mozzo Posteriore Alluminio 30 x 35, MONDOKART, kart, go kart",
+    "price": "22.85",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/23203-square_home_default/mozzo-posteriore-alluminio-30-x-35.jpg",
+    "slug": "mozzo-posteriore-alluminio-30-x-35-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/mozzo-posteriore-alluminio-30-x-35-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-2",
+    "name": "Mozzo posteriore alluminio 30 X 67, MONDOKART, kart, go kart",
+    "price": "25.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17768-square_home_default/mozzo-posteriore-alluminio-30-x-67.jpg",
+    "slug": "mozzo-posteriore-alluminio-30-x-67-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/mozzo-posteriore-alluminio-30-x-67-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-3",
+    "name": "Mozzo posteriore alluminio 30 X 95, MONDOKART, kart, go kart",
+    "price": "29.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17860-square_home_default/mozzo-posteriore-alluminio-30-x-95.jpg",
+    "slug": "mozzo-posteriore-alluminio-30-x-95-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/mozzo-posteriore-alluminio-30-x-95-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-4",
+    "name": "Mozzo posteriore in alluminio 30 X 115, MONDOKART, kart, go",
+    "price": "33.90",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17855-square_home_default/mozzo-posteriore-in-alluminio-30-x-115.jpg",
+    "slug": "mozzo-posteriore-in-alluminio-30-x-115-mondokart-kart-go",
+    "imageLocal": "/images/products/mozzo-posteriore-in-alluminio-30-x-115-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-5",
+    "name": "Mozzo Posteriore Magnesio assale 30mm x 40mm, MONDOKART, kart",
+    "price": "59.69",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/14759-square_home_default/mozzo-posteriore-magnesio-assale-30mm-x-40mm.jpg",
+    "slug": "mozzo-posteriore-magnesio-assale-30mm-x-40mm-mondokart-kart",
+    "imageLocal": "/images/products/mozzo-posteriore-magnesio-assale-30mm-x-40mm-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-6",
+    "name": "Mozzo ruota / freno Mini AL Ø 30 mm 60cc OTK TonyKart",
+    "price": "67.09",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/21848-square_home_default/mozzo-ruota-freno-mini-al-o-30-mm-60cc-otk.jpg",
+    "slug": "mozzo-ruota-freno-mini-al-30-mm-60cc-otk-tonykart",
+    "imageLocal": "/images/products/mozzo-ruota-freno-mini-al-30-mm-60cc-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-7",
+    "name": "Mozzo posteriore corto Mini - Baby 60cc 30x35 alluminio",
+    "price": "49.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/15883-square_home_default/mozzo-posteriore-corto-mini-baby-60cc-30x35.jpg",
+    "slug": "mozzo-posteriore-corto-mini-baby-60cc-30x35-alluminio",
+    "imageLocal": "/images/products/mozzo-posteriore-corto-mini-baby-60cc-30x35-alluminio.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-8",
+    "name": "Mozzo ruota posteriore Mini - Baby 30x50 Top-Kart",
+    "price": "49.99",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/23939-square_home_default/mozzo-ruota-posteriore-mini-baby-30x50-topkart.jpg",
+    "slug": "mozzo-ruota-posteriore-mini-baby-30x50-top-kart",
+    "imageLocal": "/images/products/mozzo-ruota-posteriore-mini-baby-30x50-top-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-9",
+    "name": "Mozzo ruota posteriore Mini - Baby 30x70 TopKart",
+    "price": "49.99",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/29906-square_home_default/mozzo-ruota-posteriore-mini-baby-30x70-topkart.jpg",
+    "slug": "mozzo-ruota-posteriore-mini-baby-30x70-topkart",
+    "imageLocal": "/images/products/mozzo-ruota-posteriore-mini-baby-30x70-topkart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-10",
+    "name": "Mozzo posteriore corto Mini - Baby 60cc 30x31 MAGNESIO Top-Kart",
+    "price": "69.95",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/24147-square_home_default/mozzo-posteriore-corto-mini-baby-60cc-30x31-magnesio-topkart.jpg",
+    "slug": "mozzo-posteriore-corto-mini-baby-60cc-30x31-magnesio-top-kart",
+    "imageLocal": "/images/products/mozzo-posteriore-corto-mini-baby-60cc-30x31-magnesio-top-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-11",
+    "name": "Mozzo posteriore corto Mini - Baby 60cc 30x50 MAGNESIO TopKart",
+    "price": "69.95",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/17177-square_home_default/mozzo-posteriore-corto-mini-baby-60cc-30x50-magnesio-topkart.jpg",
+    "slug": "mozzo-posteriore-corto-mini-baby-60cc-30x50-magnesio-topkart",
+    "imageLocal": "/images/products/mozzo-posteriore-corto-mini-baby-60cc-30x50-magnesio-topkart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-12",
+    "name": "Prolunga Mozzo Ruota ORO 23mm, MONDOKART, kart, go kart",
+    "price": "18.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/19910-square_home_default/prolunga-mozzo-ruota-oro-23mm.jpg",
+    "slug": "prolunga-mozzo-ruota-oro-23mm-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/prolunga-mozzo-ruota-oro-23mm-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-13",
+    "name": "Prolunga Mozzo Ruota NERA 30mm, MONDOKART, kart, go kart",
+    "price": "19.45",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/19912-square_home_default/prolunga-mozzo-ruota-nera-30mm.jpg",
+    "slug": "prolunga-mozzo-ruota-nera-30mm-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/prolunga-mozzo-ruota-nera-30mm-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-14",
+    "name": "Mozzo Ruota Posteriore 30mm x 50 - 6 A/P HQ BirelArt",
+    "price": "79.29",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/19961-square_home_default/mozzo-ruota-posteriore-30mm-x-50-6-ap-hq-birelart.jpg",
+    "slug": "mozzo-ruota-posteriore-30mm-x-50-6-ap-hq-birelart",
+    "imageLocal": "/images/products/mozzo-ruota-posteriore-30mm-x-50-6-ap-hq-birelart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-15",
+    "name": "Mozzo Ruota Posteriore 30mm x 30 - 6 A/P HQ BirelArt",
+    "price": "69.13",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/24149-square_home_default/mozzo-ruota-posteriore-30mm-x-30-6-ap-hq-birelart.jpg",
+    "slug": "mozzo-ruota-posteriore-30mm-x-30-6-ap-hq-birelart",
+    "imageLocal": "/images/products/mozzo-ruota-posteriore-30mm-x-30-6-ap-hq-birelart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-16",
+    "name": "Mozzo Posteriore 30x43 IPK - Praga - Formula K - OK1",
+    "price": "85.39",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/22101-square_home_default/mozzo-posteriore-30x43-ipk-praga-formula-k-ok1.jpg",
+    "slug": "mozzo-posteriore-30x43-ipk-praga-formula-k-ok1",
+    "imageLocal": "/images/products/mozzo-posteriore-30x43-ipk-praga-formula-k-ok1.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-17",
+    "name": "Mozzo Posteriore 30x35 IPK - Praga - Formula K - OK1",
+    "price": "84.18",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/22102-square_home_default/mozzo-posteriore-30x35-ipk-praga-formula-k-ok1.jpg",
+    "slug": "mozzo-posteriore-30x35-ipk-praga-formula-k-ok1",
+    "imageLocal": "/images/products/mozzo-posteriore-30x35-ipk-praga-formula-k-ok1.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-18",
+    "name": "Mozzo Posteriore 30x25 IPK - Praga - Formula K - OK1",
+    "price": "79.29",
+    "brand": "IPK",
+    "imageUrl": "https://www.mondokart.com/22695-square_home_default/mozzo-posteriore-30x25-ipk-praga-formula-k-ok1.jpg",
+    "slug": "mozzo-posteriore-30x25-ipk-praga-formula-k-ok1",
+    "imageLocal": "/images/products/mozzo-posteriore-30x25-ipk-praga-formula-k-ok1.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-19",
+    "name": "Estrattore per Mozzi Ruote Righetti Ridolfi, MONDOKART, kart",
+    "price": "59.39",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/28874-square_home_default/estrattore-per-mozzi-ruote-righetti-ridolfi.jpg",
+    "slug": "estrattore-per-mozzi-ruote-righetti-ridolfi-mondokart-kart",
+    "imageLocal": "/images/products/estrattore-per-mozzi-ruote-righetti-ridolfi-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-mozzo-post-30mm-20",
+    "name": "Mozzo Ruota Post 30x100 HQ BirelArt Easykart, MONDOKART, kart",
+    "price": "97.10",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/16715-square_home_default/mozzo-ruota-post-30x100-hq-birelart-easykart.jpg",
+    "slug": "mozzo-ruota-post-30x100-hq-birelart-easykart-mondokart-kart",
+    "imageLocal": "/images/products/mozzo-ruota-post-30x100-hq-birelart-easykart-mondokart-kart.jpg"
+  }
+]

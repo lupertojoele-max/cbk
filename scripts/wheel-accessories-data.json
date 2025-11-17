@@ -1,0 +1,218 @@
+[
+  {
+    "id": "mk-acc-cerchi-1",
+    "name": "Dado rame M8 per cerchi ruota, MONDOKART, kart, go kart",
+    "price": "0.60",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2599-square_home_default/dado-rame-m8-per-cerchi-ruota.jpg",
+    "slug": "dado-rame-m8-per-cerchi-ruota-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/dado-rame-m8-per-cerchi-ruota-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-2",
+    "name": "Valvola tubeless per cerchi ruota, MONDOKART, kart, go kart",
+    "price": "0.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/17451-square_home_default/valvola-tubeless-per-cerchi-ruota.jpg",
+    "slug": "valvola-tubeless-per-cerchi-ruota-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/valvola-tubeless-per-cerchi-ruota-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-3",
+    "name": "Vite antistallonamento ferro M5 (senz Oring), MONDOKART, kart",
+    "price": "0.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18888-square_home_default/vite-antistallonamento-ferro-m5-senz-oring.jpg",
+    "slug": "vite-antistallonamento-ferro-m5-senz-oring-mondokart-kart",
+    "imageLocal": "/images/products/vite-antistallonamento-ferro-m5-senz-oring-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-4",
+    "name": "Vite antistallonamento bombata M5 (senza Oring)",
+    "price": "0.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/24081-square_home_default/vite-antistallonamento-bombata-m5-senza-oring.jpg",
+    "slug": "vite-antistallonamento-bombata-m5-senza-oring",
+    "imageLocal": "/images/products/vite-antistallonamento-bombata-m5-senza-oring.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-5",
+    "name": "Oring OR per vite antistallonamento",
+    "price": "0.19",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/24084-square_home_default/oring-or-per-vite-antistallonamento.jpg",
+    "slug": "oring-or-per-vite-antistallonamento",
+    "imageLocal": "/images/products/oring-or-per-vite-antistallonamento.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-6",
+    "name": "Kit 12 Viti con Or antistallonamento bombate M5 Douglass Wheel",
+    "price": "11.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10794-square_home_default/kit-12-viti-con-or-antistallonamento-bombate-m5.jpg",
+    "slug": "kit-12-viti-con-or-antistallonamento-bombate-m5-douglass-wheel",
+    "imageLocal": "/images/products/kit-12-viti-con-or-antistallonamento-bombate-m5-douglass-wheel.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-7",
+    "name": "Kit Viti Antistallonamento Universali Topkart, MONDOKART, kart",
+    "price": "12.95",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/17242-square_home_default/kit-viti-antistallonamento-universali-topkart.jpg",
+    "slug": "kit-viti-antistallonamento-universali-topkart-mondokart-kart",
+    "imageLocal": "/images/products/kit-viti-antistallonamento-universali-topkart-mondokart-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-8",
+    "name": "Kit viti antistallonamento cerchi universali M5 - OTK Tonykart",
+    "price": "13.95",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/14111-square_home_default/kit-viti-antistallonamento-cerchi-universali-m5-.jpg",
+    "slug": "kit-viti-antistallonamento-cerchi-universali-m5-otk-tonykart",
+    "imageLocal": "/images/products/kit-viti-antistallonamento-cerchi-universali-m5-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-9",
+    "name": "Kit Viti Antistallonamento M HQ - Freeline Birel, MONDOKART",
+    "price": "19.95",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/14058-square_home_default/kit-viti-antistallonamento-m-hq-freeline-birel.jpg",
+    "slug": "kit-viti-antistallonamento-m-hq-freeline-birel-mondokart",
+    "imageLocal": "/images/products/kit-viti-antistallonamento-m-hq-freeline-birel-mondokart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-10",
+    "name": "Kit 6 Dadi Douglas M8 per cerchi ruota, MONDOKART, kart, go",
+    "price": "3.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/22237-square_home_default/kit-6-dadi-douglas-m8-per-cerchi-ruota.jpg",
+    "slug": "kit-6-dadi-douglas-m8-per-cerchi-ruota-mondokart-kart-go",
+    "imageLocal": "/images/products/kit-6-dadi-douglas-m8-per-cerchi-ruota-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-11",
+    "name": "Barretta adesive di piombo per bilanciatura ruota, MONDOKART",
+    "price": "1.49",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/2597-square_home_default/barretta-adesive-di-piombo-per-bilanciatura-ruota.jpg",
+    "slug": "barretta-adesive-di-piombo-per-bilanciatura-ruota-mondokart",
+    "imageLocal": "/images/products/barretta-adesive-di-piombo-per-bilanciatura-ruota-mondokart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-12",
+    "name": "Dado autobloccante per fusello (M14)",
+    "price": "0.59",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/29587-square_home_default/dado-autobloccante-per-fusello-m14.jpg",
+    "slug": "dado-autobloccante-per-fusello-m14",
+    "imageLocal": "/images/products/dado-autobloccante-per-fusello-m14.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-13",
+    "name": "Chiave Lunga per fissaggio Ruote con Avvitatore, MONDOKART",
+    "price": "24.39",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/23475-square_home_default/chiave-lunga-per-fissaggio-ruote-con-avvitatore.jpg",
+    "slug": "chiave-lunga-per-fissaggio-ruote-con-avvitatore-mondokart",
+    "imageLocal": "/images/products/chiave-lunga-per-fissaggio-ruote-con-avvitatore-mondokart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-14",
+    "name": "Chiave Valvola - Vite Antistallonamento M5 Douglass Wheel",
+    "price": "5.97",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/18136-square_home_default/chiave-valvola-vite-antistallonamento-m5-douglass-wheel.jpg",
+    "slug": "chiave-valvola-vite-antistallonamento-m5-douglass-wheel",
+    "imageLocal": "/images/products/chiave-valvola-vite-antistallonamento-m5-douglass-wheel.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-15",
+    "name": "Leva montaggio valvoline tubeless, MONDOKART, kart, go kart",
+    "price": "5.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5270-square_home_default/leva-montaggio-valvoline-tubeless.jpg",
+    "slug": "leva-montaggio-valvoline-tubeless-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/leva-montaggio-valvoline-tubeless-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-16",
+    "name": "Colonnetta Ergal M8 per cerchi ruota, MONDOKART, kart, go kart",
+    "price": "5.79",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/16517-square_home_default/colonnetta-ergal-m8-per-cerchi-ruota.jpg",
+    "slug": "colonnetta-ergal-m8-per-cerchi-ruota-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/colonnetta-ergal-m8-per-cerchi-ruota-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-17",
+    "name": "Prigioniero mozzo ruota M8, MONDOKART, kart, go kart, karting",
+    "price": "0.90",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/9858-square_home_default/prigioniero-mozzo-ruota-m8.jpg",
+    "slug": "prigioniero-mozzo-ruota-m8-mondokart-kart-go-kart-karting",
+    "imageLocal": "/images/products/prigioniero-mozzo-ruota-m8-mondokart-kart-go-kart-karting.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-18",
+    "name": "Vite antistallonamento Birel Freeline",
+    "price": "2.00",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29717-square_home_default/vite-antistallonamento-birel-freeline.jpg",
+    "slug": "vite-antistallonamento-birel-freeline",
+    "imageLocal": "/images/products/vite-antistallonamento-birel-freeline.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-19",
+    "name": "OR Oring Antistallonamento BirelArt Freeline",
+    "price": "0.65",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29718-square_home_default/or-oring-antistallonamento-birel-freeline.jpg",
+    "slug": "or-oring-antistallonamento-birelart-freeline",
+    "imageLocal": "/images/products/or-oring-antistallonamento-birelart-freeline.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-20",
+    "name": "Cuscinetto 6202zz (35x15x11) - Cerchi e fuselli 15mm",
+    "price": "2.00",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/24087-square_home_default/cuscinetto-6202zz-35x15x11-cerchi-e-fuselli.jpg",
+    "slug": "cuscinetto-6202zz-35x15x11-cerchi-e-fuselli-15mm",
+    "imageLocal": "/images/products/cuscinetto-6202zz-35x15x11-cerchi-e-fuselli-15mm.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-21",
+    "name": "Cuscinetto 6003 ZZ - 35x17x10 - Interno 17mm",
+    "price": "1.95",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/24086-square_home_default/cuscinetto-6003zz-35x17x10.jpg",
+    "slug": "cuscinetto-6003-zz-35x17x10-interno-17mm",
+    "imageLocal": "/images/products/cuscinetto-6003-zz-35x17x10-interno-17mm.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-22",
+    "name": "Dado autobloccante M8 (chiave del 13), MONDOKART, kart, go",
+    "price": "0.19",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/9946-square_home_default/dado-autobloccante-m8-chiave-del-13.jpg",
+    "slug": "dado-autobloccante-m8-chiave-del-13-mondokart-kart-go",
+    "imageLocal": "/images/products/dado-autobloccante-m8-chiave-del-13-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-23",
+    "name": "Vite sicurezza per ruota TonyKart OTK",
+    "price": "1.29",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/30061-square_home_default/vite-sicurezza-per-ruota-tonykart-otk.jpg",
+    "slug": "vite-sicurezza-per-ruota-tonykart-otk",
+    "imageLocal": "/images/products/vite-sicurezza-per-ruota-tonykart-otk.jpg"
+  },
+  {
+    "id": "mk-acc-cerchi-24",
+    "name": "Rosetta Nylon per viti antistallonamento m5 Birel Easykart",
+    "price": "0.39",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/17241-square_home_default/rosetta-nylon-per-viti-antistallonamento-m5-birel.jpg",
+    "slug": "rosetta-nylon-per-viti-antistallonamento-m5-birel-easykart",
+    "imageLocal": "/images/products/rosetta-nylon-per-viti-antistallonamento-m5-birel-easykart.jpg"
+  }
+]

@@ -25,6 +25,8 @@ interface Product {
 
 const categories = [
   { id: 'tutti', label: 'Tutti i Prodotti' },
+  { id: 'freni-accessori', label: 'Freni e Accessori' },
+  { id: 'cerchi-mozzi-accessori', label: 'Cerchi Mozzi e Accessori' },
   { id: 'pneumatici', label: 'Pneumatici' },
   { id: 'telemetrie', label: 'Telemetrie' },
   { id: 'motori', label: 'Motori' },

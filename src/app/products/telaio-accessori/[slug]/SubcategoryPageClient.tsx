@@ -49,6 +49,21 @@ const brakeSubcategories = [
   'Protezioni disco freno',
 ]
 
+// Wheel/hub subcategories for cerchi-mozzi-e-accessori
+const wheelSubcategories = [
+  'Tutti',
+  'Set Cerchi Magnesio',
+  'Set Cerchi Alluminio',
+  'Cerchi Anteriori Magnesio',
+  'Cerchi Posteriori Magnesio',
+  'Cerchi Anteriori Alluminio',
+  'Cerchi Posteriori Alluminio',
+  'Accessori Cerchi',
+  'Mozzi Anteriori',
+  'Mozzi Posteriori',
+  'Accessori Mozzi',
+]
+
 export default function SubcategoryPageClient({
   categoryName,
   slug,
@@ -63,6 +78,8 @@ export default function SubcategoryPageClient({
 
   // Check if this is brake products category
   const isBrakeCategory = slug === 'freni-e-accessori'
+  // Check if this is wheel/hub products category
+  const isWheelCategory = slug === 'cerchi-mozzi-e-accessori'
 
   // Calculate statistics
   const stats = useMemo(() => {
@@ -123,6 +140,39 @@ export default function SubcategoryPageClient({
             return name.includes('convogliator') || name.includes('raffreddamento')
           case 'Protezioni disco freno':
             return name.includes('protezion')
+          default:
+            return true
+        }
+      })
+    }
+
+    // Filter by subcategory (for wheel/hub products)
+    if (isWheelCategory && selectedSubcategory !== 'Tutti') {
+      filtered = filtered.filter((p) => {
+        const name = p.name.toLowerCase()
+        const id = p.id.toLowerCase()
+
+        switch (selectedSubcategory) {
+          case 'Set Cerchi Magnesio':
+            return id.includes('mk-set-cerchi-mg')
+          case 'Set Cerchi Alluminio':
+            return id.includes('mk-set-cerchi-al')
+          case 'Cerchi Anteriori Magnesio':
+            return id.includes('mk-cerchio-ant-mg')
+          case 'Cerchi Posteriori Magnesio':
+            return id.includes('mk-cerchio-post-mg')
+          case 'Cerchi Anteriori Alluminio':
+            return id.includes('mk-cerchio-ant-al')
+          case 'Cerchi Posteriori Alluminio':
+            return id.includes('mk-cerchio-post-al')
+          case 'Accessori Cerchi':
+            return id.includes('mk-acc-cerchi')
+          case 'Mozzi Anteriori':
+            return id.includes('mk-mozzo-17mm') || id.includes('mk-mozzo-25mm') || id.includes('mk-mozzo-kz-40mm')
+          case 'Mozzi Posteriori':
+            return id.includes('mk-mozzo-post')
+          case 'Accessori Mozzi':
+            return id.includes('mk-acc-mozzi')
           default:
             return true
         }
@@ -297,8 +347,8 @@ export default function SubcategoryPageClient({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Subcategory Filter (only for brake products) */}
-            {isBrakeCategory && (
+            {/* Subcategory Filter (for brake and wheel products) */}
+            {(isBrakeCategory || isWheelCategory) && (
               <div>
                 <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Sottocategoria
@@ -310,7 +360,7 @@ export default function SubcategoryPageClient({
                     focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all
                     text-gray-900 dark:text-white cursor-pointer"
                 >
-                  {brakeSubcategories.map((subcat) => (
+                  {(isBrakeCategory ? brakeSubcategories : wheelSubcategories).map((subcat) => (
                     <option key={subcat} value={subcat}>
                       {subcat}
                     </option>

@@ -22,7 +22,7 @@ interface Product {
 // Mapping slug to category in products.json
 const slugToCategoryMap: Record<string, string> = {
   'freni-e-accessori': 'freni-accessori',
-  'cerchi-mozzi-e-accessori': 'cerchi-mozzi',
+  'cerchi-mozzi-e-accessori': 'cerchi-mozzi-accessori',
   'assali-chiavette-e-cuscinetti': 'assali',
   'corone-catene-e-accessori': 'corone-catene',
   'carenature-staffe-e-paraurti': 'carenature',
