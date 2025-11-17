@@ -9,11 +9,12 @@ import { Button } from '@/components/ui/button'
 import { Calendar, MapPin, Users, ExternalLink, Clock, Trophy, Flag } from 'lucide-react'
 import { wsk2026Calendar, getSeriesColor, getSeriesBadgeText, type WSKEvent } from '@/data/wsk-2026-calendar'
 import { rok2026Calendar, getROKSeriesColor, getROKSeriesBadgeText, type ROKEvent } from '@/data/rok-2026-calendar'
+import { iame2026Calendar, getIAMESeriesColor, getIAMESeriesBadgeText, type IAMEEvent } from '@/data/iame-2026-calendar'
 import { EventRegistrationModal } from './event-registration-modal'
 import Image from 'next/image'
 
-type CalendarEvent = (WSKEvent | ROKEvent) & {
-  eventType: 'WSK' | 'ROK'
+type CalendarEvent = (WSKEvent | ROKEvent | IAMEEvent) & {
+  eventType: 'WSK' | 'ROK' | 'IAME'
 }
 
 interface MonthGroup {
@@ -24,15 +25,16 @@ interface MonthGroup {
 }
 
 export function CalendarView() {
-  const [selectedFilter, setSelectedFilter] = useState<'all' | 'wsk' | 'rok' | 'sms' | 'euro' | 'final' | 'rok-italia' | 'rok-special'>('all')
+  const [selectedFilter, setSelectedFilter] = useState<'all' | 'wsk' | 'rok' | 'iame' | 'sms' | 'euro' | 'final' | 'rok-italia' | 'rok-special'>('all')
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false)
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null)
 
-  // Merge both calendars
+  // Merge all calendars
   const allEvents: CalendarEvent[] = useMemo(() => {
     const wskEvents = wsk2026Calendar.map(event => ({ ...event, eventType: 'WSK' as const }))
     const rokEvents = rok2026Calendar.map(event => ({ ...event, eventType: 'ROK' as const }))
-    return [...wskEvents, ...rokEvents]
+    const iameEvents = iame2026Calendar.map(event => ({ ...event, eventType: 'IAME' as const }))
+    return [...wskEvents, ...rokEvents, ...iameEvents]
   }, [])
 
   const monthGroups = useMemo(() => {
@@ -43,6 +45,9 @@ export function CalendarView() {
       }
       if (selectedFilter === 'rok') {
         return event.eventType === 'ROK'
+      }
+      if (selectedFilter === 'iame') {
+        return event.eventType === 'IAME'
       }
 
       // WSK-specific filters
@@ -104,6 +109,7 @@ export function CalendarView() {
       total: allEvents.length,
       wsk: wsk2026Calendar.length,
       rok: rok2026Calendar.length,
+      iame: iame2026Calendar.length,
       sms: wsk2026Calendar.filter(e => e.series === 'WSK Super Master Series').length,
       euro: wsk2026Calendar.filter(e => e.series === 'WSK Euro Series').length,
       final: wsk2026Calendar.filter(e => e.series === 'WSK Final Cup').length,
@@ -138,6 +144,13 @@ export function CalendarView() {
             className={selectedFilter === 'rok' ? 'bg-orange-600 hover:bg-orange-700' : ''}
           >
             ROK Cup ({seriesStats.rok})
+          </Button>
+          <Button
+            variant={selectedFilter === 'iame' ? 'default' : 'outline'}
+            onClick={() => setSelectedFilter('iame')}
+            className={selectedFilter === 'iame' ? 'bg-purple-600 hover:bg-purple-700' : ''}
+          >
+            IAME Euro Series ({seriesStats.iame})
           </Button>
         </div>
 
@@ -218,13 +231,20 @@ export function CalendarView() {
               height={80}
               className="w-20 h-auto"
             />
+            <Image
+              src="https://www.iameeuroseries.com/static/images/logo.svg"
+              alt="IAME Euro Series Logo"
+              width={80}
+              height={80}
+              className="w-20 h-auto"
+            />
           </div>
           <div>
             <h3 className="text-xl font-bold text-racing-gray-900 dark:text-white mb-2">
               Calendario Gare 2026
             </h3>
             <p className="text-racing-gray-700 dark:text-racing-gray-300 mb-4">
-              Segui CBK Racing nei principali campionati 2026: WSK Promotion e ROK Cup Italia.
+              Segui CBK Racing nei principali campionati 2026: WSK Promotion, ROK Cup Italia e IAME Euro Series.
               Calendario completo con tutte le gare, test collettivi e categorie.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
@@ -237,13 +257,13 @@ export function CalendarView() {
               <div className="flex items-center gap-2">
                 <Trophy className="w-4 h-4 text-racing-red" />
                 <span className="text-racing-gray-700 dark:text-racing-gray-300">
-                  {seriesStats.wsk} WSK • {seriesStats.rok} ROK Cup
+                  {seriesStats.wsk} WSK • {seriesStats.rok} ROK • {seriesStats.iame} IAME
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
                 <span className="text-racing-gray-700 dark:text-racing-gray-300">
-                  Circuiti: Lonato, Franciacorta, Cremona, Viterbo, Sarno, La Conca, 7 Laghi, Jesolo
+                  Circuiti: Lonato, Franciacorta, Cremona, Viterbo, Sarno, La Conca, 7 Laghi, Jesolo, Zuera, Wackersdorf, Genk
                 </span>
               </div>
             </div>
@@ -314,10 +334,27 @@ export function CalendarView() {
                               {event.round && ` - Round ${event.round}`}
                             </h3>
                             <div className="flex gap-2">
-                              <Badge className={event.eventType === 'WSK' ? getSeriesColor(event.series) : getROKSeriesColor(event.series)}>
-                                {event.eventType === 'WSK' ? getSeriesBadgeText(event.series, event.round) : getROKSeriesBadgeText(event.series, event.round)}
+                              <Badge className={
+                                event.eventType === 'WSK'
+                                  ? getSeriesColor(event.series)
+                                  : event.eventType === 'ROK'
+                                    ? getROKSeriesColor(event.series)
+                                    : getIAMESeriesColor(event.series)
+                              }>
+                                {event.eventType === 'WSK'
+                                  ? getSeriesBadgeText(event.series, event.round)
+                                  : event.eventType === 'ROK'
+                                    ? getROKSeriesBadgeText(event.series, event.round)
+                                    : getIAMESeriesBadgeText(event.series, event.round)
+                                }
                               </Badge>
-                              <Badge variant="outline" className={event.eventType === 'WSK' ? 'bg-racing-red/10 text-racing-red border-racing-red/30' : 'bg-orange-600/10 text-orange-600 border-orange-600/30'}>
+                              <Badge variant="outline" className={
+                                event.eventType === 'WSK'
+                                  ? 'bg-racing-red/10 text-racing-red border-racing-red/30'
+                                  : event.eventType === 'ROK'
+                                    ? 'bg-orange-600/10 text-orange-600 border-orange-600/30'
+                                    : 'bg-purple-600/10 text-purple-600 border-purple-600/30'
+                              }>
                                 {event.eventType}
                               </Badge>
                               {event.status === 'pending' && (
