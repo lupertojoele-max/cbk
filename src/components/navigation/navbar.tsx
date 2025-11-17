@@ -71,12 +71,17 @@ const megaMenuData: Record<string, MegaMenuData> = {
         ],
       },
       {
-        title: 'Team',
+        title: 'Club',
         items: [
           {
             title: 'I Nostri Piloti',
             href: '/drivers',
             description: 'Conosci il nostro team di piloti professionisti',
+          },
+          {
+            title: 'Scuola Kart',
+            href: '/scuola-kart',
+            description: 'Corsi di guida e formazione per piloti di ogni livello',
           },
           {
             title: 'Flotta Kart',
@@ -245,7 +250,7 @@ export function Navbar() {
                     )}
                     onFocus={() => setFocusedItem('racing')}
                   >
-                    Gare
+                    Club
                     <motion.div
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
                       initial={{ scaleX: 0 }}
