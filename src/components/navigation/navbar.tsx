@@ -58,12 +58,6 @@ const megaMenuData: Record<string, MegaMenuData> = {
             description: 'Ultimi risultati delle gare e classifiche dei campionati',
           },
           {
-            title: 'Tempi Live',
-            href: '/live',
-            description: 'Cronometraggio e posizioni in tempo reale',
-            badge: 'Live',
-          },
-          {
             title: 'Campionato',
             href: '/championship',
             description: 'Classifiche e punteggi della stagione corrente',
