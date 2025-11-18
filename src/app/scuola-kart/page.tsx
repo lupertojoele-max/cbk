@@ -25,7 +25,7 @@ const courses = [
     title: 'CORSO PUFFO',
     ageRange: '4 A 8 ANNI',
     kart: 'KART 50cc MOTORE COMER',
-    image: 'https://images.unsplash.com/photo-1624198310703-0d1599b943ff?w=1200&h=800&fit=crop&q=80',
+    image: '/images/corsi/corso-puffo.avif',
     icon: Baby,
   },
   {
@@ -33,7 +33,7 @@ const courses = [
     title: 'CORSO BAMBINI',
     ageRange: '7 A 12 ANNI',
     kart: 'KART 60cc MOTORE MINI',
-    image: 'https://images.unsplash.com/photo-1591824438708-ce405531322d?w=1200&h=800&fit=crop&q=80',
+    image: '/images/corsi/corso-bambini.avif',
     icon: Sparkles,
   },
   {
@@ -41,7 +41,7 @@ const courses = [
     title: 'CORSO ADULTI',
     ageRange: '14 A + ANNI',
     kart: 'KART 125cc MONOMARCIA',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80',
+    image: '/images/corsi/corso-adulti.avif',
     icon: UserCircle,
   },
 ]
@@ -189,11 +189,6 @@ export default function KartingAcademyPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-
-                  {/* Icon Badge */}
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20">
-                    <course.icon className="w-8 h-8 text-white" />
-                  </div>
 
                   {/* Age Range on Image */}
                   <div className="absolute bottom-6 left-6 right-6">

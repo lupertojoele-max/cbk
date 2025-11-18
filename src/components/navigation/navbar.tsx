@@ -17,6 +17,9 @@ import {
 import { cn } from '@/lib/utils'
 import { ThemeToggleCompact } from '@/components/ui/theme-toggle'
 import styles from './navbar.module.css'
+import { wsk2026Calendar } from '@/data/wsk-2026-calendar'
+import { rok2026Calendar } from '@/data/rok-2026-calendar'
+import { iame2026Calendar } from '@/data/iame-2026-calendar'
 
 interface NavItem {
   title: string
@@ -39,6 +42,22 @@ interface MegaMenuData {
     href: string
     image?: string
   }
+}
+
+// Function to get next upcoming race
+function getNextRace() {
+  const allEvents = [
+    ...wsk2026Calendar.map(event => ({ ...event, eventType: 'WSK' as const })),
+    ...rok2026Calendar.map(event => ({ ...event, eventType: 'ROK' as const })),
+    ...iame2026Calendar.map(event => ({ ...event, eventType: 'IAME' as const })),
+  ]
+
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+
+  return allEvents
+    .filter(event => new Date(event.startDate) >= today)
+    .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())[0]
 }
 
 const megaMenuData: Record<string, MegaMenuData> = {
@@ -95,12 +114,32 @@ const megaMenuData: Record<string, MegaMenuData> = {
         ],
       },
     ],
-    featured: {
-      title: 'Prossima Gara: Campionato Italiano',
-      description: 'Unisciti a noi a Monza per il prossimo round del campionato',
-      href: '/events/italian-championship-round-6',
-    },
   },
+}
+
+// Generate featured content dynamically based on next race
+function getFeaturedContent() {
+  const nextRace = getNextRace()
+
+  if (!nextRace) {
+    return {
+      title: 'Prossima Gara: Da Definire',
+      description: 'Controlla il calendario per gli eventi futuri',
+      href: '/calendar',
+    }
+  }
+
+  const seriesName = nextRace.eventType === 'WSK'
+    ? nextRace.series
+    : nextRace.eventType === 'ROK'
+    ? nextRace.series
+    : nextRace.series
+
+  return {
+    title: `Prossima Gara: ${seriesName}`,
+    description: `Unisciti a noi a ${nextRace.venue} per il prossimo round del campionato`,
+    href: '/calendar',
+  }
 }
 
 export function Navbar() {
@@ -301,25 +340,28 @@ export function Navbar() {
                         </div>
                       ))}
 
-                      {/* Featured Section */}
-                      {megaMenuData.racing.featured && (
-                        <div className="bg-racing-gray-50 dark:bg-racing-gray-700 rounded-lg p-4 space-y-3">
-                          <Badge className="bg-[#1877F2] text-white">In Evidenza</Badge>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href={megaMenuData.racing.featured.href}
-                              className="block space-y-2 no-underline outline-none hover:opacity-80 focus:opacity-80 transition-opacity"
-                            >
-                              <div className="text-sm font-semibold text-racing-gray-900 dark:text-white">
-                                {megaMenuData.racing.featured.title}
-                              </div>
-                              <p className="text-xs text-racing-gray-600 dark:text-racing-gray-400 leading-relaxed">
-                                {megaMenuData.racing.featured.description}
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                        </div>
-                      )}
+                      {/* Featured Section - Dynamic Next Race */}
+                      {(() => {
+                        const featured = getFeaturedContent()
+                        return (
+                          <div className="bg-racing-gray-50 dark:bg-racing-gray-700 rounded-lg p-4 space-y-3">
+                            <Badge className="bg-[#1877F2] text-white">In Evidenza</Badge>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                href={featured.href}
+                                className="block space-y-2 no-underline outline-none hover:opacity-80 focus:opacity-80 transition-opacity"
+                              >
+                                <div className="text-sm font-semibold text-racing-gray-900 dark:text-white">
+                                  {featured.title}
+                                </div>
+                                <p className="text-xs text-racing-gray-600 dark:text-racing-gray-400 leading-relaxed">
+                                  {featured.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </div>
+                        )
+                      })()}
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
