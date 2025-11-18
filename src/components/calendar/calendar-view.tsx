@@ -231,13 +231,15 @@ export function CalendarView() {
               height={80}
               className="w-20 h-auto"
             />
-            <Image
-              src="https://www.iameeuroseries.com/wp-content/uploads/2019/07/logowhiteEURO.png"
-              alt="IAME Euro Series Logo"
-              width={80}
-              height={80}
-              className="w-20 h-auto"
-            />
+            <div className="bg-[#1877F2] p-2 rounded-lg">
+              <Image
+                src="https://www.iameeuroseries.com/wp-content/uploads/2019/07/logowhiteEURO.png"
+                alt="IAME Euro Series Logo"
+                width={80}
+                height={80}
+                className="w-20 h-auto"
+              />
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-bold text-racing-gray-900 dark:text-white mb-2">
