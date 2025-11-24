@@ -655,8 +655,8 @@ function ProductCard({
     <div style={{ height: '380px', width: '100%', overflow: 'hidden' }}>
       <Link
         href={`/prodotti/${product.slug}`}
-        className="block bg-white dark:bg-gray-800 rounded-xl shadow-md
-          hover:shadow-2xl transition-shadow duration-300 group border border-gray-200/50 dark:border-gray-700/50"
+        className="block bg-white dark:bg-gray-800 rounded-xl shadow-sm
+          hover:shadow-md hover:-translate-y-1 transition-all duration-300 group border border-gray-200 dark:border-gray-700"
         style={{ height: '380px', width: '100%', display: 'block', overflow: 'hidden' }}
       >
         {/* Image Container - Fixed Exact Size */}
@@ -747,7 +747,7 @@ function ProductCard({
                 €{parseFloat(product.price).toFixed(2)}
               </p>
             </div>
-            <div className="bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:bg-blue-700 transition-colors"
+            <div className="bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors"
               style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
             >
               <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>

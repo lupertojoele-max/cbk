@@ -27,6 +27,7 @@ const categories = [
   { id: 'tutti', label: 'Tutti i Prodotti' },
   { id: 'freni-accessori', label: 'Freni e Accessori' },
   { id: 'cerchi-mozzi-accessori', label: 'Cerchi Mozzi e Accessori' },
+  { id: 'assali-cuscinetti-chiavette', label: 'Assali Cuscinetti e Chiavette' },
   { id: 'pneumatici', label: 'Pneumatici' },
   { id: 'telemetrie', label: 'Telemetrie' },
   { id: 'motori', label: 'Motori' },
@@ -115,10 +116,10 @@ export default function ProdottiPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Header - Mix Style */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Catalogo Prodotti
+          <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
+            Catalogo <span className="text-racing-red">Prodotti</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Scopri la nostra gamma completa di prodotti per il karting: pneumatici,
@@ -126,8 +127,11 @@ export default function ProdottiPage() {
           </p>
         </div>
 
-        {/* Filters Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 mb-8">
+        {/* Filters Section - Clean with Red Accents */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 mb-8 border-l-4 border-racing-red">
+          {/* Red Racing Stripe Top - subtle */}
+          <div className="absolute top-0 left-0 right-0 h-0.5 bg-racing-red opacity-30" />
+
           {/* Search Bar */}
           <div className="mb-6">
             <input
@@ -135,23 +139,23 @@ export default function ProdottiPage() {
               placeholder="Cerca prodotti per nome, descrizione o brand..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg
-                focus:ring-2 focus:ring-blue-500 focus:border-blue-500
-                dark:bg-gray-700 dark:text-white"
+              className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg
+                focus:ring-2 focus:ring-racing-red focus:border-racing-red focus:scale-[1.02]
+                transition-all duration-300 dark:bg-gray-700 dark:text-white"
             />
           </div>
 
-          {/* Category Tabs */}
+          {/* Category Tabs - Clean with Red Active */}
           <div className="mb-6">
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 text-sm hover:scale-105 active:scale-95 ${
                     selectedCategory === cat.id
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      ? 'bg-racing-red text-white shadow-md scale-105'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white'
                   }`}
                 >
                   {cat.label}
@@ -163,14 +167,14 @@ export default function ProdottiPage() {
           {/* Brand Filter & Sort */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
                 Brand
               </label>
               <select
                 value={selectedBrand}
                 onChange={(e) => setSelectedBrand(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                  focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-300 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
                 {brands.map((brand) => (
                   <option key={brand} value={brand}>
@@ -181,14 +185,14 @@ export default function ProdottiPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
                 Ordina per
               </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                  focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-300 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
                 <option value="featured">In Evidenza</option>
                 <option value="name">Nome (A-Z)</option>
@@ -199,16 +203,16 @@ export default function ProdottiPage() {
           </div>
 
           {/* Results Count */}
-          <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            {filteredProducts.length} prodott{filteredProducts.length === 1 ? 'o' : 'i'}{' '}
+          <div className="mt-4 text-sm font-bold text-gray-600 dark:text-gray-400">
+            <span className="text-racing-red font-black">{filteredProducts.length}</span> prodott{filteredProducts.length === 1 ? 'o' : 'i'}{' '}
             trovat{filteredProducts.length === 1 ? 'o' : 'i'}
           </div>
         </div>
 
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-16">
-            <p className="text-xl text-gray-500 dark:text-gray-400">
+          <div className="text-center py-16 bg-white dark:bg-gray-800 rounded-xl shadow-md border-l-4 border-racing-red">
+            <p className="text-xl text-gray-900 dark:text-white font-bold mb-6">
               Nessun prodotto trovato con i filtri selezionati.
             </p>
             <button
@@ -217,7 +221,7 @@ export default function ProdottiPage() {
                 setSelectedBrand('Tutti')
                 setSearchQuery('')
               }}
-              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-xl"
             >
               Resetta Filtri
             </button>
@@ -251,8 +255,8 @@ function ProductCard({ product }: { product: Product }) {
     <div style={{ height: '380px', width: '100%', overflow: 'hidden' }}>
       <Link
         href={`/prodotti/${product.slug}`}
-        className="block bg-white dark:bg-gray-800 rounded-xl shadow-md
-          hover:shadow-2xl transition-shadow duration-300 group border border-gray-200/50 dark:border-gray-700/50"
+        className="block bg-white dark:bg-gray-800 rounded-xl shadow-sm
+          hover:shadow-md hover:-translate-y-1 transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-racing-red"
         style={{ height: '380px', width: '100%', display: 'block', overflow: 'hidden' }}
       >
         {/* Image Container - Fixed Exact Size */}
@@ -260,12 +264,12 @@ function ProductCard({ product }: { product: Product }) {
           style={{ height: '180px', minHeight: '180px', maxHeight: '180px', width: '100%', overflow: 'hidden' }}
         >
           {product.featured && (
-            <div className="absolute top-2 left-2 z-10 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
-              EVIDENZA
+            <div className="absolute top-2 left-2 z-10 bg-racing-red text-white text-xs font-bold px-3 py-1 rounded">
+              IN EVIDENZA
             </div>
           )}
           {hasDiscount && (
-            <div className="absolute top-2 right-2 z-10 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold px-2 py-1 rounded-md shadow-lg">
+            <div className="absolute top-2 right-2 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
               -{discountPercentage}%
             </div>
           )}
@@ -290,7 +294,7 @@ function ProductCard({ product }: { product: Product }) {
               src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
               alt={product.name}
               fill
-              className="object-contain"
+              className="object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
               sizes="180px"
               style={{ padding: '15px' }}
             />
@@ -301,7 +305,7 @@ function ProductCard({ product }: { product: Product }) {
         <div style={{ height: '200px', minHeight: '200px', maxHeight: '200px', padding: '12px', display: 'flex', flexDirection: 'column' }}>
           {/* Brand and Stock - Fixed Height */}
           <div style={{ height: '20px', minHeight: '20px', maxHeight: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <p className="text-xs text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wide truncate" style={{ flex: 1 }}>
+            <p className="text-xs text-racing-red font-bold uppercase tracking-wide truncate" style={{ flex: 1 }}>
               {product.brand}
             </p>
             {product.inStock ? (
@@ -316,7 +320,7 @@ function ProductCard({ product }: { product: Product }) {
           </div>
 
           {/* Name - Fixed Height 2 Lines */}
-          <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors overflow-hidden"
+          <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 group-hover:text-racing-red transition-colors overflow-hidden"
             style={{ height: '40px', minHeight: '40px', maxHeight: '40px', fontSize: '13px', lineHeight: '20px', marginBottom: '8px' }}
           >
             {product.name}
@@ -329,7 +333,7 @@ function ProductCard({ product }: { product: Product }) {
             {product.description}
           </p>
 
-          {/* Price Section - Fixed Height */}
+          {/* Price Section - Fixed Height - Mix Style */}
           <div style={{ height: '56px', minHeight: '56px', maxHeight: '56px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid', marginTop: 'auto' }}
             className="border-gray-200 dark:border-gray-700"
           >
@@ -339,14 +343,14 @@ function ProductCard({ product }: { product: Product }) {
                   €{parseFloat(product.originalPrice!).toFixed(2)}
                 </p>
               )}
-              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
+              <p className="text-xl font-black text-racing-red">
                 €{parseFloat(product.price).toFixed(2)}
               </p>
             </div>
-            <div className="bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:bg-blue-700 transition-colors"
+            <div className="bg-racing-red rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors"
               style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
             >
-              <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
+              <svg className="text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>

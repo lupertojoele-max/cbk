@@ -1,0 +1,164 @@
+[
+  {
+    "id": "mk-chiavetta-1",
+    "name": "Chiavetta 2 Pioli (D 7,4mm - I 34mm - H 3mm)",
+    "price": "2.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/30212-square_home_default/chiavetta-2-pioli-d-74mm-i-34mm-h-3mm.jpg",
+    "slug": "chiavetta-2-pioli-d-74mm-i-34mm-h-3mm",
+    "imageLocal": "/images/products/chiavetta-2-pioli-d-74mm-i-34mm-h-3mm.jpg"
+  },
+  {
+    "id": "mk-chiavetta-2",
+    "name": "Chiavetta 3 Pioli (D 7,5 - I 17 - H 3), MONDOKART, kart, go",
+    "price": "3.65",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/14558-square_home_default/chiavetta-3-pioli-d-75-i-17-h-3.jpg",
+    "slug": "chiavetta-3-pioli-d-75-i-17-h-3-mondokart-kart-go",
+    "imageLocal": "/images/products/chiavetta-3-pioli-d-75-i-17-h-3-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-chiavetta-3",
+    "name": "COPPIA Chiavette Assale Kart con Sistema di Bloccaggio Mozzo",
+    "price": "35.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/25530-square_home_default/coppia-chiavette-per-assale-kart-con-sistema-di-bloccaggio-mozzo-ruota.jpg",
+    "slug": "coppia-chiavette-assale-kart-con-sistema-di-bloccaggio-mozzo",
+    "imageLocal": "/images/products/coppia-chiavette-assale-kart-con-sistema-di-bloccaggio-mozzo.jpg"
+  },
+  {
+    "id": "mk-chiavetta-4",
+    "name": "Chiavetta 2 Pioli (D 6mm - I 30mm - H 3,5), MONDOKART, kart, go",
+    "price": "4.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5473-square_home_default/chiavetta-2-pioli-d-6mm-i-30mm-h-35.jpg",
+    "slug": "chiavetta-2-pioli-d-6mm-i-30mm-h-35-mondokart-kart-go",
+    "imageLocal": "/images/products/chiavetta-2-pioli-d-6mm-i-30mm-h-35-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-chiavetta-5",
+    "name": "Chiavetta 2 Pioli (D 6mm - I 30mm - H4), MONDOKART, kart, go",
+    "price": "4.99",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/5474-square_home_default/chiavetta-2-pioli-d-6mm-i-30mm-h4.jpg",
+    "slug": "chiavetta-2-pioli-d-6mm-i-30mm-h4-mondokart-kart-go",
+    "imageLocal": "/images/products/chiavetta-2-pioli-d-6mm-i-30mm-h4-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-chiavetta-6",
+    "name": "Chiavetta piana per assali 40mm Mondokart, MONDOKART, kart, go",
+    "price": "3.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/14139-square_home_default/chiavetta-piana-per-assali-40mm-mondokart.jpg",
+    "slug": "chiavetta-piana-per-assali-40mm-mondokart-mondokart-kart-go",
+    "imageLocal": "/images/products/chiavetta-piana-per-assali-40mm-mondokart-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-chiavetta-7",
+    "name": "Chiavetta assale 50mm 3 pioli per OTK Tonykart",
+    "price": "11.50",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29480-square_home_default/chiavetta-assale-50mm-3-pioli-otk-tonykart.jpg",
+    "slug": "chiavetta-assale-50mm-3-pioli-per-otk-tonykart",
+    "imageLocal": "/images/products/chiavetta-assale-50mm-3-pioli-per-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-chiavetta-8",
+    "name": "Chiavetta Assale 50mm 2 PIOLI per OTK Tonykart",
+    "price": "8.10",
+    "brand": "TonyKart OTK",
+    "imageUrl": "https://www.mondokart.com/29479-square_home_default/chiavetta-assale-50mm-2-pioli-otk-tonykart.jpg",
+    "slug": "chiavetta-assale-50mm-2-pioli-per-otk-tonykart",
+    "imageLocal": "/images/products/chiavetta-assale-50mm-2-pioli-per-otk-tonykart.jpg"
+  },
+  {
+    "id": "mk-chiavetta-9",
+    "name": "Chiavetta Assale 6x6x60",
+    "price": "2.79",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/29486-square_home_default/chiavetta-assale-6x6x60.jpg",
+    "slug": "chiavetta-assale-6x6x60",
+    "imageLocal": "/images/products/chiavetta-assale-6x6x60.jpg"
+  },
+  {
+    "id": "mk-chiavetta-10",
+    "name": "Chiavetta 3 Pioli (D 7,5 - I 15 - H 4,0), MONDOKART, kart, go",
+    "price": "4.98",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/10604-square_home_default/chiavetta-3-pioli-d-75-i-15-h-40.jpg",
+    "slug": "chiavetta-3-pioli-d-75-i-15-h-40-mondokart-kart-go",
+    "imageLocal": "/images/products/chiavetta-3-pioli-d-75-i-15-h-40-mondokart-kart-go.jpg"
+  },
+  {
+    "id": "mk-chiavetta-11",
+    "name": "Chiavetta piana 40x8x5, MONDOKART, kart, go kart, karting",
+    "price": "2.50",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/13564-square_home_default/chiavetta-piana-40x8x5.jpg",
+    "slug": "chiavetta-piana-40x8x5-mondokart-kart-go-kart-karting",
+    "imageLocal": "/images/products/chiavetta-piana-40x8x5-mondokart-kart-go-kart-karting.jpg"
+  },
+  {
+    "id": "mk-chiavetta-12",
+    "name": "Chiavetta piana 80x8x5, MONDOKART, kart, go kart, karting",
+    "price": "2.89",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/13565-square_home_default/chiavetta-piana-80x8x5.jpg",
+    "slug": "chiavetta-piana-80x8x5-mondokart-kart-go-kart-karting",
+    "imageLocal": "/images/products/chiavetta-piana-80x8x5-mondokart-kart-go-kart-karting.jpg"
+  },
+  {
+    "id": "mk-chiavetta-13",
+    "name": "Chiavetta Assale 2 pioli CRG",
+    "price": "6.55",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29482-square_home_default/chiavetta-assale-2-pioli-crg.jpg",
+    "slug": "chiavetta-assale-2-pioli-crg",
+    "imageLocal": "/images/products/chiavetta-assale-2-pioli-crg.jpg"
+  },
+  {
+    "id": "mk-chiavetta-14",
+    "name": "Chiavetta Assale 3 pioli CRG",
+    "price": "7.35",
+    "brand": "CRG",
+    "imageUrl": "https://www.mondokart.com/29481-square_home_default/chiavetta-assale-3-pioli-crg.jpg",
+    "slug": "chiavetta-assale-3-pioli-crg",
+    "imageLocal": "/images/products/chiavetta-assale-3-pioli-crg.jpg"
+  },
+  {
+    "id": "mk-chiavetta-15",
+    "name": "Chiavetta Assale BirelArt",
+    "price": "7.26",
+    "brand": "Birel",
+    "imageUrl": "https://www.mondokart.com/29483-square_home_default/chiavetta-assale-birelart.jpg",
+    "slug": "chiavetta-assale-birelart",
+    "imageLocal": "/images/products/chiavetta-assale-birelart.jpg"
+  },
+  {
+    "id": "mk-chiavetta-16",
+    "name": "Chiavetta assale originale PCR 30 mm piana 50x6mm",
+    "price": "5.55",
+    "brand": "Mondokart Racing",
+    "imageUrl": "https://www.mondokart.com/30267-square_home_default/chiavetta-assale-originale-pcr-30-mm-piana-50x6mm.jpg",
+    "slug": "chiavetta-assale-originale-pcr-30-mm-piana-50x6mm",
+    "imageLocal": "/images/products/chiavetta-assale-originale-pcr-30-mm-piana-50x6mm.jpg"
+  },
+  {
+    "id": "mk-chiavetta-17",
+    "name": "Chiavetta assale 6x5x60 Topkart, MONDOKART, kart, go kart",
+    "price": "2.79",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/17246-square_home_default/chiavetta-assale-6x5x60-topkart.jpg",
+    "slug": "chiavetta-assale-6x5x60-topkart-mondokart-kart-go-kart",
+    "imageLocal": "/images/products/chiavetta-assale-6x5x60-topkart-mondokart-kart-go-kart.jpg"
+  },
+  {
+    "id": "mk-chiavetta-18",
+    "name": "Chiavetta Disco Freno 6x5x50 Top-Kart Kid Kart, MONDOKART",
+    "price": "2.96",
+    "brand": "Top-Kart",
+    "imageUrl": "https://www.mondokart.com/18341-square_home_default/chiavetta-disco-freno-6x5x50-top-kart-kid-kart.jpg",
+    "slug": "chiavetta-disco-freno-6x5x50-top-kart-kid-kart-mondokart",
+    "imageLocal": "/images/products/chiavetta-disco-freno-6x5x50-top-kart-kid-kart-mondokart.jpg"
+  }
+]

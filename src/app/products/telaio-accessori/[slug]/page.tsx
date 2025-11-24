@@ -23,7 +23,7 @@ interface Product {
 const slugToCategoryMap: Record<string, string> = {
   'freni-e-accessori': 'freni-accessori',
   'cerchi-mozzi-e-accessori': 'cerchi-mozzi-accessori',
-  'assali-chiavette-e-cuscinetti': 'assali',
+  'assali-chiavette-e-cuscinetti': 'assali-cuscinetti-chiavette',
   'corone-catene-e-accessori': 'corone-catene',
   'carenature-staffe-e-paraurti': 'carenature',
   'leve-cambio-e-frizione': 'leve-cambio',
