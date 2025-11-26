@@ -1,0 +1,57 @@
+[
+  {
+    "id": "mk-allineatore-1",
+    "name": "Allineatore catena, ricambi",
+    "slug": "allineatore-catena-ricambi",
+    "brand": "CBK Racing",
+    "price": "23.95",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/2628-large_default/allineatore-catena.jpg",
+    "imageLocal": "/images/products/allineatore-catena-ricambi.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/catene-e-accessori-mondokart/allineatori-per-catene-mondokart/allineatore-catena.html"
+  },
+  {
+    "id": "mk-allineatore-2",
+    "name": "Allineatore catena laser (per tutte le catene)",
+    "slug": "allineatore-catena-laser-per-tutte-le-catene",
+    "brand": "CBK Racing",
+    "price": "91.49",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/16736-large_default/allineatore-catena-laser-per-tutte-le-catene.jpg",
+    "imageLocal": "/images/products/allineatore-catena-laser-per-tutte-le-catene.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/catene-e-accessori-mondokart/allineatori-per-catene-mondokart/allineatore-catena-laser-per-tutte-le-catene.html"
+  },
+  {
+    "id": "mk-allineatore-3",
+    "name": "Allineatore Catena 219 e 428 - NEW-LINE kart, go",
+    "slug": "allineatore-catena-219-e-428-new-line-kart-go",
+    "brand": "CBK Racing",
+    "price": "16.39",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/27778-large_default/allineatore-catena-219-e-428-new-line.jpg",
+    "imageLocal": "/images/products/allineatore-catena-219-e-428-new-line-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/catene-e-accessori-mondokart/allineatori-per-catene-mondokart/allineatore-catena-219-e-428-new-line.html"
+  },
+  {
+    "id": "mk-allineatore-4",
+    "name": "Asta allineamento corona pignone",
+    "slug": "asta-allineamento-corona-pignone",
+    "brand": "CBK Racing",
+    "price": "13.90",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/29384-large_default/asta-allineamento-corona-pignone.jpg",
+    "imageLocal": "/images/products/asta-allineamento-corona-pignone.jpg",
+    "productUrl": "https://www.mondokart.com/it/attrezzatura-mondokart/attrezzatura-per-telaio-mondokart/asta-allineamento-corona-pignone.html"
+  },
+  {
+    "id": "mk-allineatore-5",
+    "name": "Misuratore Catene Kart",
+    "slug": "misuratore-catene-kart",
+    "brand": "CBK Racing",
+    "price": "52.99",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/16272-large_default/misuratore-catene-kart.jpg",
+    "imageLocal": "/images/products/misuratore-catene-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/catene-e-accessori-mondokart/allineatori-per-catene-mondokart/misuratore-catene-kart.html"
+  }
+]

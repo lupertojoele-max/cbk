@@ -1,0 +1,156 @@
+[
+  {
+    "id": "mk-acc-assale-1",
+    "name": "Grano per assale posteriore M8 (50mm - 40mm) kart",
+    "slug": "grano-per-assale-posteriore-m8-50mm-40mm-kart",
+    "brand": "CBK Racing",
+    "price": "0.41",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/3386-large_default/grano-per-assale-posteriore-m8-50mm-40mm.jpg",
+    "imageLocal": "/images/products/grano-per-assale-posteriore-m8-50mm-40mm-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/grano-per-assale-posteriore-m8-50mm-40mm.html"
+  },
+  {
+    "id": "mk-acc-assale-2",
+    "name": "Grano per assale posteriore M6 (30mm) kart, go",
+    "slug": "grano-per-assale-posteriore-m6-30mm-kart-go",
+    "brand": "CBK Racing",
+    "price": "0.41",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/3387-large_default/grano-per-assale-posteriore-m6-30mm.jpg",
+    "imageLocal": "/images/products/grano-per-assale-posteriore-m6-30mm-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/cuscinetti-per-assale-mondokart/grano-per-assale-posteriore-m6-30mm.html"
+  },
+  {
+    "id": "mk-acc-assale-3",
+    "name": "Puleggia assale anodizzata sdoppiata (50mm) kart",
+    "slug": "puleggia-assale-anodizzata-sdoppiata-50mm-kart",
+    "brand": "CBK Racing",
+    "price": "16.22",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/22446-large_default/puleggia-assale-anodizzata-sdoppiata-50mm.jpg",
+    "imageLocal": "/images/products/puleggia-assale-anodizzata-sdoppiata-50mm-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-anodizzata-sdoppiata-50mm.html"
+  },
+  {
+    "id": "mk-acc-assale-4",
+    "name": "Puleggia 40mm ALLUMINIO Anodizzato",
+    "slug": "puleggia-40mm-alluminio-anodizzato",
+    "brand": "CBK Racing",
+    "price": "16.23",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/29332-large_default/puleggia-assale-anodizzata-sdoppiata-40mm.jpg",
+    "imageLocal": "/images/products/puleggia-40mm-alluminio-anodizzato.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-anodizzata-sdoppiata-40mm.html"
+  },
+  {
+    "id": "mk-acc-assale-5",
+    "name": "Puleggia 30mm ALLUMINIO Anodizzato",
+    "slug": "puleggia-30mm-alluminio-anodizzato",
+    "brand": "CBK Racing",
+    "price": "16.23",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/28255-large_default/puleggia-assale-anodizzata-sdoppiata-30mm.jpg",
+    "imageLocal": "/images/products/puleggia-30mm-alluminio-anodizzato.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-anodizzata-sdoppiata-30mm.html"
+  },
+  {
+    "id": "mk-acc-assale-6",
+    "name": "Puleggia assale plastica (resina) 50mm kart, go",
+    "slug": "puleggia-assale-plastica-resina-50mm-kart-go",
+    "brand": "INA",
+    "price": "6.96",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/2436-large_default/puleggia-assale-plastica-resina-50mm.jpg",
+    "imageLocal": "/images/products/puleggia-assale-plastica-resina-50mm-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-plastica-resina-50mm.html"
+  },
+  {
+    "id": "mk-acc-assale-7",
+    "name": "Puleggia assale plastica (resina) 40mm kart, go",
+    "slug": "puleggia-assale-plastica-resina-40mm-kart-go",
+    "brand": "INA",
+    "price": "3.93",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/2440-large_default/puleggia-assale-plastica-resina-40mm.jpg",
+    "imageLocal": "/images/products/puleggia-assale-plastica-resina-40mm-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-plastica-resina-40mm.html"
+  },
+  {
+    "id": "mk-acc-assale-8",
+    "name": "Cinghiolo OR Oring per Pompa Acqua",
+    "slug": "cinghiolo-or-oring-per-pompa-acqua",
+    "brand": "CBK Racing",
+    "price": "0.79",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/24107-large_default/cinghiolo-oring-per-pompa-acqua.jpg",
+    "imageLocal": "/images/products/cinghiolo-or-oring-per-pompa-acqua.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/cinghiolo-oring-per-pompa-acqua.html"
+  },
+  {
+    "id": "mk-acc-assale-9",
+    "name": "Puleggia assale BIG SUMMER sdoppiata (50mm)",
+    "slug": "puleggia-assale-big-summer-sdoppiata-50mm",
+    "brand": "CBK Racing",
+    "price": "24.58",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/29331-large_default/puleggia-assale-big-summer-sdoppiata-50mm.jpg",
+    "imageLocal": "/images/products/puleggia-assale-big-summer-sdoppiata-50mm.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/puleggia-assale-big-summer-sdoppiata-50mm.html"
+  },
+  {
+    "id": "mk-acc-assale-10",
+    "name": "Tappo Protezione per Assale 50mm kart, go kart",
+    "slug": "tappo-protezione-per-assale-50mm-kart-go-kart",
+    "brand": "CBK Racing",
+    "price": "2.17",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/21446-large_default/tappo-protezione-per-assale-50mm.jpg",
+    "imageLocal": "/images/products/tappo-protezione-per-assale-50mm-kart-go-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/assali-mondokart/tappo-protezione-per-assale-50mm.html"
+  },
+  {
+    "id": "mk-acc-assale-11",
+    "name": "Cinghiolo Speciale BLU - EXTRA GRIP per Pompa Acqua - NEW-LINE",
+    "slug": "cinghiolo-speciale-blu-extra-grip-per-pompa-acqua-new-line",
+    "brand": "CBK Racing",
+    "price": "2.99",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/23380-large_default/cinghiolo-extra-grip-per-pompa-acqua-new-line.jpg",
+    "imageLocal": "/images/products/cinghiolo-speciale-blu-extra-grip-per-pompa-acqua-new-line.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/cinghiolo-extra-grip-per-pompa-acqua-new-line.html"
+  },
+  {
+    "id": "mk-acc-assale-12",
+    "name": "Cinghiolo Oring per pompa acqua OTK 92mm STRETTO",
+    "slug": "cinghiolo-oring-per-pompa-acqua-otk-92mm-stretto",
+    "brand": "TonyKart OTK",
+    "price": "0.99",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/15105-large_default/cinghiolo-oring-per-pompa-acqua-otk-92mm-stretto.jpg",
+    "imageLocal": "/images/products/cinghiolo-oring-per-pompa-acqua-otk-92mm-stretto.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/cinghiolo-oring-per-pompa-acqua-otk-92mm-stretto.html"
+  },
+  {
+    "id": "mk-acc-assale-13",
+    "name": "Cinghiolo Oring per pompa acqua Intrecciato Smontabile",
+    "slug": "cinghiolo-oring-per-pompa-acqua-intrecciato-smontabile",
+    "brand": "CBK Racing",
+    "price": "4.06",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/18500-large_default/cinghiolo-oring-per-pompa-acqua-intrecciato-smontabile.jpg",
+    "imageLocal": "/images/products/cinghiolo-oring-per-pompa-acqua-intrecciato-smontabile.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/assali-chiavette-e-cuscinetti-mondokart/varie-per-assali-mondokart/cinghiolo-oring-per-pompa-acqua-intrecciato-smontabile.html"
+  },
+  {
+    "id": "mk-acc-assale-14",
+    "name": "Anello di Tenuta RZ per cuscinetto assale 50mm",
+    "slug": "anello-di-tenuta-rz-per-cuscinetto-assale-50mm",
+    "brand": "CBK Racing",
+    "price": "3.99",
+    "originalPrice": null,
+    "imageUrl": "https://www.mondokart.com/22721-large_default/anello-di-tenuta-rz-per-cuscinetto-assale-50mm.jpg",
+    "imageLocal": "/images/products/anello-di-tenuta-rz-per-cuscinetto-assale-50mm.jpg",
+    "productUrl": "https://www.mondokart.com/it/cuscinetti-paraoli-molle-mondokart/cuscinetti-telaio-mondokart/anello-di-tenuta-rz-per-cuscinetto-assale-50mm.html"
+  }
+]

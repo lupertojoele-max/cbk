@@ -28,6 +28,8 @@ const categories = [
   { id: 'freni-accessori', label: 'Freni e Accessori' },
   { id: 'cerchi-mozzi-accessori', label: 'Cerchi Mozzi e Accessori' },
   { id: 'assali-cuscinetti-chiavette', label: 'Assali Cuscinetti e Chiavette' },
+  { id: 'corone-catene', label: 'Corone, Catene e Accessori' },
+  { id: 'carenature', label: 'Carenature, Staffe e Paraurti' },
   { id: 'pneumatici', label: 'Pneumatici' },
   { id: 'telemetrie', label: 'Telemetrie' },
   { id: 'motori', label: 'Motori' },

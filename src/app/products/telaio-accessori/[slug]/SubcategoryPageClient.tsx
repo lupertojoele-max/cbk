@@ -10,6 +10,7 @@ interface Product {
   name: string
   slug: string
   category: string
+  subcategory?: string
   brand: string
   price: string
   originalPrice?: string
@@ -64,6 +65,22 @@ const wheelSubcategories = [
   'Accessori Mozzi',
 ]
 
+// Fairings subcategories for carenature-staffe-e-paraurti
+const fairingsSubcategories = [
+  { id: 'tutti', label: 'Tutti' },
+  { id: 'crg', label: 'Carenature CRG' },
+  { id: 'birel', label: 'Carenature Birel Freeline BirelArt' },
+  { id: 'tonykart-otk', label: 'Carenature Tony Kart - OTK' },
+  { id: 'topkart', label: 'Carenature Top-Kart' },
+  { id: 'parolin', label: 'Carenature Parolin' },
+  { id: 'frontalino-kg', label: 'Frontalino portanumero KG' },
+  { id: 'spoiler-anteriori', label: 'Spoiler anteriori KG' },
+  { id: 'spoiler-posteriori', label: 'Spoiler posteriori' },
+  { id: 'carenature-laterali', label: 'Carenature laterali KG' },
+  { id: 'supporti', label: 'Supporti carenature' },
+  { id: 'accessori', label: 'Accessori carenature' },
+]
+
 export default function SubcategoryPageClient({
   categoryName,
   slug,
@@ -71,7 +88,8 @@ export default function SubcategoryPageClient({
   brands,
 }: SubcategoryPageClientProps) {
   const [selectedBrand, setSelectedBrand] = useState('Tutti')
-  const [selectedSubcategory, setSelectedSubcategory] = useState('Tutti')
+  // For fairings, default is 'tutti' (lowercase), for others 'Tutti'
+  const [selectedSubcategory, setSelectedSubcategory] = useState(slug === 'carenature-staffe-e-paraurti' ? 'tutti' : 'Tutti')
   const [sortBy, setSortBy] = useState('featured')
   const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -80,6 +98,8 @@ export default function SubcategoryPageClient({
   const isBrakeCategory = slug === 'freni-e-accessori'
   // Check if this is wheel/hub products category
   const isWheelCategory = slug === 'cerchi-mozzi-e-accessori'
+  // Check if this is fairings category
+  const isFairingsCategory = slug === 'carenature-staffe-e-paraurti'
 
   // Calculate statistics
   const stats = useMemo(() => {
@@ -179,6 +199,11 @@ export default function SubcategoryPageClient({
       })
     }
 
+    // Filter by subcategory (for fairings)
+    if (isFairingsCategory && selectedSubcategory !== 'tutti') {
+      filtered = filtered.filter((p) => p.subcategory === selectedSubcategory)
+    }
+
     // Filter by brand
     if (selectedBrand !== 'Tutti') {
       filtered = filtered.filter((p) => p.brand === selectedBrand)
@@ -213,7 +238,7 @@ export default function SubcategoryPageClient({
     })
 
     return sorted
-  }, [allCategoryProducts, selectedBrand, selectedSubcategory, searchQuery, sortBy, isBrakeCategory])
+  }, [allCategoryProducts, selectedBrand, selectedSubcategory, searchQuery, sortBy, isBrakeCategory, isWheelCategory, isFairingsCategory])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 dark:from-gray-900 dark:via-blue-950/20 dark:to-gray-900 pt-24 pb-16">
@@ -347,8 +372,8 @@ export default function SubcategoryPageClient({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Subcategory Filter (for brake and wheel products) */}
-            {(isBrakeCategory || isWheelCategory) && (
+            {/* Subcategory Filter (for brake, wheel and fairings products) */}
+            {(isBrakeCategory || isWheelCategory || isFairingsCategory) && (
               <div>
                 <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Sottocategoria
@@ -360,11 +385,18 @@ export default function SubcategoryPageClient({
                     focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all
                     text-gray-900 dark:text-white cursor-pointer"
                 >
-                  {(isBrakeCategory ? brakeSubcategories : wheelSubcategories).map((subcat) => (
-                    <option key={subcat} value={subcat}>
-                      {subcat}
-                    </option>
-                  ))}
+                  {isFairingsCategory
+                    ? fairingsSubcategories.map((subcat) => (
+                        <option key={subcat.id} value={subcat.id}>
+                          {subcat.label}
+                        </option>
+                      ))
+                    : (isBrakeCategory ? brakeSubcategories : wheelSubcategories).map((subcat) => (
+                        <option key={subcat} value={subcat}>
+                          {subcat}
+                        </option>
+                      ))
+                  }
                 </select>
               </div>
             )}
