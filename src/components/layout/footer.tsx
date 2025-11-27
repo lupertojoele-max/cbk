@@ -86,7 +86,7 @@ export function Footer() {
                 href="/karts"
                 className="block text-racing-gray-300 dark:text-racing-gray-600 hover:text-racing-red dark:hover:text-racing-red-light transition-colors text-sm"
               >
-                Flotta Kart
+                Noleggio Kart
               </Link>
               <Link
                 href="/technical"

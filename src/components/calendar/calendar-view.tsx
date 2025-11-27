@@ -209,68 +209,73 @@ export function CalendarView() {
         </div>
       </div>
 
-      {/* Series Info Banner */}
+      {/* F1 Style Hero Banner */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-lg p-6"
+        className="bg-white dark:bg-racing-gray-900 rounded-lg overflow-hidden shadow-lg border-2 border-racing-gray-200 dark:border-racing-gray-700"
       >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 flex gap-4">
-            <Image
-              src="https://www.wskarting.it/assets/img/loghi/wsk_promotion.png"
-              alt="WSK Promotion Logo"
-              width={80}
-              height={80}
-              className="w-20 h-auto"
-            />
-            <Image
-              src="https://italy.rokcup.com/assets/images/logo_rok.png"
-              alt="ROK Cup Logo"
-              width={80}
-              height={80}
-              className="w-20 h-auto"
-            />
-            <div className="bg-[#1877F2] p-2 rounded-lg">
-              <Image
-                src="https://www.iameeuroseries.com/wp-content/uploads/2019/07/logowhiteEURO.png"
-                alt="IAME Euro Series Logo"
-                width={80}
-                height={80}
-                className="w-20 h-auto"
-              />
+        <div className="grid md:grid-cols-2 gap-0">
+          {/* Left Side - Title and Stats */}
+          <div className="p-8 bg-white dark:bg-racing-gray-900">
+            <h2 className="text-4xl font-black text-racing-gray-900 dark:text-white mb-2 uppercase tracking-tight">
+              Calendario 2026
+            </h2>
+            <p className="text-racing-gray-600 dark:text-racing-gray-300 mb-6 text-sm">
+              Segui CBK Racing nei principali campionati internazionali
+            </p>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="bg-racing-gray-100 dark:bg-racing-gray-800 rounded p-3 border-2 border-racing-gray-300 dark:border-racing-gray-600">
+                <div className="text-2xl font-black text-racing-gray-900 dark:text-white">{seriesStats.total}</div>
+                <div className="text-xs text-racing-gray-600 dark:text-racing-gray-400 uppercase font-bold">Eventi</div>
+              </div>
+              <div className="bg-racing-red/10 dark:bg-racing-red/20 rounded p-3 border-2 border-racing-red/50 dark:border-racing-red/40">
+                <div className="text-2xl font-black text-racing-red">{seriesStats.wsk}</div>
+                <div className="text-xs text-racing-gray-600 dark:text-racing-gray-400 uppercase font-bold">WSK</div>
+              </div>
+              <div className="bg-orange-600/10 dark:bg-orange-600/20 rounded p-3 border-2 border-orange-600/50 dark:border-orange-600/40">
+                <div className="text-2xl font-black text-orange-600">{seriesStats.rok}</div>
+                <div className="text-xs text-racing-gray-600 dark:text-racing-gray-400 uppercase font-bold">ROK</div>
+              </div>
+            </div>
+
+            <div className="text-xs text-racing-gray-500 dark:text-racing-gray-500 italic">
+              * Pending confirmation by ASN
             </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold text-racing-gray-900 dark:text-white mb-2">
-              Calendario Gare 2026
-            </h3>
-            <p className="text-racing-gray-700 dark:text-racing-gray-300 mb-4">
-              Segui CBK Racing nei principali campionati 2026: WSK Promotion, ROK Cup Italia e IAME Euro Series.
-              Calendario completo con tutte le gare, test collettivi e categorie.
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <Flag className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
-                <span className="font-semibold text-racing-gray-900 dark:text-white">
-                  {seriesStats.total} Eventi Totali
-                </span>
+
+          {/* Right Side - Championship Logos */}
+          <div className="bg-racing-gray-50 dark:bg-racing-gray-800 p-8 flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-6">
+              <div className="flex items-center justify-center">
+                <Image
+                  src="https://www.wskarting.it/assets/img/loghi/wsk_promotion.png"
+                  alt="WSK Promotion"
+                  width={100}
+                  height={100}
+                  className="w-24 h-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-racing-red" />
-                <span className="text-racing-gray-700 dark:text-racing-gray-300">
-                  {seriesStats.wsk} WSK • {seriesStats.rok} ROK • {seriesStats.iame} IAME
-                </span>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="https://italy.rokcup.com/assets/images/logo_rok.png"
+                  alt="ROK Cup"
+                  width={100}
+                  height={100}
+                  className="w-24 h-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-racing-gray-600 dark:text-racing-gray-400" />
-                <span className="text-racing-gray-700 dark:text-racing-gray-300">
-                  Circuiti: Lonato, Franciacorta, Cremona, Viterbo, Sarno, La Conca, 7 Laghi, Jesolo, Zuera, Wackersdorf, Genk
-                </span>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/iame-euro-series-logo.png"
+                  alt="IAME Euro Series"
+                  width={120}
+                  height={80}
+                  className="w-28 h-auto object-contain"
+                />
               </div>
-            </div>
-            <div className="mt-3 text-xs text-racing-gray-500 dark:text-racing-gray-500 italic">
-              * Pending confirmation by ASN
             </div>
           </div>
         </div>
@@ -288,143 +293,134 @@ export function CalendarView() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="space-y-6"
             >
-              {/* Sticky Month Header */}
-              <div className="sticky top-20 z-10 bg-white/95 dark:bg-racing-gray-900/95 backdrop-blur-sm border-b border-racing-gray-200 dark:border-racing-gray-700 py-4 rounded-lg shadow-sm">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-2xl font-bold text-racing-gray-900 dark:text-white flex items-center gap-3 capitalize">
-                    <Calendar className="w-6 h-6 text-blue-600" />
-                    {monthGroup.monthName}
-                  </h2>
-                  <Badge variant="outline" className="text-racing-gray-600 dark:text-racing-gray-400">
-                    {monthGroup.events.length} event{monthGroup.events.length !== 1 ? 'i' : 'o'}
-                  </Badge>
-                </div>
+              {/* F1 Style Month Header */}
+              <div className="bg-black py-2 px-4 rounded">
+                <h2 className="text-lg font-black text-white uppercase tracking-wider">
+                  {monthGroup.monthName}
+                </h2>
               </div>
 
-              {/* Events for this month */}
-              <div className="space-y-4">
-                {monthGroup.events.map((event, eventIndex) => (
-                  <motion.div
-                    key={event.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: eventIndex * 0.05 }}
-                    className="bg-white dark:bg-racing-gray-800 rounded-lg shadow-sm border border-racing-gray-200 dark:border-racing-gray-700 hover:shadow-md transition-all duration-200 hover:border-blue-600/50"
-                  >
-                    <div className="p-6">
-                      <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                        {/* Date Display */}
-                        <div className="flex-shrink-0">
-                          <div className="bg-blue-600/10 dark:bg-blue-600/20 rounded-lg p-4 text-center min-w-[100px]">
-                            <div className="text-2xl font-bold text-blue-600">
-                              {format(parseISO(event.startDate), 'd')}-{format(parseISO(event.endDate), 'd')}
+              {/* F1 Style Events Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {monthGroup.events.map((event, eventIndex) => {
+                  const bgColor = event.eventType === 'WSK'
+                    ? 'bg-racing-red'
+                    : event.eventType === 'ROK'
+                    ? 'bg-orange-600'
+                    : 'bg-[#1877F2]'
+
+                  const borderColor = event.eventType === 'WSK'
+                    ? 'border-racing-red'
+                    : event.eventType === 'ROK'
+                    ? 'border-orange-600'
+                    : 'border-[#1877F2]'
+
+                  return (
+                    <motion.div
+                      key={event.id}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.2, delay: eventIndex * 0.03 }}
+                      className="group cursor-pointer"
+                      whileHover={{ scale: 1.02, y: -4 }}
+                    >
+                      <div className={`bg-white dark:bg-racing-gray-800 rounded-lg overflow-hidden border-2 ${borderColor} shadow-md hover:shadow-2xl transition-all duration-300`}>
+                        {/* Top Color Bar */}
+                        <div className={`h-1.5 ${bgColor}`} />
+
+                        <div className="p-4">
+                          {/* Round Number & Date Row */}
+                          <div className="flex items-center justify-between mb-3">
+                            <div className={`${bgColor} text-white px-3 py-1 rounded font-black text-base`}>
+                              {event.round ? `R${event.round}` : event.eventType}
                             </div>
-                            <div className="text-xs font-medium text-racing-gray-600 dark:text-racing-gray-400 uppercase">
-                              {format(parseISO(event.startDate), 'MMM yyyy', { locale: it })}
-                            </div>
-                            <div className="text-xs text-racing-gray-500 dark:text-racing-gray-500 mt-1">
-                              {event.raceDays} giorni
+                            <div className="text-right">
+                              <div className="text-base font-black text-racing-gray-900 dark:text-white uppercase">
+                                {format(parseISO(event.startDate), 'd')}-{format(parseISO(event.endDate), 'd')} {format(parseISO(event.startDate), 'MMM', { locale: it }).toUpperCase()}
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        {/* Event Details */}
-                        <div className="flex-1 space-y-3">
-                          <div className="flex flex-wrap items-start gap-2">
-                            <h3 className="text-xl font-semibold text-racing-gray-900 dark:text-white flex-1">
+                          {/* Event Title with Logo */}
+                          <div className="flex items-center gap-2 mb-2">
+                            {event.eventType === 'WSK' && (
+                              <Image
+                                src="https://www.wskarting.it/assets/img/loghi/wsk_promotion.png"
+                                alt="WSK"
+                                width={48}
+                                height={48}
+                                className="w-10 h-10 object-contain flex-shrink-0"
+                              />
+                            )}
+                            {event.eventType === 'ROK' && (
+                              <Image
+                                src="https://italy.rokcup.com/assets/images/logo_rok.png"
+                                alt="ROK"
+                                width={48}
+                                height={48}
+                                className="w-10 h-10 object-contain flex-shrink-0"
+                              />
+                            )}
+                            {event.eventType === 'IAME' && (
+                              <Image
+                                src="/images/iame-euro-series-logo.png"
+                                alt="IAME"
+                                width={48}
+                                height={48}
+                                className="w-12 h-10 object-contain flex-shrink-0"
+                              />
+                            )}
+                            <h3 className="font-black text-sm text-racing-gray-900 dark:text-white uppercase leading-tight">
                               {event.series}
-                              {event.round && ` - Round ${event.round}`}
                             </h3>
-                            <div className="flex gap-2">
-                              <Badge className={
-                                event.eventType === 'WSK'
-                                  ? getSeriesColor(event.series)
-                                  : event.eventType === 'ROK'
-                                    ? getROKSeriesColor(event.series)
-                                    : getIAMESeriesColor(event.series)
-                              }>
-                                {event.eventType === 'WSK'
-                                  ? getSeriesBadgeText(event.series, event.round)
-                                  : event.eventType === 'ROK'
-                                    ? getROKSeriesBadgeText(event.series, event.round)
-                                    : getIAMESeriesBadgeText(event.series, event.round)
-                                }
-                              </Badge>
-                              <Badge variant="outline" className={
-                                event.eventType === 'WSK'
-                                  ? 'bg-racing-red/10 text-racing-red border-racing-red/30'
-                                  : event.eventType === 'ROK'
-                                    ? 'bg-orange-600/10 text-orange-600 border-orange-600/30'
-                                    : 'bg-purple-600/10 text-purple-600 border-purple-600/30'
-                              }>
-                                {event.eventType}
-                              </Badge>
-                              {event.status === 'pending' && (
-                                <Badge variant="outline" className="bg-yellow-50 dark:bg-yellow-950 text-yellow-700 dark:text-yellow-500 border-yellow-300 dark:border-yellow-700">
-                                  Da Confermare
-                                </Badge>
-                              )}
-                            </div>
                           </div>
 
-                          <div className="flex flex-wrap items-center gap-4 text-sm text-racing-gray-600 dark:text-racing-gray-400">
-                            <div className="flex items-center gap-1">
-                              <MapPin className="w-4 h-4" />
-                              <span className="font-medium">{event.venue}</span>
-                              <span className="text-racing-gray-500">• {event.location}</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              <span>{event.dates}</span>
-                            </div>
+                          {/* Location */}
+                          <div className="flex items-center gap-2 text-xs text-racing-gray-600 dark:text-racing-gray-400 mb-3">
+                            <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+                            <span className="font-semibold">{event.venue}</span>
+                            <span className="text-racing-gray-400">•</span>
+                            <span>{event.location}</span>
                           </div>
 
-                          {/* Categories */}
-                          <div className="flex flex-wrap gap-2">
-                            <span className="text-xs font-medium text-racing-gray-500 dark:text-racing-gray-500">
-                              Categorie:
-                            </span>
-                            {event.categories.map((category) => (
-                              <Badge
+                          {/* Categories - Compact */}
+                          <div className="flex flex-wrap gap-1.5">
+                            {event.categories.slice(0, 3).map((category) => (
+                              <span
                                 key={category}
-                                variant="outline"
-                                className="text-xs bg-racing-gray-50 dark:bg-racing-gray-700 border-racing-gray-300 dark:border-racing-gray-600"
+                                className="text-[10px] font-bold bg-racing-gray-100 dark:bg-racing-gray-700 text-racing-gray-700 dark:text-racing-gray-300 px-2 py-0.5 rounded uppercase"
                               >
                                 {category}
-                              </Badge>
+                              </span>
                             ))}
-                          </div>
-
-                          {/* Additional Info */}
-                          <div className="text-xs text-racing-gray-500 dark:text-racing-gray-500 pt-2 border-t border-racing-gray-100 dark:border-racing-gray-700">
-                            {event.series.includes('Euro') ? (
-                              <span>📅 Mer/Sab • 4 giorni di gara</span>
-                            ) : event.series.includes('Test') ? (
-                              <span>🔧 Test collettivi ufficiali</span>
-                            ) : (
-                              <span>📅 Mer/Dom • 5 giorni di gara</span>
+                            {event.categories.length > 3 && (
+                              <span className="text-[10px] font-bold text-racing-gray-500">
+                                +{event.categories.length - 3}
+                              </span>
                             )}
                           </div>
                         </div>
 
-                        {/* Action Button */}
-                        <div className="flex-shrink-0">
+                        {/* Bottom Action Bar */}
+                        <div className={`${bgColor} px-4 py-2 flex items-center justify-between`}>
+                          <Badge variant="outline" className="bg-white/20 text-white border-white/40">
+                            {event.eventType}
+                          </Badge>
                           <Button
-                            variant="outline"
-                            className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full lg:w-auto"
+                            size="sm"
+                            className="bg-white text-racing-gray-900 hover:bg-racing-gray-100 font-bold text-xs px-3 py-1"
                             onClick={() => {
                               setSelectedEvent(event)
                               setIsRegistrationModalOpen(true)
                             }}
                           >
-                            <Trophy className="w-4 h-4 mr-2" />
-                            Iscriviti
+                            ISCRIVITI
                           </Button>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  )
+                })}
               </div>
             </motion.div>
           ))}

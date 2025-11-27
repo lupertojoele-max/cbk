@@ -97,9 +97,9 @@ const megaMenuData: Record<string, MegaMenuData> = {
             description: 'Corsi di guida e formazione per piloti di ogni livello',
           },
           {
-            title: 'Flotta Kart',
+            title: 'Noleggio Kart',
             href: '/karts',
-            description: 'Esplora la nostra collezione di kart ad alte prestazioni',
+            description: 'Noleggia i nostri kart ad alte prestazioni per gare e allenamenti',
           },
           {
             title: 'Team Tecnico',

@@ -1,10 +1,12 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import productsData from '../../../data/products.json'
+
+const PRODUCTS_PER_PAGE = 24
 
 interface Product {
   id: string
@@ -65,7 +67,8 @@ export default function ProdottiPage() {
   const [selectedCategory, setSelectedCategory] = useState('tutti')
   const [selectedBrand, setSelectedBrand] = useState('Tutti')
   const [searchQuery, setSearchQuery] = useState('')
-  const [sortBy, setSortBy] = useState('featured') // featured, price-asc, price-desc, name
+  const [sortBy, setSortBy] = useState('featured')
+  const [currentPage, setCurrentPage] = useState(1)
 
   const products = productsData.products as Product[]
 
@@ -115,6 +118,19 @@ export default function ProdottiPage() {
     return sorted
   }, [products, selectedCategory, selectedBrand, searchQuery, sortBy])
 
+  // Pagination
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE)
+  const paginatedProducts = useMemo(() => {
+    const start = (currentPage - 1) * PRODUCTS_PER_PAGE
+    return filteredProducts.slice(start, start + PRODUCTS_PER_PAGE)
+  }, [filteredProducts, currentPage])
+
+  // Reset page when filters change
+  const handleFilterChange = useCallback((setter: (val: string) => void, value: string) => {
+    setter(value)
+    setCurrentPage(1)
+  }, [])
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,10 +169,10 @@ export default function ProdottiPage() {
               {categories.map((cat) => (
                 <button
                   key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 text-sm hover:scale-105 active:scale-95 ${
+                  onClick={() => handleFilterChange(setSelectedCategory, cat.id)}
+                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
                     selectedCategory === cat.id
-                      ? 'bg-racing-red text-white shadow-md scale-105'
+                      ? 'bg-racing-red text-white shadow-md'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white'
                   }`}
                 >
@@ -174,9 +190,9 @@ export default function ProdottiPage() {
               </label>
               <select
                 value={selectedBrand}
-                onChange={(e) => setSelectedBrand(e.target.value)}
+                onChange={(e) => handleFilterChange(setSelectedBrand, e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-300 dark:bg-gray-700 dark:text-white cursor-pointer"
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
                 {brands.map((brand) => (
                   <option key={brand} value={brand}>
@@ -192,9 +208,9 @@ export default function ProdottiPage() {
               </label>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={(e) => handleFilterChange(setSortBy, e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-300 dark:bg-gray-700 dark:text-white cursor-pointer"
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
                 <option value="featured">In Evidenza</option>
                 <option value="name">Nome (A-Z)</option>
@@ -222,25 +238,109 @@ export default function ProdottiPage() {
                 setSelectedCategory('tutti')
                 setSelectedBrand('Tutti')
                 setSearchQuery('')
+                setCurrentPage(1)
               }}
-              className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-xl"
+              className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md"
             >
               Resetta Filtri
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <ProductCard product={product} />
-              </motion.div>
-            ))}
-          </div>
+          <>
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.03,
+                    delayChildren: 0.05
+                  }
+                }
+              }}
+            >
+              <AnimatePresence mode="popLayout">
+                {paginatedProducts.map((product, index) => (
+                  <motion.div
+                    key={product.id}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 24
+                        }
+                      }
+                    }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    layout
+                    style={{ willChange: 'transform, opacity' }}
+                  >
+                    <ProductCard product={product} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex justify-center items-center gap-2">
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 rounded-lg font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white"
+                >
+                  ← Prec
+                </button>
+
+                <div className="flex gap-1">
+                  {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                    let pageNum: number
+                    if (totalPages <= 5) {
+                      pageNum = i + 1
+                    } else if (currentPage <= 3) {
+                      pageNum = i + 1
+                    } else if (currentPage >= totalPages - 2) {
+                      pageNum = totalPages - 4 + i
+                    } else {
+                      pageNum = currentPage - 2 + i
+                    }
+                    return (
+                      <button
+                        key={pageNum}
+                        onClick={() => setCurrentPage(pageNum)}
+                        className={`w-10 h-10 rounded-lg font-bold transition-all duration-200 ${
+                          currentPage === pageNum
+                            ? 'bg-racing-red text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    )
+                  })}
+                </div>
+
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 rounded-lg font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white"
+                >
+                  Succ →
+                </button>
+              </div>
+            )}
+
+            <p className="text-center mt-4 text-sm text-gray-500 dark:text-gray-400">
+              Pagina {currentPage} di {totalPages} • {filteredProducts.length} prodotti totali
+            </p>
+          </>
         )}
       </div>
     </div>
@@ -296,8 +396,9 @@ function ProductCard({ product }: { product: Product }) {
               src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
               alt={product.name}
               fill
-              className="object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
-              sizes="180px"
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              loading="lazy"
               style={{ padding: '15px' }}
             />
           </div>
@@ -349,10 +450,10 @@ function ProductCard({ product }: { product: Product }) {
                 €{parseFloat(product.price).toFixed(2)}
               </p>
             </div>
-            <div className="bg-racing-red rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors"
+            <div className="bg-racing-red rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors duration-200"
               style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
             >
-              <svg className="text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
+              <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>

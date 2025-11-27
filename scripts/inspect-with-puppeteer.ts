@@ -98,7 +98,7 @@ async function inspectWithPuppeteer() {
   console.log(`═══════════════════════════════════════════════════════════`)
 
   for (const [selector, count] of Object.entries(pageInfo.selectors)) {
-    if (count > 0) {
+    if ((count as number) > 0) {
       console.log(`✅ ${selector}: ${count} elementi`)
     } else {
       console.log(`❌ ${selector}: 0 elementi`)
