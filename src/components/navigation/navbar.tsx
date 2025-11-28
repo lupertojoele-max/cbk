@@ -225,15 +225,15 @@ export function Navbar() {
     <motion.nav
       ref={navRef}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         isScrolled
-          ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-racing-gray-200 dark:border-slate-700'
-          : 'bg-transparent border-transparent'
+          ? 'bg-white/98 dark:bg-gray-950/98 backdrop-blur-xl shadow-lg shadow-black/5'
+          : 'bg-gradient-to-b from-black/30 to-transparent'
       )}
       animate={{
-        height: isScrolled ? '72px' : '88px',
+        height: isScrolled ? '70px' : '80px',
       }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
       onKeyDown={handleKeyDown}
     >
       <div className="container mx-auto px-4 h-full">
@@ -271,65 +271,53 @@ export function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={cn(
-                      'group h-12 px-4 py-2 text-base font-medium transition-all duration-200 rounded-lg bg-transparent',
-                      'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
-                      'aria-expanded:bg-[#1877F2] aria-expanded:text-white data-[state=open]:!bg-[#1877F2] data-[state=open]:!text-white',
+                      'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
+                      'focus:outline-none',
+                      'data-[state=open]:bg-blue-600 data-[state=open]:text-white dark:data-[state=open]:bg-blue-600 dark:data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-racing-gray-900 dark:text-white hover:text-white hover:bg-[#0d5dbf]'
-                        : 'text-white hover:text-white hover:bg-white/10',
+                        ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        : 'text-white/90 hover:text-white hover:bg-white/10',
                       isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts')
-                        ? 'bg-[#1877F2]/10 text-[#1877F2]'
+                        ? 'font-semibold'
                         : ''
                     )}
                     onFocus={() => setFocusedItem('racing')}
                   >
                     Club
-                    <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
-                      initial={{ scaleX: 0 }}
-                      animate={{
-                        scaleX: isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts') ? 1 : 0
-                      }}
-                      transition={{ duration: 0.2 }}
-                    />
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[800px] grid-cols-3 gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700">
+                    <div className="grid w-[700px] grid-cols-3 gap-4 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl shadow-black/10 border border-gray-100 dark:border-gray-800">
                       {/* Menu Sections */}
                       {megaMenuData.racing.sections.map((section) => (
                         <div key={section.title} className="space-y-3">
-                          <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
+                          <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider px-3">
                             {section.title}
                           </h4>
-                          <div className="space-y-2">
+                          <div className="space-y-1">
                             {section.items.map((item) => (
                               <NavigationMenuLink key={item.href} asChild>
                                 <Link
                                   href={item.href}
                                   className={cn(
-                                    'block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none',
-                                    'transition-colors hover:bg-[#0d5dbf]',
-                                    'focus:bg-[#1877F2]',
-                                    'dark:text-racing-gray-100',
-                                    'group relative'
+                                    'block select-none rounded-xl p-3 no-underline outline-none',
+                                    'transition-all duration-200',
+                                    'hover:bg-gray-50 dark:hover:bg-gray-800',
+                                    'group'
                                   )}
                                   onFocus={() => setFocusedItem(item.href)}
                                 >
-                                  <div className="flex items-center justify-between">
-                                    <div className="text-sm font-medium leading-none text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-[#1877F2] dark:group-hover:text-[#3b82f6]">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                       {item.title}
-                                    </div>
+                                    </span>
                                     {item.badge && (
-                                      <Badge
-                                        className="ml-2 bg-[#1877F2] text-white text-xs"
-                                        variant="default"
-                                      >
+                                      <Badge className="bg-blue-500 text-white text-[10px] px-1.5 py-0">
                                         {item.badge}
                                       </Badge>
                                     )}
                                   </div>
                                   {item.description && (
-                                    <p className="line-clamp-2 text-xs leading-snug text-racing-gray-600 dark:text-racing-gray-400">
+                                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 line-clamp-1">
                                       {item.description}
                                     </p>
                                   )}
@@ -344,17 +332,17 @@ export function Navbar() {
                       {(() => {
                         const featured = getFeaturedContent()
                         return (
-                          <div className="bg-racing-gray-50 dark:bg-racing-gray-700 rounded-lg p-4 space-y-3">
-                            <Badge className="bg-[#1877F2] text-white">In Evidenza</Badge>
+                          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4 text-white">
+                            <span className="text-[10px] font-semibold uppercase tracking-wider opacity-80">In Evidenza</span>
                             <NavigationMenuLink asChild>
                               <Link
                                 href={featured.href}
-                                className="block space-y-2 no-underline outline-none hover:opacity-80 focus:opacity-80 transition-opacity"
+                                className="block mt-2 no-underline outline-none hover:opacity-90 transition-opacity"
                               >
-                                <div className="text-sm font-semibold text-racing-gray-900 dark:text-white">
+                                <div className="text-sm font-semibold">
                                   {featured.title}
                                 </div>
-                                <p className="text-xs text-racing-gray-600 dark:text-racing-gray-400 leading-relaxed">
+                                <p className="mt-1 text-xs opacity-90 leading-relaxed">
                                   {featured.description}
                                 </p>
                               </Link>
@@ -370,287 +358,92 @@ export function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={cn(
-                      'group h-12 px-4 py-2 text-base font-medium transition-all duration-200 rounded-lg bg-transparent',
-                      'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
-                      'aria-expanded:bg-[#1877F2] aria-expanded:text-white data-[state=open]:!bg-[#1877F2] data-[state=open]:!text-white',
+                      'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
+                      'focus:outline-none',
+                      'data-[state=open]:bg-blue-600 data-[state=open]:text-white dark:data-[state=open]:bg-blue-600 dark:data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-racing-gray-900 dark:text-white hover:text-white hover:bg-[#0d5dbf]'
-                        : 'text-white hover:text-white hover:bg-white/10',
-                      isActivePath('/products') ? 'bg-[#1877F2]/10 text-[#1877F2]' : ''
+                        ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        : 'text-white/90 hover:text-white hover:bg-white/10',
+                      isActivePath('/products') ? 'font-semibold' : ''
                     )}
                     onFocus={() => setFocusedItem('products')}
                   >
                     Prodotti
-                    <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1877F2]"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: isActivePath('/products') ? 1 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    />
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div
-                      className={`grid gap-6 p-6 bg-white dark:bg-racing-gray-800 border dark:border-racing-gray-700 transition-all duration-300 mx-auto ${
-                        activeSubmenu ? 'w-[900px] grid-cols-3' : 'w-[600px] grid-cols-2'
+                      className={`grid gap-4 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl shadow-black/10 border border-gray-100 dark:border-gray-800 transition-all duration-300 ${
+                        activeSubmenu ? 'w-[850px] grid-cols-3' : 'w-[550px] grid-cols-2'
                       }`}
                       onMouseLeave={() => setActiveSubmenu(null)}
                     >
                       {/* Column 1 - Left Items */}
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
+                      <div className="space-y-2">
+                        <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider px-3 mb-3">
                           Componenti Kart
                         </h4>
-                        <div className="space-y-2">
-                          <div
-                            className="group/telaio relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('telaio')
-                              setSelectedMenuItem('telaio')
-                            }}
-                          >
-                            <Link
-                              href="/products/telaio-accessori"
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group cursor-pointer ${
-                                selectedMenuItem === 'telaio'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'telaio' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'telaio'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Telaio e Accessori
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telaio' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'telaio' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'telaio' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Telai, ammortizzatori e componenti strutturali
-                                </div>
-                            </Link>
-                          </div>
-                          <div
-                            className="group/motore relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('motore')
-                              setSelectedMenuItem('motore')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
+                        <div className="space-y-1">
+                          {[
+                            { key: 'telaio', title: 'Telaio e Accessori', href: '/products/telaio-accessori' },
+                            { key: 'motore', title: 'Motore e Accessori', href: null },
+                            { key: 'carburatori', title: 'Carburatori', href: null },
+                            { key: 'radiatori', title: 'Radiatori', href: null },
+                            { key: 'cuscinetti', title: 'Cuscinetti e Molle', href: null },
+                          ].map((item) => (
                             <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'motore'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'motore' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                              key={item.key}
+                              className="group relative"
+                              onMouseEnter={() => {
+                                setActiveSubmenu(item.key)
+                                setSelectedMenuItem(item.key)
+                              }}
                             >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'motore'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Motore e Accessori
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motore' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'motore' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              {item.href ? (
+                                <Link
+                                  href={item.href}
+                                  className={cn(
+                                    'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
+                                    activeSubmenu === item.key
+                                      ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                      : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
+                                  )}
+                                >
+                                  <span className="text-sm font-medium">{item.title}</span>
+                                  <svg className={cn('w-4 h-4 transition-transform', activeSubmenu === item.key && 'rotate-90')} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                </Link>
+                              ) : (
+                                <div
+                                  className={cn(
+                                    'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
+                                    activeSubmenu === item.key
+                                      ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                      : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
+                                  )}
+                                >
+                                  <span className="text-sm font-medium">{item.title}</span>
+                                  <svg className={cn('w-4 h-4 transition-transform', activeSubmenu === item.key && 'rotate-90')} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                   </svg>
                                 </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'motore' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Componenti motore e ricambi per prestazioni
-                                </div>
-                              </div>
-                          </div>
-                          <div
-                            className="group/carburatori relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('carburatori')
-                              setSelectedMenuItem('carburatori')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'carburatori'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'carburatori' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'carburatori'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Carburatori
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'carburatori' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'carburatori' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'carburatori' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Carburatori e sistemi di alimentazione
-                                </div>
+                              )}
                             </div>
-                          </div>
-                          <div
-                            className="group/radiatori relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('radiatori')
-                              setSelectedMenuItem('radiatori')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'radiatori'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'radiatori' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'radiatori'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Radiatori e Accessori
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'radiatori' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'radiatori' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'radiatori' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Sistemi di raffreddamento e componenti
-                                </div>
-                            </div>
-                          </div>
-                          <div
-                            className="group/cuscinetti relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('cuscinetti')
-                              setSelectedMenuItem('cuscinetti')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'cuscinetti'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'cuscinetti' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'cuscinetti'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Cuscinetti Paraoli Molle
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'cuscinetti' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'cuscinetti' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'cuscinetti' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Componenti meccanici e sospensioni
-                                </div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
 
                       {/* Column 2 - Central Submenu */}
                       {activeSubmenu && (
-                        <div className="space-y-3 bg-[#1877F2] p-4 rounded-lg">
+                        <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
                           {/* Telaio Submenu */}
                           {activeSubmenu === 'telaio' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Sottocategorie
-                              </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telaio-accessori/freni-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Freni e Accessori</Link>
-                                <Link href="/products/telaio-accessori/cerchi-mozzi-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cerchi, Mozzi e Accessori</Link>
-                                <Link href="/products/telaio-accessori/assali-chiavette-e-cuscinetti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Assali chiavette e cuscinetti</Link>
-                                <Link href="/products/telaio-accessori/corone-catene-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Corone, Catene e accessori</Link>
-                                <Link href="/products/telaio-accessori/carenature-staffe-e-paraurti" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carenature, staffe e paraurti</Link>
-                                <Link href="/products/telaio-accessori/leve-cambio-e-frizione" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Leve cambio e frizione</Link>
-                                <Link href="/products/telaio-accessori/pedali-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pedali e accessori</Link>
-                                <Link href="/products/telaio-accessori/piantone-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Piantone e Accessori</Link>
-                                <Link href="/products/telaio-accessori/portacorona-e-porta-disco" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Portacorona e Porta disco</Link>
-                                <Link href="/products/telaio-accessori/serbatoio-e-tubi-benzina" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Serbatoio e Tubi Benzina</Link>
-                                <Link href="/products/telaio-accessori/sedili-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Sedili e accessori</Link>
-                                <Link href="/products/telaio-accessori/uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Uniball</Link>
-                                <Link href="/products/telaio-accessori/volanti-e-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Volanti e accessori</Link>
-                                <Link href="/products/telaio-accessori/barra-stabilizzatrici" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Barra stabilizzatrici</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Sottocategorie</h4>
+                              <div className="space-y-0.5 max-h-72 overflow-y-auto">
+                                {['Freni e Accessori', 'Cerchi, Mozzi e Accessori', 'Assali chiavette e cuscinetti', 'Corone, Catene e accessori', 'Carenature, staffe e paraurti', 'Leve cambio e frizione', 'Pedali e accessori', 'Piantone e Accessori', 'Portacorona e Porta disco', 'Serbatoio e Tubi Benzina', 'Sedili e accessori', 'Uniball', 'Volanti e accessori', 'Barra stabilizzatrici'].map((item) => (
+                                  <Link key={item} href={`/products/telaio-accessori/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -658,16 +451,11 @@ export function Navbar() {
                           {/* Cuscinetti Submenu */}
                           {activeSubmenu === 'cuscinetti' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Cuscinetti Paraoli Molle
-                              </h4>
-                              <div className="space-y-2">
-                                <Link href="/products/cuscinetti-paraoli-molle/molle" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Molle</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-telaio" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cuscinetti Telaio</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/cuscinetti-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cuscinetti Motore</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/snodi-sferici-uniball" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Snodi Sferici, Uniball</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/paraoli-anelli-tenuta" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Paraoli, Anelli Tenuta</Link>
-                                <Link href="/products/cuscinetti-paraoli-molle/gabbie-a-rulli" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Gabbie a Rulli</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Cuscinetti e Molle</h4>
+                              <div className="space-y-0.5">
+                                {['Molle', 'Cuscinetti Telaio', 'Cuscinetti Motore', 'Snodi Sferici, Uniball', 'Paraoli, Anelli Tenuta', 'Gabbie a Rulli'].map((item) => (
+                                  <Link key={item} href={`/products/cuscinetti-paraoli-molle/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -675,22 +463,11 @@ export function Navbar() {
                           {/* Motore Submenu */}
                           {activeSubmenu === 'motore' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Motore e Accessori
-                              </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/motore-accessori/ricambi-generici-motore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Ricambi Generici Motore</Link>
-                                <Link href="/products/motore-accessori/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">IAME</Link>
-                                <Link href="/products/motore-accessori/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">TM RACING</Link>
-                                <Link href="/products/motore-accessori/bmb-bluebird" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">BMB / BLUEBIRD</Link>
-                                <Link href="/products/motore-accessori/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">ROTAX</Link>
-                                <Link href="/products/motore-accessori/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">VORTEX</Link>
-                                <Link href="/products/motore-accessori/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">COMER</Link>
-                                <Link href="/products/motore-accessori/lke-lenzo" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">LKE (LENZO)</Link>
-                                <Link href="/products/motore-accessori/maxter" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">MAXTER</Link>
-                                <Link href="/products/motore-accessori/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">MODENA ENGINES</Link>
-                                <Link href="/products/motore-accessori/wtp-60" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">WTP 60</Link>
-                                <Link href="/products/motore-accessori/pavesi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">PAVESI</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Motore e Accessori</h4>
+                              <div className="space-y-0.5 max-h-72 overflow-y-auto">
+                                {['Ricambi Generici Motore', 'IAME', 'TM RACING', 'BMB / BLUEBIRD', 'ROTAX', 'VORTEX', 'COMER', 'LKE (LENZO)', 'MAXTER', 'MODENA ENGINES', 'WTP 60', 'PAVESI'].map((item) => (
+                                  <Link key={item} href={`/products/motore-accessori/${item.toLowerCase().replace(/[\/\s()]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -698,16 +475,11 @@ export function Navbar() {
                           {/* Carburatori Submenu */}
                           {activeSubmenu === 'carburatori' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Carburatori
-                              </h4>
-                              <div className="space-y-2">
-                                <Link href="/products/carburatori/attrezzatura-carburatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Attrezzatura Carburatori</Link>
-                                <Link href="/products/carburatori/dellorto-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carburatori Dellorto e ricambi</Link>
-                                <Link href="/products/carburatori/ibea-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carburatori IBEA e ricambi</Link>
-                                <Link href="/products/carburatori/tillotson-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carburatori Tillotson e ricambi</Link>
-                                <Link href="/products/carburatori/tryton-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carburatori Tryton e ricambi</Link>
-                                <Link href="/products/carburatori/walbro-ricambi" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Carburatori WALBRO e ricambi</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Carburatori</h4>
+                              <div className="space-y-0.5">
+                                {['Attrezzatura Carburatori', 'Dellorto e ricambi', 'IBEA e ricambi', 'Tillotson e ricambi', 'Tryton e ricambi', 'WALBRO e ricambi'].map((item) => (
+                                  <Link key={item} href={`/products/carburatori/${item.toLowerCase().replace(/[\/\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -715,16 +487,11 @@ export function Navbar() {
                           {/* Radiatori Submenu */}
                           {activeSubmenu === 'radiatori' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Radiatori e Accessori
-                              </h4>
-                              <div className="space-y-2">
-                                <Link href="/products/radiatori-accessori/radiatori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Radiatori</Link>
-                                <Link href="/products/radiatori-accessori/staffe-attacchi-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Staffe & Attacchi Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tubi-radiatore-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Tubi Radiatore Acqua</Link>
-                                <Link href="/products/radiatori-accessori/pompa-acqua-accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pompa acqua & Accessori</Link>
-                                <Link href="/products/radiatori-accessori/accessori-per-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Accessori per Radiatore</Link>
-                                <Link href="/products/radiatori-accessori/tendine-radiatore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Tendine Radiatore</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Radiatori e Accessori</h4>
+                              <div className="space-y-0.5">
+                                {['Radiatori', 'Staffe & Attacchi', 'Tubi Radiatore', 'Pompa acqua', 'Accessori', 'Tendine'].map((item) => (
+                                  <Link key={item} href={`/products/radiatori-accessori/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -732,20 +499,11 @@ export function Navbar() {
                           {/* Pneumatici Submenu */}
                           {activeSubmenu === 'pneumatici' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Pneumatici / Gomme
-                              </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/pneumatici-gomme/lecont" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici LeCont</Link>
-                                <Link href="/products/pneumatici-gomme/vega" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Vega</Link>
-                                <Link href="/products/pneumatici-gomme/maxxis" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Maxxis</Link>
-                                <Link href="/products/pneumatici-gomme/mg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici MG</Link>
-                                <Link href="/products/pneumatici-gomme/komet" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Komet</Link>
-                                <Link href="/products/pneumatici-gomme/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Easykart</Link>
-                                <Link href="/products/pneumatici-gomme/bridgestone" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Bridgestone</Link>
-                                <Link href="/products/pneumatici-gomme/dunlop" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Pneumatici Dunlop</Link>
-                                <Link href="/products/pneumatici-gomme/accessori" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Accessori pneumatici</Link>
-                                <Link href="/products/pneumatici-gomme/attrezzatura" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Attrezzatura pneumatici</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Pneumatici / Gomme</h4>
+                              <div className="space-y-0.5 max-h-72 overflow-y-auto">
+                                {['LeCont', 'Vega', 'Maxxis', 'MG', 'Komet', 'Easykart', 'Bridgestone', 'Dunlop', 'Accessori', 'Attrezzatura'].map((item) => (
+                                  <Link key={item} href={`/products/pneumatici-gomme/${item.toLowerCase()}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -753,17 +511,11 @@ export function Navbar() {
                           {/* Telemetrie Submenu */}
                           {activeSubmenu === 'telemetrie' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Telemetrie & Crono
-                              </h4>
-                              <div className="space-y-2">
-                                <Link href="/products/telemetrie-crono/aim-mychron" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">AIM MyChron</Link>
-                                <Link href="/products/telemetrie-crono/alfano" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Alfano</Link>
-                                <Link href="/products/telemetrie-crono/unipro" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Unipro</Link>
-                                <Link href="/products/telemetrie-crono/starlane" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Starlane</Link>
-                                <Link href="/products/telemetrie-crono/contagiri-rpm-contaore" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Contagiri RPM - Contaore</Link>
-                                <Link href="/products/telemetrie-crono/cronometri" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Cronometri</Link>
-                                <Link href="/products/telemetrie-crono/termometri-acqua" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Termometri acqua</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Telemetrie & Crono</h4>
+                              <div className="space-y-0.5">
+                                {['AIM MyChron', 'Alfano', 'Unipro', 'Starlane', 'Contagiri RPM', 'Cronometri', 'Termometri'].map((item) => (
+                                  <Link key={item} href={`/products/telemetrie-crono/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -771,19 +523,11 @@ export function Navbar() {
                           {/* Motori Nuovi Submenu */}
                           {activeSubmenu === 'motori-nuovi' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Motori Nuovi
-                              </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/motori-nuovi/tm-racing" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori TM Racing</Link>
-                                <Link href="/products/motori-nuovi/iame" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Iame</Link>
-                                <Link href="/products/motori-nuovi/vortex" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Vortex</Link>
-                                <Link href="/products/motori-nuovi/bmb" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori BMB</Link>
-                                <Link href="/products/motori-nuovi/modena-engines" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Modena Engines</Link>
-                                <Link href="/products/motori-nuovi/rotax" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Rotax</Link>
-                                <Link href="/products/motori-nuovi/comer" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Comer</Link>
-                                <Link href="/products/motori-nuovi/lke" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori LKE</Link>
-                                <Link href="/products/motori-nuovi/briggs-stratton" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Motori Briggs & Stratton</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Motori Nuovi</h4>
+                              <div className="space-y-0.5 max-h-72 overflow-y-auto">
+                                {['TM Racing', 'Iame', 'Vortex', 'BMB', 'Modena Engines', 'Rotax', 'Comer', 'LKE', 'Briggs & Stratton'].map((item) => (
+                                  <Link key={item} href={`/products/motori-nuovi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -791,22 +535,11 @@ export function Navbar() {
                           {/* Telai Nuovi Submenu */}
                           {activeSubmenu === 'telai-nuovi' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Telai Nuovi
-                              </h4>
-                              <div className="space-y-2 max-h-80 overflow-y-auto scrollbar-custom">
-                                <Link href="/products/telai-nuovi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai CRG</Link>
-                                <Link href="/products/telai-nuovi/birelart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai BirelArt</Link>
-                                <Link href="/products/telai-nuovi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Top-Kart</Link>
-                                <Link href="/products/telai-nuovi/formula-k" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Formula K</Link>
-                                <Link href="/products/telai-nuovi/praga" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Praga</Link>
-                                <Link href="/products/telai-nuovi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Kart Republic KR</Link>
-                                <Link href="/products/telai-nuovi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Tony Kart</Link>
-                                <Link href="/products/telai-nuovi/parolin" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Parolin</Link>
-                                <Link href="/products/telai-nuovi/kosmic" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Kosmic</Link>
-                                <Link href="/products/telai-nuovi/maranello" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Maranello</Link>
-                                <Link href="/products/telai-nuovi/ckr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai CKR</Link>
-                                <Link href="/products/telai-nuovi/intrepid" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Telai Intrepid</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Telai Nuovi</h4>
+                              <div className="space-y-0.5 max-h-72 overflow-y-auto">
+                                {['CRG', 'BirelArt', 'Top-Kart', 'Formula K', 'Praga', 'Kart Republic', 'Tony Kart', 'Parolin', 'Kosmic', 'Maranello', 'CKR', 'Intrepid'].map((item) => (
+                                  <Link key={item} href={`/products/telai-nuovi/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -814,16 +547,11 @@ export function Navbar() {
                           {/* Kart Completi Submenu */}
                           {activeSubmenu === 'kart-completi' && (
                             <div>
-                              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
-                                Kart Completi
-                              </h4>
-                              <div className="space-y-2">
-                                <Link href="/products/kart-completi/crg" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi CRG</Link>
-                                <Link href="/products/kart-completi/tony-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi Tony Kart</Link>
-                                <Link href="/products/kart-completi/birelart-kgp" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi BirelArt & KGP</Link>
-                                <Link href="/products/kart-completi/top-kart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi Top-Kart</Link>
-                                <Link href="/products/kart-completi/kart-republic-kr" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi Kart Republic KR</Link>
-                                <Link href="/products/kart-completi/easykart" className="block px-3 py-2 text-xs font-medium text-white hover:bg-[#0d5dbf] rounded transition-colors">Kart completi Easykart</Link>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Kart Completi</h4>
+                              <div className="space-y-0.5">
+                                {['CRG', 'Tony Kart', 'BirelArt & KGP', 'Top-Kart', 'Kart Republic', 'Easykart'].map((item) => (
+                                  <Link key={item} href={`/products/kart-completi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
                               </div>
                             </div>
                           )}
@@ -832,236 +560,41 @@ export function Navbar() {
                       )}
 
                       {/* Column 3 - Right Items */}
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-semibold text-[#1877F2] dark:text-[#3b82f6] uppercase tracking-wide">
+                      <div className="space-y-2">
+                        <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider px-3 mb-3">
                           Equipaggiamento
                         </h4>
-                        <div className="space-y-2">
-                          <div
-                            className="group/pneumatici relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('pneumatici')
-                              setSelectedMenuItem('pneumatici')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
+                        <div className="space-y-1">
+                          {[
+                            { key: 'pneumatici', title: 'Pneumatici / Gomme' },
+                            { key: 'telemetrie', title: 'Telemetrie & Crono' },
+                            { key: 'motori-nuovi', title: 'Motori Nuovi' },
+                            { key: 'telai-nuovi', title: 'Telai Nuovi' },
+                            { key: 'kart-completi', title: 'Kart Completi' },
+                          ].map((item) => (
                             <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'pneumatici'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'pneumatici' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
+                              key={item.key}
+                              className="group relative"
+                              onMouseEnter={() => {
+                                setActiveSubmenu(item.key)
+                                setSelectedMenuItem(item.key)
+                              }}
                             >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'pneumatici'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Pneumatici / Gomme
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'pneumatici' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'pneumatici' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'pneumatici' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Pneumatici per tutte le condizioni di gara
-                                </div>
+                              <div
+                                className={cn(
+                                  'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
+                                  activeSubmenu === item.key
+                                    ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                    : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
+                                )}
+                              >
+                                <span className="text-sm font-medium">{item.title}</span>
+                                <svg className={cn('w-4 h-4 transition-transform', activeSubmenu === item.key && 'rotate-90')} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </div>
                             </div>
-                          </div>
-                          <div
-                            className="group/telemetrie relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('telemetrie')
-                              setSelectedMenuItem('telemetrie')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'telemetrie'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'telemetrie' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'telemetrie'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Telemetrie & Crono
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telemetrie' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'telemetrie' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'telemetrie' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Sistemi di telemetria e cronometraggio
-                                </div>
-                            </div>
-                          </div>
-                          <div
-                            className="group/motori-nuovi relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('motori-nuovi')
-                              setSelectedMenuItem('motori-nuovi')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'motori-nuovi'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'motori-nuovi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'motori-nuovi'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Motori Nuovi
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'motori-nuovi' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'motori-nuovi' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'motori-nuovi' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Motori nuovi per ogni categoria
-                                </div>
-                            </div>
-                          </div>
-                          <div
-                            className="group/telai-nuovi relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('telai-nuovi')
-                              setSelectedMenuItem('telai-nuovi')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'telai-nuovi'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'telai-nuovi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'telai-nuovi'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Telai Nuovi
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'telai-nuovi' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'telai-nuovi' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'telai-nuovi' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Telai completi per competizione
-                                </div>
-                            </div>
-                          </div>
-                          <div
-                            className="group/kart-completi relative"
-                            onMouseEnter={() => {
-                              setActiveSubmenu('kart-completi')
-                              setSelectedMenuItem('kart-completi')
-                            }}
-                            onMouseLeave={() => {
-                              setSelectedMenuItem(null)
-                            }}
-                          >
-                            <div
-                              className={`block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors group ${
-                                selectedMenuItem === 'kart-completi'
-                                  ? 'text-white'
-                                  : 'hover:bg-[#0d5dbf] focus:bg-[#1877F2] dark:text-racing-gray-100'
-                              }`}
-                              style={selectedMenuItem === 'kart-completi' ? {backgroundColor: '#1877F2', color: 'white'} : {}}
-                            >
-                                <div className="flex items-center justify-between">
-                                  <div className={`text-sm font-medium transition-colors ${
-                                    selectedMenuItem === 'kart-completi'
-                                      ? 'text-white'
-                                      : 'text-racing-gray-900 dark:text-racing-gray-100 group-hover:text-white dark:group-hover:text-white'
-                                  }`}>
-                                    Kart Completi
-                                  </div>
-                                  <svg className={`w-4 h-4 transition-transform ${activeSubmenu === 'kart-completi' ? 'rotate-180' : ''} ${
-                                    selectedMenuItem === 'kart-completi' ? 'text-white' : ''
-                                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </div>
-                                <div style={{
-                                  fontSize: '12px',
-                                  lineHeight: '16px',
-                                  display: '-webkit-box',
-                                  WebkitLineClamp: 2,
-                                  WebkitBoxOrient: 'vertical',
-                                  overflow: 'hidden',
-                                  color: selectedMenuItem === 'kart-completi' ? '#ffffff' : '#6b7280'
-                                }}>
-                                  Kart pronti per la pista
-                                </div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
 
@@ -1069,10 +602,10 @@ export function Navbar() {
                       <div className={activeSubmenu ? 'col-span-3' : 'col-span-2'}>
                         <Link
                           href="/prodotti"
-                          className="mt-4 block w-full py-3 px-6 text-center bg-[#1877F2] text-white font-bold rounded-lg
-                            hover:bg-[#0d5dbf] transition-colors shadow-md hover:shadow-lg"
+                          className="mt-2 block w-full py-3 px-6 text-center bg-blue-600 text-white font-semibold rounded-xl
+                            hover:bg-blue-700 transition-all duration-200"
                         >
-                          Vedi Tutti i Prodotti →
+                          Vedi Tutti i Prodotti
                         </Link>
                       </div>
 
@@ -1085,31 +618,24 @@ export function Navbar() {
                   { title: 'Calendario', href: '/calendar' },
                   { title: 'Risultati', href: '/results' },
                   { title: 'News', href: '/news' },
-                  { title: 'Sponsor', href: '/sponsors' },
                   { title: 'Chi Siamo', href: '/about' },
                 ].map((item) => (
                   <NavigationMenuItem key={item.href}>
                     <Link
                       href={item.href}
                       className={cn(
-                        'group relative inline-flex h-12 w-max items-center justify-center rounded-lg px-4 py-2 text-base font-medium',
-                        'transition-all duration-200 hover:bg-[#0d5dbf]',
-                        'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2',
+                        'group relative inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium',
+                        'transition-all duration-300',
+                        'focus:outline-none',
                         isScrolled
-                          ? 'text-racing-gray-900 dark:text-white hover:text-white'
-                          : 'text-white hover:text-white',
-                        isActivePath(item.href) ? 'text-[#1877F2]' : ''
+                          ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          : 'text-white/90 hover:text-white hover:bg-white/10',
+                        isActivePath(item.href) ? 'font-semibold' : ''
                       )}
                       onFocus={() => setFocusedItem(item.href)}
                       onBlur={() => setFocusedItem(null)}
                     >
                       {item.title}
-                      <motion.div
-                        className="absolute bottom-2 left-4 right-4 h-0.5 bg-[#1877F2]"
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: isActivePath(item.href) ? 1 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      />
                     </Link>
                   </NavigationMenuItem>
                 ))}
@@ -1118,27 +644,30 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="flex items-center space-x-4">
-            <Button
-              variant="default"
-              size="lg"
-              className="hidden md:flex bg-[#1877F2] hover:bg-[#0d5dbf]/90 text-white font-semibold px-6 py-3 h-12"
-              asChild
+          <div className="flex items-center space-x-3">
+            <Link
+              href="/contact"
+              className={cn(
+                'hidden md:flex items-center justify-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300',
+                isScrolled
+                  ? 'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700'
+                  : 'bg-white text-gray-900 hover:bg-white/90'
+              )}
             >
-              <Link href="/contact">Contattaci</Link>
-            </Button>
+              Contattaci
+            </Link>
 
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className={cn(
-                'flex items-center justify-center h-12 w-12 rounded-lg',
-                'transition-transform duration-200',
-                'hover:scale-110',
+                'flex items-center justify-center h-10 w-10 rounded-full',
+                'transition-all duration-300',
+                'hover:bg-gray-100 dark:hover:bg-gray-800',
                 isScrolled
-                  ? 'text-racing-gray-900 dark:text-white'
-                  : 'text-white',
-                isSearchOpen && 'scale-110'
+                  ? 'text-gray-700 dark:text-gray-200'
+                  : 'text-white hover:bg-white/10',
+                isSearchOpen && 'bg-gray-100 dark:bg-gray-800'
               )}
               aria-label="Apri ricerca"
             >
