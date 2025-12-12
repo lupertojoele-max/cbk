@@ -10,7 +10,7 @@ export async function revalidateApiData(tags: string | string[]) {
   const tagArray = Array.isArray(tags) ? tags : [tags]
   for (const tag of tagArray) {
     console.log(`Revalidating cache tag: ${tag}`)
-    await revalidateTag(tag)
+    await revalidateTag(tag, 'max')
   }
 }
 
