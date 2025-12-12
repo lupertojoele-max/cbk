@@ -4,27 +4,10 @@ const nextConfig: NextConfig = {
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    webpackBuildWorker: true,
   },
 
-  // Disable ESLint during builds to prevent blocking
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // Bundle analyzer (dev only)
-  webpack: (config, { dev, isServer }) => {
-    // Tree shaking optimizations
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        usedExports: true,
-        sideEffects: false,
-      }
-    }
-
-    return config
-  },
+  // Turbopack config (empty to silence warning)
+  turbopack: {},
 
   // Image optimization
   images: {
@@ -74,7 +57,6 @@ const nextConfig: NextConfig = {
 
   // Compression
   compress: true,
-
 
   // Logging
   logging: {
