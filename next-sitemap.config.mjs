@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+const config = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
@@ -16,7 +16,6 @@ module.exports = {
       `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/server-sitemap-index.xml`,
     ],
   },
-  // Static routes
   additionalPaths: async (config) => {
     return [
       {
@@ -64,7 +63,6 @@ module.exports = {
     ]
   },
   transform: async (config, path) => {
-    // Custom transform for specific routes
     if (path === '/') {
       return {
         loc: path,
@@ -92,7 +90,6 @@ module.exports = {
       }
     }
 
-    // Default
     return {
       loc: path,
       changefreq: 'weekly',
@@ -101,3 +98,5 @@ module.exports = {
     }
   },
 }
+
+export default config
