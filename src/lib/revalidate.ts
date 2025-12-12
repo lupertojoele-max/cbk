@@ -6,121 +6,121 @@ import { revalidateTag, revalidatePath } from 'next/cache'
 /**
  * Revalidate specific API cache tags
  */
-export function revalidateApiData(tags: string | string[]) {
+export async function revalidateApiData(tags: string | string[]) {
   const tagArray = Array.isArray(tags) ? tags : [tags]
-  tagArray.forEach(tag => {
+  for (const tag of tagArray) {
     console.log(`Revalidating cache tag: ${tag}`)
-    revalidateTag(tag)
-  })
+    await revalidateTag(tag)
+  }
 }
 
 /**
  * Revalidate all kart-related data
  */
-export function revalidateKarts() {
-  revalidateApiData(['karts'])
+export async function revalidateKarts() {
+  await revalidateApiData(['karts'])
   revalidatePath('/karts')
 }
 
 /**
  * Revalidate specific kart data
  */
-export function revalidateKart(slug: string) {
-  revalidateApiData(['karts', `kart:${slug}`])
+export async function revalidateKart(slug: string) {
+  await revalidateApiData(['karts', `kart:${slug}`])
   revalidatePath(`/karts/${slug}`)
 }
 
 /**
  * Revalidate all driver-related data
  */
-export function revalidateDrivers() {
-  revalidateApiData(['drivers'])
+export async function revalidateDrivers() {
+  await revalidateApiData(['drivers'])
   revalidatePath('/drivers')
 }
 
 /**
  * Revalidate specific driver data
  */
-export function revalidateDriver(slug: string) {
-  revalidateApiData(['drivers', `driver:${slug}`])
+export async function revalidateDriver(slug: string) {
+  await revalidateApiData(['drivers', `driver:${slug}`])
   revalidatePath(`/drivers/${slug}`)
 }
 
 /**
  * Revalidate all event-related data
  */
-export function revalidateEvents() {
-  revalidateApiData(['events'])
+export async function revalidateEvents() {
+  await revalidateApiData(['events'])
   revalidatePath('/events')
 }
 
 /**
  * Revalidate specific event data
  */
-export function revalidateEvent(slug: string) {
-  revalidateApiData(['events', `event:${slug}`])
+export async function revalidateEvent(slug: string) {
+  await revalidateApiData(['events', `event:${slug}`])
   revalidatePath(`/events/${slug}`)
 }
 
 /**
  * Revalidate event results
  */
-export function revalidateEventResults(slug: string) {
-  revalidateApiData(['results', `results:${slug}`])
+export async function revalidateEventResults(slug: string) {
+  await revalidateApiData(['results', `results:${slug}`])
   revalidatePath(`/events/${slug}/results`)
 }
 
 /**
  * Revalidate all news-related data
  */
-export function revalidateNews() {
-  revalidateApiData(['news'])
+export async function revalidateNews() {
+  await revalidateApiData(['news'])
   revalidatePath('/news')
 }
 
 /**
  * Revalidate specific news article
  */
-export function revalidateNewsItem(slug: string) {
-  revalidateApiData(['news', `news:${slug}`])
+export async function revalidateNewsItem(slug: string) {
+  await revalidateApiData(['news', `news:${slug}`])
   revalidatePath(`/news/${slug}`)
 }
 
 /**
  * Revalidate all sponsor-related data
  */
-export function revalidateSponsors() {
-  revalidateApiData(['sponsors'])
+export async function revalidateSponsors() {
+  await revalidateApiData(['sponsors'])
   revalidatePath('/sponsors')
 }
 
 /**
  * Revalidate calendar data
  */
-export function revalidateCalendar() {
-  revalidateApiData(['calendar'])
+export async function revalidateCalendar() {
+  await revalidateApiData(['calendar'])
   revalidatePath('/calendar')
 }
 
 /**
  * Revalidate sitemap data
  */
-export function revalidateSitemap() {
-  revalidateApiData(['sitemap'])
+export async function revalidateSitemap() {
+  await revalidateApiData(['sitemap'])
 }
 
 /**
  * Revalidate health check data
  */
-export function revalidateHealth() {
-  revalidateApiData(['health'])
+export async function revalidateHealth() {
+  await revalidateApiData(['health'])
 }
 
 /**
  * Revalidate all API data (use sparingly)
  */
-export function revalidateAll() {
-  revalidateApiData([
+export async function revalidateAll() {
+  await revalidateApiData([
     'karts',
     'drivers',
     'events',
@@ -146,45 +146,45 @@ export function revalidateAll() {
  */
 export const revalidatePresets = {
   // When a new race result is added
-  newRaceResult: (eventSlug: string) => {
-    revalidateEventResults(eventSlug)
-    revalidateEvent(eventSlug)
-    revalidateEvents() // Update event list
-    revalidateDrivers() // Update driver statistics
+  newRaceResult: async (eventSlug: string) => {
+    await revalidateEventResults(eventSlug)
+    await revalidateEvent(eventSlug)
+    await revalidateEvents() // Update event list
+    await revalidateDrivers() // Update driver statistics
     revalidatePath('/') // Update homepage stats
   },
 
   // When news is published
-  newsPublished: (slug: string) => {
-    revalidateNewsItem(slug)
-    revalidateNews()
+  newsPublished: async (slug: string) => {
+    await revalidateNewsItem(slug)
+    await revalidateNews()
     revalidatePath('/') // Update homepage
   },
 
   // When event is updated
-  eventUpdated: (slug: string) => {
-    revalidateEvent(slug)
-    revalidateEvents()
-    revalidateCalendar()
+  eventUpdated: async (slug: string) => {
+    await revalidateEvent(slug)
+    await revalidateEvents()
+    await revalidateCalendar()
     revalidatePath('/')
   },
 
   // When kart information is updated
-  kartUpdated: (slug: string) => {
-    revalidateKart(slug)
-    revalidateKarts()
+  kartUpdated: async (slug: string) => {
+    await revalidateKart(slug)
+    await revalidateKarts()
   },
 
   // When driver information is updated
-  driverUpdated: (slug: string) => {
-    revalidateDriver(slug)
-    revalidateDrivers()
+  driverUpdated: async (slug: string) => {
+    await revalidateDriver(slug)
+    await revalidateDrivers()
     revalidatePath('/')
   },
 
   // When sponsor information is updated
-  sponsorUpdated: () => {
-    revalidateSponsors()
+  sponsorUpdated: async () => {
+    await revalidateSponsors()
     revalidatePath('/') // Sponsors might appear on homepage
   },
 }
