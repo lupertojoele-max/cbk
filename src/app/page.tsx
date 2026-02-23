@@ -110,24 +110,24 @@ export default function Home() {
       <MegaHero />
 
       {/* Quick Stats */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-zinc-900 border-b-2 border-racing-red/40">
         <div className="container mx-auto px-4">
           <RacingStagger staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">15+</div>
-              <div className="text-racing-gray-600">Vittorie Stagione</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Vittorie Stagione</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">6</div>
-              <div className="text-racing-gray-600">Piloti Professionisti</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Piloti Professionisti</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">10</div>
-              <div className="text-racing-gray-600">Kart da Gara</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Kart da Gara</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">3</div>
-              <div className="text-racing-gray-600">Campionati</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Campionati</div>
             </RacingStaggerItem>
           </RacingStagger>
         </div>
@@ -157,7 +157,7 @@ export default function Home() {
       </Suspense>
 
       {/* CTA Section */}
-      <section className="py-16 bg-racing-gray-900 text-white">
+      <section className="py-16 bg-zinc-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <RacingFadeIn delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -43,13 +43,13 @@ export async function KartsGrid() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-zinc-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             I Nostri Kart
           </h2>
-          <p className="text-xl text-racing-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-racing-gray-300 max-w-2xl mx-auto">
             Go-kart ad alte prestazioni progettati per velocità, precisione ed eccellenza nelle corse
           </p>
         </div>
@@ -148,24 +148,24 @@ export async function KartsGrid() {
                 </div>
 
                 {/* Performance Stats */}
-                <div className="flex justify-between text-sm bg-racing-gray-50 rounded-lg p-3">
+                <div className="flex justify-between text-sm bg-racing-gray-100 rounded-lg p-3 border border-racing-gray-200">
                   <div className="text-center">
-                    <div className="font-semibold text-racing-gray-900">
+                    <div className="font-bold text-racing-gray-900">
                       {kart.performance.total_races}
                     </div>
-                    <div className="text-racing-gray-500">Gare</div>
+                    <div className="text-racing-gray-600 text-xs font-medium">Gare</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-racing-gray-900">
+                    <div className="font-bold text-racing-gray-900">
                       {kart.performance.podiums}
                     </div>
-                    <div className="text-racing-gray-500">Podi</div>
+                    <div className="text-racing-gray-600 text-xs font-medium">Podi</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-racing-gray-900">
+                    <div className="font-bold text-racing-gray-900">
                       {kart.performance.best_lap_time}s
                     </div>
-                    <div className="text-racing-gray-500">Miglior Giro</div>
+                    <div className="text-racing-gray-600 text-xs font-medium">Miglior Giro</div>
                   </div>
                 </div>
 
@@ -201,7 +201,7 @@ export async function KartsGrid() {
         <div className="text-center mt-12">
           <Button
             size="lg"
-            className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3"
+            className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3 font-semibold"
             asChild
           >
             <Link href="/karts">

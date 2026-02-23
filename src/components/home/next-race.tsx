@@ -143,8 +143,8 @@ export function NextRace() {
   return (
     <section className={`py-16 relative overflow-hidden transition-all duration-500 ${
       isLive
-        ? 'bg-gradient-to-br from-racing-gray-900 via-red-950 to-racing-gray-900'
-        : 'bg-racing-gray-900'
+        ? 'bg-gradient-to-br from-zinc-900 via-red-950 to-zinc-900'
+        : 'bg-zinc-900'
     } text-white`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -243,17 +243,17 @@ export function NextRace() {
 
                 <CardContent className="p-0 space-y-6">
                   {/* Countdown */}
-                  <div className={`rounded-lg p-6 text-center ${
+                  <div className={`rounded-xl p-6 text-center border-2 ${
                     isLive
-                      ? 'bg-red-100 border-2 border-red-500'
-                      : 'bg-gray-100'
+                      ? 'bg-red-50 border-red-500'
+                      : 'bg-racing-gray-100 border-racing-gray-200'
                   }`}>
                     <div className={`text-4xl md:text-5xl font-bold mb-2 ${
                       isLive ? 'text-red-600' : colors.text
                     }`}>
                       {isLive ? 'IN CORSO' : isToday ? 'OGGI' : isTomorrow ? 'DOMANI' : daysUntil}
                     </div>
-                    <div className="text-racing-gray-600 font-medium">
+                    <div className="text-racing-gray-700 font-semibold text-sm uppercase tracking-widest">
                       {isLive
                         ? 'Segui la gara!'
                         : isToday || isTomorrow
@@ -269,7 +269,7 @@ export function NextRace() {
                     <div className="flex items-center space-x-3">
                       <MapPin className={`w-5 h-5 ${colors.text} flex-shrink-0`} />
                       <div>
-                        <div className="font-semibold">{nextEvent.venue}</div>
+                        <div className="font-bold text-racing-gray-900">{nextEvent.venue}</div>
                         <div className="text-sm text-racing-gray-600">{nextEvent.location}</div>
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export function NextRace() {
                     <div className="flex items-center space-x-3">
                       <Calendar className={`w-5 h-5 ${colors.text} flex-shrink-0`} />
                       <div>
-                        <div className="font-semibold">Date</div>
+                        <div className="font-bold text-racing-gray-900">Date</div>
                         <div className="text-sm text-racing-gray-600">
                           {nextEvent.dates} • {nextEvent.raceDays} giorni di gara
                         </div>
@@ -287,7 +287,7 @@ export function NextRace() {
                     <div className="flex items-center space-x-3">
                       <Trophy className={`w-5 h-5 ${colors.text} flex-shrink-0`} />
                       <div>
-                        <div className="font-semibold">Categorie</div>
+                        <div className="font-bold text-racing-gray-900">Categorie</div>
                         <div className="text-sm text-racing-gray-600">
                           {nextEvent.categories.slice(0, 4).join(', ')}
                           {nextEvent.categories.length > 4 && ` +${nextEvent.categories.length - 4}`}
@@ -298,7 +298,7 @@ export function NextRace() {
                     <div className="flex items-center space-x-3">
                       <Flag className={`w-5 h-5 ${colors.text} flex-shrink-0`} />
                       <div>
-                        <div className="font-semibold">Campionato</div>
+                        <div className="font-bold text-racing-gray-900">Campionato</div>
                         <div className="text-sm text-racing-gray-600">
                           {nextEvent.series}
                         </div>

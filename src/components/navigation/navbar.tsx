@@ -273,10 +273,10 @@ export function Navbar() {
                     className={cn(
                       'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
                       'focus:outline-none',
-                      'data-[state=open]:bg-blue-600 data-[state=open]:text-white dark:data-[state=open]:bg-blue-600 dark:data-[state=open]:text-white',
+                      'data-[state=open]:bg-[#1877F2] data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
-                        : 'text-white/90 hover:text-white hover:bg-white/10',
+                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
+                        : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
                       isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts')
                         ? 'font-semibold'
                         : ''
@@ -360,10 +360,10 @@ export function Navbar() {
                     className={cn(
                       'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
                       'focus:outline-none',
-                      'data-[state=open]:bg-blue-600 data-[state=open]:text-white dark:data-[state=open]:bg-blue-600 dark:data-[state=open]:text-white',
+                      'data-[state=open]:bg-[#1877F2] data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
-                        : 'text-white/90 hover:text-white hover:bg-white/10',
+                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
+                        : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
                       isActivePath('/products') ? 'font-semibold' : ''
                     )}
                     onFocus={() => setFocusedItem('products')}
@@ -628,8 +628,8 @@ export function Navbar() {
                         'transition-all duration-300',
                         'focus:outline-none',
                         isScrolled
-                          ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          : 'text-white/90 hover:text-white hover:bg-white/10',
+                          ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
+                          : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
                         isActivePath(item.href) ? 'font-semibold' : ''
                       )}
                       onFocus={() => setFocusedItem(item.href)}
