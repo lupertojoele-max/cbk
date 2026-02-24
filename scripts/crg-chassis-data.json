@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mk-telaio-crg-1",
+    "name": "Chassis CRG Road Rebel Gold 2026!",
+    "slug": "chassis-crg-road-rebel-gold-2026",
+    "brand": "CRG",
+    "category": "Senior",
+    "price": "3999.99",
+    "imageUrl": "https://www.mondokart.com/24686-square_home_default/chassis-crg-road-rebel-kz-gold-2019.jpg",
+    "imageLocal": "/images/products/chassis-crg-road-rebel-gold-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-road-rebel-kz-gold-2019.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-road-rebel-kz-gold-2019.html"
+  },
+  {
+    "id": "mk-telaio-crg-2",
+    "name": "Chassis CRG KT5 2026!",
+    "slug": "chassis-crg-kt5-2026",
+    "brand": "CRG",
+    "category": "Senior",
+    "price": "3999.99",
+    "imageUrl": "https://www.mondokart.com/24691-square_home_default/chassis-crg-road-rebel-ok-okj-v11-2019.jpg",
+    "imageLocal": "/images/products/chassis-crg-kt5-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-road-rebel-ok-okj-v11-2019.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-road-rebel-ok-okj-v11-2019.html"
+  },
+  {
+    "id": "mk-telaio-crg-3",
+    "name": "Chassis CRG KT2 2026!",
+    "slug": "chassis-crg-kt2-2026",
+    "brand": "CRG",
+    "category": "Senior",
+    "price": "3999.99",
+    "imageUrl": "https://www.mondokart.com/24692-square_home_default/chassis-crg-kt2-ok-okj-v11-2021.jpg",
+    "imageLocal": "/images/products/chassis-crg-kt2-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-kt2-ok-okj-v11-2021.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-kt2-ok-okj-v11-2021.html"
+  },
+  {
+    "id": "mk-telaio-crg-4",
+    "name": "Chassis CRG KT4 2026!",
+    "slug": "chassis-crg-kt4-2026",
+    "brand": "CRG",
+    "category": "Senior",
+    "price": "3999.99",
+    "imageUrl": "https://www.mondokart.com/24695-square_home_default/chassis-crg-kt4-ok-okj-v11-2021.jpg",
+    "imageLocal": "/images/products/chassis-crg-kt4-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-kt4-ok-okj-v11-2021.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-kt4-ok-okj-v11-2021.html"
+  },
+  {
+    "id": "mk-telaio-crg-5",
+    "name": "Chassis CRG DD2 2026!",
+    "slug": "chassis-crg-dd2-2026",
+    "brand": "CRG",
+    "category": "KZ",
+    "price": "4737.19",
+    "imageUrl": "https://www.mondokart.com/24697-square_home_default/chassis-crg-dd2-v13-2022.jpg",
+    "imageLocal": "/images/products/chassis-crg-dd2-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-dd2-v13-2022.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-dd2-v13-2022.html"
+  },
+  {
+    "id": "mk-telaio-crg-6",
+    "name": "Chassis CRG New Mini BLACK MIRROR 2026!",
+    "slug": "chassis-crg-new-mini-black-mirror-2026",
+    "brand": "CRG",
+    "category": "Mini",
+    "price": "2799.99",
+    "imageUrl": "https://www.mondokart.com/33908-square_home_default/chassis-crg-new-age-mini-hero-2019.jpg",
+    "imageLocal": "/images/products/chassis-crg-new-mini-black-mirror-2026.jpg",
+    "productUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-new-age-mini-hero-2019.html",
+    "mondokartUrl": "https://www.mondokart.com/en/new-chassis-mondokart/chassis-crg-mondokart/chassis-crg-new-age-mini-hero-2019.html"
+  }
+]

@@ -35,7 +35,8 @@ const categories = [
   { id: 'pneumatici', label: 'Pneumatici' },
   { id: 'telemetrie', label: 'Telemetrie' },
   { id: 'motori', label: 'Motori' },
-  { id: 'telai', label: 'Telai' },
+  { id: 'telai-nuovi', label: 'Telai Nuovi' },
+  { id: 'telai', label: 'Telai Accessori' },
   { id: 'abbigliamento', label: 'Abbigliamento' },
   { id: 'accessori', label: 'Accessori' },
 ]
