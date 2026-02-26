@@ -32,13 +32,12 @@ const categories = [
   { id: 'assali-cuscinetti-chiavette', label: 'Assali Cuscinetti e Chiavette' },
   { id: 'corone-catene', label: 'Corone, Catene e Accessori' },
   { id: 'carenature', label: 'Carenature, Staffe e Paraurti' },
-  { id: 'pneumatici', label: 'Pneumatici' },
-  { id: 'telemetrie', label: 'Telemetrie' },
-  { id: 'motori', label: 'Motori' },
   { id: 'telai-nuovi', label: 'Telai Nuovi' },
-  { id: 'telai', label: 'Telai Accessori' },
-  { id: 'abbigliamento', label: 'Abbigliamento' },
-  { id: 'accessori', label: 'Accessori' },
+  { id: 'abbigliamento-caschi', label: 'Abbigliamento e Caschi' },
+  { id: 'sedili', label: 'Sedili' },
+  { id: 'volanti-accessori', label: 'Volanti e Accessori' },
+  { id: 'adesivi', label: 'Adesivi' },
+  { id: 'pedali-accessori', label: 'Pedali e Accessori' },
 ]
 
 const brands = [
