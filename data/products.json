@@ -25749,6 +25749,48 @@
       "inStock": true,
       "specifications": {},
       "mondokartUrl": "https://www.mondokart.com/it/telaio-accessori/serbatoio-e-tubi-benzina-mondokart/tubi-benzina-e-raccordi-mondokart/or-viton-per-raccordo-serbatoio-benzina-otk.html"
+    },
+    {
+      "id": "mk-tubi-freno-2",
+      "name": "Tubo freno anteriore (freno al volante) tris occhiello freno anteriore V06 CRG",
+      "slug": "tubo-freno-anteriore-freno-al-volante-tris-occhiello-freno-anteriore-v06-crg",
+      "category": "freni-accessori",
+      "brand": "CBK Racing",
+      "price": "64.49",
+      "image": "https://www.mondokart.com/14802-square_home_default/tubo-freno-anteriore-freno-al-volante-tris.jpg",
+      "imageLocal": "/images/products/tubo-freno-anteriore-freno-al-volante-tris-occhiello-freno-anteriore-v06-crg.jpg",
+      "description": "Tubo freno anteriore (freno al volante) tris occhiello freno anteriore V06 CRG - Tubo freno per kart",
+      "inStock": true,
+      "specifications": {},
+      "mondokartUrl": ""
+    },
+    {
+      "id": "mk-tubi-freno-4",
+      "name": "Tubo freno anteriore tris 570-350-570 occhiello KZ V05 V10 V07 V11 CRG",
+      "slug": "tubo-freno-anteriore-tris-570-350-570-occhiello-kz-v05-v10-v07-v11-crg",
+      "category": "freni-accessori",
+      "brand": "CBK Racing",
+      "price": "54.20",
+      "image": "https://www.mondokart.com/14800-square_home_default/tubo-freno-anteriore-tris-570-350-570-occhiello.jpg",
+      "imageLocal": "/images/products/tubo-freno-anteriore-tris-570-350-570-occhiello-kz-v05-v10-v07-v11-crg.jpg",
+      "description": "Tubo freno anteriore tris 570-350-570 occhiello KZ V05 V10 V07 V11 CRG - Tubo freno per kart",
+      "inStock": true,
+      "specifications": {},
+      "mondokartUrl": ""
+    },
+    {
+      "id": "mk-tubi-freno-7",
+      "name": "Kit posteriore tubi freno KZ BSS BSD OTK TonyKart",
+      "slug": "kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart",
+      "category": "freni-accessori",
+      "brand": "TonyKart OTK",
+      "price": "106.35",
+      "image": "https://www.mondokart.com/5149-square_home_default/kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart.jpg",
+      "imageLocal": "/images/products/kit-posteriore-tubi-freno-kz-bss-bsd-otk-tonykart.jpg",
+      "description": "Kit posteriore tubi freno KZ BSS BSD OTK TonyKart - Tubo freno per kart",
+      "inStock": true,
+      "specifications": {},
+      "mondokartUrl": ""
     }
   ]
 }
