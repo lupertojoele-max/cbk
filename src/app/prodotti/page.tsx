@@ -38,6 +38,7 @@ const categories = [
   { id: 'volanti-accessori', label: 'Volanti e Accessori' },
   { id: 'adesivi', label: 'Adesivi' },
   { id: 'pedali-accessori', label: 'Pedali e Accessori' },
+  { id: 'accessori-telaio', label: 'Accessori Telaio' },
 ]
 
 const brands = [
