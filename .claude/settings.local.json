@@ -3,9 +3,30 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implementa barra di ricerca animata nella navbar con icona ingrandibile\n\nAggiunta funzionalità di ricerca completa alla navbar con le seguenti caratteristiche:\n\n**Icona Ricerca:**\n- Icona lente di ingrandimento (h-6 w-6) con stroke più spesso (2.5)\n- Effetto scale-110 al passaggio del mouse e quando attiva\n- Nessuno sfondo colorato, solo ingrandimento dell''icona\n- Transizione fluida con duration-200\n\n**Barra di Ricerca a Dropdown:**\n- Si apre sotto la navbar con animazione framer-motion\n- Sfondo completamente trasparente\n- Input box con bordo blu #1877F2 e focus ring\n- Dimensioni compatte (h-12, py-1)\n- Auto-focus sull''input quando si apre\n- Icona lente a sinistra, pulsante chiudi (X) a destra\n\n**Gestione Interazioni:**\n- Click fuori dalla barra per chiuderla\n- ESC key per chiuderla\n- Toggle con click sull''icona\n- Pulizia automatica del testo alla chiusura\n- Supporto dark mode completo\n\n**Implementazione Tecnica:**\n- useState per isSearchOpen e searchQuery\n- useRef per gestire focus e click-outside detection\n- useEffect per event listeners (mousedown, ESC key)\n- Framer Motion per animazioni fluide height/opacity\n\nLa search bar è ora completamente funzionale e pronta per essere integrata\ncon la logica di ricerca backend.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implementa barra di ricerca animata nella navbar con icona ingrandibile\n\nAggiunta funzionalità di ricerca completa alla navbar con le seguenti caratteristiche:\n\n**Icona Ricerca:**\n- Icona lente di ingrandimento (h-6 w-6) con stroke più spesso (2.5)\n- Effetto scale-110 al passaggio del mouse e quando attiva\n- Nessuno sfondo colorato, solo ingrandimento dell''icona\n- Transizione fluida con duration-200\n\n**Barra di Ricerca a Dropdown:**\n- Si apre sotto la navbar con animazione framer-motion\n- Sfondo completamente trasparente\n- Input box con bordo blu #1877F2 e focus ring\n- Dimensioni compatte (h-12, py-1)\n- Auto-focus sull''input quando si apre\n- Icona lente a sinistra, pulsante chiudi (X) a destra\n\n**Gestione Interazioni:**\n- Click fuori dalla barra per chiuderla\n- ESC key per chiuderla\n- Toggle con click sull''icona\n- Pulizia automatica del testo alla chiusura\n- Supporto dark mode completo\n\n**Implementazione Tecnica:**\n- useState per isSearchOpen e searchQuery\n- useRef per gestire focus e click-outside detection\n- useEffect per event listeners (mousedown, ESC key)\n- Framer Motion per animazioni fluide height/opacity\n\nLa search bar è ora completamente funzionale e pronta per essere integrata\ncon la logica di ricerca backend.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(cat:*)",
+      "Bash(npx:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implementa sistema completo importazione prodotti con scraper Puppeteer\n\nAggiunto sistema di scraping automatico da MondoKart per importazione prodotti:\n\n**Sistema Scraper Puppeteer:**\n- Script completo per scraping con rilevamento dinamico JavaScript\n- Estrazione automatica prezzi, descrizioni, immagini e specifiche tecniche\n- Download locale immagini prodotti in public/images/products/\n- Rilevamento intelligente sconti (solo badge nell''area .product-prices)\n- Gestione corretta originalPrice solo per prodotti realmente scontati\n- Rate limiting e gestione errori\n\n**Importazione Categoria Freni e Accessori:**\n- 32 prodotti pastiglie freno importati completamente\n- 9 prodotti con sconto reale (10-20%)\n- 23 prodotti a prezzo pieno\n- Tutte le immagini scaricate localmente\n- Specifiche tecniche e descrizioni complete\n\n**Pagine Prodotti:**\n- /prodotti - Catalogo completo con filtri categoria\n- /prodotti/[slug] - Pagina dettaglio prodotto\n- Badge sconto visualizzati correttamente\n- Prezzi originali mostrati solo se scontati\n- Responsive design completo\n\n**Fix Tecnici:**\n- Risolto problema falsi sconti (badge promozioni esterne)\n- Scope badge sconto limitato a .product-prices area\n- Estrazione prezzi con fallback multipli selettori\n- Gestione corretta prodotti senza originalPrice\n\n**Dati Importati:**\n- data/products.json - 32 prodotti categoria freni-accessori\n- public/images/products/ - 32 immagini scaricate\n- Brands: CRG, TonyKart OTK, Birel, Intrepid, Mondokart Racing, WildKart\n\n**Dipendenze Aggiunte:**\n- puppeteer: ^24.29.1 per scraping dinamico\n- axios per download immagini\n- cheerio per parsing HTML (opzionale)\n\nProssimi step: espandere importazione ad altre categorie (pneumatici, telemetrie, motori)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run dev:*)",
+      "Bash(node scripts/scrape-brake-hoses.cjs:*)",
+      "Bash(node scripts/scrape-hubs-17mm.cjs:*)",
+      "Bash(node scripts/scrape-hubs-25mm.cjs:*)",
+      "Bash(node scripts/scrape-hubs-kz-40mm.cjs:*)",
+      "Bash(node scripts/scrape-rear-hubs-25mm.cjs:*)",
+      "Bash(node scripts/scrape-rear-hubs-30mm.cjs:*)",
+      "Bash(node scripts/scrape-rear-hubs-40mm.cjs:*)",
+      "Bash(node scripts/scrape-rear-hubs-50mm.cjs:*)",
+      "Bash(node scripts/scrape-hub-accessories.cjs:*)",
+      "Bash(node scripts/remove-mondokart-references.cjs:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   }
 }

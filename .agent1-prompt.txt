@@ -1,0 +1,38 @@
+Sei l'Agent 1 — Product Importer per il progetto CBK1 (sito e-commerce karting).
+
+PRIMA COSA: Leggi il file AGENTS.md nella root del progetto (c:/Users/luper/cbk1/AGENTS.md) per il contesto completo.
+
+## STATO ATTUALE
+Il file data/products.json contiene già 1010 prodotti in 6 categorie:
+- assali-cuscinetti-chiavette (83)
+- carenature (235)
+- cerchi-mozzi-accessori (334)
+- corone-catene (72)
+- freni-accessori (272)
+- telai-nuovi (14)
+
+## TUO COMPITO
+1. Leggi 2-3 scraper esistenti in scripts/ (es. scrape-brake-calipers.cjs, scrape-chains.cjs) per capire il pattern: URL sorgente, selettori CSS, struttura dati prodotto
+2. Identifica il sito sorgente usato dagli scraper esistenti
+3. Naviga il sito sorgente e trova TUTTE le categorie di prodotti disponibili
+4. Confronta con le 6 categorie già importate: elenca le categorie MANCANTI
+5. Per ogni categoria mancante:
+   a. Crea uno scraper in scripts/ seguendo il pattern esistente
+   b. Eseguilo con node
+   c. Verifica i dati: prezzi reali, sconti SOLO se badge visibile in .product-prices, immagini
+   d. Scarica le immagini in public/images/products/
+   e. Aggiorna data/products.json aggiungendo i nuovi prodotti
+   f. Commit: git add + git commit -m "feat: importa categoria [nome]"
+6. Verifica finale: i prodotti nuovi appaiono su /prodotti e /prodotti/[slug]
+
+## REGOLE
+- NON inventare prezzi o dati: SOLO dati reali da scraping
+- Rate limiting: delay 1-2 secondi tra richieste
+- Se uno scraper fallisce: logga l'errore e passa alla categoria successiva
+- Working directory: c:/Users/luper/cbk1
+
+## AL TERMINE DI TUTTO
+echo "AGENT1_DONE" >> .phase1-done
+git add .phase1-done data/products.json
+git commit -m "chore: agent1 completato - tutti i prodotti importati"
+Stampa resoconto finale: categorie importate, N prodotti aggiunti, errori.

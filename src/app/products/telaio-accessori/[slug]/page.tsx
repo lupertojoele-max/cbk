@@ -26,15 +26,15 @@ const slugToCategoryMap: Record<string, string> = {
   'assali-chiavette-e-cuscinetti': 'assali-cuscinetti-chiavette',
   'corone-catene-e-accessori': 'corone-catene',
   'carenature-staffe-e-paraurti': 'carenature',
-  'leve-cambio-e-frizione': 'leve-cambio',
-  'pedali-e-accessori': 'pedali',
-  'piantone-e-accessori': 'piantone',
-  'portacorona-e-porta-disco': 'portacorona',
-  'serbatoio-e-tubi-benzina': 'serbatoio',
+  'leve-cambio-e-frizione': 'accessori-telaio',
+  'pedali-e-accessori': 'pedali-accessori',
+  'piantone-e-accessori': 'accessori-telaio',
+  'portacorona-e-porta-disco': 'accessori-telaio',
+  'serbatoio-e-tubi-benzina': 'accessori-telaio',
   'sedili-e-accessori': 'sedili',
-  'uniball': 'uniball',
-  'volanti-e-accessori': 'volanti',
-  'barra-stabilizzatrici': 'barre',
+  'uniball': 'accessori-telaio',
+  'volanti-e-accessori': 'volanti-accessori',
+  'barra-stabilizzatrici': 'accessori-telaio',
 }
 
 const categoryNames: Record<string, string> = {

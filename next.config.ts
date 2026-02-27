@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.mondokart.com',
         port: '',
-        pathname: '/c/**',
+        pathname: '/**',
       },
       {
         protocol: 'https',
@@ -68,8 +68,21 @@ const nextConfig: NextConfig = {
   // Headers for security and performance
   async headers() {
     const isDev = process.env.NODE_ENV === 'development'
+    // Origini consentite per CORS (Next.js frontend locale + produzione)
+    const allowedOrigin = process.env.FRONTEND_URL || 'http://localhost:3007'
 
     return [
+      // CORS per tutte le API routes (preflight OPTIONS + risposte reali)
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: allowedOrigin },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization, X-Requested-With' },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Max-Age', value: '86400' },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [

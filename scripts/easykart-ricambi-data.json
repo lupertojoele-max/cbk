@@ -1,0 +1,79 @@
+[
+  {
+    "id": "easykart-ricambi-1",
+    "name": "Corona Freeline Birelart Easykart 219 HQ",
+    "slug": "corona-freeline-birelart-easykart-219-hq",
+    "brand": "Birel ART",
+    "price": "58.43",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24108-large_default/corona-freeline-birel-easykart.jpg",
+    "imageLocal": "/images/products/corona-freeline-birelart-easykart-219-hq.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/birelart-motorsport-mts-leclerc/corone-e-catene-birelart-freeline-mondokart/corona-freeline-birel-easykart.html"
+  },
+  {
+    "id": "easykart-ricambi-2",
+    "name": "Kit Attacchi Paracatena - EASYKART BIRELART kart",
+    "slug": "kit-attacchi-paracatena-easykart-birelart-kart",
+    "brand": "Birel ART",
+    "price": "19.87",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/34113-large_default/kit-attacchi-paracatena-easykart-birelart.jpg",
+    "imageLocal": "/images/products/kit-attacchi-paracatena-easykart-birelart-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/easykart-125-mondokart/varie-easykart-125cc-mondokart/kit-attacchi-paracatena-easykart-birelart.html"
+  },
+  {
+    "id": "easykart-ricambi-3",
+    "name": "Volante Birel-ART 340mm",
+    "slug": "volante-birel-art-340mm",
+    "brand": "CBK Racing",
+    "price": "195.19",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/16204-large_default/volante-birel-art-340mm.jpg",
+    "imageLocal": "/images/products/volante-birel-art-340mm.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/volanti-e-accessori-mondokart/volanti-mondokart/volante-birel-art-340mm.html"
+  },
+  {
+    "id": "easykart-ricambi-4",
+    "name": "Distanziale volante inclinato spessore BirelArt",
+    "slug": "distanziale-volante-inclinato-spessore-birelart",
+    "brand": "Birel ART",
+    "price": "15.60",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/30765-large_default/distanziale-volante-inclinato-spessore-birelart.jpg",
+    "imageLocal": "/images/products/distanziale-volante-inclinato-spessore-birelart.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/birelart-motorsport-mts-leclerc/volanti-birelart-leclerc/distanziale-volante-inclinato-spessore-birelart.html"
+  },
+  {
+    "id": "easykart-ricambi-5",
+    "name": "Boccola Eccentrica 1,5 Easykart 8/12",
+    "slug": "boccola-eccentrica-15-easykart-812",
+    "brand": "CBK Racing",
+    "price": "7.92",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29776-large_default/boccola-eccentrica-15-easykart-8-12.jpg",
+    "imageLocal": "/images/products/boccola-eccentrica-15-easykart-812.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/easykart-100-mondokart/accessori-easykart-100cc-mondokart/boccola-eccentrica-15-easykart-8-12.html"
+  },
+  {
+    "id": "easykart-ricambi-6",
+    "name": "Boccola Eccentrica 0,5 Birel Easykart 8/12",
+    "slug": "boccola-eccentrica-05-birel-easykart-812",
+    "brand": "CBK Racing",
+    "price": "7.63",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29775-large_default/boccola-eccentrica-05-birel-easykart-8-12.jpg",
+    "imageLocal": "/images/products/boccola-eccentrica-05-birel-easykart-812.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/easykart-125-mondokart/varie-easykart-125cc-mondokart/boccola-eccentrica-05-birel-easykart-8-12.html"
+  },
+  {
+    "id": "easykart-ricambi-7",
+    "name": "Chiave Boccola Fusello Birel Easykart",
+    "slug": "chiave-boccola-fusello-birel-easykart",
+    "brand": "CBK Racing",
+    "price": "9.33",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29731-large_default/chiave-boccola-fusello-birel-easykart.jpg",
+    "imageLocal": "/images/products/chiave-boccola-fusello-birel-easykart.jpg",
+    "productUrl": "https://www.mondokart.com/it/birel-art-easykart-leclerc/birelart-motorsport-mts-leclerc/fuselli-birelart-mondokart/chiave-boccola-fusello-birel-easykart.html"
+  }
+]

@@ -1,0 +1,115 @@
+Sei uno scraper agent per CBK1. Il tuo unico obiettivo è importare TUTTI i prodotti mancanti da mondokart.com in data/products.json.
+
+## STATO ATTUALE
+Categorie GIA' importate in products.json (1862 prodotti totali):
+- freni-accessori (pastiglie, pompe, pinze, dischi, tubi, kit revisione freni)
+- cerchi-mozzi-accessori (cerchi alluminio/magnesio, mozzi 17/25/40mm)
+- assali-cuscinetti-chiavette (assali, cuscinetti, chiavette)
+- corone-catene (corone, catene, tendicatena, protezioni)
+- carenature (carenature CRG, BirelArt, TonyKart, Top-Kart, Parolin)
+- telai-nuovi (CRG, BirelArt)
+- abbigliamento-caschi (tute, caschi, guanti, collari, paracostole, stivali)
+- accessori-telaio (piantoni, barre stabilizzatrici, serbatoi, fuselli, boccole, viti, dadi)
+- adesivi (kit adesivi, numeri)
+- volanti-accessori (volanti, mozzi volante)
+- pedali-accessori (pedali, pedaliere)
+- sedili (sedili)
+
+## CATEGORIE MANCANTI DA IMPORTARE (priorità alta)
+Vai su https://www.mondokart.com/it/ e naviga il menu per trovare TUTTE le categorie disponibili.
+Le categorie probabilmente mancanti (verifica le URL reali sul sito):
+
+1. **Motore e Accessori** - ricambi motore generico, kit revisione motore
+   - IAME, TM Racing, BMB/Bluebird, Rotax, Vortex, Comer, LKE, Modena, WTP60
+   - Usa category: "motore-accessori"
+
+2. **Carburatori** - Dellorto, Tillotson, IBEA, Tryton, WALBRO e ricambi
+   - Usa category: "carburatori"
+
+3. **Radiatori** - radiatori, staffe, tubi radiatore, pompa acqua, tendine
+   - Usa category: "radiatori-accessori"
+
+4. **Molle e Cuscinetti** - molle, cuscinetti telaio, cuscinetti motore, snodi sferici, uniball, paraoli
+   - Usa category: "molle-cuscinetti" (se non già in accessori-telaio)
+
+5. **Pneumatici / Gomme** - LeCont, Vega, Maxxis, MG, Komet, Easykart, Bridgestone
+   - Usa category: "pneumatici"
+
+6. **Telemetrie & Crono** - AIM MyChron, Alfano, Unipro, Starlane, contagiri, cronometri
+   - Usa category: "telemetrie"
+
+7. **Motori Nuovi** - TM Racing, IAME, Vortex, BMB, Modena Engines, Rotax
+   - Usa category: "motori-nuovi" (se vendono motori completi)
+
+8. **Kart Completi** - kart assemblati
+   - Usa category: "kart-completi"
+
+9. **Portacorona e Porta Disco** - portacorone, portadischi
+   - Usa category: "portacorona-porta-disco"
+
+10. **Leve cambio e frizione** - leve frizione, leve cambio
+    - Usa category: "leve-cambio-frizione"
+
+11. **Abbigliamento bambino** - tute baby/mini, caschi bambino (se non già importati)
+
+12. **Attrezzatura officina** - attrezzi, estrattori, attrezzatura
+    - Usa category: "attrezzatura"
+
+13. **Elettrica / Accensione** - candele, bobine, centraline
+    - Usa category: "elettrica-accensione"
+
+## COME PROCEDERE
+
+### STEP 1 - Esplora mondokart.com
+Prima di tutto, esplora il sito mondokart.com/it/ per trovare TUTTE le categorie reali:
+```
+node -e "
+const puppeteer = require('puppeteer');
+// Visita mondokart.com/it/ e stampa tutti i link del menu principale
+"
+```
+O scrivi uno script Puppeteer che visita la homepage e stampa tutti i link di categoria.
+
+### STEP 2 - Pattern da seguire (leggi uno scraper esistente come riferimento)
+```
+cat scripts/scrape-brake-calipers.cjs
+```
+Il pattern è:
+- URL mondokart: https://www.mondokart.com/it/{slug-categoria}-mondokart/
+  (a volte senza "-mondokart", verifica)
+- Selettore prodotti: .js-product-miniature
+- Selettore nome: .product-title a
+- Selettore prezzo: .product-prices .regular-price (senza IVA → moltiplica x 1.22)
+- Selettore prezzo scontato: .product-prices .price
+- Immagine: attributo data-full-size-image-url, replace "square_home_default" → "large_default"
+- Paginazione: ?p=2, ?p=3, etc.
+
+### STEP 3 - Per ogni categoria mancante
+1. Crea scripts/scrape-{nome}.cjs seguendo il pattern esistente
+2. Eseguilo: node scripts/scrape-{nome}.cjs
+3. Verifica l'output: controlla prezzi (devono essere con IVA x1.22), immagini, dati
+4. Scarica le immagini in public/images/products/
+5. Crea scripts/merge-{nome}.cjs per aggiungere i prodotti a data/products.json
+6. Eseguilo: node scripts/merge-{nome}.cjs
+7. Commit: git add -A && git commit -m "feat: importa categoria {nome} - N prodotti"
+
+### STEP 4 - Verifica finale
+Dopo ogni importazione:
+```
+node -e "const {products}=require('./data/products.json'); console.log('Totale:', products.length)"
+```
+
+## REGOLE CRITICHE
+- NON inventare prodotti: solo dati reali da scraping
+- IVA: i prezzi mondokart NON includono IVA → moltiplica SEMPRE x 1.22
+- Rate limiting: delay di 1-2 secondi tra richieste
+- Se una categoria non esiste o è vuota, vai avanti
+- Se uno scraper fallisce dopo 3 tentativi, skippa e continua
+- Working directory: c:/Users/luper/cbk1
+
+## AL TERMINE
+Quando hai importato tutto:
+  node -e "const {products}=require('./data/products.json'); const cats=[...new Set(products.map(x=>x.category))].sort(); console.log('Totale:', products.length); cats.forEach(c=>console.log(c))"
+  git add -A
+  git commit -m "chore: importazione completa catalogo mondokart"
+Stampa il resoconto: categorie importate, prodotti aggiunti, categorie non trovate, errori.

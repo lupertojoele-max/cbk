@@ -67,6 +67,31 @@ const wheelSubcategories = [
   'Accessori Mozzi',
 ]
 
+// Accessori-telaio subcategory keyword filters
+const accessoriTelaioFilters: Record<string, (name: string) => boolean> = {
+  'barra-stabilizzatrici': (n) =>
+    n.includes('barra') || n.includes('stabilizzator') || n.includes('torsion') ||
+    (n.includes('fascetta') && (n.includes('barra') || n.includes('stabiliz'))),
+  'piantone-e-accessori': (n) =>
+    n.includes('piantone') || n.includes('supporto piantone') || n.includes('supporto per piantone'),
+  'serbatoio-e-tubi-benzina': (n) =>
+    n.includes('serbatoio') || n.includes('tanica') || n.includes('tubo benzin') ||
+    n.includes('tubo sfiato') || n.includes('filtro benzin') || n.includes('filtro per benz') ||
+    n.includes('raccordo serbatoio') || n.includes('raccordo sfiato') || n.includes('raccordo tubo benz') ||
+    n.includes('pescante') || n.includes('oring serbat') || n.includes('deviatore') ||
+    n.includes('rubinetto') || (n.includes('pompa') && n.includes('benzin')) ||
+    n.includes('anello alluminio foro') || n.includes('molla') && n.includes('benzin'),
+  'uniball': (n) =>
+    n.includes('fusello') || n.includes('boccola') || n.includes('eccentrico') ||
+    n.includes('eccentrica') || n.includes('sniper') || n.includes('vite fus') ||
+    n.includes('distanziale fus') || n.includes('distanziale perno') || n.includes('distanziale ruota') ||
+    n.includes('spessore fus') || n.includes('kit camber') || n.includes('caster'),
+  'leve-cambio-e-frizione': (n) =>
+    n.includes('leva') || n.includes('frizione') || n.includes('leva frizione'),
+  'portacorona-e-porta-disco': (n) =>
+    n.includes('portacorona') || n.includes('porta disco') || n.includes('porta corona'),
+}
+
 // Fairings subcategories for carenature-staffe-e-paraurti
 const fairingsSubcategories = [
   { id: 'tutti', label: 'Tutti' },
@@ -99,6 +124,7 @@ export default function SubcategoryPageClient({
   const isBrakeCategory = slug === 'freni-e-accessori'
   const isWheelCategory = slug === 'cerchi-mozzi-e-accessori'
   const isFairingsCategory = slug === 'carenature-staffe-e-paraurti'
+  const isAccessoriTelaioSubcategory = slug in accessoriTelaioFilters
 
   // Calculate statistics
   const stats = useMemo(() => {
@@ -198,6 +224,11 @@ export default function SubcategoryPageClient({
       filtered = filtered.filter((p) => p.subcategory === selectedSubcategory)
     }
 
+    // Filter by keyword for accessori-telaio subcategories
+    if (isAccessoriTelaioSubcategory && accessoriTelaioFilters[slug]) {
+      filtered = filtered.filter((p) => accessoriTelaioFilters[slug](p.name.toLowerCase()))
+    }
+
     // Filter by brand
     if (selectedBrand !== 'Tutti') {
       filtered = filtered.filter((p) => p.brand === selectedBrand)
@@ -232,7 +263,7 @@ export default function SubcategoryPageClient({
     })
 
     return sorted
-  }, [allCategoryProducts, selectedBrand, selectedSubcategory, searchQuery, sortBy, isBrakeCategory, isWheelCategory, isFairingsCategory])
+  }, [allCategoryProducts, selectedBrand, selectedSubcategory, searchQuery, sortBy, isBrakeCategory, isWheelCategory, isFairingsCategory, isAccessoriTelaioSubcategory, slug])
 
   // Pagination
   const totalPages = Math.ceil(categoryProducts.length / PRODUCTS_PER_PAGE)

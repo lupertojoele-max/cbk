@@ -1,0 +1,46 @@
+[
+  {
+    "id": "zavorre-data2-json-1",
+    "name": "Zavorra tonda 1 Kg",
+    "slug": "zavorra-tonda-1-kg",
+    "brand": "CBK Racing",
+    "price": "12.94",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24258-large_default/zavorra-tonda-1-kg.jpg",
+    "imageLocal": "/images/products/zavorra-tonda-1-kg.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/zavorre-mondokart/zavorra-tonda-1-kg.html"
+  },
+  {
+    "id": "zavorre-data2-json-2",
+    "name": "Zavorra 2 Kg. forata",
+    "slug": "zavorra-2-kg-forata",
+    "brand": "CBK Racing",
+    "price": "22.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/3310-large_default/zavorra-2-kg-forata.jpg",
+    "imageLocal": "/images/products/zavorra-2-kg-forata.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/zavorre-mondokart/zavorra-2-kg-forata.html"
+  },
+  {
+    "id": "zavorre-data2-json-3",
+    "name": "Zavorra 3 Kg., ricambi kart",
+    "slug": "zavorra-3-kg-ricambi-kart",
+    "brand": "CBK Racing",
+    "price": "29.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/3313-large_default/zavorra-3-kg.jpg",
+    "imageLocal": "/images/products/zavorra-3-kg-ricambi-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/zavorre-mondokart/zavorra-3-kg.html"
+  },
+  {
+    "id": "zavorre-data2-json-4",
+    "name": "Zavorra 4 Kg., ricambi kart",
+    "slug": "zavorra-4-kg-ricambi-kart",
+    "brand": "CBK Racing",
+    "price": "39.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/15545-large_default/zavorra-4-kg.jpg",
+    "imageLocal": "/images/products/zavorra-4-kg-ricambi-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/telaio-accessori/zavorre-mondokart/zavorra-4-kg.html"
+  }
+]
