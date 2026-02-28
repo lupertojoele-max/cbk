@@ -45,6 +45,7 @@ const categories = [
   { id: 'pneumatici', label: 'Pneumatici e Gomme' },
   { id: 'telemetrie', label: 'Telemetrie e Crono' },
   { id: 'abbigliamento-caschi', label: 'Abbigliamento e Caschi' },
+  { id: 'accessori-caschi', label: 'Accessori Caschi' },
   { id: 'sedili', label: 'Sedili' },
   { id: 'volanti-accessori', label: 'Volanti e Accessori' },
   { id: 'pedali-accessori', label: 'Pedali e Accessori' },
@@ -53,6 +54,8 @@ const categories = [
   { id: 'lubrificanti', label: 'Lubrificanti e Oli' },
   { id: 'attrezzatura', label: 'Attrezzatura Officina' },
   { id: 'kart-completi', label: 'Kart Completi' },
+  { id: 'accessori-kart', label: 'Accessori Kart' },
+  { id: 'motori-nuovi', label: 'Motori Nuovi' },
 ]
 
 const brands = [
@@ -278,7 +281,7 @@ export default function ProdottiPage() {
               }}
             >
               <AnimatePresence mode="popLayout">
-                {paginatedProducts.map((product, index) => (
+                {paginatedProducts.map((product) => (
                   <motion.div
                     key={product.id}
                     variants={{
