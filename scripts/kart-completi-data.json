@@ -1,28 +1,6 @@
 [
   {
     "id": "kart-completi-1",
-    "name": "KART KZ COMPLETO – CRG ROAD REBEL V13 + TM KZ R2 BLACK",
-    "slug": "kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black",
-    "brand": "CRG",
-    "price": "14.20",
-    "discountedPrice": null,
-    "imageUrl": "https://www.mondokart.com/26191-large_default/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.jpg",
-    "imageLocal": "/images/products/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.jpg",
-    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-crg-mondokart/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.html"
-  },
-  {
-    "id": "kart-completi-2",
-    "name": "KART KZ COMPLETO – TONY KART RACER 401T + TM KZ R2 BLACK",
-    "slug": "kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black",
-    "brand": "TonyKart OTK",
-    "price": "14.64",
-    "discountedPrice": null,
-    "imageUrl": "https://www.mondokart.com/26264-large_default/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.jpg",
-    "imageLocal": "/images/products/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.jpg",
-    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-tony-kart-mondokart/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.html"
-  },
-  {
-    "id": "kart-completi-3",
     "name": "Kart completo Mini KGP BirelArt C28-Y 60cc kart, go",
     "slug": "kart-completo-mini-kgp-birelart-c28-y-60cc-kart-go",
     "brand": "Birel ART",
@@ -33,7 +11,7 @@
     "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-birelart-kgp-mondokart/kart-completo-mini-kgp-birelart-c28-y-60cc.html"
   },
   {
-    "id": "kart-completi-4",
+    "id": "kart-completi-2",
     "name": "KART COMPLETO KZ – BIREL ART S19 + TM KZ R3 STD",
     "slug": "kart-completo-kz-birel-art-s19-tm-kz-r3-std",
     "brand": "Birel ART",
@@ -42,6 +20,28 @@
     "imageUrl": "https://www.mondokart.com/33527-large_default/kart-kz-completo-birel-art-s18-tm-kz-r2-black.jpg",
     "imageLocal": "/images/products/kart-completo-kz-birel-art-s19-tm-kz-r3-std.jpg",
     "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-birelart-kgp-mondokart/kart-kz-completo-birel-art-s18-tm-kz-r2-black.html"
+  },
+  {
+    "id": "kart-completi-3",
+    "name": "KART KZ COMPLETO – CRG ROAD REBEL V13 + TM KZ R2 BLACK",
+    "slug": "kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black",
+    "brand": "CRG",
+    "price": "14.20",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/26191-large_default/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.jpg",
+    "imageLocal": "/images/products/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-crg-mondokart/kart-kz-completo-crg-road-rebel-v13-tm-kz-r2-black.html"
+  },
+  {
+    "id": "kart-completi-4",
+    "name": "KART KZ COMPLETO – TONY KART RACER 401T + TM KZ R2 BLACK",
+    "slug": "kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black",
+    "brand": "TonyKart OTK",
+    "price": "14.64",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/26264-large_default/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.jpg",
+    "imageLocal": "/images/products/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-tony-kart-mondokart/kart-kz-completo-tony-kart-racer-401t-tm-kz-r2-black.html"
   },
   {
     "id": "kart-completi-5",
@@ -89,13 +89,101 @@
   },
   {
     "id": "kart-completi-9",
-    "name": "KART COMPLETO KZ – KART REPUBLIC KR1 + TM KZ R3 STD",
-    "slug": "kart-completo-kz-kart-republic-kr1-tm-kz-r3-std",
-    "brand": "Kart Republic",
-    "price": "14.39",
+    "name": "Kart USATO completo Tony Kart RacerEVR/Reedster KF2",
+    "slug": "kart-usato-completo-tony-kart-racerevrreedster-kf2",
+    "brand": "TonyKart OTK",
+    "price": "3.60",
     "discountedPrice": null,
-    "imageUrl": "https://www.mondokart.com/33526-large_default/kart-kz-completo-kart-republic-kr1-tm-kz-r2-black.jpg",
-    "imageLocal": "/images/products/kart-completo-kz-kart-republic-kr1-tm-kz-r3-std.jpg",
-    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-kart-republic-kr-/kart-kz-completo-kart-republic-kr1-tm-kz-r2-black.html"
+    "imageUrl": "https://www.mondokart.com/15546-large_default/kart-usato-completo-tony-kart-racerevr-reedster.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-tony-kart-racerevrreedster-kf2.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-tony-kart-racerevr-reedster.html"
+  },
+  {
+    "id": "kart-completi-10",
+    "name": "Kart USATO completo Mini Ricciardo/Swift kart, go",
+    "slug": "kart-usato-completo-mini-ricciardoswift-kart-go",
+    "brand": "CBK Racing",
+    "price": "2.43",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/9804-large_default/kart-usato-completo-mini-ricciardo-swift.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-mini-ricciardoswift-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-mini-ricciardo-swift.html"
+  },
+  {
+    "id": "kart-completi-11",
+    "name": "Kart USATO completo Mini Tonykart/Vortex kart, go",
+    "slug": "kart-usato-completo-mini-tonykartvortex-kart-go",
+    "brand": "Vortex",
+    "price": "2.38",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/15512-large_default/kart-usato-completo-mini-tonykart-vortex.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-mini-tonykartvortex-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-mini-tonykart-vortex.html"
+  },
+  {
+    "id": "kart-completi-12",
+    "name": "Telaio USATO Reparto Corse Top-Kart Dreamer KZ - NEW - RXT",
+    "slug": "telaio-usato-reparto-corse-top-kart-dreamer-kz-new-rxt",
+    "brand": "CBK Racing",
+    "price": "2.44",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/19853-large_default/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-2021-rxt-magnesio.jpg",
+    "imageLocal": "/images/products/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-rxt.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/telai-usati-mondokart/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-2021-rxt-magnesio.html"
+  },
+  {
+    "id": "kart-completi-13",
+    "name": "Telaio Usato KR Kart Republic OK/OKJ - Fia Motorsport Games",
+    "slug": "telaio-usato-kr-kart-republic-okokj-fia-motorsport-games",
+    "brand": "Kart Republic",
+    "price": "2.44",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/25688-large_default/telaio-usato-kr-okokj-fia-motorsport-games.jpg",
+    "imageLocal": "/images/products/telaio-usato-kr-kart-republic-okokj-fia-motorsport-games.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/telai-usati-mondokart/telaio-usato-kr-okokj-fia-motorsport-games.html"
+  },
+  {
+    "id": "kart-completi-14",
+    "name": "Kart completo Birel Easykart 50cc NEW!!",
+    "slug": "kart-completo-birel-easykart-50cc-new",
+    "brand": "CBK Racing",
+    "price": "2.30",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/33528-large_default/kart-completo-birel-easykart-50cc-new.jpg",
+    "imageLocal": "/images/products/kart-completo-birel-easykart-50cc-new.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-easykart-mondokart/kart-completo-birel-easykart-50cc-new.html"
+  },
+  {
+    "id": "kart-completi-15",
+    "name": "Kart completo Birel Easykart 60cc NEW!!",
+    "slug": "kart-completo-birel-easykart-60cc-new",
+    "brand": "CBK Racing",
+    "price": "4.33",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/23846-large_default/kart-completo-birel-easykart-60cc-new.jpg",
+    "imageLocal": "/images/products/kart-completo-birel-easykart-60cc-new.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-easykart-mondokart/kart-completo-birel-easykart-60cc-new.html"
+  },
+  {
+    "id": "kart-completi-16",
+    "name": "Kart completo Birel Easykart 100cc NEW!!",
+    "slug": "kart-completo-birel-easykart-100cc-new",
+    "brand": "CBK Racing",
+    "price": "4.84",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/23838-large_default/kart-completo-birel-easykart-100cc-new.jpg",
+    "imageLocal": "/images/products/kart-completo-birel-easykart-100cc-new.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-easykart-mondokart/kart-completo-birel-easykart-100cc-new.html"
+  },
+  {
+    "id": "kart-completi-17",
+    "name": "Kart Completo Birel Easykart 125cc NEW!!",
+    "slug": "kart-completo-birel-easykart-125cc-new",
+    "brand": "CBK Racing",
+    "price": "5.11",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/23835-large_default/kart-completo-birel-easykart-125cc-new.jpg",
+    "imageLocal": "/images/products/kart-completo-birel-easykart-125cc-new.jpg",
+    "productUrl": "https://www.mondokart.com/it/kart-completi-mondokart/kart-completi-easykart-mondokart/kart-completo-birel-easykart-125cc-new.html"
   }
 ]

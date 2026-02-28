@@ -1,0 +1,123 @@
+[
+  {
+    "id": "batterie-extra-1",
+    "name": "Batteria 12 volt 7 AH - 7.0AH",
+    "slug": "batteria-12-volt-7-ah-70ah",
+    "brand": "CBK Racing",
+    "price": "15.85",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24284-large_default/batteria-12-volt-7-ah.jpg",
+    "imageLocal": "/images/products/batteria-12-volt-7-ah-70ah.jpg",
+    "productUrl": "https://www.mondokart.com/it/iame-mondokart-karting/kf-reedster-125cc-karting/accensione-iame-kf-mondokart-karting/batteria-12-volt-7-ah.html"
+  },
+  {
+    "id": "batterie-extra-2",
+    "name": "Batteria FIAMM 12 volt 9 AH (alta qualità FIAMM)",
+    "slug": "batteria-fiamm-12-volt-9-ah-alta-qualita-fiamm",
+    "brand": "CBK Racing",
+    "price": "43.29",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24285-large_default/batteria-fiamm-12-volt-9-ah.jpg",
+    "imageLocal": "/images/products/batteria-fiamm-12-volt-9-ah-alta-qualita-fiamm.jpg",
+    "productUrl": "https://www.mondokart.com/it/motore-accessori-mondokart/ricambi-generici-motore/batterie-mondokart-karting/batterie-mondokart/batteria-fiamm-12-volt-9-ah.html"
+  },
+  {
+    "id": "batterie-extra-3",
+    "name": "Batteria Lipo 2200 mah 14,8v kart, go kart",
+    "slug": "batteria-lipo-2200-mah-148v-kart-go-kart",
+    "brand": "CBK Racing",
+    "price": "36.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/9857-large_default/batteria-lipo-2200-mah-148v.jpg",
+    "imageLocal": "/images/products/batteria-lipo-2200-mah-148v-kart-go-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/motore-accessori-mondokart/ricambi-generici-motore/batterie-mondokart-karting/batterie-mondokart/batteria-lipo-2200-mah-148v.html"
+  },
+  {
+    "id": "batterie-extra-4",
+    "name": "Batteria LIPO Birel Easykart (assieme batteria) Freeline",
+    "slug": "batteria-lipo-birel-easykart-assieme-batteria-freeline",
+    "brand": "Birel ART",
+    "price": "166.93",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/10458-large_default/batteria-lipo-birel-easykart-assieme-batteria.jpg",
+    "imageLocal": "/images/products/batteria-lipo-birel-easykart-assieme-batteria-freeline.jpg",
+    "productUrl": "https://www.mondokart.com/it/motore-accessori-mondokart/bmb-bluebird-mondokart/bmb-easykart-60cc-mondokart-karting/accensione-ekl-60cc-mondokart-karting/batteria-lipo-birel-easykart-assieme-batteria.html"
+  },
+  {
+    "id": "batterie-extra-5",
+    "name": "Batteria Standard Rotax Evo DD2",
+    "slug": "batteria-standard-rotax-evo-dd2",
+    "brand": "Rotax",
+    "price": "109.79",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24287-large_default/batteria-standard-rotax-evo-dd2.jpg",
+    "imageLocal": "/images/products/batteria-standard-rotax-evo-dd2.jpg",
+    "productUrl": "https://www.mondokart.com/it/rotax-mondokart/rotax-max-micro-mini-junior-senior/accensione-rotax-max-mondokart/batteria-standard-rotax-evo-dd2.html"
+  },
+  {
+    "id": "batterie-extra-6",
+    "name": "Batteria 12 volt 9 AH - 9.0AH",
+    "slug": "batteria-12-volt-9-ah-90ah",
+    "brand": "CBK Racing",
+    "price": "21.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/24286-large_default/batteria-12-volt-9-ah.jpg",
+    "imageLocal": "/images/products/batteria-12-volt-9-ah-90ah.jpg",
+    "productUrl": "https://www.mondokart.com/it/iame-mondokart-karting/kf-reedster-125cc-karting/accensione-iame-kf-mondokart-karting/batteria-12-volt-9-ah.html"
+  },
+  {
+    "id": "batterie-extra-7",
+    "name": "Batteria Lipo 11.1V 2200 mAh Unigo Unipro kart, go",
+    "slug": "batteria-lipo-111v-2200-mah-unigo-unipro-kart-go",
+    "brand": "Unipro",
+    "price": "65.82",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/20473-large_default/batteria-lipo-111v-2200-mah-unigo-unipro.jpg",
+    "imageLocal": "/images/products/batteria-lipo-111v-2200-mah-unigo-unipro-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/telemetrie-crono-mondokart/accessori-unipro/batteria-lipo-111v-2200-mah-unigo-unipro.html"
+  },
+  {
+    "id": "batterie-extra-8",
+    "name": "Carica batteria 12v universale (piombo) kart, go",
+    "slug": "carica-batteria-12v-universale-piombo-kart-go",
+    "brand": "CBK Racing",
+    "price": "26.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/18908-large_default/carica-batteria-12v-universale-piombo.jpg",
+    "imageLocal": "/images/products/carica-batteria-12v-universale-piombo-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/vortex-mondokart-karting/vortex-mini-rok/impianto-elettrico-batteria-minirok-mondokart-karting/carica-batteria-12v-universale-piombo.html"
+  },
+  {
+    "id": "batterie-extra-9",
+    "name": "Caricabatterie LIPO Li-Ion Imax B6 kart, go kart",
+    "slug": "caricabatterie-lipo-li-ion-imax-b6-kart-go-kart",
+    "brand": "CBK Racing",
+    "price": "34.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/6579-large_default/caricabatterie-lipo-li-ion-imax-b6.jpg",
+    "imageLocal": "/images/products/caricabatterie-lipo-li-ion-imax-b6-kart-go-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/attrezzatura-mondokart/caricabatterie-mondokart-karting/caricabatterie-lipo-li-ion-imax-b6.html"
+  },
+  {
+    "id": "batterie-extra-10",
+    "name": "Alimentatore Caricabatterie Universale kart, go",
+    "slug": "alimentatore-caricabatterie-universale-kart-go",
+    "brand": "CBK Racing",
+    "price": "29.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/15128-large_default/alimentatore-caricabatterie-universale.jpg",
+    "imageLocal": "/images/products/alimentatore-caricabatterie-universale-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/attrezzatura-mondokart/caricabatterie-mondokart-karting/alimentatore-caricabatterie-universale.html"
+  },
+  {
+    "id": "batterie-extra-11",
+    "name": "Caricabatteria SPEKTRUM S150 completo EasyKart",
+    "slug": "caricabatteria-spektrum-s150-completo-easykart",
+    "brand": "CBK Racing",
+    "price": "149.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/21903-large_default/caricabatteria-spektrum-s150-completo-easykart.jpg",
+    "imageLocal": "/images/products/caricabatteria-spektrum-s150-completo-easykart.jpg",
+    "productUrl": "https://www.mondokart.com/it/motore-accessori-mondokart/bmb-bluebird-mondokart/bmb-easykart-60cc-mondokart-karting/accensione-ekl-60cc-mondokart-karting/caricabatteria-spektrum-s150-completo-easykart.html"
+  }
+]

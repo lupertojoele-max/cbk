@@ -1,0 +1,178 @@
+[
+  {
+    "id": "lubrificanti-extra-1",
+    "name": "EXCED Super Chain STANDARD - Spray Catena kart, go",
+    "slug": "exced-super-chain-standard-spray-catena-kart-go",
+    "brand": "CBK Racing",
+    "price": "6.69",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22411-large_default/exced-super-chain-spray-catena.jpg",
+    "imageLocal": "/images/products/exced-super-chain-standard-spray-catena-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/exced-super-chain-spray-catena.html"
+  },
+  {
+    "id": "lubrificanti-extra-2",
+    "name": "EXCED O-RING Chain - Spray Catena specifico O-Ring",
+    "slug": "exced-o-ring-chain-spray-catena-specifico-o-ring",
+    "brand": "CBK Racing",
+    "price": "7.92",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22412-large_default/exced-super-chain-o-ring-spray-catena.jpg",
+    "imageLocal": "/images/products/exced-o-ring-chain-spray-catena-specifico-o-ring.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/exced-super-chain-o-ring-spray-catena.html"
+  },
+  {
+    "id": "lubrificanti-extra-3",
+    "name": "SPECIAL LUBE Corse Fimo - Spray Catena",
+    "slug": "special-lube-corse-fimo-spray-catena",
+    "brand": "CBK Racing",
+    "price": "8.49",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29424-large_default/special-lube-corse-fimo-spray-catena.jpg",
+    "imageLocal": "/images/products/special-lube-corse-fimo-spray-catena.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/special-lube-corse-fimo-spray-catena.html"
+  },
+  {
+    "id": "lubrificanti-extra-4",
+    "name": "FIMO Dry - Spray Catena asciutto",
+    "slug": "fimo-dry-spray-catena-asciutto",
+    "brand": "CBK Racing",
+    "price": "8.49",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29425-large_default/fimo-dry-spray-catena-asciutto.jpg",
+    "imageLocal": "/images/products/fimo-dry-spray-catena-asciutto.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/fimo-dry-spray-catena-asciutto.html"
+  },
+  {
+    "id": "lubrificanti-extra-5",
+    "name": "Silkolene Titanium Chain PTFE kart, go kart",
+    "slug": "silkolene-titanium-chain-ptfe-kart-go-kart",
+    "brand": "CBK Racing",
+    "price": "16.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/14116-large_default/silkolene-titanium-chain-ptfe.jpg",
+    "imageLocal": "/images/products/silkolene-titanium-chain-ptfe-kart-go-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/silkolene-titanium-chain-ptfe.html"
+  },
+  {
+    "id": "lubrificanti-extra-6",
+    "name": "Super THE WHITE - CERAMIC Fimo - Spray Catena",
+    "slug": "super-the-white-ceramic-fimo-spray-catena",
+    "brand": "CBK Racing",
+    "price": "12.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/29426-large_default/super-white-ceramic-fimo-spray-catena.jpg",
+    "imageLocal": "/images/products/super-the-white-ceramic-fimo-spray-catena.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/super-white-ceramic-fimo-spray-catena.html"
+  },
+  {
+    "id": "lubrificanti-extra-7",
+    "name": "Grasso Catena SINTETICO - XERAMIC Synthetic Chain Spray",
+    "slug": "grasso-catena-sintetico-xeramic-synthetic-chain-spray",
+    "brand": "CBK Racing",
+    "price": "11.94",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/34287-large_default/xeramic-synthetic-chain-spray.jpg",
+    "imageLocal": "/images/products/grasso-catena-sintetico-xeramic-synthetic-chain-spray.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/xeramic-synthetic-chain-spray.html"
+  },
+  {
+    "id": "lubrificanti-extra-8",
+    "name": "Grasso Spray Catena GENERIC LUBE - XERAMIC - Kart",
+    "slug": "grasso-spray-catena-generic-lube-xeramic-kart",
+    "brand": "CBK Racing",
+    "price": "9.75",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/34286-large_default/xeramic-kart-chain-spray.jpg",
+    "imageLocal": "/images/products/grasso-spray-catena-generic-lube-xeramic-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/xeramic-kart-chain-spray.html"
+  },
+  {
+    "id": "lubrificanti-extra-9",
+    "name": "Grasso Spray Catena BIANCO - XERAMIC - Kart",
+    "slug": "grasso-spray-catena-bianco-xeramic-kart",
+    "brand": "CBK Racing",
+    "price": "11.96",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/34285-large_default/xeramic-white-chain-spray.jpg",
+    "imageLocal": "/images/products/grasso-spray-catena-bianco-xeramic-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/xeramic-white-chain-spray.html"
+  },
+  {
+    "id": "lubrificanti-extra-10",
+    "name": "Motul EZ Lube - Lubrificante Multiuso 400ml kart",
+    "slug": "motul-ez-lube-lubrificante-multiuso-400ml-kart",
+    "brand": "CBK Racing",
+    "price": "7.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/18703-large_default/motul-ez-lube-lubrificante-multiuso-400ml.jpg",
+    "imageLocal": "/images/products/motul-ez-lube-lubrificante-multiuso-400ml-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/motul-ez-lube-lubrificante-multiuso-400ml.html"
+  },
+  {
+    "id": "lubrificanti-extra-11",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 600ml WD40 - FLEXIBLE",
+    "slug": "wd-40-bomboletta-spray-lubrificante-600ml-wd40-flexible",
+    "brand": "CBK Racing",
+    "price": "15.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/17284-large_default/wd-40-bomboletta-spray-lubrificante-600ml-flexible-new.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-600ml-wd40-flexible.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-600ml-flexible-new.html"
+  },
+  {
+    "id": "lubrificanti-extra-12",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 500ml DOPPIA POSIZIONE",
+    "slug": "wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione",
+    "brand": "CBK Racing",
+    "price": "10.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22952-large_default/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione-wd40.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione-wd40.html"
+  },
+  {
+    "id": "lubrificanti-extra-13",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 400ml CLASSIC WD40",
+    "slug": "wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40",
+    "brand": "CBK Racing",
+    "price": "9.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22954-large_default/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.html"
+  },
+  {
+    "id": "lubrificanti-extra-14",
+    "name": "Durance Petronas - Spray Catena kart, go kart",
+    "slug": "durance-petronas-spray-catena-kart-go-kart",
+    "brand": "CBK Racing",
+    "price": "12.80",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/20113-large_default/durance-petronas-spray-catena.jpg",
+    "imageLocal": "/images/products/durance-petronas-spray-catena-kart-go-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/durance-petronas-spray-catena.html"
+  },
+  {
+    "id": "lubrificanti-extra-15",
+    "name": "Dispositivo Lubrificazione Porta bomboletta Spray Catena 428",
+    "slug": "dispositivo-lubrificazione-porta-bomboletta-spray-catena-428",
+    "brand": "CBK Racing",
+    "price": "21.50",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22319-large_default/porta-bomboletta-spray-catena-428.jpg",
+    "imageLocal": "/images/products/dispositivo-lubrificazione-porta-bomboletta-spray-catena-428.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/porta-bomboletta-spray-catena-428.html"
+  },
+  {
+    "id": "lubrificanti-extra-16",
+    "name": "Dispositivo Lubrificazione Porta bomboletta Spray Catena 219",
+    "slug": "dispositivo-lubrificazione-porta-bomboletta-spray-catena-219",
+    "brand": "CBK Racing",
+    "price": "21.50",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22320-large_default/porta-bomboletta-spray-catena-219.jpg",
+    "imageLocal": "/images/products/dispositivo-lubrificazione-porta-bomboletta-spray-catena-219.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/grasso-catena-mondokart/porta-bomboletta-spray-catena-219.html"
+  }
+]

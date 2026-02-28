@@ -1,0 +1,112 @@
+[
+  {
+    "id": "lubrificanti-brand-1",
+    "name": "Olio Cambio Trasmissioni Motul ATF Dexron VI kart",
+    "slug": "olio-cambio-trasmissioni-motul-atf-dexron-vi-kart",
+    "brand": "CBK Racing",
+    "price": "13.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/12300-large_default/olio-cambio-trasmissioni-motul-atf-dexron-vi.jpg",
+    "imageLocal": "/images/products/olio-cambio-trasmissioni-motul-atf-dexron-vi-kart.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/olio-cambio-ingranaggi-mondokart/olio-cambio-trasmissioni-motul-atf-dexron-vi.html"
+  },
+  {
+    "id": "lubrificanti-brand-2",
+    "name": "Olio SHIFTER - per Cambio DD2 - XERAMIC Kart Transmission Oil –",
+    "slug": "olio-shifter-per-cambio-dd2-xeramic-kart-transmission-oil-",
+    "brand": "CBK Racing",
+    "price": "22.92",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/33968-large_default/olio-shifter-per-cambio-dd2-xeramic-kart-transmission-oil-1l.jpg",
+    "imageLocal": "/images/products/olio-shifter-per-cambio-dd2-xeramic-kart-transmission-oil-.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/olio-cambio-ingranaggi-mondokart/olio-shifter-per-cambio-dd2-xeramic-kart-transmission-oil-1l.html"
+  },
+  {
+    "id": "lubrificanti-brand-3",
+    "name": "Olio Ingranaggi Xeramic motori KF e Rotax kart, go",
+    "slug": "olio-ingranaggi-xeramic-motori-kf-e-rotax-kart-go",
+    "brand": "Rotax",
+    "price": "20.00",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/26461-large_default/olio-ingranaggi-xeramic-motori-kf-e-rotax.jpg",
+    "imageLocal": "/images/products/olio-ingranaggi-xeramic-motori-kf-e-rotax-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/olio-cambio-ingranaggi-mondokart/olio-ingranaggi-xeramic-motori-kf-e-rotax.html"
+  },
+  {
+    "id": "lubrificanti-brand-4",
+    "name": "Olio KZ KART - per Cambio - XERAMIC Kart Transmission Oil – 1L",
+    "slug": "olio-kz-kart-per-cambio-xeramic-kart-transmission-oil-1l",
+    "brand": "CBK Racing",
+    "price": "24.39",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/26857-large_default/olio-kz-kart-per-cambio-xeramic-kart-transmission-oil-1l.jpg",
+    "imageLocal": "/images/products/olio-kz-kart-per-cambio-xeramic-kart-transmission-oil-1l.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/olio-cambio-ingranaggi-mondokart/olio-kz-kart-per-cambio-xeramic-kart-transmission-oil-1l.html"
+  },
+  {
+    "id": "lubrificanti-brand-5",
+    "name": "Olio Ingranaggi motori monomarcia Wladoil kart, go",
+    "slug": "olio-ingranaggi-motori-monomarcia-wladoil-kart-go",
+    "brand": "CBK Racing",
+    "price": "16.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/9727-large_default/olio-ingranaggi-motori-monomarcia-wladoil.jpg",
+    "imageLocal": "/images/products/olio-ingranaggi-motori-monomarcia-wladoil-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/olio-cambio-ingranaggi-mondokart/olio-ingranaggi-motori-monomarcia-wladoil.html"
+  },
+  {
+    "id": "lubrificanti-brand-6",
+    "name": "Additivo Silkolene ProCCA",
+    "slug": "additivo-silkolene-procca",
+    "brand": "CBK Racing",
+    "price": "24.95",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/16971-large_default/additivo-silkolene-procca.jpg",
+    "imageLocal": "/images/products/additivo-silkolene-procca.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/additivi-mondokart/additivo-silkolene-procca.html"
+  },
+  {
+    "id": "lubrificanti-brand-7",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 600ml WD40 - FLEXIBLE",
+    "slug": "wd-40-bomboletta-spray-lubrificante-600ml-wd40-flexible",
+    "brand": "CBK Racing",
+    "price": "15.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/17284-large_default/wd-40-bomboletta-spray-lubrificante-600ml-flexible-new.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-600ml-wd40-flexible.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-600ml-flexible-new.html"
+  },
+  {
+    "id": "lubrificanti-brand-8",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 500ml DOPPIA POSIZIONE",
+    "slug": "wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione",
+    "brand": "CBK Racing",
+    "price": "10.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22952-large_default/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione-wd40.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-500ml-doppia-posizione-wd40.html"
+  },
+  {
+    "id": "lubrificanti-brand-9",
+    "name": "WD-40 - Bomboletta Spray Lubrificante 400ml CLASSIC WD40",
+    "slug": "wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40",
+    "brand": "CBK Racing",
+    "price": "9.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/22954-large_default/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.jpg",
+    "imageLocal": "/images/products/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/pulitori-sgrassanti-vari-mondokart/wd-40-bomboletta-spray-lubrificante-400ml-classic-wd40.html"
+  },
+  {
+    "id": "lubrificanti-brand-10",
+    "name": "Additivo Benzine Wladogas Octaplus Wladoil kart, go",
+    "slug": "additivo-benzine-wladogas-octaplus-wladoil-kart-go",
+    "brand": "CBK Racing",
+    "price": "32.99",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/21761-large_default/additivo-benzine-wladogas-octaplus-wladoil.jpg",
+    "imageLocal": "/images/products/additivo-benzine-wladogas-octaplus-wladoil-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/lubrificanti-additivi-mondokart/additivi-mondokart/additivo-benzine-wladogas-octaplus-wladoil.html"
+  }
+]

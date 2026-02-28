@@ -1,0 +1,57 @@
+[
+  {
+    "id": "usati-1",
+    "name": "Kart USATO completo Tony Kart RacerEVR/Reedster KF2",
+    "slug": "kart-usato-completo-tony-kart-racerevrreedster-kf2",
+    "brand": "TonyKart OTK",
+    "price": "3.60",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/15546-large_default/kart-usato-completo-tony-kart-racerevr-reedster.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-tony-kart-racerevrreedster-kf2.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-tony-kart-racerevr-reedster.html"
+  },
+  {
+    "id": "usati-2",
+    "name": "Kart USATO completo Mini Ricciardo/Swift kart, go",
+    "slug": "kart-usato-completo-mini-ricciardoswift-kart-go",
+    "brand": "CBK Racing",
+    "price": "2.43",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/9804-large_default/kart-usato-completo-mini-ricciardo-swift.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-mini-ricciardoswift-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-mini-ricciardo-swift.html"
+  },
+  {
+    "id": "usati-3",
+    "name": "Kart USATO completo Mini Tonykart/Vortex kart, go",
+    "slug": "kart-usato-completo-mini-tonykartvortex-kart-go",
+    "brand": "Vortex",
+    "price": "2.38",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/15512-large_default/kart-usato-completo-mini-tonykart-vortex.jpg",
+    "imageLocal": "/images/products/kart-usato-completo-mini-tonykartvortex-kart-go.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/kart-completi-usati-mondokart/kart-usato-completo-mini-tonykart-vortex.html"
+  },
+  {
+    "id": "usati-4",
+    "name": "Telaio USATO Reparto Corse Top-Kart Dreamer KZ - NEW - RXT",
+    "slug": "telaio-usato-reparto-corse-top-kart-dreamer-kz-new-rxt",
+    "brand": "CBK Racing",
+    "price": "2.44",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/19853-large_default/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-2021-rxt-magnesio.jpg",
+    "imageLocal": "/images/products/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-rxt.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/telai-usati-mondokart/telaio-usato-reparto-corse-top-kart-dreamer-kz-new-2021-rxt-magnesio.html"
+  },
+  {
+    "id": "usati-5",
+    "name": "Telaio Usato KR Kart Republic OK/OKJ - Fia Motorsport Games",
+    "slug": "telaio-usato-kr-kart-republic-okokj-fia-motorsport-games",
+    "brand": "Kart Republic",
+    "price": "2.44",
+    "discountedPrice": null,
+    "imageUrl": "https://www.mondokart.com/25688-large_default/telaio-usato-kr-okokj-fia-motorsport-games.jpg",
+    "imageLocal": "/images/products/telaio-usato-kr-kart-republic-okokj-fia-motorsport-games.jpg",
+    "productUrl": "https://www.mondokart.com/it/occasioni-mondokart/telai-usati-mondokart/telaio-usato-kr-okokj-fia-motorsport-games.html"
+  }
+]
