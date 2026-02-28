@@ -29,7 +29,7 @@ export default function ProductDetailPage() {
   const slug = params?.slug as string
 
   // Find product by slug
-  const product = (productsData.products as Product[]).find((p) => p.slug === slug)
+  const product = ((productsData as unknown as { products: Product[] }).products).find((p) => p.slug === slug)
 
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
@@ -69,7 +69,7 @@ export default function ProductDetailPage() {
     : 0
 
   // Get related products from same category
-  const relatedProducts = (productsData.products as Product[])
+  const relatedProducts = ((productsData as unknown as { products: Product[] }).products)
     .filter((p) => p.category === product.category && p.slug !== product.slug)
     .slice(0, 4)
 

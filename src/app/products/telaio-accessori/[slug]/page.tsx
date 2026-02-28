@@ -77,7 +77,7 @@ export default async function SubcategoryPage({ params }: { params: Promise<{ sl
     notFound()
   }
 
-  const products = productsData.products as Product[]
+  const products = (productsData as unknown as { products: Product[] }).products
   const allCategoryProducts = products.filter((p) => p.category === categoryId)
 
   // Pass data to client component

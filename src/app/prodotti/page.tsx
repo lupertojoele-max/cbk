@@ -35,6 +35,7 @@ const categories = [
   { id: 'portacorona-portadisco', label: 'Portacorona e Portadisco' },
   { id: 'telai-nuovi', label: 'Telai Nuovi' },
   { id: 'motore-ricambi', label: 'Motore e Accessori' },
+  { id: 'ricambi-motore', label: 'Ricambi Motore' },
   { id: 'carburatori', label: 'Carburatori' },
   { id: 'radiatori-accessori', label: 'Radiatori e Accessori' },
   { id: 'scarichi-silenziatori', label: 'Scarichi e Silenziatori' },
@@ -88,7 +89,7 @@ export default function ProdottiPage() {
   const [sortBy, setSortBy] = useState('featured')
   const [currentPage, setCurrentPage] = useState(1)
 
-  const products = productsData.products as Product[]
+  const products = (productsData as unknown as { products: Product[] }).products
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
