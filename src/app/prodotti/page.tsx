@@ -1,12 +1,13 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect, Suspense } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import productsData from '../../../data/products.json'
 
-const PRODUCTS_PER_PAGE = 24
+const PRODUCTS_PER_PAGE = 48
 
 interface Product {
   id: string
@@ -82,12 +83,76 @@ const brands = [
   'Varie',
 ]
 
-export default function ProdottiPage() {
-  const [selectedCategory, setSelectedCategory] = useState('tutti')
-  const [selectedBrand, setSelectedBrand] = useState('Tutti')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [sortBy, setSortBy] = useState('featured')
-  const [currentPage, setCurrentPage] = useState(1)
+function ProdottiPageInner() {
+  const searchParams = useSearchParams()
+  const router = useRouter()
+
+  // Read filters from URL params
+  const selectedCategory = searchParams.get('categoria') || 'tutti'
+  const selectedBrand = searchParams.get('brand') || 'Tutti'
+  const searchQuery = searchParams.get('q') || ''
+  const sortBy = searchParams.get('ordine') || 'featured'
+  const currentPage = parseInt(searchParams.get('pagina') || '1', 10)
+  const minPriceParam = searchParams.get('prezzoMin')
+  const maxPriceParam = searchParams.get('prezzoMax')
+  const minPrice = minPriceParam ? parseFloat(minPriceParam) : undefined
+  const maxPrice = maxPriceParam ? parseFloat(maxPriceParam) : undefined
+  const soloDisponibili = searchParams.get('disponibili') === 'true'
+
+  // Local state for price inputs (applied on blur/enter)
+  const [localMinPrice, setLocalMinPrice] = useState(minPriceParam || '')
+  const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam || '')
+
+  const updateURL = useCallback((updates: Record<string, string | null>) => {
+    const params = new URLSearchParams(searchParams.toString())
+    Object.entries(updates).forEach(([key, value]) => {
+      if (value === null || value === '' || value === 'tutti' || value === 'Tutti' || value === 'featured' || value === '1') {
+        params.delete(key)
+      } else {
+        params.set(key, value)
+      }
+    })
+    const qs = params.toString()
+    router.push(qs ? '/prodotti?' + qs : '/prodotti', { scroll: false })
+  }, [searchParams, router])
+
+  const handleCategoryChange = useCallback((cat: string) => {
+    updateURL({ categoria: cat, pagina: null })
+  }, [updateURL])
+
+  const handleBrandChange = useCallback((brand: string) => {
+    updateURL({ brand, pagina: null })
+  }, [updateURL])
+
+  const handleSearchChange = useCallback((q: string) => {
+    updateURL({ q, pagina: null })
+  }, [updateURL])
+
+  const handleSortChange = useCallback((ordine: string) => {
+    updateURL({ ordine, pagina: null })
+  }, [updateURL])
+
+  const handlePageChange = useCallback((pagina: number) => {
+    updateURL({ pagina: String(pagina) })
+  }, [updateURL])
+
+  const handleDisponibiliChange = useCallback((checked: boolean) => {
+    updateURL({ disponibili: checked ? 'true' : null, pagina: null })
+  }, [updateURL])
+
+  const handlePriceApply = useCallback(() => {
+    updateURL({
+      prezzoMin: localMinPrice || null,
+      prezzoMax: localMaxPrice || null,
+      pagina: null
+    })
+  }, [localMinPrice, localMaxPrice, updateURL])
+
+  const handleResetFilters = useCallback(() => {
+    setLocalMinPrice('')
+    setLocalMaxPrice('')
+    router.push('/prodotti', { scroll: false })
+  }, [router])
 
   const products = (productsData as unknown as { products: Product[] }).products
 
@@ -116,7 +181,20 @@ export default function ProdottiPage() {
       )
     }
 
-    // Sort products
+    // Filter by price range
+    if (minPrice !== undefined) {
+      filtered = filtered.filter((p) => parseFloat(p.price) >= minPrice)
+    }
+    if (maxPrice !== undefined) {
+      filtered = filtered.filter((p) => parseFloat(p.price) <= maxPrice)
+    }
+
+    // Filter solo disponibili
+    if (soloDisponibili) {
+      filtered = filtered.filter((p) => p.inStock)
+    }
+
+        // Sort products
     const sorted = [...filtered].sort((a, b) => {
       switch (sortBy) {
         case 'price-asc':
@@ -135,7 +213,7 @@ export default function ProdottiPage() {
     })
 
     return sorted
-  }, [products, selectedCategory, selectedBrand, searchQuery, sortBy])
+  }, [products, selectedCategory, selectedBrand, searchQuery, sortBy, minPrice, maxPrice, soloDisponibili])
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE)
@@ -143,12 +221,6 @@ export default function ProdottiPage() {
     const start = (currentPage - 1) * PRODUCTS_PER_PAGE
     return filteredProducts.slice(start, start + PRODUCTS_PER_PAGE)
   }, [filteredProducts, currentPage])
-
-  // Reset page when filters change
-  const handleFilterChange = useCallback((setter: (val: string) => void, value: string) => {
-    setter(value)
-    setCurrentPage(1)
-  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-16">
@@ -175,7 +247,7 @@ export default function ProdottiPage() {
               type="text"
               placeholder="Cerca prodotti per nome, descrizione o brand..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg
                 focus:ring-2 focus:ring-racing-red focus:border-racing-red focus:scale-[1.02]
                 transition-all duration-300 dark:bg-gray-700 dark:text-white"
@@ -188,7 +260,7 @@ export default function ProdottiPage() {
               {categories.map((cat) => (
                 <button
                   key={cat.id}
-                  onClick={() => handleFilterChange(setSelectedCategory, cat.id)}
+                  onClick={() => handleCategoryChange(cat.id)}
                   className={`px-4 py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
                     selectedCategory === cat.id
                       ? 'bg-racing-red text-white shadow-md active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-1'
@@ -209,7 +281,7 @@ export default function ProdottiPage() {
               </label>
               <select
                 value={selectedBrand}
-                onChange={(e) => handleFilterChange(setSelectedBrand, e.target.value)}
+                onChange={(e) => handleBrandChange(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                   focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
@@ -227,7 +299,7 @@ export default function ProdottiPage() {
               </label>
               <select
                 value={sortBy}
-                onChange={(e) => handleFilterChange(setSortBy, e.target.value)}
+                onChange={(e) => handleSortChange(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                   focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
@@ -239,7 +311,58 @@ export default function ProdottiPage() {
             </div>
           </div>
 
-          {/* Results Count */}
+          {/* Prezzo e Disponibilita */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                Prezzo min (€)
+              </label>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="0"
+                value={localMinPrice}
+                onChange={(e) => setLocalMinPrice(e.target.value)}
+                onBlur={handlePriceApply}
+                onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                Prezzo max (€)
+              </label>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="9999"
+                value={localMaxPrice}
+                onChange={(e) => setLocalMaxPrice(e.target.value)}
+                onBlur={handlePriceApply}
+                onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div className="flex items-end">
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={soloDisponibili}
+                  onChange={(e) => handleDisponibiliChange(e.target.checked)}
+                  className="w-5 h-5 accent-racing-red rounded cursor-pointer"
+                />
+                <span className="text-sm font-bold text-gray-700 dark:text-gray-300 group-hover:text-racing-red transition-colors">
+                  Solo disponibili
+                </span>
+              </label>
+            </div>
+          </div>
+
+                    {/* Results Count */}
           <div className="mt-4 text-sm font-bold text-gray-600 dark:text-gray-400">
             <span className="text-racing-red font-black">{filteredProducts.length}</span> prodott{filteredProducts.length === 1 ? 'o' : 'i'}{' '}
             trovat{filteredProducts.length === 1 ? 'o' : 'i'}
@@ -253,12 +376,7 @@ export default function ProdottiPage() {
               Nessun prodotto trovato con i filtri selezionati.
             </p>
             <button
-              onClick={() => {
-                setSelectedCategory('tutti')
-                setSelectedBrand('Tutti')
-                setSearchQuery('')
-                setCurrentPage(1)
-              }}
+              onClick={handleResetFilters}
               className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 shadow-md focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-2"
             >
               Resetta Filtri
@@ -311,7 +429,7 @@ export default function ProdottiPage() {
             {totalPages > 1 && (
               <div className="mt-12 flex justify-center items-center gap-2">
                 <button
-                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 rounded-lg font-bold transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red"
                 >
@@ -333,7 +451,7 @@ export default function ProdottiPage() {
                     return (
                       <button
                         key={pageNum}
-                        onClick={() => setCurrentPage(pageNum)}
+                        onClick={() => handlePageChange(pageNum)}
                         className={`w-10 h-10 rounded-lg font-bold transition-all duration-200 ${
                           currentPage === pageNum
                             ? 'bg-racing-red text-white'
@@ -347,7 +465,7 @@ export default function ProdottiPage() {
                 </div>
 
                 <button
-                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 rounded-lg font-bold transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red"
                 >
@@ -363,6 +481,21 @@ export default function ProdottiPage() {
         )}
       </div>
     </div>
+  )
+}
+
+export default function ProdottiPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-16 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-racing-red border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-600 dark:text-gray-400 font-medium">Caricamento catalogo...</p>
+        </div>
+      </div>
+    }>
+      <ProdottiPageInner />
+    </Suspense>
   )
 }
 
