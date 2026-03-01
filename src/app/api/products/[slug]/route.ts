@@ -33,9 +33,7 @@ interface Product {
   featured?: boolean
 }
 
-const allProducts: Product[] = (
-  (productsData as { products?: Product[] }).products ?? (productsData as Product[])
-).map((p) => ({ ...p, inStock: p.inStock ?? true }))
+const allProducts: Product[] = (productsData as unknown as { products: Product[] }).products.map((p) => ({ ...p, inStock: p.inStock ?? true }))
 
 export async function OPTIONS() {
   return optionsResponse()

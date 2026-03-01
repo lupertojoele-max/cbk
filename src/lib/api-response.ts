@@ -28,7 +28,7 @@ export function addRateLimitHeaders(
 
 export function successResponse<T>(
   data: T,
-  meta?: Record<string, unknown>,
+  meta?: Record<string, unknown> | null,
   status = 200,
   extraHeaders: Record<string, string> = {}
 ) {
