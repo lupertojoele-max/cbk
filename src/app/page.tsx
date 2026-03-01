@@ -114,20 +114,20 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <RacingStagger staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <RacingStaggerItem className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">15+</div>
-              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Vittorie Stagione</div>
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">6.800+</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Prodotti a Catalogo</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">6</div>
-              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Piloti Professionisti</div>
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">24h</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Spedizione Express</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">10</div>
-              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Kart da Gara</div>
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">50+</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Brand Partner</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">3</div>
-              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Campionati</div>
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">10+</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Anni nel Karting</div>
             </RacingStaggerItem>
           </RacingStagger>
         </div>
@@ -161,17 +161,17 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <RacingFadeIn delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pronto a Vivere l'Eccellenza delle Corse?
+              Il Tuo Setup Perfetto Inizia Qui
             </h2>
           </RacingFadeIn>
           <RacingFadeIn delay={0.4}>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contattaci per saperne di più sul nostro team, opportunità di sponsorizzazione o eventi futuri
+              Hai bisogno di assistenza tecnica per scegliere il ricambio giusto? Il team CBK1 è a tua disposizione per guidarti nel setup perfetto del tuo kart.
             </p>
           </RacingFadeIn>
           <RacingFadeIn delay={0.6}>
             <Button size="lg" className="bg-racing-red hover:bg-racing-red/90 text-white px-8 py-3 racing-lift">
-              <Link href="/contact">Contattaci</Link>
+              <Link href="/contatti">Contatta il Team Tecnico</Link>
             </Button>
           </RacingFadeIn>
         </div>

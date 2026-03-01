@@ -31,15 +31,15 @@ interface MegaHeroProps {
 const defaultSlides: HeroSlide[] = [
   {
     id: 'championship',
-    title: 'Eccellenza nelle Corse',
-    subtitle: 'Campionato CBK Racing 2024',
-    description: 'Vivi il brivido delle corse professionali di go-kart con tecnologia all\'avanguardia e piloti appassionati che competono ai massimi livelli.',
+    title: 'Il Kart che vuoi.',
+    subtitle: 'I Ricambi che ti servono. Consegna in 24h.',
+    description: '6.800+ componenti OEM per kart professionale: telai, motori, freni, telemetrie, abbigliamento. OTK, CRG, BirelArt, IAME, Rotax — il catalogo piu completo del karting italiano.',
     image: '/images/kart-racing-hero.png',
     cta: {
-      primary: { text: 'Vedi Risultati', href: '/results' },
-      secondary: { text: 'Conosci i Piloti', href: '/drivers' },
+      primary: { text: 'Esplora il Catalogo', href: '/prodotti' },
+      secondary: { text: 'Trova il tuo Ricambio', href: '/prodotti' },
     },
-    badge: 'Live Ora',
+    badge: 'Spedizione 24h',
   },
 ]
 
@@ -233,12 +233,12 @@ export function MegaHero({
 
             {/* Title */}
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold racing-text-shadow leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight racing-text-shadow leading-none"
+              initial={{ opacity: 0, y: 40, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.35, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              {showVideo ? 'CBK Racing' : currentSlideData.title}
+              {showVideo ? 'CBK1 Karting' : currentSlideData.title}
             </motion.h1>
 
             {/* Description */}
@@ -249,21 +249,21 @@ export function MegaHero({
               transition={{ delay: 0.5 }}
             >
               {showVideo
-                ? 'Vivi il brivido delle corse professionali di go-kart con tecnologia all\'avanguardia e piloti appassionati'
+                ? '6.800+ componenti kart originali. OTK, CRG, BirelArt, IAME, Rotax. Spedizione rapida in tutta Italia.'
                 : currentSlideData.description
               }
             </motion.p>
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-4 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
               <Button
                 size="lg"
-                className="bg-racing-red hover:bg-racing-red/90 text-white font-semibold px-8 py-4 h-14 text-lg"
+                className="bg-racing-red hover:bg-racing-red/90 text-white font-bold px-8 py-4 h-12 sm:h-14 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50 active:scale-[0.98]"
                 asChild
               >
                 <Link href={currentSlideData.cta.primary.href}>
@@ -275,7 +275,7 @@ export function MegaHero({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-black font-semibold px-8 py-4 h-14 text-lg"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-black font-bold px-8 py-4 h-12 sm:h-14 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50 active:scale-[0.98]"
                   asChild
                 >
                   <Link href={currentSlideData.cta.secondary.href}>

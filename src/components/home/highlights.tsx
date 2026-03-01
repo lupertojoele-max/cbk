@@ -19,49 +19,49 @@ interface HighlightCard {
 const highlightCards: HighlightCard[] = [
   {
     id: 'championship',
-    title: 'Vittoria Campionato',
+    title: 'Catalogo Kart Completo',
     description: 'CBK Racing conquista un\'altra vittoria di campionato con una prestazione eccezionale sul circuito di Monza.',
-    badge: { text: 'Ultime News', className: 'bg-racing-red text-white' },
-    cta: { text: 'Leggi di Più', href: '/news' },
+    badge: { text: 'Catalogo Completo', className: 'bg-racing-red text-white' },
+    cta: { text: 'Sfoglia i Prodotti', href: '/prodotti' },
     icon: <Trophy className="w-6 h-6 text-white" />,
     iconBg: 'bg-racing-red',
     accentBg: 'bg-racing-red',
-    stats: { label: 'Posizione', value: '1°' }
+    stats: { label: 'Prodotti', value: '6.800+' }
   },
   {
     id: 'upcoming-event',
-    title: 'Campionato Italiano Karting',
+    title: 'Spedizione in 24/48 Ore',
     description: 'Unisciti a noi per il prossimo round del Campionato Italiano sui circuiti più iconici d\'Italia.',
-    badge: { text: 'Prossimo Evento', className: 'bg-blue-600 text-white' },
-    cta: { text: 'Vedi Calendario', href: '/calendar' },
+    badge: { text: 'Spedizione Rapida', className: 'bg-blue-600 text-white' },
+    cta: { text: 'Scopri Come Funziona', href: '/contatti' },
     icon: <Calendar className="w-6 h-6 text-white" />,
     iconBg: 'bg-blue-600',
     accentBg: 'bg-blue-600',
-    stats: { label: 'Giorni Mancanti', value: '12' }
+    stats: { label: 'Ore Consegna', value: '24h' }
   },
   {
     id: 'technology',
-    title: 'Nuova Tecnologia Kart',
-    description: 'Scopri la nostra ultima tecnologia di gara ad alte prestazioni e le innovazioni ingegneristiche.',
-    badge: { text: 'Aggiornamento Team', className: 'bg-emerald-600 text-white' },
-    cta: { text: 'Esplora Flotta', href: '/karts' },
+    title: 'Assistenza Tecnica Specializzata',
+    description: 'Non sai quale ricambio scegliere? Il nostro team tecnico ti supporta nella selezione del componente giusto per il tuo setup.',
+    badge: { text: 'Supporto Tecnico', className: 'bg-emerald-600 text-white' },
+    cta: { text: 'Contatta il Team', href: '/contatti' },
     icon: <Wrench className="w-6 h-6 text-white" />,
     iconBg: 'bg-emerald-600',
     accentBg: 'bg-emerald-600',
-    stats: { label: 'Nuovi Kart', value: '3' }
+    stats: { label: 'Brand Partner', value: '50+' }
   }
 ]
 
 export function Highlights() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 mb-4">
-            Ultime da CBK Racing
+          <h2 className="text-3xl md:text-4xl font-bold text-racing-gray-900 dark:text-white mb-4">
+            Perche Scegliere CBK1
           </h2>
-          <p className="text-lg text-racing-gray-600 max-w-2xl mx-auto">
-            Rimani aggiornato con le nostre ultime gare, successi e sviluppi del team
+          <p className="text-lg text-racing-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Il catalogo piu completo del karting italiano. Componenti OEM, spedizione rapida, assistenza tecnica dedicata.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export function Highlights() {
           {highlightCards.map((card) => (
             <Card
               key={card.id}
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-racing-gray-200 overflow-hidden"
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-racing-gray-200 dark:border-gray-700 dark:bg-gray-800 overflow-hidden"
             >
               {/* Colored accent stripe */}
               <div className={`h-1.5 w-full ${card.accentBg}`} />
@@ -81,10 +81,10 @@ export function Highlights() {
                   </div>
                   {card.stats && (
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-racing-gray-900">
+                      <div className="text-3xl font-bold text-racing-gray-900 dark:text-white">
                         {card.stats.value}
                       </div>
-                      <div className="text-xs font-semibold text-racing-gray-500 uppercase tracking-widest mt-1">
+                      <div className="text-xs font-semibold text-racing-gray-500 dark:text-gray-400 uppercase tracking-widest mt-1">
                         {card.stats.label}
                       </div>
                     </div>
@@ -95,10 +95,10 @@ export function Highlights() {
                   <Badge className={`mb-3 text-xs font-semibold ${card.badge.className}`}>
                     {card.badge.text}
                   </Badge>
-                  <CardTitle className="text-xl font-bold text-racing-gray-900 group-hover:text-racing-red transition-colors leading-snug">
+                  <CardTitle className="text-xl font-bold text-racing-gray-900 dark:text-white group-hover:text-racing-red transition-colors leading-snug">
                     {card.title}
                   </CardTitle>
-                  <CardDescription className="text-racing-gray-600 leading-relaxed mt-2 text-sm">
+                  <CardDescription className="text-racing-gray-600 dark:text-gray-400 leading-relaxed mt-2 text-sm">
                     {card.description}
                   </CardDescription>
                 </div>
@@ -107,7 +107,7 @@ export function Highlights() {
               <CardContent className="pt-0">
                 <Button
                   variant="outline"
-                  className="w-full border-racing-gray-300 text-racing-gray-700 group-hover:border-racing-red group-hover:text-racing-red transition-colors font-medium"
+                  className="w-full border-racing-gray-300 dark:border-gray-600 text-racing-gray-700 dark:text-gray-200 group-hover:border-racing-red group-hover:text-racing-red transition-colors font-medium active:scale-[0.98]"
                   asChild
                 >
                   <Link href={card.cta.href}>
