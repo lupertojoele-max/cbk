@@ -191,8 +191,8 @@ export default function ProdottiPage() {
                   onClick={() => handleFilterChange(setSelectedCategory, cat.id)}
                   className={`px-4 py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
                     selectedCategory === cat.id
-                      ? 'bg-racing-red text-white shadow-md'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white'
+                      ? 'bg-racing-red text-white shadow-md active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-1'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-1'
                   }`}
                 >
                   {cat.label}
@@ -259,7 +259,7 @@ export default function ProdottiPage() {
                 setSearchQuery('')
                 setCurrentPage(1)
               }}
-              className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md"
+              className="mt-4 px-6 py-3 bg-racing-red text-white font-bold rounded-lg hover:bg-red-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 shadow-md focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-2"
             >
               Resetta Filtri
             </button>
@@ -313,7 +313,7 @@ export default function ProdottiPage() {
                 <button
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 rounded-lg font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white"
+                  className="px-4 py-2 rounded-lg font-bold transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red"
                 >
                   ← Prec
                 </button>
@@ -349,7 +349,7 @@ export default function ProdottiPage() {
                 <button
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 rounded-lg font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white"
+                  className="px-4 py-2 rounded-lg font-bold transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red"
                 >
                   Succ →
                 </button>

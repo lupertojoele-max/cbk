@@ -21,9 +21,8 @@ interface Product {
 
 const allProducts = (productsData as unknown as { products: Product[] }).products
 
-export async function generateStaticParams() {
-  return allProducts.slice(0, 200).map((p) => ({ slug: p.slug }))
-}
+// Dynamic rendering for all product pages (6789 products - too many to prerender on Windows)
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
