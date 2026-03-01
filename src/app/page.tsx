@@ -8,6 +8,7 @@ import { NewsList } from "@/components/home/news-list"
 import { SponsorStripAPI } from "@/components/sponsors/sponsor-strip-api"
 import { RacingStagger, RacingStaggerItem, RacingFadeIn } from "@/components/animations"
 import Link from "next/link"
+import { NewsletterForm } from '@/components/home/newsletter-form'
 
 // Loading components for Suspense boundaries
 function KartsGridSkeleton() {
@@ -238,6 +239,40 @@ export default function Home() {
       <Suspense fallback={<SponsorStripSkeleton />}>
         <SponsorStripAPI />
       </Suspense>
+
+
+      {/* Newsletter / Community Section */}
+      <section className="py-16 bg-zinc-900 border-t border-racing-red/20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-block bg-racing-red/10 border border-racing-red/30 rounded-full px-4 py-1 text-sm text-racing-red font-bold uppercase tracking-widest mb-6">
+              CBK Community
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+              Resta Aggiornato sui Nuovi Prodotti
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Iscriviti alla newsletter CBK1: novita di catalogo, offerte esclusive, guide tecniche
+              per migliorare il tuo setup in pista. La community dei piloti seri inizia qui.
+            </p>
+            <NewsletterForm />
+            <div className="mt-10 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-black text-racing-red mb-1">6.800+</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">Prodotti in Catalogo</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-racing-red mb-1">24h</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">Spedizione Express</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-racing-red mb-1">10+</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">Anni nel Karting</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-zinc-900 text-white">
