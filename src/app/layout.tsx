@@ -20,44 +20,60 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CBK Racing - Professional Go-Kart Racing Team",
-    template: "%s | CBK Racing"
+    default: "CBK1 | Ricambi e Accessori Kart Professionali",
+    template: "%s | CBK1"
   },
-  description: "Professional go-kart racing team competing in national and international championships. Experience the thrill of motorsport with cutting-edge technology and passionate drivers.",
-  keywords: ["go-kart racing", "motorsport", "racing team", "championships", "CBK Racing", "karting", "professional racing", "motorsport team"],
-  authors: [{ name: "CBK Racing Team" }],
-  creator: "CBK Racing Team",
+  description: "Ricambi kart originali, accessori karting e attrezzatura professionale. OTK, CRG, BirelArt, IAME, Rotax. Spedizione rapida in tutta Italia. CBK Racing.",
+  keywords: [
+    "ricambi kart",
+    "accessori karting",
+    "kart professionale",
+    "ricambi go kart",
+    "accessori kart italia",
+    "CBK Racing",
+    "CBK1",
+    "telaio kart",
+    "motore kart ricambi",
+    "pneumatici kart",
+    "telemetria kart",
+    "freni kart",
+    "abbigliamento karting",
+    "karting professionale",
+    "OTK ricambi",
+    "CRG kart",
+    "BirelArt",
+    "IAME ricambi",
+    "Rotax kart"
+  ],
+  authors: [{ name: "CBK1 - CBK Racing" }],
+  creator: "CBK1",
   publisher: "CBK Racing",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   alternates: {
     canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'it-IT': '/it-IT',
-    },
   },
   openGraph: {
-    title: "CBK Racing - Professional Go-Kart Racing Team",
-    description: "Professional go-kart racing team competing in national and international championships. Experience the thrill of motorsport with cutting-edge technology and passionate drivers.",
+    title: "CBK1 | Ricambi e Accessori Kart Professionali",
+    description: "Ricambi kart originali, accessori karting e attrezzatura professionale. OTK, CRG, BirelArt, IAME, Rotax. Spedizione rapida in tutta Italia.",
     type: "website",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    siteName: "CBK Racing",
-    locale: "en_US",
+    siteName: "CBK1",
+    locale: "it_IT",
     images: [
       {
         url: "/images/seo/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "CBK Racing - Professional Go-Kart Racing Team",
+        alt: "CBK1 - Ricambi e Accessori Kart Professionali",
         type: "image/jpeg",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CBK Racing - Professional Go-Kart Racing Team",
-    description: "Professional go-kart racing team competing in national and international championships",
-    creator: "@cbkracing",
+    title: "CBK1 | Ricambi e Accessori Kart Professionali",
+    description: "Ricambi kart originali, accessori karting e attrezzatura professionale. OTK, CRG, BirelArt, IAME, Rotax. Spedizione rapida in tutta Italia.",
+    creator: "@cbk1racing",
     images: ["/images/seo/og-default.jpg"],
   },
   robots: {
@@ -86,7 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
