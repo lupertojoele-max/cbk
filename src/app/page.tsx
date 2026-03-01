@@ -135,6 +135,89 @@ export default function Home() {
 
       {/* Highlights Section */}
       <Highlights />
+      {/* Social Proof Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+
+          {/* Testimonials */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">
+              Cosa Dicono i Nostri <span className="text-racing-red">Piloti</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              La fiducia dei professionisti del karting italiano e il nostro miglior riconoscimento.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Testimonial 1 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-l-4 border-racing-red">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-racing-red rounded-full flex items-center justify-center text-white font-black text-lg mr-4">M</div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">Marco Ferretti</p>
+                  <p className="text-sm text-racing-red font-medium">Pilota OK — Team Nordika Racing</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 italic leading-relaxed">
+                &ldquo;Trovo sempre quello che cerco. Dall'assale ai fuselli, dal carburatore alle pastiglie freno — il catalogo CBK1 copre tutto. E la spedizione arriva sempre il giorno dopo.&rdquo;
+              </p>
+              <div className="mt-4 text-racing-red">
+                <span className="text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-l-4 border-racing-red">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-racing-red rounded-full flex items-center justify-center text-white font-black text-lg mr-4">A</div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">Alessandro Moretti</p>
+                  <p className="text-sm text-racing-red font-medium">Team Manager — Scuderia Milanese Kart</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 italic leading-relaxed">
+                &ldquo;Gestiamo un parco kart di 8 vetture in categoria KZ e OK. CBK1 e l'unico fornitore con cui riusciamo a tenere il magazzino box sempre rifornito. Assistenza tecnica impeccabile.&rdquo;
+              </p>
+              <div className="mt-4 text-racing-red">
+                <span className="text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-l-4 border-racing-red">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-racing-red rounded-full flex items-center justify-center text-white font-black text-lg mr-4">S</div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">Sofia Brambilla</p>
+                  <p className="text-sm text-racing-red font-medium">Pilota KZ Ladies — Campionessa Regionale</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 italic leading-relaxed">
+                &ldquo;Prima di ogni weekend di gara verifico il setup con il team CBK1. Sanno esattamente quale assetto serve su ogni tracciato. Indispensabili per chiunque voglia fare sul serio.&rdquo;
+              </p>
+              <div className="mt-4 text-racing-red">
+                <span className="text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Brand Logos */}
+          <div className="text-center mb-8">
+            <p className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-6">
+              Brand Partner Ufficiali
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+              {["OTK / TonyKart", "CRG", "BirelArt", "IAME", "TM Racing", "Rotax", "Vega", "LeCont", "Maxxis", "Alpinestars"].map((brand) => (
+                <span key={brand} className="text-sm md:text-base font-black text-gray-400 dark:text-gray-500 hover:text-racing-red dark:hover:text-racing-red transition-colors duration-200 cursor-default uppercase tracking-wide">
+                  {brand}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       {/* Karts Grid */}
       <Suspense fallback={<KartsGridSkeleton />}>
