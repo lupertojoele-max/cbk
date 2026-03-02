@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useMemo, useCallback, useEffect, Suspense } from 'react'
+import { useState, useMemo, useCallback, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
 import productsData from '../../../data/products.json'
+import { ProductCard } from '@/components/products/product-card'
 
 const PRODUCTS_PER_PAGE = 48
 
@@ -26,61 +25,72 @@ interface Product {
   featured?: boolean
 }
 
-const categories = [
-  { id: 'tutti', label: 'Tutti i Prodotti' },
-  { id: 'freni-accessori', label: 'Freni e Accessori' },
-  { id: 'cerchi-mozzi-accessori', label: 'Cerchi Mozzi e Accessori' },
-  { id: 'assali-cuscinetti-chiavette', label: 'Assali Cuscinetti e Chiavette' },
-  { id: 'corone-catene', label: 'Corone, Catene e Accessori' },
-  { id: 'carenature', label: 'Carenature, Staffe e Paraurti' },
-  { id: 'portacorona-portadisco', label: 'Portacorona e Portadisco' },
-  { id: 'telai-nuovi', label: 'Telai Nuovi' },
-  { id: 'motore-ricambi', label: 'Motore e Accessori' },
-  { id: 'ricambi-motore', label: 'Ricambi Motore' },
-  { id: 'carburatori', label: 'Carburatori' },
-  { id: 'radiatori-accessori', label: 'Radiatori e Accessori' },
-  { id: 'scarichi-silenziatori', label: 'Scarichi e Silenziatori' },
-  { id: 'accensione-elettrica', label: 'Accensione ed Elettrica' },
-  { id: 'candele-accensione', label: 'Candele' },
-  { id: 'filtri-aria', label: 'Filtri Aria' },
-  { id: 'molle-cuscinetti', label: 'Molle e Cuscinetti' },
-  { id: 'pneumatici', label: 'Pneumatici e Gomme' },
-  { id: 'telemetrie', label: 'Telemetrie e Crono' },
-  { id: 'abbigliamento-caschi', label: 'Abbigliamento e Caschi' },
-  { id: 'accessori-caschi', label: 'Accessori Caschi' },
-  { id: 'sedili', label: 'Sedili' },
-  { id: 'volanti-accessori', label: 'Volanti e Accessori' },
-  { id: 'pedali-accessori', label: 'Pedali e Accessori' },
-  { id: 'accessori-telaio', label: 'Accessori Telaio' },
-  { id: 'adesivi', label: 'Adesivi' },
-  { id: 'lubrificanti', label: 'Lubrificanti e Oli' },
-  { id: 'attrezzatura', label: 'Attrezzatura Officina' },
-  { id: 'kart-completi', label: 'Kart Completi' },
-  { id: 'accessori-kart', label: 'Accessori Kart' },
-  { id: 'motori-nuovi', label: 'Motori Nuovi' },
-]
-
-const brands = [
-  'Tutti',
-  'LeCont',
-  'Vega',
-  'Maxxis',
-  'MG',
-  'Komet',
-  'AIM',
-  'Alfano',
-  'CRG',
-  'Tony Kart',
-  'Birel',
-  'IAME',
-  'ROK',
-  'Rotax',
-  'Alpinestars',
-  'Sparco',
-  'OMP',
-  'Tillotson',
-  'Racing',
-  'Varie',
+const CATEGORY_GROUPS = [
+  {
+    group: 'Kart',
+    items: [
+      { id: 'telai-nuovi',   label: 'Telai Nuovi' },
+      { id: 'kart-completi', label: 'Kart Completi' },
+    ],
+  },
+  {
+    group: 'Motore',
+    items: [
+      { id: 'motori-nuovi',          label: 'Motori Nuovi' },
+      { id: 'ricambi-motore',        label: 'Ricambi Motore' },
+      { id: 'motore-ricambi',        label: 'Motore e Accessori' },
+      { id: 'carburatori',           label: 'Carburatori' },
+      { id: 'candele-accensione',    label: 'Candele' },
+      { id: 'filtri-aria',           label: 'Filtri Aria' },
+      { id: 'accensione-elettrica',  label: 'Accensione ed Elettrica' },
+      { id: 'radiatori-accessori',   label: 'Radiatori e Accessori' },
+      { id: 'scarichi-silenziatori', label: 'Scarichi e Silenziatori' },
+      { id: 'lubrificanti',          label: 'Lubrificanti e Oli' },
+    ],
+  },
+  {
+    group: 'Freni e Ruote',
+    items: [
+      { id: 'freni-accessori',             label: 'Freni e Accessori' },
+      { id: 'cerchi-mozzi-accessori',      label: 'Cerchi Mozzi e Accessori' },
+      { id: 'assali-cuscinetti-chiavette', label: 'Assali Cuscinetti e Chiavette' },
+      { id: 'corone-catene',               label: 'Corone, Catene e Accessori' },
+      { id: 'portacorona-portadisco',      label: 'Portacorona e Portadisco' },
+      { id: 'pneumatici',                  label: 'Pneumatici e Gomme' },
+    ],
+  },
+  {
+    group: 'Telaio e Carrozzeria',
+    items: [
+      { id: 'carenature',       label: 'Carenature, Staffe e Paraurti' },
+      { id: 'accessori-telaio', label: 'Accessori Telaio' },
+      { id: 'molle-cuscinetti', label: 'Molle e Cuscinetti' },
+      { id: 'sedili',           label: 'Sedili' },
+      { id: 'pedali-accessori', label: 'Pedali e Accessori' },
+      { id: 'volanti-accessori',label: 'Volanti e Accessori' },
+    ],
+  },
+  {
+    group: 'Strumentazione',
+    items: [
+      { id: 'telemetrie', label: 'Telemetrie e Crono' },
+    ],
+  },
+  {
+    group: 'Pilota',
+    items: [
+      { id: 'abbigliamento-caschi', label: 'Abbigliamento e Caschi' },
+      { id: 'accessori-caschi',     label: 'Accessori Caschi' },
+    ],
+  },
+  {
+    group: 'Altro',
+    items: [
+      { id: 'adesivi',       label: 'Adesivi' },
+      { id: 'attrezzatura',  label: 'Attrezzatura Officina' },
+      { id: 'accessori-kart',label: 'Accessori Kart' },
+    ],
+  },
 ]
 
 function ProdottiPageInner() {
@@ -155,6 +165,12 @@ function ProdottiPageInner() {
   }, [router])
 
   const products = (productsData as unknown as { products: Product[] }).products
+
+  // Dynamic brands from data
+  const allBrands = useMemo(() => {
+    const set = new Set(products.map((p) => p.brand).filter(Boolean))
+    return ['Tutti', ...Array.from(set).sort()]
+  }, [products])
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
@@ -254,27 +270,29 @@ function ProdottiPageInner() {
             />
           </div>
 
-          {/* Category Tabs - Clean with Red Active */}
-          <div className="mb-6">
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
-                    selectedCategory === cat.id
-                      ? 'bg-racing-red text-white shadow-md active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-1'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-racing-red hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-racing-red focus:ring-offset-1'
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
+          {/* Filters row — categoria + brand + ordina */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                Categoria
+              </label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => handleCategoryChange(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
+                  focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
+              >
+                <option value="tutti">Tutti i Prodotti</option>
+                {CATEGORY_GROUPS.map((group) => (
+                  <optgroup key={group.group} label={group.group}>
+                    {group.items.map((cat) => (
+                      <option key={cat.id} value={cat.id}>{cat.label}</option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
             </div>
-          </div>
 
-          {/* Brand Filter & Sort */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
                 Brand
@@ -285,10 +303,8 @@ function ProdottiPageInner() {
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                   focus:ring-2 focus:ring-racing-red focus:border-racing-red transition-all duration-200 dark:bg-gray-700 dark:text-white cursor-pointer"
               >
-                {brands.map((brand) => (
-                  <option key={brand} value={brand}>
-                    {brand}
-                  </option>
+                {allBrands.map((brand) => (
+                  <option key={brand} value={brand}>{brand}</option>
                 ))}
               </select>
             </div>
@@ -499,119 +515,3 @@ export default function ProdottiPage() {
   )
 }
 
-function ProductCard({ product }: { product: Product }) {
-  const hasDiscount = product.originalPrice && parseFloat(product.originalPrice) > parseFloat(product.price)
-  const discountPercentage = hasDiscount
-    ? Math.round(((parseFloat(product.originalPrice!) - parseFloat(product.price)) / parseFloat(product.originalPrice!)) * 100)
-    : 0
-
-  return (
-    <div style={{ height: '380px', width: '100%', overflow: 'hidden' }}>
-      <Link
-        href={`/prodotti/${product.slug}`}
-        className="block bg-white dark:bg-gray-800 rounded-xl shadow-sm
-          hover:shadow-md hover:-translate-y-1 transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-racing-red"
-        style={{ height: '380px', width: '100%', display: 'block', overflow: 'hidden' }}
-      >
-        {/* Image Container - Fixed Exact Size */}
-        <div className="relative bg-white dark:bg-gray-800"
-          style={{ height: '180px', minHeight: '180px', maxHeight: '180px', width: '100%', overflow: 'hidden' }}
-        >
-          {product.featured && (
-            <div className="absolute top-2 left-2 z-10 bg-racing-red text-white text-xs font-bold px-3 py-1 rounded">
-              IN EVIDENZA
-            </div>
-          )}
-          {hasDiscount && (
-            <div className="absolute top-2 right-2 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
-              -{discountPercentage}%
-            </div>
-          )}
-          {!product.inStock && (
-            <div className="absolute inset-0 z-10 bg-black/60 backdrop-blur-sm flex items-center justify-center">
-              <span className="bg-gray-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-2xl">
-                ESAURITO
-              </span>
-            </div>
-          )}
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            padding: '15px',
-            overflow: 'hidden',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <Image
-              src={product.imageLocal || product.image || '/images/placeholder-product.jpg'}
-              alt={product.name}
-              fill
-              className="object-contain group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              loading="lazy"
-              style={{ padding: '15px' }}
-            />
-          </div>
-        </div>
-
-        {/* Product Info - Fixed Height Sections */}
-        <div style={{ height: '200px', minHeight: '200px', maxHeight: '200px', padding: '12px', display: 'flex', flexDirection: 'column' }}>
-          {/* Brand and Stock - Fixed Height */}
-          <div style={{ height: '20px', minHeight: '20px', maxHeight: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <p className="text-xs text-racing-red font-bold uppercase tracking-wide truncate" style={{ flex: 1 }}>
-              {product.brand}
-            </p>
-            {product.inStock ? (
-              <span className="px-1.5 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
-                Stock
-              </span>
-            ) : (
-              <span className="px-1.5 py-0.5 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold rounded" style={{ flexShrink: 0, marginLeft: '8px' }}>
-                Out
-              </span>
-            )}
-          </div>
-
-          {/* Name - Fixed Height 2 Lines */}
-          <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 group-hover:text-racing-red transition-colors overflow-hidden"
-            style={{ height: '40px', minHeight: '40px', maxHeight: '40px', fontSize: '13px', lineHeight: '20px', marginBottom: '8px' }}
-          >
-            {product.name}
-          </h3>
-
-          {/* Description - Fixed Height 2 Lines */}
-          <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2 overflow-hidden"
-            style={{ height: '32px', minHeight: '32px', maxHeight: '32px', lineHeight: '16px', marginBottom: '8px' }}
-          >
-            {product.description}
-          </p>
-
-          {/* Price Section - Fixed Height - Mix Style */}
-          <div style={{ height: '56px', minHeight: '56px', maxHeight: '56px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid', marginTop: 'auto' }}
-            className="border-gray-200 dark:border-gray-700"
-          >
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-              {hasDiscount && (
-                <p className="text-xs text-gray-500 dark:text-gray-400 line-through" style={{ marginBottom: '2px' }}>
-                  €{parseFloat(product.originalPrice!).toFixed(2)}
-                </p>
-              )}
-              <p className="text-xl font-black text-racing-red">
-                €{parseFloat(product.price).toFixed(2)}
-              </p>
-            </div>
-            <div className="bg-racing-red rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors duration-200"
-              style={{ width: '32px', height: '32px', minWidth: '32px', minHeight: '32px', flexShrink: 0 }}
-            >
-              <svg className="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ width: '16px', height: '16px' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </Link>
-    </div>
-  )
-}

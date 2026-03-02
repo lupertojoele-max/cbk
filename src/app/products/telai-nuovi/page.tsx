@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Badge } from '@/components/ui/badge'
 import { ExternalLink } from 'lucide-react'
 import productsData from '../../../../data/products.json'
 
@@ -19,26 +18,17 @@ interface ChassisProduct {
   inStock?: boolean
 }
 
-const CATEGORY_COLORS: Record<string, string> = {
-  'Mini':       'bg-green-100 text-green-800',
-  'Baby':       'bg-emerald-100 text-emerald-800',
-  'OK-Junior':  'bg-blue-100 text-blue-800',
-  'Junior':     'bg-blue-100 text-blue-800',
-  'OK':         'bg-purple-100 text-purple-800',
-  'Senior':     'bg-purple-100 text-purple-800',
-  'KZ':         'bg-red-100 text-red-800',
-}
 
 const BRAND_STRIPE: Record<string, string> = {
-  'CRG':           'bg-orange-500',
-  'Tony Kart':     'bg-blue-700',
-  'BirelArt':      'bg-red-600',
-  'Top-Kart':      'bg-green-700',
-  'Kart Republic': 'bg-purple-700',
-  'Praga':         'bg-yellow-500',
-  'Parolin':       'bg-teal-600',
-  'Kosmic':        'bg-gray-600',
-  'Intrepid':      'bg-slate-700',
+  'CRG':           'bg-racing-red',
+  'Tony Kart':     'bg-racing-blue',
+  'BirelArt':      'bg-racing-red',
+  'Top-Kart':      'bg-gray-600',
+  'Kart Republic': 'bg-gray-700',
+  'Praga':         'bg-gray-600',
+  'Parolin':       'bg-gray-500',
+  'Kosmic':        'bg-racing-blue',
+  'Intrepid':      'bg-gray-700',
 }
 
 function formatPrice(price: string): string {
@@ -123,70 +113,50 @@ export default function TelaiNuoviPage() {
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {brandProducts.map((product) => {
-                  const catColor = CATEGORY_COLORS[product.subcategory] || 'bg-gray-100 text-gray-800'
-
                   return (
                     <div
                       key={product.id}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm
-                        hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group
-                        border border-gray-200 dark:border-gray-700"
+                      className="group flex flex-col bg-white dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800"
                     >
-                      {/* Brand stripe */}
-                      <div className={`h-1.5 ${stripeColor}`} />
-
-                      {/* Image */}
-                      <div className="relative aspect-square bg-gray-50 dark:bg-gray-900 overflow-hidden">
+                      {/* Image — fixed height, no background */}
+                      <div className="relative h-48 flex-shrink-0 overflow-hidden">
+                        <div className={`absolute top-0 left-0 right-0 h-0.5 ${stripeColor} z-10`} />
                         <Image
                           src={product.imageLocal || product.image}
                           alt={product.name}
                           fill
-                          className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                          className="object-contain p-4 group-hover:scale-110 transition-transform duration-500 ease-out"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         />
-                        {product.featured && (
-                          <div className="absolute top-3 left-3">
-                            <span className="bg-racing-red text-white text-xs font-bold px-2 py-1 rounded">
-                              IN EVIDENZA
-                            </span>
-                          </div>
-                        )}
-                        <div className="absolute top-3 right-3">
-                          <Badge className={`text-xs font-semibold ${catColor}`}>
-                            {product.subcategory}
-                          </Badge>
-                        </div>
                       </div>
 
-                      {/* Info */}
-                      <div className="p-4">
-                        <p className="text-xs font-bold uppercase tracking-wide text-racing-red mb-1">
-                          {brand}
-                        </p>
-                        <h3 className="font-bold text-gray-900 dark:text-white text-sm leading-tight
-                          group-hover:text-racing-red transition-colors line-clamp-2 mb-2">
+                      {/* Content */}
+                      <div className="flex flex-col flex-1 p-4">
+                        <p className={`text-xs font-bold uppercase tracking-widest mb-1.5 ${
+                          stripeColor === 'bg-racing-red' ? 'text-racing-red' :
+                          stripeColor === 'bg-racing-blue' ? 'text-racing-blue' :
+                          'text-gray-500'
+                        }`}>{brand} · {product.subcategory}</p>
+
+                        <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 min-h-[2.5rem]">
                           {cleanName(product.name)}
                         </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-4">
-                          {product.description}
-                        </p>
 
-                        <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-700">
-                          <span className="text-xl font-black text-racing-red">
-                            {formatPrice(product.price)}
-                          </span>
-                          <Link
-                            href={product.mondokartUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                              bg-racing-red text-white text-xs font-bold
-                              hover:bg-red-700 transition-colors"
-                          >
-                            Acquista
-                            <ExternalLink className="w-3 h-3" />
-                          </Link>
+                        <div className="flex-1" />
+
+                        <div className="text-xl font-black text-gray-900 dark:text-white mt-3 mb-3">
+                          {formatPrice(product.price)}
                         </div>
+
+                        <Link
+                          href={product.mondokartUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center justify-center gap-1.5 w-full ${stripeColor} hover:opacity-90 text-white text-xs font-black uppercase tracking-widest py-2.5 rounded-lg transition-opacity duration-200`}
+                        >
+                          Acquista
+                          <ExternalLink className="w-3 h-3" />
+                        </Link>
                       </div>
                     </div>
                   )

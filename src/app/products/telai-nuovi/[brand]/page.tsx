@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Badge } from '@/components/ui/badge'
 import { ExternalLink, ArrowLeft } from 'lucide-react'
 import productsData from '../../../../../data/products.json'
 
@@ -17,15 +16,6 @@ interface ChassisProduct {
   featured?: boolean
 }
 
-const CATEGORY_COLORS: Record<string, string> = {
-  'Mini':      'bg-green-100 text-green-800',
-  'Baby':      'bg-emerald-100 text-emerald-800',
-  'OK-Junior': 'bg-blue-100 text-blue-800',
-  'Junior':    'bg-blue-100 text-blue-800',
-  'OK':        'bg-purple-100 text-purple-800',
-  'Senior':    'bg-purple-100 text-purple-800',
-  'KZ':        'bg-red-100 text-red-800',
-}
 
 interface BrandTheme {
   stripe: string         // stripe bar color
@@ -38,15 +28,15 @@ interface BrandTheme {
 }
 
 const BRAND_THEME: Record<string, BrandTheme> = {
-  'CRG':           { stripe: 'bg-orange-500', text: 'text-orange-500', hoverText: 'hover:text-orange-500', groupHoverText: 'group-hover:text-orange-500', bg: 'bg-orange-500', bgHover: 'hover:bg-orange-600', featured: 'bg-orange-500' },
-  'Tony Kart':     { stripe: 'bg-blue-700',   text: 'text-blue-700',   hoverText: 'hover:text-blue-700',   groupHoverText: 'group-hover:text-blue-700',   bg: 'bg-blue-700',   bgHover: 'hover:bg-blue-800',   featured: 'bg-blue-700'   },
-  'BirelArt':      { stripe: 'bg-red-600',    text: 'text-red-600',    hoverText: 'hover:text-red-600',    groupHoverText: 'group-hover:text-red-600',    bg: 'bg-red-600',    bgHover: 'hover:bg-red-700',    featured: 'bg-red-600'    },
-  'Top-Kart':      { stripe: 'bg-green-700',  text: 'text-green-700',  hoverText: 'hover:text-green-700',  groupHoverText: 'group-hover:text-green-700',  bg: 'bg-green-700',  bgHover: 'hover:bg-green-800',  featured: 'bg-green-700'  },
-  'Kart Republic': { stripe: 'bg-purple-700', text: 'text-purple-700', hoverText: 'hover:text-purple-700', groupHoverText: 'group-hover:text-purple-700', bg: 'bg-purple-700', bgHover: 'hover:bg-purple-800', featured: 'bg-purple-700' },
-  'Praga':         { stripe: 'bg-yellow-500', text: 'text-yellow-600', hoverText: 'hover:text-yellow-600', groupHoverText: 'group-hover:text-yellow-600', bg: 'bg-yellow-500', bgHover: 'hover:bg-yellow-600', featured: 'bg-yellow-500' },
-  'Parolin':       { stripe: 'bg-teal-600',   text: 'text-teal-600',   hoverText: 'hover:text-teal-600',   groupHoverText: 'group-hover:text-teal-600',   bg: 'bg-teal-600',   bgHover: 'hover:bg-teal-700',   featured: 'bg-teal-600'   },
-  'Kosmic':        { stripe: 'bg-gray-600',   text: 'text-gray-600',   hoverText: 'hover:text-gray-600',   groupHoverText: 'group-hover:text-gray-600',   bg: 'bg-gray-600',   bgHover: 'hover:bg-gray-700',   featured: 'bg-gray-600'   },
-  'Intrepid':      { stripe: 'bg-slate-700',  text: 'text-slate-700',  hoverText: 'hover:text-slate-700',  groupHoverText: 'group-hover:text-slate-700',  bg: 'bg-slate-700',  bgHover: 'hover:bg-slate-800',  featured: 'bg-slate-700'  },
+  'CRG':           { stripe: 'bg-racing-red',  text: 'text-racing-red',  hoverText: 'hover:text-racing-red',  groupHoverText: 'group-hover:text-racing-red',  bg: 'bg-racing-red',  bgHover: 'hover:bg-racing-red-dark',  featured: 'bg-racing-red'  },
+  'Tony Kart':     { stripe: 'bg-racing-blue', text: 'text-racing-blue', hoverText: 'hover:text-racing-blue', groupHoverText: 'group-hover:text-racing-blue', bg: 'bg-racing-blue', bgHover: 'hover:bg-racing-blue-dark', featured: 'bg-racing-blue' },
+  'BirelArt':      { stripe: 'bg-racing-red',  text: 'text-racing-red',  hoverText: 'hover:text-racing-red',  groupHoverText: 'group-hover:text-racing-red',  bg: 'bg-racing-red',  bgHover: 'hover:bg-racing-red-dark',  featured: 'bg-racing-red'  },
+  'Top-Kart':      { stripe: 'bg-gray-600',    text: 'text-gray-600',    hoverText: 'hover:text-gray-600',    groupHoverText: 'group-hover:text-gray-600',    bg: 'bg-gray-600',    bgHover: 'hover:bg-gray-700',    featured: 'bg-gray-600'    },
+  'Kart Republic': { stripe: 'bg-gray-700',    text: 'text-gray-700',    hoverText: 'hover:text-gray-700',    groupHoverText: 'group-hover:text-gray-700',    bg: 'bg-gray-700',    bgHover: 'hover:bg-gray-800',    featured: 'bg-gray-700'    },
+  'Praga':         { stripe: 'bg-gray-600',    text: 'text-gray-600',    hoverText: 'hover:text-gray-600',    groupHoverText: 'group-hover:text-gray-600',    bg: 'bg-gray-600',    bgHover: 'hover:bg-gray-700',    featured: 'bg-gray-600'    },
+  'Parolin':       { stripe: 'bg-gray-500',    text: 'text-gray-500',    hoverText: 'hover:text-gray-500',    groupHoverText: 'group-hover:text-gray-500',    bg: 'bg-gray-500',    bgHover: 'hover:bg-gray-600',    featured: 'bg-gray-500'    },
+  'Kosmic':        { stripe: 'bg-racing-blue', text: 'text-racing-blue', hoverText: 'hover:text-racing-blue', groupHoverText: 'group-hover:text-racing-blue', bg: 'bg-racing-blue', bgHover: 'hover:bg-racing-blue-dark', featured: 'bg-racing-blue' },
+  'Intrepid':      { stripe: 'bg-gray-700',    text: 'text-gray-700',    hoverText: 'hover:text-gray-700',    groupHoverText: 'group-hover:text-gray-700',    bg: 'bg-gray-700',    bgHover: 'hover:bg-gray-800',    featured: 'bg-gray-700'    },
 }
 
 const DEFAULT_THEME: BrandTheme = {
@@ -167,66 +157,48 @@ export default async function TelaiNuoviBrandPage({
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product) => {
-            const catColor = CATEGORY_COLORS[product.subcategory] || 'bg-gray-100 text-gray-800'
-
             return (
               <div
                 key={product.id}
-                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm
-                  hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group
-                  border border-gray-200 dark:border-gray-700"
+                className="group flex flex-col bg-white dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800"
               >
-                <div className={`h-1.5 ${theme.stripe}`} />
-
-                <div className="relative aspect-square bg-gray-50 dark:bg-gray-900 overflow-hidden">
+                {/* Image — fixed height, no background */}
+                <div className="relative h-48 flex-shrink-0 overflow-hidden">
+                  <div className={`absolute top-0 left-0 right-0 h-0.5 ${theme.stripe} z-10`} />
                   <Image
                     src={product.imageLocal}
                     alt={product.name}
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain p-4 group-hover:scale-110 transition-transform duration-500 ease-out"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  {product.featured && (
-                    <div className="absolute top-3 left-3">
-                      <span className={`${theme.featured} text-white text-xs font-bold px-2 py-1 rounded`}>
-                        IN EVIDENZA
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute top-3 right-3">
-                    <Badge className={`text-xs font-semibold ${catColor}`}>
-                      {product.subcategory}
-                    </Badge>
-                  </div>
                 </div>
 
-                <div className="p-4">
-                  <p className={`text-xs font-bold uppercase tracking-wide ${theme.text} mb-1`}>
-                    {brandName}
-                  </p>
-                  <h3 className={`font-bold text-gray-900 dark:text-white text-sm leading-tight
-                    ${theme.groupHoverText} transition-colors line-clamp-2 mb-2`}>
-                    {cleanName(product.name)}
-                  </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-4">
-                    {product.description}
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-4">
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-1.5 ${theme.text}`}>
+                    {brandName} · {product.subcategory}
                   </p>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-700">
-                    <span className={`text-xl font-black ${theme.text}`}>
-                      {formatPrice(product.price)}
-                    </span>
-                    <Link
-                      href={product.mondokartUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                        ${theme.bg} ${theme.bgHover} text-white text-xs font-bold transition-colors`}
-                    >
-                      Acquista
-                      <ExternalLink className="w-3 h-3" />
-                    </Link>
+                  <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 min-h-[2.5rem]">
+                    {cleanName(product.name)}
+                  </h3>
+
+                  <div className="flex-1" />
+
+                  <div className="text-xl font-black text-gray-900 dark:text-white mt-3 mb-3">
+                    {formatPrice(product.price)}
                   </div>
+
+                  <Link
+                    href={product.mondokartUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center justify-center gap-1.5 w-full ${theme.stripe} hover:opacity-90 text-white text-xs font-black uppercase tracking-widest py-2.5 rounded-lg transition-opacity duration-200`}
+                  >
+                    Acquista
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
                 </div>
               </div>
             )

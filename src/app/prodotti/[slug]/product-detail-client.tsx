@@ -110,7 +110,7 @@ export function ProductDetailClient({ product }: { product: Product | null }) {
                   </div>
                 )}
                 {hasDiscount && (
-                  <div className="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded shadow-lg">
+                  <div className="bg-racing-red text-white text-sm font-bold px-3 py-1 rounded shadow-lg">
                     -{discountPercentage}%
                   </div>
                 )}
@@ -344,7 +344,7 @@ export function ProductDetailClient({ product }: { product: Product | null }) {
                         </div>
                       )}
                       {relatedHasDiscount && (
-                        <div className="absolute top-2 right-2 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded shadow-lg">
+                        <div className="absolute top-2 right-2 z-10 bg-racing-red text-white text-xs font-bold px-3 py-1 rounded shadow-lg">
                           -{relatedDiscountPercentage}%
                         </div>
                       )}
