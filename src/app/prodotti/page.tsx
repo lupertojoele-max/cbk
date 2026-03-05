@@ -84,6 +84,13 @@ const CATEGORY_GROUPS = [
     ],
   },
   {
+    group: 'Officina',
+    items: [
+      { id: 'lavorazioni-motore', label: 'Lavorazioni Motore' },
+      { id: 'lavorazioni-telaio', label: 'Lavorazioni Telaio' },
+    ],
+  },
+  {
     group: 'Altro',
     items: [
       { id: 'adesivi',       label: 'Adesivi' },
