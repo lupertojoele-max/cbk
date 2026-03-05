@@ -30,24 +30,24 @@ const highlightCards: HighlightCard[] = [
   },
   {
     id: 'upcoming-event',
-    title: 'Spedizione in 24/48 Ore',
-    description: 'Unisciti a noi per il prossimo round del Campionato Italiano sui circuiti più iconici d\'Italia.',
-    badge: { text: 'Spedizione Rapida', className: 'bg-blue-600 text-white' },
-    cta: { text: 'Scopri Come Funziona', href: '/contatti' },
+    title: 'Assistenza Ordini Dedicata',
+    description: 'Il nostro team è disponibile per supportarti nella scelta del ricambio e nella gestione del tuo ordine.',
+    badge: { text: 'Supporto Ordini', className: 'bg-racing-blue text-white' },
+    cta: { text: 'Contattaci', href: '/contatti' },
     icon: <Calendar className="w-6 h-6 text-white" />,
-    iconBg: 'bg-blue-600',
-    accentBg: 'bg-blue-600',
-    stats: { label: 'Ore Consegna', value: '24h' }
+    iconBg: 'bg-racing-blue',
+    accentBg: 'bg-racing-blue',
+    stats: { label: 'Brand Partner', value: '50+' }
   },
   {
     id: 'technology',
     title: 'Assistenza Tecnica Specializzata',
     description: 'Non sai quale ricambio scegliere? Il nostro team tecnico ti supporta nella selezione del componente giusto per il tuo setup.',
-    badge: { text: 'Supporto Tecnico', className: 'bg-emerald-600 text-white' },
+    badge: { text: 'Supporto Tecnico', className: 'bg-gray-700 text-white' },
     cta: { text: 'Contatta il Team', href: '/contatti' },
     icon: <Wrench className="w-6 h-6 text-white" />,
-    iconBg: 'bg-emerald-600',
-    accentBg: 'bg-emerald-600',
+    iconBg: 'bg-gray-700',
+    accentBg: 'bg-gray-700',
     stats: { label: 'Brand Partner', value: '50+' }
   }
 ]

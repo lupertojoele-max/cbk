@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Carburatori Kart | OEM e Aftermarket | CBK1",
-  description: "Carburatori originali e aftermarket per kart: Tillotson, Dell'Orto, Mikuni. Compatibili con IAME, Rotax, TM Racing. Disponibilita immediata, spedizione in 24h.",
+  description: "Carburatori originali e aftermarket per kart: Tillotson, Dell'Orto, Mikuni. Compatibili con IAME, Rotax, TM Racing. Disponibilita immediata.",
   keywords: [
     "carburatore kart",
     "carburatore IAME",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Carburatori Kart | OEM e Aftermarket | CBK1",
-    description: "Carburatori originali e aftermarket per kart: Tillotson, Dell'Orto, Mikuni. Compatibili con IAME, Rotax, TM Racing. Disponibilita immediata, spedizione in 24h.",
+    description: "Carburatori originali e aftermarket per kart: Tillotson, Dell'Orto, Mikuni. Compatibili con IAME, Rotax, TM Racing. Disponibilita immediata.",
     type: 'website',
     siteName: 'CBK1',
     locale: 'it_IT',

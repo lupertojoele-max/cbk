@@ -111,7 +111,7 @@ export default function Home() {
       <MegaHero />
 
       {/* Quick Stats */}
-      <section className="py-12 bg-zinc-900 border-b-2 border-racing-red/40">
+      <section className="py-12 bg-racing-carbon border-b-2 border-racing-red/40">
         <div className="container mx-auto px-4">
           <RacingStagger staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <RacingStaggerItem className="text-center">
@@ -119,8 +119,8 @@ export default function Home() {
               <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Prodotti a Catalogo</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">24h</div>
-              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Spedizione Express</div>
+              <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">50+</div>
+              <div className="text-racing-gray-300 text-sm uppercase tracking-widest">Brand Partner</div>
             </RacingStaggerItem>
             <RacingStaggerItem className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-racing-red mb-2 racing-number">50+</div>
@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 italic leading-relaxed">
-                &ldquo;Trovo sempre quello che cerco. Dall'assale ai fuselli, dal carburatore alle pastiglie freno — il catalogo CBK1 copre tutto. E la spedizione arriva sempre il giorno dopo.&rdquo;
+                &ldquo;Trovo sempre quello che cerco. Dall'assale ai fuselli, dal carburatore alle pastiglie freno — il catalogo CBK1 copre tutto. Il supporto tecnico del team CBK1 fa la differenza.&rdquo;
               </p>
               <div className="mt-4 text-racing-red">
                 <span className="text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -242,7 +242,7 @@ export default function Home() {
 
 
       {/* Newsletter / Community Section */}
-      <section className="py-16 bg-zinc-900 border-t border-racing-red/20">
+      <section className="py-16 bg-gray-900 border-t border-racing-red/20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <div className="inline-block bg-racing-red/10 border border-racing-red/30 rounded-full px-4 py-1 text-sm text-racing-red font-bold uppercase tracking-widest mb-6">
@@ -262,8 +262,8 @@ export default function Home() {
                 <div className="text-xs text-gray-400 uppercase tracking-wide">Prodotti in Catalogo</div>
               </div>
               <div>
-                <div className="text-2xl font-black text-racing-red mb-1">24h</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">Spedizione Express</div>
+                <div className="text-2xl font-black text-racing-red mb-1">50+</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">Brand Partner</div>
               </div>
               <div>
                 <div className="text-2xl font-black text-racing-red mb-1">10+</div>
@@ -275,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-zinc-900 text-white">
+      <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <RacingFadeIn delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

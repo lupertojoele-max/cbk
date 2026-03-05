@@ -32,14 +32,14 @@ const defaultSlides: HeroSlide[] = [
   {
     id: 'championship',
     title: 'Il Kart che vuoi.',
-    subtitle: 'I Ricambi che ti servono. Consegna in 24h.',
+    subtitle: 'I Ricambi che ti servono. Assistenza tecnica dedicata.',
     description: '6.800+ componenti OEM per kart professionale: telai, motori, freni, telemetrie, abbigliamento. OTK, CRG, BirelArt, IAME, Rotax — il catalogo piu completo del karting italiano.',
     image: '/images/kart-racing-hero.png',
     cta: {
       primary: { text: 'Esplora il Catalogo', href: '/prodotti' },
       secondary: { text: 'Trova il tuo Ricambio', href: '/prodotti' },
     },
-    badge: 'Spedizione 24h',
+    badge: '6.800+ Prodotti',
   },
 ]
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Catalogo Prodotti Kart | CBK1',
-    description: '6.800+ ricambi e accessori kart professionali. OTK, CRG, BirelArt, IAME, Rotax. Spedizione in 24h in tutta Italia.',
+    description: '6.800+ ricambi e accessori kart professionali. OTK, CRG, BirelArt, IAME, Rotax. Assistenza tecnica dedicata.',
     type: 'website',
     siteName: 'CBK1',
     locale: 'it_IT',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Catalogo Prodotti Kart | CBK1',
-    description: '6.800+ ricambi e accessori kart professionali. Spedizione in 24h.',
+    description: '6.800+ ricambi e accessori kart professionali. Assistenza tecnica dedicata.',
   },
 };
 
