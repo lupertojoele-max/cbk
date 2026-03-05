@@ -273,10 +273,10 @@ export function Navbar() {
                     className={cn(
                       'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
                       'focus:outline-none',
-                      'data-[state=open]:bg-[#1877F2] data-[state=open]:text-white',
+                      'data-[state=open]:bg-[#1E90FF] data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
-                        : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
+                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1E90FF] hover:text-white'
+                        : 'text-white hover:bg-[#1E90FF]/80 hover:text-white',
                       isActivePath('/events') || isActivePath('/drivers') || isActivePath('/karts')
                         ? 'font-semibold'
                         : ''
@@ -307,11 +307,11 @@ export function Navbar() {
                                   onFocus={() => setFocusedItem(item.href)}
                                 >
                                   <div className="flex items-center gap-2">
-                                    <span className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                    <span className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-racing-blue dark:group-hover:text-racing-blue-light transition-colors">
                                       {item.title}
                                     </span>
                                     {item.badge && (
-                                      <Badge className="bg-blue-500 text-white text-[10px] px-1.5 py-0">
+                                      <Badge className="bg-racing-blue text-white text-[10px] px-1.5 py-0">
                                         {item.badge}
                                       </Badge>
                                     )}
@@ -360,10 +360,10 @@ export function Navbar() {
                     className={cn(
                       'group h-10 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full bg-transparent',
                       'focus:outline-none',
-                      'data-[state=open]:bg-[#1877F2] data-[state=open]:text-white',
+                      'data-[state=open]:bg-[#1E90FF] data-[state=open]:text-white',
                       isScrolled
-                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
-                        : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
+                        ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1E90FF] hover:text-white'
+                        : 'text-white hover:bg-[#1E90FF]/80 hover:text-white',
                       isActivePath('/products') ? 'font-semibold' : ''
                     )}
                     onFocus={() => setFocusedItem('products')}
@@ -389,6 +389,7 @@ export function Navbar() {
                             { key: 'carburatori', title: 'Carburatori', href: null },
                             { key: 'radiatori', title: 'Radiatori', href: null },
                             { key: 'cuscinetti', title: 'Cuscinetti e Molle', href: null },
+                            { key: 'officina', title: 'Officina', href: null },
                           ].map((item) => (
                             <div
                               key={item.key}
@@ -404,7 +405,7 @@ export function Navbar() {
                                   className={cn(
                                     'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
                                     activeSubmenu === item.key
-                                      ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                      ? 'bg-racing-blue text-white dark:bg-racing-blue dark:text-white'
                                       : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
                                   )}
                                 >
@@ -418,7 +419,7 @@ export function Navbar() {
                                   className={cn(
                                     'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
                                     activeSubmenu === item.key
-                                      ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                      ? 'bg-racing-blue text-white dark:bg-racing-blue dark:text-white'
                                       : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
                                   )}
                                 >
@@ -442,7 +443,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Sottocategorie</h4>
                               <div className="space-y-0.5 max-h-72 overflow-y-auto">
                                 {['Freni e Accessori', 'Cerchi, Mozzi e Accessori', 'Assali chiavette e cuscinetti', 'Corone, Catene e accessori', 'Carenature, staffe e paraurti', 'Leve cambio e frizione', 'Pedali e accessori', 'Piantone e Accessori', 'Portacorona e Porta disco', 'Serbatoio e Tubi Benzina', 'Sedili e accessori', 'Uniball', 'Volanti e accessori', 'Barra stabilizzatrici'].map((item) => (
-                                  <Link key={item} href={`/products/telaio-accessori/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/telaio-accessori/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -454,7 +455,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Cuscinetti e Molle</h4>
                               <div className="space-y-0.5">
                                 {['Molle', 'Cuscinetti Telaio', 'Cuscinetti Motore', 'Snodi Sferici, Uniball', 'Paraoli, Anelli Tenuta', 'Gabbie a Rulli'].map((item) => (
-                                  <Link key={item} href={`/products/cuscinetti-paraoli-molle/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/cuscinetti-paraoli-molle/${item.toLowerCase().replace(/[,\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -466,7 +467,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Motore e Accessori</h4>
                               <div className="space-y-0.5 max-h-72 overflow-y-auto">
                                 {['Ricambi Generici Motore', 'IAME', 'TM RACING', 'BMB / BLUEBIRD', 'ROTAX', 'VORTEX', 'COMER', 'LKE (LENZO)', 'MAXTER', 'MODENA ENGINES', 'WTP 60', 'PAVESI'].map((item) => (
-                                  <Link key={item} href={`/products/motore-accessori/${item.toLowerCase().replace(/[\/\s()]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/motore-accessori/${item.toLowerCase().replace(/[\/\s()]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -478,7 +479,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Carburatori</h4>
                               <div className="space-y-0.5">
                                 {['Attrezzatura Carburatori', 'Dellorto e ricambi', 'IBEA e ricambi', 'Tillotson e ricambi', 'Tryton e ricambi', 'WALBRO e ricambi'].map((item) => (
-                                  <Link key={item} href={`/products/carburatori/${item.toLowerCase().replace(/[\/\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/carburatori/${item.toLowerCase().replace(/[\/\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -490,7 +491,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Radiatori e Accessori</h4>
                               <div className="space-y-0.5">
                                 {['Radiatori', 'Staffe & Attacchi', 'Tubi Radiatore', 'Pompa acqua', 'Accessori', 'Tendine'].map((item) => (
-                                  <Link key={item} href={`/products/radiatori-accessori/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/radiatori-accessori/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -502,7 +503,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Pneumatici / Gomme</h4>
                               <div className="space-y-0.5 max-h-72 overflow-y-auto">
                                 {['LeCont', 'Vega', 'Maxxis', 'MG', 'Komet', 'Easykart', 'Bridgestone', 'Dunlop', 'Accessori', 'Attrezzatura'].map((item) => (
-                                  <Link key={item} href={`/products/pneumatici-gomme/${item.toLowerCase()}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/pneumatici-gomme/${item.toLowerCase()}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -514,7 +515,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Telemetrie & Crono</h4>
                               <div className="space-y-0.5">
                                 {['AIM MyChron', 'Alfano', 'Unipro', 'Starlane', 'Contagiri RPM', 'Cronometri', 'Termometri'].map((item) => (
-                                  <Link key={item} href={`/products/telemetrie-crono/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/telemetrie-crono/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -526,7 +527,22 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Motori Nuovi</h4>
                               <div className="space-y-0.5 max-h-72 overflow-y-auto">
                                 {['TM Racing', 'Iame', 'Vortex', 'BMB', 'Modena Engines', 'Rotax', 'Comer', 'LKE', 'Briggs & Stratton'].map((item) => (
-                                  <Link key={item} href={`/products/motori-nuovi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/motori-nuovi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Officina Submenu */}
+                          {activeSubmenu === 'officina' && (
+                            <div>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Servizi Officina</h4>
+                              <div className="space-y-0.5">
+                                {[
+                                  { label: 'Lavorazioni Motore', href: '/prodotti?category=lavorazioni-motore' },
+                                  { label: 'Lavorazioni Telaio', href: '/prodotti?category=lavorazioni-telaio' },
+                                ].map((item) => (
+                                  <Link key={item.href} href={item.href} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item.label}</Link>
                                 ))}
                               </div>
                             </div>
@@ -538,7 +554,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Telai Nuovi</h4>
                               <div className="space-y-0.5 max-h-72 overflow-y-auto">
                                 {['CRG', 'BirelArt', 'Top-Kart', 'Formula K', 'Praga', 'Kart Republic', 'Tony Kart', 'Parolin', 'Kosmic', 'Maranello', 'CKR', 'Intrepid'].map((item) => (
-                                  <Link key={item} href={`/products/telai-nuovi/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/telai-nuovi/${item.toLowerCase().replace(/\s+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -550,7 +566,7 @@ export function Navbar() {
                               <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Kart Completi</h4>
                               <div className="space-y-0.5">
                                 {['CRG', 'Tony Kart', 'BirelArt & KGP', 'Top-Kart', 'Kart Republic', 'Easykart'].map((item) => (
-                                  <Link key={item} href={`/products/kart-completi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white rounded-lg transition-colors">{item}</Link>
+                                  <Link key={item} href={`/products/kart-completi/${item.toLowerCase().replace(/[&\s]+/g, '-')}`} className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-racing-blue hover:text-white dark:hover:bg-racing-blue dark:hover:text-white rounded-lg transition-colors">{item}</Link>
                                 ))}
                               </div>
                             </div>
@@ -584,7 +600,7 @@ export function Navbar() {
                                 className={cn(
                                   'flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-200',
                                   activeSubmenu === item.key
-                                    ? 'bg-blue-600 text-white dark:bg-blue-600 dark:text-white'
+                                    ? 'bg-racing-blue text-white dark:bg-racing-blue dark:text-white'
                                     : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200'
                                 )}
                               >
@@ -602,8 +618,8 @@ export function Navbar() {
                       <div className={activeSubmenu ? 'col-span-3' : 'col-span-2'}>
                         <Link
                           href="/prodotti"
-                          className="mt-2 block w-full py-3 px-6 text-center bg-blue-600 text-white font-semibold rounded-xl
-                            hover:bg-blue-700 transition-all duration-200"
+                          className="mt-2 block w-full py-3 px-6 text-center bg-racing-blue text-white font-semibold rounded-xl
+                            hover:bg-racing-blue-dark transition-all duration-200"
                         >
                           Vedi Tutti i Prodotti
                         </Link>
@@ -628,8 +644,8 @@ export function Navbar() {
                         'transition-all duration-300',
                         'focus:outline-none',
                         isScrolled
-                          ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1877F2] hover:text-white'
-                          : 'text-white hover:bg-[#1877F2]/80 hover:text-white',
+                          ? 'text-gray-800 dark:text-gray-200 hover:bg-[#1E90FF] hover:text-white'
+                          : 'text-white hover:bg-[#1E90FF]/80 hover:text-white',
                         isActivePath(item.href) ? 'font-semibold' : ''
                       )}
                       onFocus={() => setFocusedItem(item.href)}
@@ -650,7 +666,7 @@ export function Navbar() {
               className={cn(
                 'hidden md:flex items-center justify-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300',
                 isScrolled
-                  ? 'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700'
+                  ? 'bg-racing-blue text-white hover:bg-racing-blue-dark dark:bg-racing-blue dark:text-white dark:hover:bg-racing-blue-dark'
                   : 'bg-white text-gray-900 hover:bg-white/90'
               )}
             >
@@ -695,7 +711,7 @@ export function Navbar() {
               size="icon"
               className={cn(
                 'lg:hidden h-12 w-12',
-                isScrolled ? 'text-racing-gray-900 dark:text-white' : 'text-white'
+                isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
               )}
               aria-label="Open mobile menu"
             >
@@ -740,8 +756,8 @@ export function Navbar() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Cerca prodotti, categorie, marchi..."
                   className={cn(
-                    'w-full h-12 pl-12 pr-12 rounded-lg border-2 border-[#1877F2]',
-                    'focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:border-transparent',
+                    'w-full h-12 pl-12 pr-12 rounded-lg border-2 border-[#1E90FF]',
+                    'focus:outline-none focus:ring-2 focus:ring-[#1E90FF] focus:border-transparent',
                     'transition-colors text-base',
                     'bg-white dark:bg-slate-800 text-racing-gray-900 dark:text-white',
                     'placeholder:text-racing-gray-500 dark:placeholder:text-slate-400'
